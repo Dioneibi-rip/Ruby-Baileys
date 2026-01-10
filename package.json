@@ -48,7 +48,7 @@
     "@itsukichan/eslint-config": "^1.0.0", 
     "@itsukichan/libsignal-node": "^1.0.1", 
     "async-mutex": "^0.5.0",
-    "axios": "^1.12.1",
+    "axios": "^1.12.0",
     "audio-decode": "^2.2.2", 
     "cache-manager": "^5.7.6", 
     "fflate": "^0.8.2", 
