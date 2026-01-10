@@ -54,91 +54,215 @@ $root.SyncAction = (function() {
 
         /**
          * PatchDebugData currentLthash.
-         * @member {Uint8Array} currentLthash
+         * @member {Uint8Array|null|undefined} currentLthash
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.currentLthash = $util.newBuffer([]);
+        PatchDebugData.prototype.currentLthash = null;
 
         /**
          * PatchDebugData newLthash.
-         * @member {Uint8Array} newLthash
+         * @member {Uint8Array|null|undefined} newLthash
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.newLthash = $util.newBuffer([]);
+        PatchDebugData.prototype.newLthash = null;
 
         /**
          * PatchDebugData patchVersion.
-         * @member {Uint8Array} patchVersion
+         * @member {Uint8Array|null|undefined} patchVersion
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.patchVersion = $util.newBuffer([]);
+        PatchDebugData.prototype.patchVersion = null;
 
         /**
          * PatchDebugData collectionName.
-         * @member {Uint8Array} collectionName
+         * @member {Uint8Array|null|undefined} collectionName
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.collectionName = $util.newBuffer([]);
+        PatchDebugData.prototype.collectionName = null;
 
         /**
          * PatchDebugData firstFourBytesFromAHashOfSnapshotMacKey.
-         * @member {Uint8Array} firstFourBytesFromAHashOfSnapshotMacKey
+         * @member {Uint8Array|null|undefined} firstFourBytesFromAHashOfSnapshotMacKey
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.firstFourBytesFromAHashOfSnapshotMacKey = $util.newBuffer([]);
+        PatchDebugData.prototype.firstFourBytesFromAHashOfSnapshotMacKey = null;
 
         /**
          * PatchDebugData newLthashSubtract.
-         * @member {Uint8Array} newLthashSubtract
+         * @member {Uint8Array|null|undefined} newLthashSubtract
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.newLthashSubtract = $util.newBuffer([]);
+        PatchDebugData.prototype.newLthashSubtract = null;
 
         /**
          * PatchDebugData numberAdd.
-         * @member {number} numberAdd
+         * @member {number|null|undefined} numberAdd
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.numberAdd = 0;
+        PatchDebugData.prototype.numberAdd = null;
 
         /**
          * PatchDebugData numberRemove.
-         * @member {number} numberRemove
+         * @member {number|null|undefined} numberRemove
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.numberRemove = 0;
+        PatchDebugData.prototype.numberRemove = null;
 
         /**
          * PatchDebugData numberOverride.
-         * @member {number} numberOverride
+         * @member {number|null|undefined} numberOverride
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.numberOverride = 0;
+        PatchDebugData.prototype.numberOverride = null;
 
         /**
          * PatchDebugData senderPlatform.
-         * @member {SyncAction.PatchDebugData.Platform} senderPlatform
+         * @member {SyncAction.PatchDebugData.Platform|null|undefined} senderPlatform
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.senderPlatform = 0;
+        PatchDebugData.prototype.senderPlatform = null;
 
         /**
          * PatchDebugData isSenderPrimary.
-         * @member {boolean} isSenderPrimary
+         * @member {boolean|null|undefined} isSenderPrimary
          * @memberof SyncAction.PatchDebugData
          * @instance
          */
-        PatchDebugData.prototype.isSenderPrimary = false;
+        PatchDebugData.prototype.isSenderPrimary = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * PatchDebugData _currentLthash.
+         * @member {"currentLthash"|undefined} _currentLthash
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_currentLthash", {
+            get: $util.oneOfGetter($oneOfFields = ["currentLthash"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _newLthash.
+         * @member {"newLthash"|undefined} _newLthash
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_newLthash", {
+            get: $util.oneOfGetter($oneOfFields = ["newLthash"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _patchVersion.
+         * @member {"patchVersion"|undefined} _patchVersion
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_patchVersion", {
+            get: $util.oneOfGetter($oneOfFields = ["patchVersion"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _collectionName.
+         * @member {"collectionName"|undefined} _collectionName
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_collectionName", {
+            get: $util.oneOfGetter($oneOfFields = ["collectionName"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _firstFourBytesFromAHashOfSnapshotMacKey.
+         * @member {"firstFourBytesFromAHashOfSnapshotMacKey"|undefined} _firstFourBytesFromAHashOfSnapshotMacKey
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_firstFourBytesFromAHashOfSnapshotMacKey", {
+            get: $util.oneOfGetter($oneOfFields = ["firstFourBytesFromAHashOfSnapshotMacKey"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _newLthashSubtract.
+         * @member {"newLthashSubtract"|undefined} _newLthashSubtract
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_newLthashSubtract", {
+            get: $util.oneOfGetter($oneOfFields = ["newLthashSubtract"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _numberAdd.
+         * @member {"numberAdd"|undefined} _numberAdd
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_numberAdd", {
+            get: $util.oneOfGetter($oneOfFields = ["numberAdd"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _numberRemove.
+         * @member {"numberRemove"|undefined} _numberRemove
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_numberRemove", {
+            get: $util.oneOfGetter($oneOfFields = ["numberRemove"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _numberOverride.
+         * @member {"numberOverride"|undefined} _numberOverride
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_numberOverride", {
+            get: $util.oneOfGetter($oneOfFields = ["numberOverride"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _senderPlatform.
+         * @member {"senderPlatform"|undefined} _senderPlatform
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_senderPlatform", {
+            get: $util.oneOfGetter($oneOfFields = ["senderPlatform"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * PatchDebugData _isSenderPrimary.
+         * @member {"isSenderPrimary"|undefined} _isSenderPrimary
+         * @memberof SyncAction.PatchDebugData
+         * @instance
+         */
+        Object.defineProperty(PatchDebugData.prototype, "_isSenderPrimary", {
+            get: $util.oneOfGetter($oneOfFields = ["isSenderPrimary"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new PatchDebugData instance using the specified properties.
@@ -301,34 +425,54 @@ $root.SyncAction = (function() {
         PatchDebugData.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.currentLthash != null && message.hasOwnProperty("currentLthash"))
+            var properties = {};
+            if (message.currentLthash != null && message.hasOwnProperty("currentLthash")) {
+                properties._currentLthash = 1;
                 if (!(message.currentLthash && typeof message.currentLthash.length === "number" || $util.isString(message.currentLthash)))
                     return "currentLthash: buffer expected";
-            if (message.newLthash != null && message.hasOwnProperty("newLthash"))
+            }
+            if (message.newLthash != null && message.hasOwnProperty("newLthash")) {
+                properties._newLthash = 1;
                 if (!(message.newLthash && typeof message.newLthash.length === "number" || $util.isString(message.newLthash)))
                     return "newLthash: buffer expected";
-            if (message.patchVersion != null && message.hasOwnProperty("patchVersion"))
+            }
+            if (message.patchVersion != null && message.hasOwnProperty("patchVersion")) {
+                properties._patchVersion = 1;
                 if (!(message.patchVersion && typeof message.patchVersion.length === "number" || $util.isString(message.patchVersion)))
                     return "patchVersion: buffer expected";
-            if (message.collectionName != null && message.hasOwnProperty("collectionName"))
+            }
+            if (message.collectionName != null && message.hasOwnProperty("collectionName")) {
+                properties._collectionName = 1;
                 if (!(message.collectionName && typeof message.collectionName.length === "number" || $util.isString(message.collectionName)))
                     return "collectionName: buffer expected";
-            if (message.firstFourBytesFromAHashOfSnapshotMacKey != null && message.hasOwnProperty("firstFourBytesFromAHashOfSnapshotMacKey"))
+            }
+            if (message.firstFourBytesFromAHashOfSnapshotMacKey != null && message.hasOwnProperty("firstFourBytesFromAHashOfSnapshotMacKey")) {
+                properties._firstFourBytesFromAHashOfSnapshotMacKey = 1;
                 if (!(message.firstFourBytesFromAHashOfSnapshotMacKey && typeof message.firstFourBytesFromAHashOfSnapshotMacKey.length === "number" || $util.isString(message.firstFourBytesFromAHashOfSnapshotMacKey)))
                     return "firstFourBytesFromAHashOfSnapshotMacKey: buffer expected";
-            if (message.newLthashSubtract != null && message.hasOwnProperty("newLthashSubtract"))
+            }
+            if (message.newLthashSubtract != null && message.hasOwnProperty("newLthashSubtract")) {
+                properties._newLthashSubtract = 1;
                 if (!(message.newLthashSubtract && typeof message.newLthashSubtract.length === "number" || $util.isString(message.newLthashSubtract)))
                     return "newLthashSubtract: buffer expected";
-            if (message.numberAdd != null && message.hasOwnProperty("numberAdd"))
+            }
+            if (message.numberAdd != null && message.hasOwnProperty("numberAdd")) {
+                properties._numberAdd = 1;
                 if (!$util.isInteger(message.numberAdd))
                     return "numberAdd: integer expected";
-            if (message.numberRemove != null && message.hasOwnProperty("numberRemove"))
+            }
+            if (message.numberRemove != null && message.hasOwnProperty("numberRemove")) {
+                properties._numberRemove = 1;
                 if (!$util.isInteger(message.numberRemove))
                     return "numberRemove: integer expected";
-            if (message.numberOverride != null && message.hasOwnProperty("numberOverride"))
+            }
+            if (message.numberOverride != null && message.hasOwnProperty("numberOverride")) {
+                properties._numberOverride = 1;
                 if (!$util.isInteger(message.numberOverride))
                     return "numberOverride: integer expected";
-            if (message.senderPlatform != null && message.hasOwnProperty("senderPlatform"))
+            }
+            if (message.senderPlatform != null && message.hasOwnProperty("senderPlatform")) {
+                properties._senderPlatform = 1;
                 switch (message.senderPlatform) {
                 default:
                     return "senderPlatform: enum value expected";
@@ -341,11 +485,17 @@ $root.SyncAction = (function() {
                 case 6:
                 case 7:
                 case 8:
+                case 9:
+                case 10:
+                case 11:
                     break;
                 }
-            if (message.isSenderPrimary != null && message.hasOwnProperty("isSenderPrimary"))
+            }
+            if (message.isSenderPrimary != null && message.hasOwnProperty("isSenderPrimary")) {
+                properties._isSenderPrimary = 1;
                 if (typeof message.isSenderPrimary !== "boolean")
                     return "isSenderPrimary: boolean expected";
+            }
             return null;
         };
 
@@ -440,6 +590,18 @@ $root.SyncAction = (function() {
             case 8:
                 message.senderPlatform = 8;
                 break;
+            case "WASG":
+            case 9:
+                message.senderPlatform = 9;
+                break;
+            case "WEARM":
+            case 10:
+                message.senderPlatform = 10;
+                break;
+            case "CAPI":
+            case 11:
+                message.senderPlatform = 11;
+                break;
             }
             if (object.isSenderPrimary != null)
                 message.isSenderPrimary = Boolean(object.isSenderPrimary);
@@ -459,77 +621,61 @@ $root.SyncAction = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                if (options.bytes === String)
-                    object.currentLthash = "";
-                else {
-                    object.currentLthash = [];
-                    if (options.bytes !== Array)
-                        object.currentLthash = $util.newBuffer(object.currentLthash);
-                }
-                if (options.bytes === String)
-                    object.newLthash = "";
-                else {
-                    object.newLthash = [];
-                    if (options.bytes !== Array)
-                        object.newLthash = $util.newBuffer(object.newLthash);
-                }
-                if (options.bytes === String)
-                    object.patchVersion = "";
-                else {
-                    object.patchVersion = [];
-                    if (options.bytes !== Array)
-                        object.patchVersion = $util.newBuffer(object.patchVersion);
-                }
-                if (options.bytes === String)
-                    object.collectionName = "";
-                else {
-                    object.collectionName = [];
-                    if (options.bytes !== Array)
-                        object.collectionName = $util.newBuffer(object.collectionName);
-                }
-                if (options.bytes === String)
-                    object.firstFourBytesFromAHashOfSnapshotMacKey = "";
-                else {
-                    object.firstFourBytesFromAHashOfSnapshotMacKey = [];
-                    if (options.bytes !== Array)
-                        object.firstFourBytesFromAHashOfSnapshotMacKey = $util.newBuffer(object.firstFourBytesFromAHashOfSnapshotMacKey);
-                }
-                if (options.bytes === String)
-                    object.newLthashSubtract = "";
-                else {
-                    object.newLthashSubtract = [];
-                    if (options.bytes !== Array)
-                        object.newLthashSubtract = $util.newBuffer(object.newLthashSubtract);
-                }
-                object.numberAdd = 0;
-                object.numberRemove = 0;
-                object.numberOverride = 0;
-                object.senderPlatform = options.enums === String ? "ANDROID" : 0;
-                object.isSenderPrimary = false;
-            }
-            if (message.currentLthash != null && message.hasOwnProperty("currentLthash"))
+            if (message.currentLthash != null && message.hasOwnProperty("currentLthash")) {
                 object.currentLthash = options.bytes === String ? $util.base64.encode(message.currentLthash, 0, message.currentLthash.length) : options.bytes === Array ? Array.prototype.slice.call(message.currentLthash) : message.currentLthash;
-            if (message.newLthash != null && message.hasOwnProperty("newLthash"))
+                if (options.oneofs)
+                    object._currentLthash = "currentLthash";
+            }
+            if (message.newLthash != null && message.hasOwnProperty("newLthash")) {
                 object.newLthash = options.bytes === String ? $util.base64.encode(message.newLthash, 0, message.newLthash.length) : options.bytes === Array ? Array.prototype.slice.call(message.newLthash) : message.newLthash;
-            if (message.patchVersion != null && message.hasOwnProperty("patchVersion"))
+                if (options.oneofs)
+                    object._newLthash = "newLthash";
+            }
+            if (message.patchVersion != null && message.hasOwnProperty("patchVersion")) {
                 object.patchVersion = options.bytes === String ? $util.base64.encode(message.patchVersion, 0, message.patchVersion.length) : options.bytes === Array ? Array.prototype.slice.call(message.patchVersion) : message.patchVersion;
-            if (message.collectionName != null && message.hasOwnProperty("collectionName"))
+                if (options.oneofs)
+                    object._patchVersion = "patchVersion";
+            }
+            if (message.collectionName != null && message.hasOwnProperty("collectionName")) {
                 object.collectionName = options.bytes === String ? $util.base64.encode(message.collectionName, 0, message.collectionName.length) : options.bytes === Array ? Array.prototype.slice.call(message.collectionName) : message.collectionName;
-            if (message.firstFourBytesFromAHashOfSnapshotMacKey != null && message.hasOwnProperty("firstFourBytesFromAHashOfSnapshotMacKey"))
+                if (options.oneofs)
+                    object._collectionName = "collectionName";
+            }
+            if (message.firstFourBytesFromAHashOfSnapshotMacKey != null && message.hasOwnProperty("firstFourBytesFromAHashOfSnapshotMacKey")) {
                 object.firstFourBytesFromAHashOfSnapshotMacKey = options.bytes === String ? $util.base64.encode(message.firstFourBytesFromAHashOfSnapshotMacKey, 0, message.firstFourBytesFromAHashOfSnapshotMacKey.length) : options.bytes === Array ? Array.prototype.slice.call(message.firstFourBytesFromAHashOfSnapshotMacKey) : message.firstFourBytesFromAHashOfSnapshotMacKey;
-            if (message.newLthashSubtract != null && message.hasOwnProperty("newLthashSubtract"))
+                if (options.oneofs)
+                    object._firstFourBytesFromAHashOfSnapshotMacKey = "firstFourBytesFromAHashOfSnapshotMacKey";
+            }
+            if (message.newLthashSubtract != null && message.hasOwnProperty("newLthashSubtract")) {
                 object.newLthashSubtract = options.bytes === String ? $util.base64.encode(message.newLthashSubtract, 0, message.newLthashSubtract.length) : options.bytes === Array ? Array.prototype.slice.call(message.newLthashSubtract) : message.newLthashSubtract;
-            if (message.numberAdd != null && message.hasOwnProperty("numberAdd"))
+                if (options.oneofs)
+                    object._newLthashSubtract = "newLthashSubtract";
+            }
+            if (message.numberAdd != null && message.hasOwnProperty("numberAdd")) {
                 object.numberAdd = message.numberAdd;
-            if (message.numberRemove != null && message.hasOwnProperty("numberRemove"))
+                if (options.oneofs)
+                    object._numberAdd = "numberAdd";
+            }
+            if (message.numberRemove != null && message.hasOwnProperty("numberRemove")) {
                 object.numberRemove = message.numberRemove;
-            if (message.numberOverride != null && message.hasOwnProperty("numberOverride"))
+                if (options.oneofs)
+                    object._numberRemove = "numberRemove";
+            }
+            if (message.numberOverride != null && message.hasOwnProperty("numberOverride")) {
                 object.numberOverride = message.numberOverride;
-            if (message.senderPlatform != null && message.hasOwnProperty("senderPlatform"))
+                if (options.oneofs)
+                    object._numberOverride = "numberOverride";
+            }
+            if (message.senderPlatform != null && message.hasOwnProperty("senderPlatform")) {
                 object.senderPlatform = options.enums === String ? $root.SyncAction.PatchDebugData.Platform[message.senderPlatform] === undefined ? message.senderPlatform : $root.SyncAction.PatchDebugData.Platform[message.senderPlatform] : message.senderPlatform;
-            if (message.isSenderPrimary != null && message.hasOwnProperty("isSenderPrimary"))
+                if (options.oneofs)
+                    object._senderPlatform = "senderPlatform";
+            }
+            if (message.isSenderPrimary != null && message.hasOwnProperty("isSenderPrimary")) {
                 object.isSenderPrimary = message.isSenderPrimary;
+                if (options.oneofs)
+                    object._isSenderPrimary = "isSenderPrimary";
+            }
             return object;
         };
 
@@ -572,6 +718,9 @@ $root.SyncAction = (function() {
          * @property {number} DARWIN=6 DARWIN value
          * @property {number} IPAD=7 IPAD value
          * @property {number} WEAROS=8 WEAROS value
+         * @property {number} WASG=9 WASG value
+         * @property {number} WEARM=10 WEARM value
+         * @property {number} CAPI=11 CAPI value
          */
         PatchDebugData.Platform = (function() {
             var valuesById = {}, values = Object.create(valuesById);
@@ -584,6 +733,9 @@ $root.SyncAction = (function() {
             values[valuesById[6] = "DARWIN"] = 6;
             values[valuesById[7] = "IPAD"] = 7;
             values[valuesById[8] = "WEAROS"] = 8;
+            values[valuesById[9] = "WASG"] = 9;
+            values[valuesById[10] = "WEARM"] = 10;
+            values[valuesById[11] = "CAPI"] = 11;
             return values;
         })();
 
@@ -619,11 +771,11 @@ $root.SyncAction = (function() {
 
         /**
          * SyncActionData index.
-         * @member {Uint8Array} index
+         * @member {Uint8Array|null|undefined} index
          * @memberof SyncAction.SyncActionData
          * @instance
          */
-        SyncActionData.prototype.index = $util.newBuffer([]);
+        SyncActionData.prototype.index = null;
 
         /**
          * SyncActionData value.
@@ -635,19 +787,66 @@ $root.SyncAction = (function() {
 
         /**
          * SyncActionData padding.
-         * @member {Uint8Array} padding
+         * @member {Uint8Array|null|undefined} padding
          * @memberof SyncAction.SyncActionData
          * @instance
          */
-        SyncActionData.prototype.padding = $util.newBuffer([]);
+        SyncActionData.prototype.padding = null;
 
         /**
          * SyncActionData version.
-         * @member {number} version
+         * @member {number|null|undefined} version
          * @memberof SyncAction.SyncActionData
          * @instance
          */
-        SyncActionData.prototype.version = 0;
+        SyncActionData.prototype.version = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * SyncActionData _index.
+         * @member {"index"|undefined} _index
+         * @memberof SyncAction.SyncActionData
+         * @instance
+         */
+        Object.defineProperty(SyncActionData.prototype, "_index", {
+            get: $util.oneOfGetter($oneOfFields = ["index"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionData _value.
+         * @member {"value"|undefined} _value
+         * @memberof SyncAction.SyncActionData
+         * @instance
+         */
+        Object.defineProperty(SyncActionData.prototype, "_value", {
+            get: $util.oneOfGetter($oneOfFields = ["value"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionData _padding.
+         * @member {"padding"|undefined} _padding
+         * @memberof SyncAction.SyncActionData
+         * @instance
+         */
+        Object.defineProperty(SyncActionData.prototype, "_padding", {
+            get: $util.oneOfGetter($oneOfFields = ["padding"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionData _version.
+         * @member {"version"|undefined} _version
+         * @memberof SyncAction.SyncActionData
+         * @instance
+         */
+        Object.defineProperty(SyncActionData.prototype, "_version", {
+            get: $util.oneOfGetter($oneOfFields = ["version"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new SyncActionData instance using the specified properties.
@@ -768,20 +967,30 @@ $root.SyncAction = (function() {
         SyncActionData.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.index != null && message.hasOwnProperty("index"))
+            var properties = {};
+            if (message.index != null && message.hasOwnProperty("index")) {
+                properties._index = 1;
                 if (!(message.index && typeof message.index.length === "number" || $util.isString(message.index)))
                     return "index: buffer expected";
-            if (message.value != null && message.hasOwnProperty("value")) {
-                var error = $root.SyncAction.SyncActionValue.verify(message.value);
-                if (error)
-                    return "value." + error;
             }
-            if (message.padding != null && message.hasOwnProperty("padding"))
+            if (message.value != null && message.hasOwnProperty("value")) {
+                properties._value = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.verify(message.value);
+                    if (error)
+                        return "value." + error;
+                }
+            }
+            if (message.padding != null && message.hasOwnProperty("padding")) {
+                properties._padding = 1;
                 if (!(message.padding && typeof message.padding.length === "number" || $util.isString(message.padding)))
                     return "padding: buffer expected";
-            if (message.version != null && message.hasOwnProperty("version"))
+            }
+            if (message.version != null && message.hasOwnProperty("version")) {
+                properties._version = 1;
                 if (!$util.isInteger(message.version))
                     return "version: integer expected";
+            }
             return null;
         };
 
@@ -830,32 +1039,26 @@ $root.SyncAction = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                if (options.bytes === String)
-                    object.index = "";
-                else {
-                    object.index = [];
-                    if (options.bytes !== Array)
-                        object.index = $util.newBuffer(object.index);
-                }
-                object.value = null;
-                if (options.bytes === String)
-                    object.padding = "";
-                else {
-                    object.padding = [];
-                    if (options.bytes !== Array)
-                        object.padding = $util.newBuffer(object.padding);
-                }
-                object.version = 0;
-            }
-            if (message.index != null && message.hasOwnProperty("index"))
+            if (message.index != null && message.hasOwnProperty("index")) {
                 object.index = options.bytes === String ? $util.base64.encode(message.index, 0, message.index.length) : options.bytes === Array ? Array.prototype.slice.call(message.index) : message.index;
-            if (message.value != null && message.hasOwnProperty("value"))
+                if (options.oneofs)
+                    object._index = "index";
+            }
+            if (message.value != null && message.hasOwnProperty("value")) {
                 object.value = $root.SyncAction.SyncActionValue.toObject(message.value, options);
-            if (message.padding != null && message.hasOwnProperty("padding"))
+                if (options.oneofs)
+                    object._value = "value";
+            }
+            if (message.padding != null && message.hasOwnProperty("padding")) {
                 object.padding = options.bytes === String ? $util.base64.encode(message.padding, 0, message.padding.length) : options.bytes === Array ? Array.prototype.slice.call(message.padding) : message.padding;
-            if (message.version != null && message.hasOwnProperty("version"))
+                if (options.oneofs)
+                    object._padding = "padding";
+            }
+            if (message.version != null && message.hasOwnProperty("version")) {
                 object.version = message.version;
+                if (options.oneofs)
+                    object._version = "version";
+            }
             return object;
         };
 
@@ -899,7 +1102,6 @@ $root.SyncAction = (function() {
          * @property {SyncAction.SyncActionValue.IContactAction|null} [contactAction] SyncActionValue contactAction
          * @property {SyncAction.SyncActionValue.IMuteAction|null} [muteAction] SyncActionValue muteAction
          * @property {SyncAction.SyncActionValue.IPinAction|null} [pinAction] SyncActionValue pinAction
-         * @property {SyncAction.SyncActionValue.ISecurityNotificationSetting|null} [securityNotificationSetting] SyncActionValue securityNotificationSetting
          * @property {SyncAction.SyncActionValue.IPushNameSetting|null} [pushNameSetting] SyncActionValue pushNameSetting
          * @property {SyncAction.SyncActionValue.IQuickReplyAction|null} [quickReplyAction] SyncActionValue quickReplyAction
          * @property {SyncAction.SyncActionValue.IRecentEmojiWeightsAction|null} [recentEmojiWeightsAction] SyncActionValue recentEmojiWeightsAction
@@ -931,6 +1133,7 @@ $root.SyncAction = (function() {
          * @property {SyncAction.SyncActionValue.IExternalWebBetaAction|null} [externalWebBetaAction] SyncActionValue externalWebBetaAction
          * @property {SyncAction.SyncActionValue.IPrivacySettingRelayAllCalls|null} [privacySettingRelayAllCalls] SyncActionValue privacySettingRelayAllCalls
          * @property {SyncAction.SyncActionValue.ICallLogAction|null} [callLogAction] SyncActionValue callLogAction
+         * @property {SyncAction.SyncActionValue.IUGCBot|null} [ugcBot] SyncActionValue ugcBot
          * @property {SyncAction.SyncActionValue.IStatusPrivacyAction|null} [statusPrivacy] SyncActionValue statusPrivacy
          * @property {SyncAction.SyncActionValue.IBotWelcomeRequestAction|null} [botWelcomeRequestAction] SyncActionValue botWelcomeRequestAction
          * @property {SyncAction.SyncActionValue.IDeleteIndividualCallLogAction|null} [deleteIndividualCallLog] SyncActionValue deleteIndividualCallLog
@@ -952,11 +1155,17 @@ $root.SyncAction = (function() {
          * @property {SyncAction.SyncActionValue.ICtwaPerCustomerDataSharingAction|null} [ctwaPerCustomerDataSharingAction] SyncActionValue ctwaPerCustomerDataSharingAction
          * @property {SyncAction.SyncActionValue.IPaymentTosAction|null} [paymentTosAction] SyncActionValue paymentTosAction
          * @property {SyncAction.SyncActionValue.IPrivacySettingChannelsPersonalisedRecommendationAction|null} [privacySettingChannelsPersonalisedRecommendationAction] SyncActionValue privacySettingChannelsPersonalisedRecommendationAction
-         * @property {SyncAction.SyncActionValue.IBusinessBroadcastAssociationAction|null} [businessBroadcastAssociationAction] SyncActionValue businessBroadcastAssociationAction
          * @property {SyncAction.SyncActionValue.IDetectedOutcomesStatusAction|null} [detectedOutcomesStatusAction] SyncActionValue detectedOutcomesStatusAction
          * @property {SyncAction.SyncActionValue.IMaibaAIFeaturesControlAction|null} [maibaAiFeaturesControlAction] SyncActionValue maibaAiFeaturesControlAction
          * @property {SyncAction.SyncActionValue.IBusinessBroadcastListAction|null} [businessBroadcastListAction] SyncActionValue businessBroadcastListAction
          * @property {SyncAction.SyncActionValue.IMusicUserIdAction|null} [musicUserIdAction] SyncActionValue musicUserIdAction
+         * @property {SyncAction.SyncActionValue.IStatusPostOptInNotificationPreferencesAction|null} [statusPostOptInNotificationPreferencesAction] SyncActionValue statusPostOptInNotificationPreferencesAction
+         * @property {SyncAction.SyncActionValue.IAvatarUpdatedAction|null} [avatarUpdatedAction] SyncActionValue avatarUpdatedAction
+         * @property {SyncAction.SyncActionValue.IPrivateProcessingSettingAction|null} [privateProcessingSettingAction] SyncActionValue privateProcessingSettingAction
+         * @property {SyncAction.SyncActionValue.INewsletterSavedInterestsAction|null} [newsletterSavedInterestsAction] SyncActionValue newsletterSavedInterestsAction
+         * @property {SyncAction.SyncActionValue.IAiThreadRenameAction|null} [aiThreadRenameAction] SyncActionValue aiThreadRenameAction
+         * @property {SyncAction.SyncActionValue.IInteractiveMessageAction|null} [interactiveMessageAction] SyncActionValue interactiveMessageAction
+         * @property {SyncAction.SyncActionValue.ISettingsSyncAction|null} [settingsSyncAction] SyncActionValue settingsSyncAction
          */
 
         /**
@@ -976,11 +1185,11 @@ $root.SyncAction = (function() {
 
         /**
          * SyncActionValue timestamp.
-         * @member {number|Long} timestamp
+         * @member {number|Long|null|undefined} timestamp
          * @memberof SyncAction.SyncActionValue
          * @instance
          */
-        SyncActionValue.prototype.timestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        SyncActionValue.prototype.timestamp = null;
 
         /**
          * SyncActionValue starAction.
@@ -1013,14 +1222,6 @@ $root.SyncAction = (function() {
          * @instance
          */
         SyncActionValue.prototype.pinAction = null;
-
-        /**
-         * SyncActionValue securityNotificationSetting.
-         * @member {SyncAction.SyncActionValue.ISecurityNotificationSetting|null|undefined} securityNotificationSetting
-         * @memberof SyncAction.SyncActionValue
-         * @instance
-         */
-        SyncActionValue.prototype.securityNotificationSetting = null;
 
         /**
          * SyncActionValue pushNameSetting.
@@ -1271,6 +1472,14 @@ $root.SyncAction = (function() {
         SyncActionValue.prototype.callLogAction = null;
 
         /**
+         * SyncActionValue ugcBot.
+         * @member {SyncAction.SyncActionValue.IUGCBot|null|undefined} ugcBot
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.ugcBot = null;
+
+        /**
          * SyncActionValue statusPrivacy.
          * @member {SyncAction.SyncActionValue.IStatusPrivacyAction|null|undefined} statusPrivacy
          * @memberof SyncAction.SyncActionValue
@@ -1439,14 +1648,6 @@ $root.SyncAction = (function() {
         SyncActionValue.prototype.privacySettingChannelsPersonalisedRecommendationAction = null;
 
         /**
-         * SyncActionValue businessBroadcastAssociationAction.
-         * @member {SyncAction.SyncActionValue.IBusinessBroadcastAssociationAction|null|undefined} businessBroadcastAssociationAction
-         * @memberof SyncAction.SyncActionValue
-         * @instance
-         */
-        SyncActionValue.prototype.businessBroadcastAssociationAction = null;
-
-        /**
          * SyncActionValue detectedOutcomesStatusAction.
          * @member {SyncAction.SyncActionValue.IDetectedOutcomesStatusAction|null|undefined} detectedOutcomesStatusAction
          * @memberof SyncAction.SyncActionValue
@@ -1477,6 +1678,824 @@ $root.SyncAction = (function() {
          * @instance
          */
         SyncActionValue.prototype.musicUserIdAction = null;
+
+        /**
+         * SyncActionValue statusPostOptInNotificationPreferencesAction.
+         * @member {SyncAction.SyncActionValue.IStatusPostOptInNotificationPreferencesAction|null|undefined} statusPostOptInNotificationPreferencesAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.statusPostOptInNotificationPreferencesAction = null;
+
+        /**
+         * SyncActionValue avatarUpdatedAction.
+         * @member {SyncAction.SyncActionValue.IAvatarUpdatedAction|null|undefined} avatarUpdatedAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.avatarUpdatedAction = null;
+
+        /**
+         * SyncActionValue privateProcessingSettingAction.
+         * @member {SyncAction.SyncActionValue.IPrivateProcessingSettingAction|null|undefined} privateProcessingSettingAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.privateProcessingSettingAction = null;
+
+        /**
+         * SyncActionValue newsletterSavedInterestsAction.
+         * @member {SyncAction.SyncActionValue.INewsletterSavedInterestsAction|null|undefined} newsletterSavedInterestsAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.newsletterSavedInterestsAction = null;
+
+        /**
+         * SyncActionValue aiThreadRenameAction.
+         * @member {SyncAction.SyncActionValue.IAiThreadRenameAction|null|undefined} aiThreadRenameAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.aiThreadRenameAction = null;
+
+        /**
+         * SyncActionValue interactiveMessageAction.
+         * @member {SyncAction.SyncActionValue.IInteractiveMessageAction|null|undefined} interactiveMessageAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.interactiveMessageAction = null;
+
+        /**
+         * SyncActionValue settingsSyncAction.
+         * @member {SyncAction.SyncActionValue.ISettingsSyncAction|null|undefined} settingsSyncAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        SyncActionValue.prototype.settingsSyncAction = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * SyncActionValue _timestamp.
+         * @member {"timestamp"|undefined} _timestamp
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_timestamp", {
+            get: $util.oneOfGetter($oneOfFields = ["timestamp"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _starAction.
+         * @member {"starAction"|undefined} _starAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_starAction", {
+            get: $util.oneOfGetter($oneOfFields = ["starAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _contactAction.
+         * @member {"contactAction"|undefined} _contactAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_contactAction", {
+            get: $util.oneOfGetter($oneOfFields = ["contactAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _muteAction.
+         * @member {"muteAction"|undefined} _muteAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_muteAction", {
+            get: $util.oneOfGetter($oneOfFields = ["muteAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _pinAction.
+         * @member {"pinAction"|undefined} _pinAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_pinAction", {
+            get: $util.oneOfGetter($oneOfFields = ["pinAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _pushNameSetting.
+         * @member {"pushNameSetting"|undefined} _pushNameSetting
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_pushNameSetting", {
+            get: $util.oneOfGetter($oneOfFields = ["pushNameSetting"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _quickReplyAction.
+         * @member {"quickReplyAction"|undefined} _quickReplyAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_quickReplyAction", {
+            get: $util.oneOfGetter($oneOfFields = ["quickReplyAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _recentEmojiWeightsAction.
+         * @member {"recentEmojiWeightsAction"|undefined} _recentEmojiWeightsAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_recentEmojiWeightsAction", {
+            get: $util.oneOfGetter($oneOfFields = ["recentEmojiWeightsAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _labelEditAction.
+         * @member {"labelEditAction"|undefined} _labelEditAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_labelEditAction", {
+            get: $util.oneOfGetter($oneOfFields = ["labelEditAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _labelAssociationAction.
+         * @member {"labelAssociationAction"|undefined} _labelAssociationAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_labelAssociationAction", {
+            get: $util.oneOfGetter($oneOfFields = ["labelAssociationAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _localeSetting.
+         * @member {"localeSetting"|undefined} _localeSetting
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_localeSetting", {
+            get: $util.oneOfGetter($oneOfFields = ["localeSetting"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _archiveChatAction.
+         * @member {"archiveChatAction"|undefined} _archiveChatAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_archiveChatAction", {
+            get: $util.oneOfGetter($oneOfFields = ["archiveChatAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _deleteMessageForMeAction.
+         * @member {"deleteMessageForMeAction"|undefined} _deleteMessageForMeAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_deleteMessageForMeAction", {
+            get: $util.oneOfGetter($oneOfFields = ["deleteMessageForMeAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _keyExpiration.
+         * @member {"keyExpiration"|undefined} _keyExpiration
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_keyExpiration", {
+            get: $util.oneOfGetter($oneOfFields = ["keyExpiration"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _markChatAsReadAction.
+         * @member {"markChatAsReadAction"|undefined} _markChatAsReadAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_markChatAsReadAction", {
+            get: $util.oneOfGetter($oneOfFields = ["markChatAsReadAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _clearChatAction.
+         * @member {"clearChatAction"|undefined} _clearChatAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_clearChatAction", {
+            get: $util.oneOfGetter($oneOfFields = ["clearChatAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _deleteChatAction.
+         * @member {"deleteChatAction"|undefined} _deleteChatAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_deleteChatAction", {
+            get: $util.oneOfGetter($oneOfFields = ["deleteChatAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _unarchiveChatsSetting.
+         * @member {"unarchiveChatsSetting"|undefined} _unarchiveChatsSetting
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_unarchiveChatsSetting", {
+            get: $util.oneOfGetter($oneOfFields = ["unarchiveChatsSetting"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _primaryFeature.
+         * @member {"primaryFeature"|undefined} _primaryFeature
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_primaryFeature", {
+            get: $util.oneOfGetter($oneOfFields = ["primaryFeature"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _androidUnsupportedActions.
+         * @member {"androidUnsupportedActions"|undefined} _androidUnsupportedActions
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_androidUnsupportedActions", {
+            get: $util.oneOfGetter($oneOfFields = ["androidUnsupportedActions"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _agentAction.
+         * @member {"agentAction"|undefined} _agentAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_agentAction", {
+            get: $util.oneOfGetter($oneOfFields = ["agentAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _subscriptionAction.
+         * @member {"subscriptionAction"|undefined} _subscriptionAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_subscriptionAction", {
+            get: $util.oneOfGetter($oneOfFields = ["subscriptionAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _userStatusMuteAction.
+         * @member {"userStatusMuteAction"|undefined} _userStatusMuteAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_userStatusMuteAction", {
+            get: $util.oneOfGetter($oneOfFields = ["userStatusMuteAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _timeFormatAction.
+         * @member {"timeFormatAction"|undefined} _timeFormatAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_timeFormatAction", {
+            get: $util.oneOfGetter($oneOfFields = ["timeFormatAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _nuxAction.
+         * @member {"nuxAction"|undefined} _nuxAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_nuxAction", {
+            get: $util.oneOfGetter($oneOfFields = ["nuxAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _primaryVersionAction.
+         * @member {"primaryVersionAction"|undefined} _primaryVersionAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_primaryVersionAction", {
+            get: $util.oneOfGetter($oneOfFields = ["primaryVersionAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _stickerAction.
+         * @member {"stickerAction"|undefined} _stickerAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_stickerAction", {
+            get: $util.oneOfGetter($oneOfFields = ["stickerAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _removeRecentStickerAction.
+         * @member {"removeRecentStickerAction"|undefined} _removeRecentStickerAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_removeRecentStickerAction", {
+            get: $util.oneOfGetter($oneOfFields = ["removeRecentStickerAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _chatAssignment.
+         * @member {"chatAssignment"|undefined} _chatAssignment
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_chatAssignment", {
+            get: $util.oneOfGetter($oneOfFields = ["chatAssignment"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _chatAssignmentOpenedStatus.
+         * @member {"chatAssignmentOpenedStatus"|undefined} _chatAssignmentOpenedStatus
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_chatAssignmentOpenedStatus", {
+            get: $util.oneOfGetter($oneOfFields = ["chatAssignmentOpenedStatus"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _pnForLidChatAction.
+         * @member {"pnForLidChatAction"|undefined} _pnForLidChatAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_pnForLidChatAction", {
+            get: $util.oneOfGetter($oneOfFields = ["pnForLidChatAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _marketingMessageAction.
+         * @member {"marketingMessageAction"|undefined} _marketingMessageAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_marketingMessageAction", {
+            get: $util.oneOfGetter($oneOfFields = ["marketingMessageAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _marketingMessageBroadcastAction.
+         * @member {"marketingMessageBroadcastAction"|undefined} _marketingMessageBroadcastAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_marketingMessageBroadcastAction", {
+            get: $util.oneOfGetter($oneOfFields = ["marketingMessageBroadcastAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _externalWebBetaAction.
+         * @member {"externalWebBetaAction"|undefined} _externalWebBetaAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_externalWebBetaAction", {
+            get: $util.oneOfGetter($oneOfFields = ["externalWebBetaAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _privacySettingRelayAllCalls.
+         * @member {"privacySettingRelayAllCalls"|undefined} _privacySettingRelayAllCalls
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_privacySettingRelayAllCalls", {
+            get: $util.oneOfGetter($oneOfFields = ["privacySettingRelayAllCalls"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _callLogAction.
+         * @member {"callLogAction"|undefined} _callLogAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_callLogAction", {
+            get: $util.oneOfGetter($oneOfFields = ["callLogAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _ugcBot.
+         * @member {"ugcBot"|undefined} _ugcBot
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_ugcBot", {
+            get: $util.oneOfGetter($oneOfFields = ["ugcBot"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _statusPrivacy.
+         * @member {"statusPrivacy"|undefined} _statusPrivacy
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_statusPrivacy", {
+            get: $util.oneOfGetter($oneOfFields = ["statusPrivacy"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _botWelcomeRequestAction.
+         * @member {"botWelcomeRequestAction"|undefined} _botWelcomeRequestAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_botWelcomeRequestAction", {
+            get: $util.oneOfGetter($oneOfFields = ["botWelcomeRequestAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _deleteIndividualCallLog.
+         * @member {"deleteIndividualCallLog"|undefined} _deleteIndividualCallLog
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_deleteIndividualCallLog", {
+            get: $util.oneOfGetter($oneOfFields = ["deleteIndividualCallLog"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _labelReorderingAction.
+         * @member {"labelReorderingAction"|undefined} _labelReorderingAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_labelReorderingAction", {
+            get: $util.oneOfGetter($oneOfFields = ["labelReorderingAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _paymentInfoAction.
+         * @member {"paymentInfoAction"|undefined} _paymentInfoAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_paymentInfoAction", {
+            get: $util.oneOfGetter($oneOfFields = ["paymentInfoAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _customPaymentMethodsAction.
+         * @member {"customPaymentMethodsAction"|undefined} _customPaymentMethodsAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_customPaymentMethodsAction", {
+            get: $util.oneOfGetter($oneOfFields = ["customPaymentMethodsAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _lockChatAction.
+         * @member {"lockChatAction"|undefined} _lockChatAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_lockChatAction", {
+            get: $util.oneOfGetter($oneOfFields = ["lockChatAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _chatLockSettings.
+         * @member {"chatLockSettings"|undefined} _chatLockSettings
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_chatLockSettings", {
+            get: $util.oneOfGetter($oneOfFields = ["chatLockSettings"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _wamoUserIdentifierAction.
+         * @member {"wamoUserIdentifierAction"|undefined} _wamoUserIdentifierAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_wamoUserIdentifierAction", {
+            get: $util.oneOfGetter($oneOfFields = ["wamoUserIdentifierAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _privacySettingDisableLinkPreviewsAction.
+         * @member {"privacySettingDisableLinkPreviewsAction"|undefined} _privacySettingDisableLinkPreviewsAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_privacySettingDisableLinkPreviewsAction", {
+            get: $util.oneOfGetter($oneOfFields = ["privacySettingDisableLinkPreviewsAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _deviceCapabilities.
+         * @member {"deviceCapabilities"|undefined} _deviceCapabilities
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_deviceCapabilities", {
+            get: $util.oneOfGetter($oneOfFields = ["deviceCapabilities"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _noteEditAction.
+         * @member {"noteEditAction"|undefined} _noteEditAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_noteEditAction", {
+            get: $util.oneOfGetter($oneOfFields = ["noteEditAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _favoritesAction.
+         * @member {"favoritesAction"|undefined} _favoritesAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_favoritesAction", {
+            get: $util.oneOfGetter($oneOfFields = ["favoritesAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _merchantPaymentPartnerAction.
+         * @member {"merchantPaymentPartnerAction"|undefined} _merchantPaymentPartnerAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_merchantPaymentPartnerAction", {
+            get: $util.oneOfGetter($oneOfFields = ["merchantPaymentPartnerAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _waffleAccountLinkStateAction.
+         * @member {"waffleAccountLinkStateAction"|undefined} _waffleAccountLinkStateAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_waffleAccountLinkStateAction", {
+            get: $util.oneOfGetter($oneOfFields = ["waffleAccountLinkStateAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _usernameChatStartMode.
+         * @member {"usernameChatStartMode"|undefined} _usernameChatStartMode
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_usernameChatStartMode", {
+            get: $util.oneOfGetter($oneOfFields = ["usernameChatStartMode"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _notificationActivitySettingAction.
+         * @member {"notificationActivitySettingAction"|undefined} _notificationActivitySettingAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_notificationActivitySettingAction", {
+            get: $util.oneOfGetter($oneOfFields = ["notificationActivitySettingAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _lidContactAction.
+         * @member {"lidContactAction"|undefined} _lidContactAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_lidContactAction", {
+            get: $util.oneOfGetter($oneOfFields = ["lidContactAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _ctwaPerCustomerDataSharingAction.
+         * @member {"ctwaPerCustomerDataSharingAction"|undefined} _ctwaPerCustomerDataSharingAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_ctwaPerCustomerDataSharingAction", {
+            get: $util.oneOfGetter($oneOfFields = ["ctwaPerCustomerDataSharingAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _paymentTosAction.
+         * @member {"paymentTosAction"|undefined} _paymentTosAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_paymentTosAction", {
+            get: $util.oneOfGetter($oneOfFields = ["paymentTosAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _privacySettingChannelsPersonalisedRecommendationAction.
+         * @member {"privacySettingChannelsPersonalisedRecommendationAction"|undefined} _privacySettingChannelsPersonalisedRecommendationAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_privacySettingChannelsPersonalisedRecommendationAction", {
+            get: $util.oneOfGetter($oneOfFields = ["privacySettingChannelsPersonalisedRecommendationAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _detectedOutcomesStatusAction.
+         * @member {"detectedOutcomesStatusAction"|undefined} _detectedOutcomesStatusAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_detectedOutcomesStatusAction", {
+            get: $util.oneOfGetter($oneOfFields = ["detectedOutcomesStatusAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _maibaAiFeaturesControlAction.
+         * @member {"maibaAiFeaturesControlAction"|undefined} _maibaAiFeaturesControlAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_maibaAiFeaturesControlAction", {
+            get: $util.oneOfGetter($oneOfFields = ["maibaAiFeaturesControlAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _businessBroadcastListAction.
+         * @member {"businessBroadcastListAction"|undefined} _businessBroadcastListAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_businessBroadcastListAction", {
+            get: $util.oneOfGetter($oneOfFields = ["businessBroadcastListAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _musicUserIdAction.
+         * @member {"musicUserIdAction"|undefined} _musicUserIdAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_musicUserIdAction", {
+            get: $util.oneOfGetter($oneOfFields = ["musicUserIdAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _statusPostOptInNotificationPreferencesAction.
+         * @member {"statusPostOptInNotificationPreferencesAction"|undefined} _statusPostOptInNotificationPreferencesAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_statusPostOptInNotificationPreferencesAction", {
+            get: $util.oneOfGetter($oneOfFields = ["statusPostOptInNotificationPreferencesAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _avatarUpdatedAction.
+         * @member {"avatarUpdatedAction"|undefined} _avatarUpdatedAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_avatarUpdatedAction", {
+            get: $util.oneOfGetter($oneOfFields = ["avatarUpdatedAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _privateProcessingSettingAction.
+         * @member {"privateProcessingSettingAction"|undefined} _privateProcessingSettingAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_privateProcessingSettingAction", {
+            get: $util.oneOfGetter($oneOfFields = ["privateProcessingSettingAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _newsletterSavedInterestsAction.
+         * @member {"newsletterSavedInterestsAction"|undefined} _newsletterSavedInterestsAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_newsletterSavedInterestsAction", {
+            get: $util.oneOfGetter($oneOfFields = ["newsletterSavedInterestsAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _aiThreadRenameAction.
+         * @member {"aiThreadRenameAction"|undefined} _aiThreadRenameAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_aiThreadRenameAction", {
+            get: $util.oneOfGetter($oneOfFields = ["aiThreadRenameAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _interactiveMessageAction.
+         * @member {"interactiveMessageAction"|undefined} _interactiveMessageAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_interactiveMessageAction", {
+            get: $util.oneOfGetter($oneOfFields = ["interactiveMessageAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * SyncActionValue _settingsSyncAction.
+         * @member {"settingsSyncAction"|undefined} _settingsSyncAction
+         * @memberof SyncAction.SyncActionValue
+         * @instance
+         */
+        Object.defineProperty(SyncActionValue.prototype, "_settingsSyncAction", {
+            get: $util.oneOfGetter($oneOfFields = ["settingsSyncAction"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new SyncActionValue instance using the specified properties.
@@ -1512,8 +2531,6 @@ $root.SyncAction = (function() {
                 $root.SyncAction.SyncActionValue.MuteAction.encode(message.muteAction, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
             if (message.pinAction != null && Object.hasOwnProperty.call(message, "pinAction"))
                 $root.SyncAction.SyncActionValue.PinAction.encode(message.pinAction, writer.uint32(/* id 5, wireType 2 =*/42).fork()).ldelim();
-            if (message.securityNotificationSetting != null && Object.hasOwnProperty.call(message, "securityNotificationSetting"))
-                $root.SyncAction.SyncActionValue.SecurityNotificationSetting.encode(message.securityNotificationSetting, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             if (message.pushNameSetting != null && Object.hasOwnProperty.call(message, "pushNameSetting"))
                 $root.SyncAction.SyncActionValue.PushNameSetting.encode(message.pushNameSetting, writer.uint32(/* id 7, wireType 2 =*/58).fork()).ldelim();
             if (message.quickReplyAction != null && Object.hasOwnProperty.call(message, "quickReplyAction"))
@@ -1576,6 +2593,8 @@ $root.SyncAction = (function() {
                 $root.SyncAction.SyncActionValue.PrivacySettingRelayAllCalls.encode(message.privacySettingRelayAllCalls, writer.uint32(/* id 41, wireType 2 =*/330).fork()).ldelim();
             if (message.callLogAction != null && Object.hasOwnProperty.call(message, "callLogAction"))
                 $root.SyncAction.SyncActionValue.CallLogAction.encode(message.callLogAction, writer.uint32(/* id 42, wireType 2 =*/338).fork()).ldelim();
+            if (message.ugcBot != null && Object.hasOwnProperty.call(message, "ugcBot"))
+                $root.SyncAction.SyncActionValue.UGCBot.encode(message.ugcBot, writer.uint32(/* id 43, wireType 2 =*/346).fork()).ldelim();
             if (message.statusPrivacy != null && Object.hasOwnProperty.call(message, "statusPrivacy"))
                 $root.SyncAction.SyncActionValue.StatusPrivacyAction.encode(message.statusPrivacy, writer.uint32(/* id 44, wireType 2 =*/354).fork()).ldelim();
             if (message.botWelcomeRequestAction != null && Object.hasOwnProperty.call(message, "botWelcomeRequestAction"))
@@ -1618,8 +2637,6 @@ $root.SyncAction = (function() {
                 $root.SyncAction.SyncActionValue.PaymentTosAction.encode(message.paymentTosAction, writer.uint32(/* id 63, wireType 2 =*/506).fork()).ldelim();
             if (message.privacySettingChannelsPersonalisedRecommendationAction != null && Object.hasOwnProperty.call(message, "privacySettingChannelsPersonalisedRecommendationAction"))
                 $root.SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction.encode(message.privacySettingChannelsPersonalisedRecommendationAction, writer.uint32(/* id 64, wireType 2 =*/514).fork()).ldelim();
-            if (message.businessBroadcastAssociationAction != null && Object.hasOwnProperty.call(message, "businessBroadcastAssociationAction"))
-                $root.SyncAction.SyncActionValue.BusinessBroadcastAssociationAction.encode(message.businessBroadcastAssociationAction, writer.uint32(/* id 65, wireType 2 =*/522).fork()).ldelim();
             if (message.detectedOutcomesStatusAction != null && Object.hasOwnProperty.call(message, "detectedOutcomesStatusAction"))
                 $root.SyncAction.SyncActionValue.DetectedOutcomesStatusAction.encode(message.detectedOutcomesStatusAction, writer.uint32(/* id 66, wireType 2 =*/530).fork()).ldelim();
             if (message.maibaAiFeaturesControlAction != null && Object.hasOwnProperty.call(message, "maibaAiFeaturesControlAction"))
@@ -1628,6 +2645,20 @@ $root.SyncAction = (function() {
                 $root.SyncAction.SyncActionValue.BusinessBroadcastListAction.encode(message.businessBroadcastListAction, writer.uint32(/* id 69, wireType 2 =*/554).fork()).ldelim();
             if (message.musicUserIdAction != null && Object.hasOwnProperty.call(message, "musicUserIdAction"))
                 $root.SyncAction.SyncActionValue.MusicUserIdAction.encode(message.musicUserIdAction, writer.uint32(/* id 70, wireType 2 =*/562).fork()).ldelim();
+            if (message.statusPostOptInNotificationPreferencesAction != null && Object.hasOwnProperty.call(message, "statusPostOptInNotificationPreferencesAction"))
+                $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.encode(message.statusPostOptInNotificationPreferencesAction, writer.uint32(/* id 71, wireType 2 =*/570).fork()).ldelim();
+            if (message.avatarUpdatedAction != null && Object.hasOwnProperty.call(message, "avatarUpdatedAction"))
+                $root.SyncAction.SyncActionValue.AvatarUpdatedAction.encode(message.avatarUpdatedAction, writer.uint32(/* id 72, wireType 2 =*/578).fork()).ldelim();
+            if (message.privateProcessingSettingAction != null && Object.hasOwnProperty.call(message, "privateProcessingSettingAction"))
+                $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.encode(message.privateProcessingSettingAction, writer.uint32(/* id 74, wireType 2 =*/594).fork()).ldelim();
+            if (message.newsletterSavedInterestsAction != null && Object.hasOwnProperty.call(message, "newsletterSavedInterestsAction"))
+                $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction.encode(message.newsletterSavedInterestsAction, writer.uint32(/* id 75, wireType 2 =*/602).fork()).ldelim();
+            if (message.aiThreadRenameAction != null && Object.hasOwnProperty.call(message, "aiThreadRenameAction"))
+                $root.SyncAction.SyncActionValue.AiThreadRenameAction.encode(message.aiThreadRenameAction, writer.uint32(/* id 76, wireType 2 =*/610).fork()).ldelim();
+            if (message.interactiveMessageAction != null && Object.hasOwnProperty.call(message, "interactiveMessageAction"))
+                $root.SyncAction.SyncActionValue.InteractiveMessageAction.encode(message.interactiveMessageAction, writer.uint32(/* id 77, wireType 2 =*/618).fork()).ldelim();
+            if (message.settingsSyncAction != null && Object.hasOwnProperty.call(message, "settingsSyncAction"))
+                $root.SyncAction.SyncActionValue.SettingsSyncAction.encode(message.settingsSyncAction, writer.uint32(/* id 78, wireType 2 =*/626).fork()).ldelim();
             return writer;
         };
 
@@ -1682,10 +2713,6 @@ $root.SyncAction = (function() {
                     }
                 case 5: {
                         message.pinAction = $root.SyncAction.SyncActionValue.PinAction.decode(reader, reader.uint32());
-                        break;
-                    }
-                case 6: {
-                        message.securityNotificationSetting = $root.SyncAction.SyncActionValue.SecurityNotificationSetting.decode(reader, reader.uint32());
                         break;
                     }
                 case 7: {
@@ -1812,6 +2839,10 @@ $root.SyncAction = (function() {
                         message.callLogAction = $root.SyncAction.SyncActionValue.CallLogAction.decode(reader, reader.uint32());
                         break;
                     }
+                case 43: {
+                        message.ugcBot = $root.SyncAction.SyncActionValue.UGCBot.decode(reader, reader.uint32());
+                        break;
+                    }
                 case 44: {
                         message.statusPrivacy = $root.SyncAction.SyncActionValue.StatusPrivacyAction.decode(reader, reader.uint32());
                         break;
@@ -1896,10 +2927,6 @@ $root.SyncAction = (function() {
                         message.privacySettingChannelsPersonalisedRecommendationAction = $root.SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction.decode(reader, reader.uint32());
                         break;
                     }
-                case 65: {
-                        message.businessBroadcastAssociationAction = $root.SyncAction.SyncActionValue.BusinessBroadcastAssociationAction.decode(reader, reader.uint32());
-                        break;
-                    }
                 case 66: {
                         message.detectedOutcomesStatusAction = $root.SyncAction.SyncActionValue.DetectedOutcomesStatusAction.decode(reader, reader.uint32());
                         break;
@@ -1914,6 +2941,34 @@ $root.SyncAction = (function() {
                     }
                 case 70: {
                         message.musicUserIdAction = $root.SyncAction.SyncActionValue.MusicUserIdAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 71: {
+                        message.statusPostOptInNotificationPreferencesAction = $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 72: {
+                        message.avatarUpdatedAction = $root.SyncAction.SyncActionValue.AvatarUpdatedAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 74: {
+                        message.privateProcessingSettingAction = $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 75: {
+                        message.newsletterSavedInterestsAction = $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 76: {
+                        message.aiThreadRenameAction = $root.SyncAction.SyncActionValue.AiThreadRenameAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 77: {
+                        message.interactiveMessageAction = $root.SyncAction.SyncActionValue.InteractiveMessageAction.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 78: {
+                        message.settingsSyncAction = $root.SyncAction.SyncActionValue.SettingsSyncAction.decode(reader, reader.uint32());
                         break;
                     }
                 default:
@@ -1951,318 +3006,555 @@ $root.SyncAction = (function() {
         SyncActionValue.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            var properties = {};
+            if (message.timestamp != null && message.hasOwnProperty("timestamp")) {
+                properties._timestamp = 1;
                 if (!$util.isInteger(message.timestamp) && !(message.timestamp && $util.isInteger(message.timestamp.low) && $util.isInteger(message.timestamp.high)))
                     return "timestamp: integer|Long expected";
+            }
             if (message.starAction != null && message.hasOwnProperty("starAction")) {
-                var error = $root.SyncAction.SyncActionValue.StarAction.verify(message.starAction);
-                if (error)
-                    return "starAction." + error;
+                properties._starAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.StarAction.verify(message.starAction);
+                    if (error)
+                        return "starAction." + error;
+                }
             }
             if (message.contactAction != null && message.hasOwnProperty("contactAction")) {
-                var error = $root.SyncAction.SyncActionValue.ContactAction.verify(message.contactAction);
-                if (error)
-                    return "contactAction." + error;
+                properties._contactAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.ContactAction.verify(message.contactAction);
+                    if (error)
+                        return "contactAction." + error;
+                }
             }
             if (message.muteAction != null && message.hasOwnProperty("muteAction")) {
-                var error = $root.SyncAction.SyncActionValue.MuteAction.verify(message.muteAction);
-                if (error)
-                    return "muteAction." + error;
+                properties._muteAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MuteAction.verify(message.muteAction);
+                    if (error)
+                        return "muteAction." + error;
+                }
             }
             if (message.pinAction != null && message.hasOwnProperty("pinAction")) {
-                var error = $root.SyncAction.SyncActionValue.PinAction.verify(message.pinAction);
-                if (error)
-                    return "pinAction." + error;
-            }
-            if (message.securityNotificationSetting != null && message.hasOwnProperty("securityNotificationSetting")) {
-                var error = $root.SyncAction.SyncActionValue.SecurityNotificationSetting.verify(message.securityNotificationSetting);
-                if (error)
-                    return "securityNotificationSetting." + error;
+                properties._pinAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PinAction.verify(message.pinAction);
+                    if (error)
+                        return "pinAction." + error;
+                }
             }
             if (message.pushNameSetting != null && message.hasOwnProperty("pushNameSetting")) {
-                var error = $root.SyncAction.SyncActionValue.PushNameSetting.verify(message.pushNameSetting);
-                if (error)
-                    return "pushNameSetting." + error;
+                properties._pushNameSetting = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PushNameSetting.verify(message.pushNameSetting);
+                    if (error)
+                        return "pushNameSetting." + error;
+                }
             }
             if (message.quickReplyAction != null && message.hasOwnProperty("quickReplyAction")) {
-                var error = $root.SyncAction.SyncActionValue.QuickReplyAction.verify(message.quickReplyAction);
-                if (error)
-                    return "quickReplyAction." + error;
+                properties._quickReplyAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.QuickReplyAction.verify(message.quickReplyAction);
+                    if (error)
+                        return "quickReplyAction." + error;
+                }
             }
             if (message.recentEmojiWeightsAction != null && message.hasOwnProperty("recentEmojiWeightsAction")) {
-                var error = $root.SyncAction.SyncActionValue.RecentEmojiWeightsAction.verify(message.recentEmojiWeightsAction);
-                if (error)
-                    return "recentEmojiWeightsAction." + error;
+                properties._recentEmojiWeightsAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.RecentEmojiWeightsAction.verify(message.recentEmojiWeightsAction);
+                    if (error)
+                        return "recentEmojiWeightsAction." + error;
+                }
             }
             if (message.labelEditAction != null && message.hasOwnProperty("labelEditAction")) {
-                var error = $root.SyncAction.SyncActionValue.LabelEditAction.verify(message.labelEditAction);
-                if (error)
-                    return "labelEditAction." + error;
+                properties._labelEditAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.LabelEditAction.verify(message.labelEditAction);
+                    if (error)
+                        return "labelEditAction." + error;
+                }
             }
             if (message.labelAssociationAction != null && message.hasOwnProperty("labelAssociationAction")) {
-                var error = $root.SyncAction.SyncActionValue.LabelAssociationAction.verify(message.labelAssociationAction);
-                if (error)
-                    return "labelAssociationAction." + error;
+                properties._labelAssociationAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.LabelAssociationAction.verify(message.labelAssociationAction);
+                    if (error)
+                        return "labelAssociationAction." + error;
+                }
             }
             if (message.localeSetting != null && message.hasOwnProperty("localeSetting")) {
-                var error = $root.SyncAction.SyncActionValue.LocaleSetting.verify(message.localeSetting);
-                if (error)
-                    return "localeSetting." + error;
+                properties._localeSetting = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.LocaleSetting.verify(message.localeSetting);
+                    if (error)
+                        return "localeSetting." + error;
+                }
             }
             if (message.archiveChatAction != null && message.hasOwnProperty("archiveChatAction")) {
-                var error = $root.SyncAction.SyncActionValue.ArchiveChatAction.verify(message.archiveChatAction);
-                if (error)
-                    return "archiveChatAction." + error;
+                properties._archiveChatAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.ArchiveChatAction.verify(message.archiveChatAction);
+                    if (error)
+                        return "archiveChatAction." + error;
+                }
             }
             if (message.deleteMessageForMeAction != null && message.hasOwnProperty("deleteMessageForMeAction")) {
-                var error = $root.SyncAction.SyncActionValue.DeleteMessageForMeAction.verify(message.deleteMessageForMeAction);
-                if (error)
-                    return "deleteMessageForMeAction." + error;
+                properties._deleteMessageForMeAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.DeleteMessageForMeAction.verify(message.deleteMessageForMeAction);
+                    if (error)
+                        return "deleteMessageForMeAction." + error;
+                }
             }
             if (message.keyExpiration != null && message.hasOwnProperty("keyExpiration")) {
-                var error = $root.SyncAction.SyncActionValue.KeyExpiration.verify(message.keyExpiration);
-                if (error)
-                    return "keyExpiration." + error;
+                properties._keyExpiration = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.KeyExpiration.verify(message.keyExpiration);
+                    if (error)
+                        return "keyExpiration." + error;
+                }
             }
             if (message.markChatAsReadAction != null && message.hasOwnProperty("markChatAsReadAction")) {
-                var error = $root.SyncAction.SyncActionValue.MarkChatAsReadAction.verify(message.markChatAsReadAction);
-                if (error)
-                    return "markChatAsReadAction." + error;
+                properties._markChatAsReadAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MarkChatAsReadAction.verify(message.markChatAsReadAction);
+                    if (error)
+                        return "markChatAsReadAction." + error;
+                }
             }
             if (message.clearChatAction != null && message.hasOwnProperty("clearChatAction")) {
-                var error = $root.SyncAction.SyncActionValue.ClearChatAction.verify(message.clearChatAction);
-                if (error)
-                    return "clearChatAction." + error;
+                properties._clearChatAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.ClearChatAction.verify(message.clearChatAction);
+                    if (error)
+                        return "clearChatAction." + error;
+                }
             }
             if (message.deleteChatAction != null && message.hasOwnProperty("deleteChatAction")) {
-                var error = $root.SyncAction.SyncActionValue.DeleteChatAction.verify(message.deleteChatAction);
-                if (error)
-                    return "deleteChatAction." + error;
+                properties._deleteChatAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.DeleteChatAction.verify(message.deleteChatAction);
+                    if (error)
+                        return "deleteChatAction." + error;
+                }
             }
             if (message.unarchiveChatsSetting != null && message.hasOwnProperty("unarchiveChatsSetting")) {
-                var error = $root.SyncAction.SyncActionValue.UnarchiveChatsSetting.verify(message.unarchiveChatsSetting);
-                if (error)
-                    return "unarchiveChatsSetting." + error;
+                properties._unarchiveChatsSetting = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.UnarchiveChatsSetting.verify(message.unarchiveChatsSetting);
+                    if (error)
+                        return "unarchiveChatsSetting." + error;
+                }
             }
             if (message.primaryFeature != null && message.hasOwnProperty("primaryFeature")) {
-                var error = $root.SyncAction.SyncActionValue.PrimaryFeature.verify(message.primaryFeature);
-                if (error)
-                    return "primaryFeature." + error;
+                properties._primaryFeature = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PrimaryFeature.verify(message.primaryFeature);
+                    if (error)
+                        return "primaryFeature." + error;
+                }
             }
             if (message.androidUnsupportedActions != null && message.hasOwnProperty("androidUnsupportedActions")) {
-                var error = $root.SyncAction.SyncActionValue.AndroidUnsupportedActions.verify(message.androidUnsupportedActions);
-                if (error)
-                    return "androidUnsupportedActions." + error;
+                properties._androidUnsupportedActions = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.AndroidUnsupportedActions.verify(message.androidUnsupportedActions);
+                    if (error)
+                        return "androidUnsupportedActions." + error;
+                }
             }
             if (message.agentAction != null && message.hasOwnProperty("agentAction")) {
-                var error = $root.SyncAction.SyncActionValue.AgentAction.verify(message.agentAction);
-                if (error)
-                    return "agentAction." + error;
+                properties._agentAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.AgentAction.verify(message.agentAction);
+                    if (error)
+                        return "agentAction." + error;
+                }
             }
             if (message.subscriptionAction != null && message.hasOwnProperty("subscriptionAction")) {
-                var error = $root.SyncAction.SyncActionValue.SubscriptionAction.verify(message.subscriptionAction);
-                if (error)
-                    return "subscriptionAction." + error;
+                properties._subscriptionAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.SubscriptionAction.verify(message.subscriptionAction);
+                    if (error)
+                        return "subscriptionAction." + error;
+                }
             }
             if (message.userStatusMuteAction != null && message.hasOwnProperty("userStatusMuteAction")) {
-                var error = $root.SyncAction.SyncActionValue.UserStatusMuteAction.verify(message.userStatusMuteAction);
-                if (error)
-                    return "userStatusMuteAction." + error;
+                properties._userStatusMuteAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.UserStatusMuteAction.verify(message.userStatusMuteAction);
+                    if (error)
+                        return "userStatusMuteAction." + error;
+                }
             }
             if (message.timeFormatAction != null && message.hasOwnProperty("timeFormatAction")) {
-                var error = $root.SyncAction.SyncActionValue.TimeFormatAction.verify(message.timeFormatAction);
-                if (error)
-                    return "timeFormatAction." + error;
+                properties._timeFormatAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.TimeFormatAction.verify(message.timeFormatAction);
+                    if (error)
+                        return "timeFormatAction." + error;
+                }
             }
             if (message.nuxAction != null && message.hasOwnProperty("nuxAction")) {
-                var error = $root.SyncAction.SyncActionValue.NuxAction.verify(message.nuxAction);
-                if (error)
-                    return "nuxAction." + error;
+                properties._nuxAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.NuxAction.verify(message.nuxAction);
+                    if (error)
+                        return "nuxAction." + error;
+                }
             }
             if (message.primaryVersionAction != null && message.hasOwnProperty("primaryVersionAction")) {
-                var error = $root.SyncAction.SyncActionValue.PrimaryVersionAction.verify(message.primaryVersionAction);
-                if (error)
-                    return "primaryVersionAction." + error;
+                properties._primaryVersionAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PrimaryVersionAction.verify(message.primaryVersionAction);
+                    if (error)
+                        return "primaryVersionAction." + error;
+                }
             }
             if (message.stickerAction != null && message.hasOwnProperty("stickerAction")) {
-                var error = $root.SyncAction.SyncActionValue.StickerAction.verify(message.stickerAction);
-                if (error)
-                    return "stickerAction." + error;
+                properties._stickerAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.StickerAction.verify(message.stickerAction);
+                    if (error)
+                        return "stickerAction." + error;
+                }
             }
             if (message.removeRecentStickerAction != null && message.hasOwnProperty("removeRecentStickerAction")) {
-                var error = $root.SyncAction.SyncActionValue.RemoveRecentStickerAction.verify(message.removeRecentStickerAction);
-                if (error)
-                    return "removeRecentStickerAction." + error;
+                properties._removeRecentStickerAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.RemoveRecentStickerAction.verify(message.removeRecentStickerAction);
+                    if (error)
+                        return "removeRecentStickerAction." + error;
+                }
             }
             if (message.chatAssignment != null && message.hasOwnProperty("chatAssignment")) {
-                var error = $root.SyncAction.SyncActionValue.ChatAssignmentAction.verify(message.chatAssignment);
-                if (error)
-                    return "chatAssignment." + error;
+                properties._chatAssignment = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.ChatAssignmentAction.verify(message.chatAssignment);
+                    if (error)
+                        return "chatAssignment." + error;
+                }
             }
             if (message.chatAssignmentOpenedStatus != null && message.hasOwnProperty("chatAssignmentOpenedStatus")) {
-                var error = $root.SyncAction.SyncActionValue.ChatAssignmentOpenedStatusAction.verify(message.chatAssignmentOpenedStatus);
-                if (error)
-                    return "chatAssignmentOpenedStatus." + error;
+                properties._chatAssignmentOpenedStatus = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.ChatAssignmentOpenedStatusAction.verify(message.chatAssignmentOpenedStatus);
+                    if (error)
+                        return "chatAssignmentOpenedStatus." + error;
+                }
             }
             if (message.pnForLidChatAction != null && message.hasOwnProperty("pnForLidChatAction")) {
-                var error = $root.SyncAction.SyncActionValue.PnForLidChatAction.verify(message.pnForLidChatAction);
-                if (error)
-                    return "pnForLidChatAction." + error;
+                properties._pnForLidChatAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PnForLidChatAction.verify(message.pnForLidChatAction);
+                    if (error)
+                        return "pnForLidChatAction." + error;
+                }
             }
             if (message.marketingMessageAction != null && message.hasOwnProperty("marketingMessageAction")) {
-                var error = $root.SyncAction.SyncActionValue.MarketingMessageAction.verify(message.marketingMessageAction);
-                if (error)
-                    return "marketingMessageAction." + error;
+                properties._marketingMessageAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MarketingMessageAction.verify(message.marketingMessageAction);
+                    if (error)
+                        return "marketingMessageAction." + error;
+                }
             }
             if (message.marketingMessageBroadcastAction != null && message.hasOwnProperty("marketingMessageBroadcastAction")) {
-                var error = $root.SyncAction.SyncActionValue.MarketingMessageBroadcastAction.verify(message.marketingMessageBroadcastAction);
-                if (error)
-                    return "marketingMessageBroadcastAction." + error;
+                properties._marketingMessageBroadcastAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MarketingMessageBroadcastAction.verify(message.marketingMessageBroadcastAction);
+                    if (error)
+                        return "marketingMessageBroadcastAction." + error;
+                }
             }
             if (message.externalWebBetaAction != null && message.hasOwnProperty("externalWebBetaAction")) {
-                var error = $root.SyncAction.SyncActionValue.ExternalWebBetaAction.verify(message.externalWebBetaAction);
-                if (error)
-                    return "externalWebBetaAction." + error;
+                properties._externalWebBetaAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.ExternalWebBetaAction.verify(message.externalWebBetaAction);
+                    if (error)
+                        return "externalWebBetaAction." + error;
+                }
             }
             if (message.privacySettingRelayAllCalls != null && message.hasOwnProperty("privacySettingRelayAllCalls")) {
-                var error = $root.SyncAction.SyncActionValue.PrivacySettingRelayAllCalls.verify(message.privacySettingRelayAllCalls);
-                if (error)
-                    return "privacySettingRelayAllCalls." + error;
+                properties._privacySettingRelayAllCalls = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PrivacySettingRelayAllCalls.verify(message.privacySettingRelayAllCalls);
+                    if (error)
+                        return "privacySettingRelayAllCalls." + error;
+                }
             }
             if (message.callLogAction != null && message.hasOwnProperty("callLogAction")) {
-                var error = $root.SyncAction.SyncActionValue.CallLogAction.verify(message.callLogAction);
-                if (error)
-                    return "callLogAction." + error;
+                properties._callLogAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.CallLogAction.verify(message.callLogAction);
+                    if (error)
+                        return "callLogAction." + error;
+                }
+            }
+            if (message.ugcBot != null && message.hasOwnProperty("ugcBot")) {
+                properties._ugcBot = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.UGCBot.verify(message.ugcBot);
+                    if (error)
+                        return "ugcBot." + error;
+                }
             }
             if (message.statusPrivacy != null && message.hasOwnProperty("statusPrivacy")) {
-                var error = $root.SyncAction.SyncActionValue.StatusPrivacyAction.verify(message.statusPrivacy);
-                if (error)
-                    return "statusPrivacy." + error;
+                properties._statusPrivacy = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.StatusPrivacyAction.verify(message.statusPrivacy);
+                    if (error)
+                        return "statusPrivacy." + error;
+                }
             }
             if (message.botWelcomeRequestAction != null && message.hasOwnProperty("botWelcomeRequestAction")) {
-                var error = $root.SyncAction.SyncActionValue.BotWelcomeRequestAction.verify(message.botWelcomeRequestAction);
-                if (error)
-                    return "botWelcomeRequestAction." + error;
+                properties._botWelcomeRequestAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.BotWelcomeRequestAction.verify(message.botWelcomeRequestAction);
+                    if (error)
+                        return "botWelcomeRequestAction." + error;
+                }
             }
             if (message.deleteIndividualCallLog != null && message.hasOwnProperty("deleteIndividualCallLog")) {
-                var error = $root.SyncAction.SyncActionValue.DeleteIndividualCallLogAction.verify(message.deleteIndividualCallLog);
-                if (error)
-                    return "deleteIndividualCallLog." + error;
+                properties._deleteIndividualCallLog = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.DeleteIndividualCallLogAction.verify(message.deleteIndividualCallLog);
+                    if (error)
+                        return "deleteIndividualCallLog." + error;
+                }
             }
             if (message.labelReorderingAction != null && message.hasOwnProperty("labelReorderingAction")) {
-                var error = $root.SyncAction.SyncActionValue.LabelReorderingAction.verify(message.labelReorderingAction);
-                if (error)
-                    return "labelReorderingAction." + error;
+                properties._labelReorderingAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.LabelReorderingAction.verify(message.labelReorderingAction);
+                    if (error)
+                        return "labelReorderingAction." + error;
+                }
             }
             if (message.paymentInfoAction != null && message.hasOwnProperty("paymentInfoAction")) {
-                var error = $root.SyncAction.SyncActionValue.PaymentInfoAction.verify(message.paymentInfoAction);
-                if (error)
-                    return "paymentInfoAction." + error;
+                properties._paymentInfoAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PaymentInfoAction.verify(message.paymentInfoAction);
+                    if (error)
+                        return "paymentInfoAction." + error;
+                }
             }
             if (message.customPaymentMethodsAction != null && message.hasOwnProperty("customPaymentMethodsAction")) {
-                var error = $root.SyncAction.SyncActionValue.CustomPaymentMethodsAction.verify(message.customPaymentMethodsAction);
-                if (error)
-                    return "customPaymentMethodsAction." + error;
+                properties._customPaymentMethodsAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.CustomPaymentMethodsAction.verify(message.customPaymentMethodsAction);
+                    if (error)
+                        return "customPaymentMethodsAction." + error;
+                }
             }
             if (message.lockChatAction != null && message.hasOwnProperty("lockChatAction")) {
-                var error = $root.SyncAction.SyncActionValue.LockChatAction.verify(message.lockChatAction);
-                if (error)
-                    return "lockChatAction." + error;
+                properties._lockChatAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.LockChatAction.verify(message.lockChatAction);
+                    if (error)
+                        return "lockChatAction." + error;
+                }
             }
             if (message.chatLockSettings != null && message.hasOwnProperty("chatLockSettings")) {
-                var error = $root.ChatLockSettings.ChatLockSettings.verify(message.chatLockSettings);
-                if (error)
-                    return "chatLockSettings." + error;
+                properties._chatLockSettings = 1;
+                {
+                    var error = $root.ChatLockSettings.ChatLockSettings.verify(message.chatLockSettings);
+                    if (error)
+                        return "chatLockSettings." + error;
+                }
             }
             if (message.wamoUserIdentifierAction != null && message.hasOwnProperty("wamoUserIdentifierAction")) {
-                var error = $root.SyncAction.SyncActionValue.WamoUserIdentifierAction.verify(message.wamoUserIdentifierAction);
-                if (error)
-                    return "wamoUserIdentifierAction." + error;
+                properties._wamoUserIdentifierAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.WamoUserIdentifierAction.verify(message.wamoUserIdentifierAction);
+                    if (error)
+                        return "wamoUserIdentifierAction." + error;
+                }
             }
             if (message.privacySettingDisableLinkPreviewsAction != null && message.hasOwnProperty("privacySettingDisableLinkPreviewsAction")) {
-                var error = $root.SyncAction.SyncActionValue.PrivacySettingDisableLinkPreviewsAction.verify(message.privacySettingDisableLinkPreviewsAction);
-                if (error)
-                    return "privacySettingDisableLinkPreviewsAction." + error;
+                properties._privacySettingDisableLinkPreviewsAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PrivacySettingDisableLinkPreviewsAction.verify(message.privacySettingDisableLinkPreviewsAction);
+                    if (error)
+                        return "privacySettingDisableLinkPreviewsAction." + error;
+                }
             }
             if (message.deviceCapabilities != null && message.hasOwnProperty("deviceCapabilities")) {
-                var error = $root.DeviceCapabilities.DeviceCapabilities.verify(message.deviceCapabilities);
-                if (error)
-                    return "deviceCapabilities." + error;
+                properties._deviceCapabilities = 1;
+                {
+                    var error = $root.DeviceCapabilities.DeviceCapabilities.verify(message.deviceCapabilities);
+                    if (error)
+                        return "deviceCapabilities." + error;
+                }
             }
             if (message.noteEditAction != null && message.hasOwnProperty("noteEditAction")) {
-                var error = $root.SyncAction.SyncActionValue.NoteEditAction.verify(message.noteEditAction);
-                if (error)
-                    return "noteEditAction." + error;
+                properties._noteEditAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.NoteEditAction.verify(message.noteEditAction);
+                    if (error)
+                        return "noteEditAction." + error;
+                }
             }
             if (message.favoritesAction != null && message.hasOwnProperty("favoritesAction")) {
-                var error = $root.SyncAction.SyncActionValue.FavoritesAction.verify(message.favoritesAction);
-                if (error)
-                    return "favoritesAction." + error;
+                properties._favoritesAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.FavoritesAction.verify(message.favoritesAction);
+                    if (error)
+                        return "favoritesAction." + error;
+                }
             }
             if (message.merchantPaymentPartnerAction != null && message.hasOwnProperty("merchantPaymentPartnerAction")) {
-                var error = $root.SyncAction.SyncActionValue.MerchantPaymentPartnerAction.verify(message.merchantPaymentPartnerAction);
-                if (error)
-                    return "merchantPaymentPartnerAction." + error;
+                properties._merchantPaymentPartnerAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MerchantPaymentPartnerAction.verify(message.merchantPaymentPartnerAction);
+                    if (error)
+                        return "merchantPaymentPartnerAction." + error;
+                }
             }
             if (message.waffleAccountLinkStateAction != null && message.hasOwnProperty("waffleAccountLinkStateAction")) {
-                var error = $root.SyncAction.SyncActionValue.WaffleAccountLinkStateAction.verify(message.waffleAccountLinkStateAction);
-                if (error)
-                    return "waffleAccountLinkStateAction." + error;
+                properties._waffleAccountLinkStateAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.WaffleAccountLinkStateAction.verify(message.waffleAccountLinkStateAction);
+                    if (error)
+                        return "waffleAccountLinkStateAction." + error;
+                }
             }
             if (message.usernameChatStartMode != null && message.hasOwnProperty("usernameChatStartMode")) {
-                var error = $root.SyncAction.SyncActionValue.UsernameChatStartModeAction.verify(message.usernameChatStartMode);
-                if (error)
-                    return "usernameChatStartMode." + error;
+                properties._usernameChatStartMode = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.UsernameChatStartModeAction.verify(message.usernameChatStartMode);
+                    if (error)
+                        return "usernameChatStartMode." + error;
+                }
             }
             if (message.notificationActivitySettingAction != null && message.hasOwnProperty("notificationActivitySettingAction")) {
-                var error = $root.SyncAction.SyncActionValue.NotificationActivitySettingAction.verify(message.notificationActivitySettingAction);
-                if (error)
-                    return "notificationActivitySettingAction." + error;
+                properties._notificationActivitySettingAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.NotificationActivitySettingAction.verify(message.notificationActivitySettingAction);
+                    if (error)
+                        return "notificationActivitySettingAction." + error;
+                }
             }
             if (message.lidContactAction != null && message.hasOwnProperty("lidContactAction")) {
-                var error = $root.SyncAction.SyncActionValue.LidContactAction.verify(message.lidContactAction);
-                if (error)
-                    return "lidContactAction." + error;
+                properties._lidContactAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.LidContactAction.verify(message.lidContactAction);
+                    if (error)
+                        return "lidContactAction." + error;
+                }
             }
             if (message.ctwaPerCustomerDataSharingAction != null && message.hasOwnProperty("ctwaPerCustomerDataSharingAction")) {
-                var error = $root.SyncAction.SyncActionValue.CtwaPerCustomerDataSharingAction.verify(message.ctwaPerCustomerDataSharingAction);
-                if (error)
-                    return "ctwaPerCustomerDataSharingAction." + error;
+                properties._ctwaPerCustomerDataSharingAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.CtwaPerCustomerDataSharingAction.verify(message.ctwaPerCustomerDataSharingAction);
+                    if (error)
+                        return "ctwaPerCustomerDataSharingAction." + error;
+                }
             }
             if (message.paymentTosAction != null && message.hasOwnProperty("paymentTosAction")) {
-                var error = $root.SyncAction.SyncActionValue.PaymentTosAction.verify(message.paymentTosAction);
-                if (error)
-                    return "paymentTosAction." + error;
+                properties._paymentTosAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PaymentTosAction.verify(message.paymentTosAction);
+                    if (error)
+                        return "paymentTosAction." + error;
+                }
             }
             if (message.privacySettingChannelsPersonalisedRecommendationAction != null && message.hasOwnProperty("privacySettingChannelsPersonalisedRecommendationAction")) {
-                var error = $root.SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction.verify(message.privacySettingChannelsPersonalisedRecommendationAction);
-                if (error)
-                    return "privacySettingChannelsPersonalisedRecommendationAction." + error;
-            }
-            if (message.businessBroadcastAssociationAction != null && message.hasOwnProperty("businessBroadcastAssociationAction")) {
-                var error = $root.SyncAction.SyncActionValue.BusinessBroadcastAssociationAction.verify(message.businessBroadcastAssociationAction);
-                if (error)
-                    return "businessBroadcastAssociationAction." + error;
+                properties._privacySettingChannelsPersonalisedRecommendationAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction.verify(message.privacySettingChannelsPersonalisedRecommendationAction);
+                    if (error)
+                        return "privacySettingChannelsPersonalisedRecommendationAction." + error;
+                }
             }
             if (message.detectedOutcomesStatusAction != null && message.hasOwnProperty("detectedOutcomesStatusAction")) {
-                var error = $root.SyncAction.SyncActionValue.DetectedOutcomesStatusAction.verify(message.detectedOutcomesStatusAction);
-                if (error)
-                    return "detectedOutcomesStatusAction." + error;
+                properties._detectedOutcomesStatusAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.DetectedOutcomesStatusAction.verify(message.detectedOutcomesStatusAction);
+                    if (error)
+                        return "detectedOutcomesStatusAction." + error;
+                }
             }
             if (message.maibaAiFeaturesControlAction != null && message.hasOwnProperty("maibaAiFeaturesControlAction")) {
-                var error = $root.SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.verify(message.maibaAiFeaturesControlAction);
-                if (error)
-                    return "maibaAiFeaturesControlAction." + error;
+                properties._maibaAiFeaturesControlAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.verify(message.maibaAiFeaturesControlAction);
+                    if (error)
+                        return "maibaAiFeaturesControlAction." + error;
+                }
             }
             if (message.businessBroadcastListAction != null && message.hasOwnProperty("businessBroadcastListAction")) {
-                var error = $root.SyncAction.SyncActionValue.BusinessBroadcastListAction.verify(message.businessBroadcastListAction);
-                if (error)
-                    return "businessBroadcastListAction." + error;
+                properties._businessBroadcastListAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.BusinessBroadcastListAction.verify(message.businessBroadcastListAction);
+                    if (error)
+                        return "businessBroadcastListAction." + error;
+                }
             }
             if (message.musicUserIdAction != null && message.hasOwnProperty("musicUserIdAction")) {
-                var error = $root.SyncAction.SyncActionValue.MusicUserIdAction.verify(message.musicUserIdAction);
-                if (error)
-                    return "musicUserIdAction." + error;
+                properties._musicUserIdAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.MusicUserIdAction.verify(message.musicUserIdAction);
+                    if (error)
+                        return "musicUserIdAction." + error;
+                }
+            }
+            if (message.statusPostOptInNotificationPreferencesAction != null && message.hasOwnProperty("statusPostOptInNotificationPreferencesAction")) {
+                properties._statusPostOptInNotificationPreferencesAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.verify(message.statusPostOptInNotificationPreferencesAction);
+                    if (error)
+                        return "statusPostOptInNotificationPreferencesAction." + error;
+                }
+            }
+            if (message.avatarUpdatedAction != null && message.hasOwnProperty("avatarUpdatedAction")) {
+                properties._avatarUpdatedAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.AvatarUpdatedAction.verify(message.avatarUpdatedAction);
+                    if (error)
+                        return "avatarUpdatedAction." + error;
+                }
+            }
+            if (message.privateProcessingSettingAction != null && message.hasOwnProperty("privateProcessingSettingAction")) {
+                properties._privateProcessingSettingAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.verify(message.privateProcessingSettingAction);
+                    if (error)
+                        return "privateProcessingSettingAction." + error;
+                }
+            }
+            if (message.newsletterSavedInterestsAction != null && message.hasOwnProperty("newsletterSavedInterestsAction")) {
+                properties._newsletterSavedInterestsAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction.verify(message.newsletterSavedInterestsAction);
+                    if (error)
+                        return "newsletterSavedInterestsAction." + error;
+                }
+            }
+            if (message.aiThreadRenameAction != null && message.hasOwnProperty("aiThreadRenameAction")) {
+                properties._aiThreadRenameAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.AiThreadRenameAction.verify(message.aiThreadRenameAction);
+                    if (error)
+                        return "aiThreadRenameAction." + error;
+                }
+            }
+            if (message.interactiveMessageAction != null && message.hasOwnProperty("interactiveMessageAction")) {
+                properties._interactiveMessageAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.InteractiveMessageAction.verify(message.interactiveMessageAction);
+                    if (error)
+                        return "interactiveMessageAction." + error;
+                }
+            }
+            if (message.settingsSyncAction != null && message.hasOwnProperty("settingsSyncAction")) {
+                properties._settingsSyncAction = 1;
+                {
+                    var error = $root.SyncAction.SyncActionValue.SettingsSyncAction.verify(message.settingsSyncAction);
+                    if (error)
+                        return "settingsSyncAction." + error;
+                }
             }
             return null;
         };
@@ -2307,11 +3599,6 @@ $root.SyncAction = (function() {
                 if (typeof object.pinAction !== "object")
                     throw TypeError(".SyncAction.SyncActionValue.pinAction: object expected");
                 message.pinAction = $root.SyncAction.SyncActionValue.PinAction.fromObject(object.pinAction);
-            }
-            if (object.securityNotificationSetting != null) {
-                if (typeof object.securityNotificationSetting !== "object")
-                    throw TypeError(".SyncAction.SyncActionValue.securityNotificationSetting: object expected");
-                message.securityNotificationSetting = $root.SyncAction.SyncActionValue.SecurityNotificationSetting.fromObject(object.securityNotificationSetting);
             }
             if (object.pushNameSetting != null) {
                 if (typeof object.pushNameSetting !== "object")
@@ -2468,6 +3755,11 @@ $root.SyncAction = (function() {
                     throw TypeError(".SyncAction.SyncActionValue.callLogAction: object expected");
                 message.callLogAction = $root.SyncAction.SyncActionValue.CallLogAction.fromObject(object.callLogAction);
             }
+            if (object.ugcBot != null) {
+                if (typeof object.ugcBot !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.ugcBot: object expected");
+                message.ugcBot = $root.SyncAction.SyncActionValue.UGCBot.fromObject(object.ugcBot);
+            }
             if (object.statusPrivacy != null) {
                 if (typeof object.statusPrivacy !== "object")
                     throw TypeError(".SyncAction.SyncActionValue.statusPrivacy: object expected");
@@ -2573,11 +3865,6 @@ $root.SyncAction = (function() {
                     throw TypeError(".SyncAction.SyncActionValue.privacySettingChannelsPersonalisedRecommendationAction: object expected");
                 message.privacySettingChannelsPersonalisedRecommendationAction = $root.SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction.fromObject(object.privacySettingChannelsPersonalisedRecommendationAction);
             }
-            if (object.businessBroadcastAssociationAction != null) {
-                if (typeof object.businessBroadcastAssociationAction !== "object")
-                    throw TypeError(".SyncAction.SyncActionValue.businessBroadcastAssociationAction: object expected");
-                message.businessBroadcastAssociationAction = $root.SyncAction.SyncActionValue.BusinessBroadcastAssociationAction.fromObject(object.businessBroadcastAssociationAction);
-            }
             if (object.detectedOutcomesStatusAction != null) {
                 if (typeof object.detectedOutcomesStatusAction !== "object")
                     throw TypeError(".SyncAction.SyncActionValue.detectedOutcomesStatusAction: object expected");
@@ -2598,6 +3885,41 @@ $root.SyncAction = (function() {
                     throw TypeError(".SyncAction.SyncActionValue.musicUserIdAction: object expected");
                 message.musicUserIdAction = $root.SyncAction.SyncActionValue.MusicUserIdAction.fromObject(object.musicUserIdAction);
             }
+            if (object.statusPostOptInNotificationPreferencesAction != null) {
+                if (typeof object.statusPostOptInNotificationPreferencesAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.statusPostOptInNotificationPreferencesAction: object expected");
+                message.statusPostOptInNotificationPreferencesAction = $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.fromObject(object.statusPostOptInNotificationPreferencesAction);
+            }
+            if (object.avatarUpdatedAction != null) {
+                if (typeof object.avatarUpdatedAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.avatarUpdatedAction: object expected");
+                message.avatarUpdatedAction = $root.SyncAction.SyncActionValue.AvatarUpdatedAction.fromObject(object.avatarUpdatedAction);
+            }
+            if (object.privateProcessingSettingAction != null) {
+                if (typeof object.privateProcessingSettingAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.privateProcessingSettingAction: object expected");
+                message.privateProcessingSettingAction = $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.fromObject(object.privateProcessingSettingAction);
+            }
+            if (object.newsletterSavedInterestsAction != null) {
+                if (typeof object.newsletterSavedInterestsAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.newsletterSavedInterestsAction: object expected");
+                message.newsletterSavedInterestsAction = $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction.fromObject(object.newsletterSavedInterestsAction);
+            }
+            if (object.aiThreadRenameAction != null) {
+                if (typeof object.aiThreadRenameAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.aiThreadRenameAction: object expected");
+                message.aiThreadRenameAction = $root.SyncAction.SyncActionValue.AiThreadRenameAction.fromObject(object.aiThreadRenameAction);
+            }
+            if (object.interactiveMessageAction != null) {
+                if (typeof object.interactiveMessageAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.interactiveMessageAction: object expected");
+                message.interactiveMessageAction = $root.SyncAction.SyncActionValue.InteractiveMessageAction.fromObject(object.interactiveMessageAction);
+            }
+            if (object.settingsSyncAction != null) {
+                if (typeof object.settingsSyncAction !== "object")
+                    throw TypeError(".SyncAction.SyncActionValue.settingsSyncAction: object expected");
+                message.settingsSyncAction = $root.SyncAction.SyncActionValue.SettingsSyncAction.fromObject(object.settingsSyncAction);
+            }
             return message;
         };
 
@@ -2614,204 +3936,354 @@ $root.SyncAction = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                if ($util.Long) {
-                    var long = new $util.Long(0, 0, false);
-                    object.timestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                } else
-                    object.timestamp = options.longs === String ? "0" : 0;
-                object.starAction = null;
-                object.contactAction = null;
-                object.muteAction = null;
-                object.pinAction = null;
-                object.securityNotificationSetting = null;
-                object.pushNameSetting = null;
-                object.quickReplyAction = null;
-                object.recentEmojiWeightsAction = null;
-                object.labelEditAction = null;
-                object.labelAssociationAction = null;
-                object.localeSetting = null;
-                object.archiveChatAction = null;
-                object.deleteMessageForMeAction = null;
-                object.keyExpiration = null;
-                object.markChatAsReadAction = null;
-                object.clearChatAction = null;
-                object.deleteChatAction = null;
-                object.unarchiveChatsSetting = null;
-                object.primaryFeature = null;
-                object.androidUnsupportedActions = null;
-                object.agentAction = null;
-                object.subscriptionAction = null;
-                object.userStatusMuteAction = null;
-                object.timeFormatAction = null;
-                object.nuxAction = null;
-                object.primaryVersionAction = null;
-                object.stickerAction = null;
-                object.removeRecentStickerAction = null;
-                object.chatAssignment = null;
-                object.chatAssignmentOpenedStatus = null;
-                object.pnForLidChatAction = null;
-                object.marketingMessageAction = null;
-                object.marketingMessageBroadcastAction = null;
-                object.externalWebBetaAction = null;
-                object.privacySettingRelayAllCalls = null;
-                object.callLogAction = null;
-                object.statusPrivacy = null;
-                object.botWelcomeRequestAction = null;
-                object.deleteIndividualCallLog = null;
-                object.labelReorderingAction = null;
-                object.paymentInfoAction = null;
-                object.customPaymentMethodsAction = null;
-                object.lockChatAction = null;
-                object.chatLockSettings = null;
-                object.wamoUserIdentifierAction = null;
-                object.privacySettingDisableLinkPreviewsAction = null;
-                object.deviceCapabilities = null;
-                object.noteEditAction = null;
-                object.favoritesAction = null;
-                object.merchantPaymentPartnerAction = null;
-                object.waffleAccountLinkStateAction = null;
-                object.usernameChatStartMode = null;
-                object.notificationActivitySettingAction = null;
-                object.lidContactAction = null;
-                object.ctwaPerCustomerDataSharingAction = null;
-                object.paymentTosAction = null;
-                object.privacySettingChannelsPersonalisedRecommendationAction = null;
-                object.businessBroadcastAssociationAction = null;
-                object.detectedOutcomesStatusAction = null;
-                object.maibaAiFeaturesControlAction = null;
-                object.businessBroadcastListAction = null;
-                object.musicUserIdAction = null;
-            }
-            if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+            if (message.timestamp != null && message.hasOwnProperty("timestamp")) {
                 if (typeof message.timestamp === "number")
                     object.timestamp = options.longs === String ? String(message.timestamp) : message.timestamp;
                 else
                     object.timestamp = options.longs === String ? $util.Long.prototype.toString.call(message.timestamp) : options.longs === Number ? new $util.LongBits(message.timestamp.low >>> 0, message.timestamp.high >>> 0).toNumber() : message.timestamp;
-            if (message.starAction != null && message.hasOwnProperty("starAction"))
+                if (options.oneofs)
+                    object._timestamp = "timestamp";
+            }
+            if (message.starAction != null && message.hasOwnProperty("starAction")) {
                 object.starAction = $root.SyncAction.SyncActionValue.StarAction.toObject(message.starAction, options);
-            if (message.contactAction != null && message.hasOwnProperty("contactAction"))
+                if (options.oneofs)
+                    object._starAction = "starAction";
+            }
+            if (message.contactAction != null && message.hasOwnProperty("contactAction")) {
                 object.contactAction = $root.SyncAction.SyncActionValue.ContactAction.toObject(message.contactAction, options);
-            if (message.muteAction != null && message.hasOwnProperty("muteAction"))
+                if (options.oneofs)
+                    object._contactAction = "contactAction";
+            }
+            if (message.muteAction != null && message.hasOwnProperty("muteAction")) {
                 object.muteAction = $root.SyncAction.SyncActionValue.MuteAction.toObject(message.muteAction, options);
-            if (message.pinAction != null && message.hasOwnProperty("pinAction"))
+                if (options.oneofs)
+                    object._muteAction = "muteAction";
+            }
+            if (message.pinAction != null && message.hasOwnProperty("pinAction")) {
                 object.pinAction = $root.SyncAction.SyncActionValue.PinAction.toObject(message.pinAction, options);
-            if (message.securityNotificationSetting != null && message.hasOwnProperty("securityNotificationSetting"))
-                object.securityNotificationSetting = $root.SyncAction.SyncActionValue.SecurityNotificationSetting.toObject(message.securityNotificationSetting, options);
-            if (message.pushNameSetting != null && message.hasOwnProperty("pushNameSetting"))
+                if (options.oneofs)
+                    object._pinAction = "pinAction";
+            }
+            if (message.pushNameSetting != null && message.hasOwnProperty("pushNameSetting")) {
                 object.pushNameSetting = $root.SyncAction.SyncActionValue.PushNameSetting.toObject(message.pushNameSetting, options);
-            if (message.quickReplyAction != null && message.hasOwnProperty("quickReplyAction"))
+                if (options.oneofs)
+                    object._pushNameSetting = "pushNameSetting";
+            }
+            if (message.quickReplyAction != null && message.hasOwnProperty("quickReplyAction")) {
                 object.quickReplyAction = $root.SyncAction.SyncActionValue.QuickReplyAction.toObject(message.quickReplyAction, options);
-            if (message.recentEmojiWeightsAction != null && message.hasOwnProperty("recentEmojiWeightsAction"))
+                if (options.oneofs)
+                    object._quickReplyAction = "quickReplyAction";
+            }
+            if (message.recentEmojiWeightsAction != null && message.hasOwnProperty("recentEmojiWeightsAction")) {
                 object.recentEmojiWeightsAction = $root.SyncAction.SyncActionValue.RecentEmojiWeightsAction.toObject(message.recentEmojiWeightsAction, options);
-            if (message.labelEditAction != null && message.hasOwnProperty("labelEditAction"))
+                if (options.oneofs)
+                    object._recentEmojiWeightsAction = "recentEmojiWeightsAction";
+            }
+            if (message.labelEditAction != null && message.hasOwnProperty("labelEditAction")) {
                 object.labelEditAction = $root.SyncAction.SyncActionValue.LabelEditAction.toObject(message.labelEditAction, options);
-            if (message.labelAssociationAction != null && message.hasOwnProperty("labelAssociationAction"))
+                if (options.oneofs)
+                    object._labelEditAction = "labelEditAction";
+            }
+            if (message.labelAssociationAction != null && message.hasOwnProperty("labelAssociationAction")) {
                 object.labelAssociationAction = $root.SyncAction.SyncActionValue.LabelAssociationAction.toObject(message.labelAssociationAction, options);
-            if (message.localeSetting != null && message.hasOwnProperty("localeSetting"))
+                if (options.oneofs)
+                    object._labelAssociationAction = "labelAssociationAction";
+            }
+            if (message.localeSetting != null && message.hasOwnProperty("localeSetting")) {
                 object.localeSetting = $root.SyncAction.SyncActionValue.LocaleSetting.toObject(message.localeSetting, options);
-            if (message.archiveChatAction != null && message.hasOwnProperty("archiveChatAction"))
+                if (options.oneofs)
+                    object._localeSetting = "localeSetting";
+            }
+            if (message.archiveChatAction != null && message.hasOwnProperty("archiveChatAction")) {
                 object.archiveChatAction = $root.SyncAction.SyncActionValue.ArchiveChatAction.toObject(message.archiveChatAction, options);
-            if (message.deleteMessageForMeAction != null && message.hasOwnProperty("deleteMessageForMeAction"))
+                if (options.oneofs)
+                    object._archiveChatAction = "archiveChatAction";
+            }
+            if (message.deleteMessageForMeAction != null && message.hasOwnProperty("deleteMessageForMeAction")) {
                 object.deleteMessageForMeAction = $root.SyncAction.SyncActionValue.DeleteMessageForMeAction.toObject(message.deleteMessageForMeAction, options);
-            if (message.keyExpiration != null && message.hasOwnProperty("keyExpiration"))
+                if (options.oneofs)
+                    object._deleteMessageForMeAction = "deleteMessageForMeAction";
+            }
+            if (message.keyExpiration != null && message.hasOwnProperty("keyExpiration")) {
                 object.keyExpiration = $root.SyncAction.SyncActionValue.KeyExpiration.toObject(message.keyExpiration, options);
-            if (message.markChatAsReadAction != null && message.hasOwnProperty("markChatAsReadAction"))
+                if (options.oneofs)
+                    object._keyExpiration = "keyExpiration";
+            }
+            if (message.markChatAsReadAction != null && message.hasOwnProperty("markChatAsReadAction")) {
                 object.markChatAsReadAction = $root.SyncAction.SyncActionValue.MarkChatAsReadAction.toObject(message.markChatAsReadAction, options);
-            if (message.clearChatAction != null && message.hasOwnProperty("clearChatAction"))
+                if (options.oneofs)
+                    object._markChatAsReadAction = "markChatAsReadAction";
+            }
+            if (message.clearChatAction != null && message.hasOwnProperty("clearChatAction")) {
                 object.clearChatAction = $root.SyncAction.SyncActionValue.ClearChatAction.toObject(message.clearChatAction, options);
-            if (message.deleteChatAction != null && message.hasOwnProperty("deleteChatAction"))
+                if (options.oneofs)
+                    object._clearChatAction = "clearChatAction";
+            }
+            if (message.deleteChatAction != null && message.hasOwnProperty("deleteChatAction")) {
                 object.deleteChatAction = $root.SyncAction.SyncActionValue.DeleteChatAction.toObject(message.deleteChatAction, options);
-            if (message.unarchiveChatsSetting != null && message.hasOwnProperty("unarchiveChatsSetting"))
+                if (options.oneofs)
+                    object._deleteChatAction = "deleteChatAction";
+            }
+            if (message.unarchiveChatsSetting != null && message.hasOwnProperty("unarchiveChatsSetting")) {
                 object.unarchiveChatsSetting = $root.SyncAction.SyncActionValue.UnarchiveChatsSetting.toObject(message.unarchiveChatsSetting, options);
-            if (message.primaryFeature != null && message.hasOwnProperty("primaryFeature"))
+                if (options.oneofs)
+                    object._unarchiveChatsSetting = "unarchiveChatsSetting";
+            }
+            if (message.primaryFeature != null && message.hasOwnProperty("primaryFeature")) {
                 object.primaryFeature = $root.SyncAction.SyncActionValue.PrimaryFeature.toObject(message.primaryFeature, options);
-            if (message.androidUnsupportedActions != null && message.hasOwnProperty("androidUnsupportedActions"))
+                if (options.oneofs)
+                    object._primaryFeature = "primaryFeature";
+            }
+            if (message.androidUnsupportedActions != null && message.hasOwnProperty("androidUnsupportedActions")) {
                 object.androidUnsupportedActions = $root.SyncAction.SyncActionValue.AndroidUnsupportedActions.toObject(message.androidUnsupportedActions, options);
-            if (message.agentAction != null && message.hasOwnProperty("agentAction"))
+                if (options.oneofs)
+                    object._androidUnsupportedActions = "androidUnsupportedActions";
+            }
+            if (message.agentAction != null && message.hasOwnProperty("agentAction")) {
                 object.agentAction = $root.SyncAction.SyncActionValue.AgentAction.toObject(message.agentAction, options);
-            if (message.subscriptionAction != null && message.hasOwnProperty("subscriptionAction"))
+                if (options.oneofs)
+                    object._agentAction = "agentAction";
+            }
+            if (message.subscriptionAction != null && message.hasOwnProperty("subscriptionAction")) {
                 object.subscriptionAction = $root.SyncAction.SyncActionValue.SubscriptionAction.toObject(message.subscriptionAction, options);
-            if (message.userStatusMuteAction != null && message.hasOwnProperty("userStatusMuteAction"))
+                if (options.oneofs)
+                    object._subscriptionAction = "subscriptionAction";
+            }
+            if (message.userStatusMuteAction != null && message.hasOwnProperty("userStatusMuteAction")) {
                 object.userStatusMuteAction = $root.SyncAction.SyncActionValue.UserStatusMuteAction.toObject(message.userStatusMuteAction, options);
-            if (message.timeFormatAction != null && message.hasOwnProperty("timeFormatAction"))
+                if (options.oneofs)
+                    object._userStatusMuteAction = "userStatusMuteAction";
+            }
+            if (message.timeFormatAction != null && message.hasOwnProperty("timeFormatAction")) {
                 object.timeFormatAction = $root.SyncAction.SyncActionValue.TimeFormatAction.toObject(message.timeFormatAction, options);
-            if (message.nuxAction != null && message.hasOwnProperty("nuxAction"))
+                if (options.oneofs)
+                    object._timeFormatAction = "timeFormatAction";
+            }
+            if (message.nuxAction != null && message.hasOwnProperty("nuxAction")) {
                 object.nuxAction = $root.SyncAction.SyncActionValue.NuxAction.toObject(message.nuxAction, options);
-            if (message.primaryVersionAction != null && message.hasOwnProperty("primaryVersionAction"))
+                if (options.oneofs)
+                    object._nuxAction = "nuxAction";
+            }
+            if (message.primaryVersionAction != null && message.hasOwnProperty("primaryVersionAction")) {
                 object.primaryVersionAction = $root.SyncAction.SyncActionValue.PrimaryVersionAction.toObject(message.primaryVersionAction, options);
-            if (message.stickerAction != null && message.hasOwnProperty("stickerAction"))
+                if (options.oneofs)
+                    object._primaryVersionAction = "primaryVersionAction";
+            }
+            if (message.stickerAction != null && message.hasOwnProperty("stickerAction")) {
                 object.stickerAction = $root.SyncAction.SyncActionValue.StickerAction.toObject(message.stickerAction, options);
-            if (message.removeRecentStickerAction != null && message.hasOwnProperty("removeRecentStickerAction"))
+                if (options.oneofs)
+                    object._stickerAction = "stickerAction";
+            }
+            if (message.removeRecentStickerAction != null && message.hasOwnProperty("removeRecentStickerAction")) {
                 object.removeRecentStickerAction = $root.SyncAction.SyncActionValue.RemoveRecentStickerAction.toObject(message.removeRecentStickerAction, options);
-            if (message.chatAssignment != null && message.hasOwnProperty("chatAssignment"))
+                if (options.oneofs)
+                    object._removeRecentStickerAction = "removeRecentStickerAction";
+            }
+            if (message.chatAssignment != null && message.hasOwnProperty("chatAssignment")) {
                 object.chatAssignment = $root.SyncAction.SyncActionValue.ChatAssignmentAction.toObject(message.chatAssignment, options);
-            if (message.chatAssignmentOpenedStatus != null && message.hasOwnProperty("chatAssignmentOpenedStatus"))
+                if (options.oneofs)
+                    object._chatAssignment = "chatAssignment";
+            }
+            if (message.chatAssignmentOpenedStatus != null && message.hasOwnProperty("chatAssignmentOpenedStatus")) {
                 object.chatAssignmentOpenedStatus = $root.SyncAction.SyncActionValue.ChatAssignmentOpenedStatusAction.toObject(message.chatAssignmentOpenedStatus, options);
-            if (message.pnForLidChatAction != null && message.hasOwnProperty("pnForLidChatAction"))
+                if (options.oneofs)
+                    object._chatAssignmentOpenedStatus = "chatAssignmentOpenedStatus";
+            }
+            if (message.pnForLidChatAction != null && message.hasOwnProperty("pnForLidChatAction")) {
                 object.pnForLidChatAction = $root.SyncAction.SyncActionValue.PnForLidChatAction.toObject(message.pnForLidChatAction, options);
-            if (message.marketingMessageAction != null && message.hasOwnProperty("marketingMessageAction"))
+                if (options.oneofs)
+                    object._pnForLidChatAction = "pnForLidChatAction";
+            }
+            if (message.marketingMessageAction != null && message.hasOwnProperty("marketingMessageAction")) {
                 object.marketingMessageAction = $root.SyncAction.SyncActionValue.MarketingMessageAction.toObject(message.marketingMessageAction, options);
-            if (message.marketingMessageBroadcastAction != null && message.hasOwnProperty("marketingMessageBroadcastAction"))
+                if (options.oneofs)
+                    object._marketingMessageAction = "marketingMessageAction";
+            }
+            if (message.marketingMessageBroadcastAction != null && message.hasOwnProperty("marketingMessageBroadcastAction")) {
                 object.marketingMessageBroadcastAction = $root.SyncAction.SyncActionValue.MarketingMessageBroadcastAction.toObject(message.marketingMessageBroadcastAction, options);
-            if (message.externalWebBetaAction != null && message.hasOwnProperty("externalWebBetaAction"))
+                if (options.oneofs)
+                    object._marketingMessageBroadcastAction = "marketingMessageBroadcastAction";
+            }
+            if (message.externalWebBetaAction != null && message.hasOwnProperty("externalWebBetaAction")) {
                 object.externalWebBetaAction = $root.SyncAction.SyncActionValue.ExternalWebBetaAction.toObject(message.externalWebBetaAction, options);
-            if (message.privacySettingRelayAllCalls != null && message.hasOwnProperty("privacySettingRelayAllCalls"))
+                if (options.oneofs)
+                    object._externalWebBetaAction = "externalWebBetaAction";
+            }
+            if (message.privacySettingRelayAllCalls != null && message.hasOwnProperty("privacySettingRelayAllCalls")) {
                 object.privacySettingRelayAllCalls = $root.SyncAction.SyncActionValue.PrivacySettingRelayAllCalls.toObject(message.privacySettingRelayAllCalls, options);
-            if (message.callLogAction != null && message.hasOwnProperty("callLogAction"))
+                if (options.oneofs)
+                    object._privacySettingRelayAllCalls = "privacySettingRelayAllCalls";
+            }
+            if (message.callLogAction != null && message.hasOwnProperty("callLogAction")) {
                 object.callLogAction = $root.SyncAction.SyncActionValue.CallLogAction.toObject(message.callLogAction, options);
-            if (message.statusPrivacy != null && message.hasOwnProperty("statusPrivacy"))
+                if (options.oneofs)
+                    object._callLogAction = "callLogAction";
+            }
+            if (message.ugcBot != null && message.hasOwnProperty("ugcBot")) {
+                object.ugcBot = $root.SyncAction.SyncActionValue.UGCBot.toObject(message.ugcBot, options);
+                if (options.oneofs)
+                    object._ugcBot = "ugcBot";
+            }
+            if (message.statusPrivacy != null && message.hasOwnProperty("statusPrivacy")) {
                 object.statusPrivacy = $root.SyncAction.SyncActionValue.StatusPrivacyAction.toObject(message.statusPrivacy, options);
-            if (message.botWelcomeRequestAction != null && message.hasOwnProperty("botWelcomeRequestAction"))
+                if (options.oneofs)
+                    object._statusPrivacy = "statusPrivacy";
+            }
+            if (message.botWelcomeRequestAction != null && message.hasOwnProperty("botWelcomeRequestAction")) {
                 object.botWelcomeRequestAction = $root.SyncAction.SyncActionValue.BotWelcomeRequestAction.toObject(message.botWelcomeRequestAction, options);
-            if (message.deleteIndividualCallLog != null && message.hasOwnProperty("deleteIndividualCallLog"))
+                if (options.oneofs)
+                    object._botWelcomeRequestAction = "botWelcomeRequestAction";
+            }
+            if (message.deleteIndividualCallLog != null && message.hasOwnProperty("deleteIndividualCallLog")) {
                 object.deleteIndividualCallLog = $root.SyncAction.SyncActionValue.DeleteIndividualCallLogAction.toObject(message.deleteIndividualCallLog, options);
-            if (message.labelReorderingAction != null && message.hasOwnProperty("labelReorderingAction"))
+                if (options.oneofs)
+                    object._deleteIndividualCallLog = "deleteIndividualCallLog";
+            }
+            if (message.labelReorderingAction != null && message.hasOwnProperty("labelReorderingAction")) {
                 object.labelReorderingAction = $root.SyncAction.SyncActionValue.LabelReorderingAction.toObject(message.labelReorderingAction, options);
-            if (message.paymentInfoAction != null && message.hasOwnProperty("paymentInfoAction"))
+                if (options.oneofs)
+                    object._labelReorderingAction = "labelReorderingAction";
+            }
+            if (message.paymentInfoAction != null && message.hasOwnProperty("paymentInfoAction")) {
                 object.paymentInfoAction = $root.SyncAction.SyncActionValue.PaymentInfoAction.toObject(message.paymentInfoAction, options);
-            if (message.customPaymentMethodsAction != null && message.hasOwnProperty("customPaymentMethodsAction"))
+                if (options.oneofs)
+                    object._paymentInfoAction = "paymentInfoAction";
+            }
+            if (message.customPaymentMethodsAction != null && message.hasOwnProperty("customPaymentMethodsAction")) {
                 object.customPaymentMethodsAction = $root.SyncAction.SyncActionValue.CustomPaymentMethodsAction.toObject(message.customPaymentMethodsAction, options);
-            if (message.lockChatAction != null && message.hasOwnProperty("lockChatAction"))
+                if (options.oneofs)
+                    object._customPaymentMethodsAction = "customPaymentMethodsAction";
+            }
+            if (message.lockChatAction != null && message.hasOwnProperty("lockChatAction")) {
                 object.lockChatAction = $root.SyncAction.SyncActionValue.LockChatAction.toObject(message.lockChatAction, options);
-            if (message.chatLockSettings != null && message.hasOwnProperty("chatLockSettings"))
+                if (options.oneofs)
+                    object._lockChatAction = "lockChatAction";
+            }
+            if (message.chatLockSettings != null && message.hasOwnProperty("chatLockSettings")) {
                 object.chatLockSettings = $root.ChatLockSettings.ChatLockSettings.toObject(message.chatLockSettings, options);
-            if (message.wamoUserIdentifierAction != null && message.hasOwnProperty("wamoUserIdentifierAction"))
+                if (options.oneofs)
+                    object._chatLockSettings = "chatLockSettings";
+            }
+            if (message.wamoUserIdentifierAction != null && message.hasOwnProperty("wamoUserIdentifierAction")) {
                 object.wamoUserIdentifierAction = $root.SyncAction.SyncActionValue.WamoUserIdentifierAction.toObject(message.wamoUserIdentifierAction, options);
-            if (message.privacySettingDisableLinkPreviewsAction != null && message.hasOwnProperty("privacySettingDisableLinkPreviewsAction"))
+                if (options.oneofs)
+                    object._wamoUserIdentifierAction = "wamoUserIdentifierAction";
+            }
+            if (message.privacySettingDisableLinkPreviewsAction != null && message.hasOwnProperty("privacySettingDisableLinkPreviewsAction")) {
                 object.privacySettingDisableLinkPreviewsAction = $root.SyncAction.SyncActionValue.PrivacySettingDisableLinkPreviewsAction.toObject(message.privacySettingDisableLinkPreviewsAction, options);
-            if (message.deviceCapabilities != null && message.hasOwnProperty("deviceCapabilities"))
+                if (options.oneofs)
+                    object._privacySettingDisableLinkPreviewsAction = "privacySettingDisableLinkPreviewsAction";
+            }
+            if (message.deviceCapabilities != null && message.hasOwnProperty("deviceCapabilities")) {
                 object.deviceCapabilities = $root.DeviceCapabilities.DeviceCapabilities.toObject(message.deviceCapabilities, options);
-            if (message.noteEditAction != null && message.hasOwnProperty("noteEditAction"))
+                if (options.oneofs)
+                    object._deviceCapabilities = "deviceCapabilities";
+            }
+            if (message.noteEditAction != null && message.hasOwnProperty("noteEditAction")) {
                 object.noteEditAction = $root.SyncAction.SyncActionValue.NoteEditAction.toObject(message.noteEditAction, options);
-            if (message.favoritesAction != null && message.hasOwnProperty("favoritesAction"))
+                if (options.oneofs)
+                    object._noteEditAction = "noteEditAction";
+            }
+            if (message.favoritesAction != null && message.hasOwnProperty("favoritesAction")) {
                 object.favoritesAction = $root.SyncAction.SyncActionValue.FavoritesAction.toObject(message.favoritesAction, options);
-            if (message.merchantPaymentPartnerAction != null && message.hasOwnProperty("merchantPaymentPartnerAction"))
+                if (options.oneofs)
+                    object._favoritesAction = "favoritesAction";
+            }
+            if (message.merchantPaymentPartnerAction != null && message.hasOwnProperty("merchantPaymentPartnerAction")) {
                 object.merchantPaymentPartnerAction = $root.SyncAction.SyncActionValue.MerchantPaymentPartnerAction.toObject(message.merchantPaymentPartnerAction, options);
-            if (message.waffleAccountLinkStateAction != null && message.hasOwnProperty("waffleAccountLinkStateAction"))
+                if (options.oneofs)
+                    object._merchantPaymentPartnerAction = "merchantPaymentPartnerAction";
+            }
+            if (message.waffleAccountLinkStateAction != null && message.hasOwnProperty("waffleAccountLinkStateAction")) {
                 object.waffleAccountLinkStateAction = $root.SyncAction.SyncActionValue.WaffleAccountLinkStateAction.toObject(message.waffleAccountLinkStateAction, options);
-            if (message.usernameChatStartMode != null && message.hasOwnProperty("usernameChatStartMode"))
+                if (options.oneofs)
+                    object._waffleAccountLinkStateAction = "waffleAccountLinkStateAction";
+            }
+            if (message.usernameChatStartMode != null && message.hasOwnProperty("usernameChatStartMode")) {
                 object.usernameChatStartMode = $root.SyncAction.SyncActionValue.UsernameChatStartModeAction.toObject(message.usernameChatStartMode, options);
-            if (message.notificationActivitySettingAction != null && message.hasOwnProperty("notificationActivitySettingAction"))
+                if (options.oneofs)
+                    object._usernameChatStartMode = "usernameChatStartMode";
+            }
+            if (message.notificationActivitySettingAction != null && message.hasOwnProperty("notificationActivitySettingAction")) {
                 object.notificationActivitySettingAction = $root.SyncAction.SyncActionValue.NotificationActivitySettingAction.toObject(message.notificationActivitySettingAction, options);
-            if (message.lidContactAction != null && message.hasOwnProperty("lidContactAction"))
+                if (options.oneofs)
+                    object._notificationActivitySettingAction = "notificationActivitySettingAction";
+            }
+            if (message.lidContactAction != null && message.hasOwnProperty("lidContactAction")) {
                 object.lidContactAction = $root.SyncAction.SyncActionValue.LidContactAction.toObject(message.lidContactAction, options);
-            if (message.ctwaPerCustomerDataSharingAction != null && message.hasOwnProperty("ctwaPerCustomerDataSharingAction"))
+                if (options.oneofs)
+                    object._lidContactAction = "lidContactAction";
+            }
+            if (message.ctwaPerCustomerDataSharingAction != null && message.hasOwnProperty("ctwaPerCustomerDataSharingAction")) {
                 object.ctwaPerCustomerDataSharingAction = $root.SyncAction.SyncActionValue.CtwaPerCustomerDataSharingAction.toObject(message.ctwaPerCustomerDataSharingAction, options);
-            if (message.paymentTosAction != null && message.hasOwnProperty("paymentTosAction"))
+                if (options.oneofs)
+                    object._ctwaPerCustomerDataSharingAction = "ctwaPerCustomerDataSharingAction";
+            }
+            if (message.paymentTosAction != null && message.hasOwnProperty("paymentTosAction")) {
                 object.paymentTosAction = $root.SyncAction.SyncActionValue.PaymentTosAction.toObject(message.paymentTosAction, options);
-            if (message.privacySettingChannelsPersonalisedRecommendationAction != null && message.hasOwnProperty("privacySettingChannelsPersonalisedRecommendationAction"))
+                if (options.oneofs)
+                    object._paymentTosAction = "paymentTosAction";
+            }
+            if (message.privacySettingChannelsPersonalisedRecommendationAction != null && message.hasOwnProperty("privacySettingChannelsPersonalisedRecommendationAction")) {
                 object.privacySettingChannelsPersonalisedRecommendationAction = $root.SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction.toObject(message.privacySettingChannelsPersonalisedRecommendationAction, options);
-            if (message.businessBroadcastAssociationAction != null && message.hasOwnProperty("businessBroadcastAssociationAction"))
-                object.businessBroadcastAssociationAction = $root.SyncAction.SyncActionValue.BusinessBroadcastAssociationAction.toObject(message.businessBroadcastAssociationAction, options);
-            if (message.detectedOutcomesStatusAction != null && message.hasOwnProperty("detectedOutcomesStatusAction"))
+                if (options.oneofs)
+                    object._privacySettingChannelsPersonalisedRecommendationAction = "privacySettingChannelsPersonalisedRecommendationAction";
+            }
+            if (message.detectedOutcomesStatusAction != null && message.hasOwnProperty("detectedOutcomesStatusAction")) {
                 object.detectedOutcomesStatusAction = $root.SyncAction.SyncActionValue.DetectedOutcomesStatusAction.toObject(message.detectedOutcomesStatusAction, options);
-            if (message.maibaAiFeaturesControlAction != null && message.hasOwnProperty("maibaAiFeaturesControlAction"))
+                if (options.oneofs)
+                    object._detectedOutcomesStatusAction = "detectedOutcomesStatusAction";
+            }
+            if (message.maibaAiFeaturesControlAction != null && message.hasOwnProperty("maibaAiFeaturesControlAction")) {
                 object.maibaAiFeaturesControlAction = $root.SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.toObject(message.maibaAiFeaturesControlAction, options);
-            if (message.businessBroadcastListAction != null && message.hasOwnProperty("businessBroadcastListAction"))
+                if (options.oneofs)
+                    object._maibaAiFeaturesControlAction = "maibaAiFeaturesControlAction";
+            }
+            if (message.businessBroadcastListAction != null && message.hasOwnProperty("businessBroadcastListAction")) {
                 object.businessBroadcastListAction = $root.SyncAction.SyncActionValue.BusinessBroadcastListAction.toObject(message.businessBroadcastListAction, options);
-            if (message.musicUserIdAction != null && message.hasOwnProperty("musicUserIdAction"))
+                if (options.oneofs)
+                    object._businessBroadcastListAction = "businessBroadcastListAction";
+            }
+            if (message.musicUserIdAction != null && message.hasOwnProperty("musicUserIdAction")) {
                 object.musicUserIdAction = $root.SyncAction.SyncActionValue.MusicUserIdAction.toObject(message.musicUserIdAction, options);
+                if (options.oneofs)
+                    object._musicUserIdAction = "musicUserIdAction";
+            }
+            if (message.statusPostOptInNotificationPreferencesAction != null && message.hasOwnProperty("statusPostOptInNotificationPreferencesAction")) {
+                object.statusPostOptInNotificationPreferencesAction = $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.toObject(message.statusPostOptInNotificationPreferencesAction, options);
+                if (options.oneofs)
+                    object._statusPostOptInNotificationPreferencesAction = "statusPostOptInNotificationPreferencesAction";
+            }
+            if (message.avatarUpdatedAction != null && message.hasOwnProperty("avatarUpdatedAction")) {
+                object.avatarUpdatedAction = $root.SyncAction.SyncActionValue.AvatarUpdatedAction.toObject(message.avatarUpdatedAction, options);
+                if (options.oneofs)
+                    object._avatarUpdatedAction = "avatarUpdatedAction";
+            }
+            if (message.privateProcessingSettingAction != null && message.hasOwnProperty("privateProcessingSettingAction")) {
+                object.privateProcessingSettingAction = $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.toObject(message.privateProcessingSettingAction, options);
+                if (options.oneofs)
+                    object._privateProcessingSettingAction = "privateProcessingSettingAction";
+            }
+            if (message.newsletterSavedInterestsAction != null && message.hasOwnProperty("newsletterSavedInterestsAction")) {
+                object.newsletterSavedInterestsAction = $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction.toObject(message.newsletterSavedInterestsAction, options);
+                if (options.oneofs)
+                    object._newsletterSavedInterestsAction = "newsletterSavedInterestsAction";
+            }
+            if (message.aiThreadRenameAction != null && message.hasOwnProperty("aiThreadRenameAction")) {
+                object.aiThreadRenameAction = $root.SyncAction.SyncActionValue.AiThreadRenameAction.toObject(message.aiThreadRenameAction, options);
+                if (options.oneofs)
+                    object._aiThreadRenameAction = "aiThreadRenameAction";
+            }
+            if (message.interactiveMessageAction != null && message.hasOwnProperty("interactiveMessageAction")) {
+                object.interactiveMessageAction = $root.SyncAction.SyncActionValue.InteractiveMessageAction.toObject(message.interactiveMessageAction, options);
+                if (options.oneofs)
+                    object._interactiveMessageAction = "interactiveMessageAction";
+            }
+            if (message.settingsSyncAction != null && message.hasOwnProperty("settingsSyncAction")) {
+                object.settingsSyncAction = $root.SyncAction.SyncActionValue.SettingsSyncAction.toObject(message.settingsSyncAction, options);
+                if (options.oneofs)
+                    object._settingsSyncAction = "settingsSyncAction";
+            }
             return object;
         };
 
@@ -2869,27 +4341,63 @@ $root.SyncAction = (function() {
 
             /**
              * AgentAction name.
-             * @member {string} name
+             * @member {string|null|undefined} name
              * @memberof SyncAction.SyncActionValue.AgentAction
              * @instance
              */
-            AgentAction.prototype.name = "";
+            AgentAction.prototype.name = null;
 
             /**
              * AgentAction deviceID.
-             * @member {number} deviceID
+             * @member {number|null|undefined} deviceID
              * @memberof SyncAction.SyncActionValue.AgentAction
              * @instance
              */
-            AgentAction.prototype.deviceID = 0;
+            AgentAction.prototype.deviceID = null;
 
             /**
              * AgentAction isDeleted.
-             * @member {boolean} isDeleted
+             * @member {boolean|null|undefined} isDeleted
              * @memberof SyncAction.SyncActionValue.AgentAction
              * @instance
              */
-            AgentAction.prototype.isDeleted = false;
+            AgentAction.prototype.isDeleted = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * AgentAction _name.
+             * @member {"name"|undefined} _name
+             * @memberof SyncAction.SyncActionValue.AgentAction
+             * @instance
+             */
+            Object.defineProperty(AgentAction.prototype, "_name", {
+                get: $util.oneOfGetter($oneOfFields = ["name"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * AgentAction _deviceID.
+             * @member {"deviceID"|undefined} _deviceID
+             * @memberof SyncAction.SyncActionValue.AgentAction
+             * @instance
+             */
+            Object.defineProperty(AgentAction.prototype, "_deviceID", {
+                get: $util.oneOfGetter($oneOfFields = ["deviceID"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * AgentAction _isDeleted.
+             * @member {"isDeleted"|undefined} _isDeleted
+             * @memberof SyncAction.SyncActionValue.AgentAction
+             * @instance
+             */
+            Object.defineProperty(AgentAction.prototype, "_isDeleted", {
+                get: $util.oneOfGetter($oneOfFields = ["isDeleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new AgentAction instance using the specified properties.
@@ -3004,15 +4512,22 @@ $root.SyncAction = (function() {
             AgentAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.name != null && message.hasOwnProperty("name"))
+                var properties = {};
+                if (message.name != null && message.hasOwnProperty("name")) {
+                    properties._name = 1;
                     if (!$util.isString(message.name))
                         return "name: string expected";
-                if (message.deviceID != null && message.hasOwnProperty("deviceID"))
+                }
+                if (message.deviceID != null && message.hasOwnProperty("deviceID")) {
+                    properties._deviceID = 1;
                     if (!$util.isInteger(message.deviceID))
                         return "deviceID: integer expected";
-                if (message.isDeleted != null && message.hasOwnProperty("isDeleted"))
+                }
+                if (message.isDeleted != null && message.hasOwnProperty("isDeleted")) {
+                    properties._isDeleted = 1;
                     if (typeof message.isDeleted !== "boolean")
                         return "isDeleted: boolean expected";
+                }
                 return null;
             };
 
@@ -3050,17 +4565,21 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.name = "";
-                    object.deviceID = 0;
-                    object.isDeleted = false;
-                }
-                if (message.name != null && message.hasOwnProperty("name"))
+                if (message.name != null && message.hasOwnProperty("name")) {
                     object.name = message.name;
-                if (message.deviceID != null && message.hasOwnProperty("deviceID"))
+                    if (options.oneofs)
+                        object._name = "name";
+                }
+                if (message.deviceID != null && message.hasOwnProperty("deviceID")) {
                     object.deviceID = message.deviceID;
-                if (message.isDeleted != null && message.hasOwnProperty("isDeleted"))
+                    if (options.oneofs)
+                        object._deviceID = "deviceID";
+                }
+                if (message.isDeleted != null && message.hasOwnProperty("isDeleted")) {
                     object.isDeleted = message.isDeleted;
+                    if (options.oneofs)
+                        object._isDeleted = "isDeleted";
+                }
                 return object;
             };
 
@@ -3093,6 +4612,229 @@ $root.SyncAction = (function() {
             return AgentAction;
         })();
 
+        SyncActionValue.AiThreadRenameAction = (function() {
+
+            /**
+             * Properties of an AiThreadRenameAction.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IAiThreadRenameAction
+             * @property {string|null} [newTitle] AiThreadRenameAction newTitle
+             */
+
+            /**
+             * Constructs a new AiThreadRenameAction.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents an AiThreadRenameAction.
+             * @implements IAiThreadRenameAction
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IAiThreadRenameAction=} [properties] Properties to set
+             */
+            function AiThreadRenameAction(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AiThreadRenameAction newTitle.
+             * @member {string|null|undefined} newTitle
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @instance
+             */
+            AiThreadRenameAction.prototype.newTitle = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * AiThreadRenameAction _newTitle.
+             * @member {"newTitle"|undefined} _newTitle
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @instance
+             */
+            Object.defineProperty(AiThreadRenameAction.prototype, "_newTitle", {
+                get: $util.oneOfGetter($oneOfFields = ["newTitle"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new AiThreadRenameAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IAiThreadRenameAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.AiThreadRenameAction} AiThreadRenameAction instance
+             */
+            AiThreadRenameAction.create = function create(properties) {
+                return new AiThreadRenameAction(properties);
+            };
+
+            /**
+             * Encodes the specified AiThreadRenameAction message. Does not implicitly {@link SyncAction.SyncActionValue.AiThreadRenameAction.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IAiThreadRenameAction} message AiThreadRenameAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AiThreadRenameAction.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.newTitle != null && Object.hasOwnProperty.call(message, "newTitle"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.newTitle);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AiThreadRenameAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.AiThreadRenameAction.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IAiThreadRenameAction} message AiThreadRenameAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AiThreadRenameAction.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AiThreadRenameAction message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.AiThreadRenameAction} AiThreadRenameAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AiThreadRenameAction.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.AiThreadRenameAction();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.newTitle = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AiThreadRenameAction message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.AiThreadRenameAction} AiThreadRenameAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AiThreadRenameAction.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AiThreadRenameAction message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AiThreadRenameAction.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.newTitle != null && message.hasOwnProperty("newTitle")) {
+                    properties._newTitle = 1;
+                    if (!$util.isString(message.newTitle))
+                        return "newTitle: string expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates an AiThreadRenameAction message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.AiThreadRenameAction} AiThreadRenameAction
+             */
+            AiThreadRenameAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.AiThreadRenameAction)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.AiThreadRenameAction();
+                if (object.newTitle != null)
+                    message.newTitle = String(object.newTitle);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AiThreadRenameAction message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {SyncAction.SyncActionValue.AiThreadRenameAction} message AiThreadRenameAction
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AiThreadRenameAction.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.newTitle != null && message.hasOwnProperty("newTitle")) {
+                    object.newTitle = message.newTitle;
+                    if (options.oneofs)
+                        object._newTitle = "newTitle";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this AiThreadRenameAction to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AiThreadRenameAction.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AiThreadRenameAction
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.AiThreadRenameAction
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AiThreadRenameAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.AiThreadRenameAction";
+            };
+
+            return AiThreadRenameAction;
+        })();
+
         SyncActionValue.AndroidUnsupportedActions = (function() {
 
             /**
@@ -3119,11 +4861,25 @@ $root.SyncAction = (function() {
 
             /**
              * AndroidUnsupportedActions allowed.
-             * @member {boolean} allowed
+             * @member {boolean|null|undefined} allowed
              * @memberof SyncAction.SyncActionValue.AndroidUnsupportedActions
              * @instance
              */
-            AndroidUnsupportedActions.prototype.allowed = false;
+            AndroidUnsupportedActions.prototype.allowed = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * AndroidUnsupportedActions _allowed.
+             * @member {"allowed"|undefined} _allowed
+             * @memberof SyncAction.SyncActionValue.AndroidUnsupportedActions
+             * @instance
+             */
+            Object.defineProperty(AndroidUnsupportedActions.prototype, "_allowed", {
+                get: $util.oneOfGetter($oneOfFields = ["allowed"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new AndroidUnsupportedActions instance using the specified properties.
@@ -3226,9 +4982,12 @@ $root.SyncAction = (function() {
             AndroidUnsupportedActions.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.allowed != null && message.hasOwnProperty("allowed"))
+                var properties = {};
+                if (message.allowed != null && message.hasOwnProperty("allowed")) {
+                    properties._allowed = 1;
                     if (typeof message.allowed !== "boolean")
                         return "allowed: boolean expected";
+                }
                 return null;
             };
 
@@ -3262,10 +5021,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.allowed = false;
-                if (message.allowed != null && message.hasOwnProperty("allowed"))
+                if (message.allowed != null && message.hasOwnProperty("allowed")) {
                     object.allowed = message.allowed;
+                    if (options.oneofs)
+                        object._allowed = "allowed";
+                }
                 return object;
             };
 
@@ -3325,11 +5085,11 @@ $root.SyncAction = (function() {
 
             /**
              * ArchiveChatAction archived.
-             * @member {boolean} archived
+             * @member {boolean|null|undefined} archived
              * @memberof SyncAction.SyncActionValue.ArchiveChatAction
              * @instance
              */
-            ArchiveChatAction.prototype.archived = false;
+            ArchiveChatAction.prototype.archived = null;
 
             /**
              * ArchiveChatAction messageRange.
@@ -3338,6 +5098,31 @@ $root.SyncAction = (function() {
              * @instance
              */
             ArchiveChatAction.prototype.messageRange = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ArchiveChatAction _archived.
+             * @member {"archived"|undefined} _archived
+             * @memberof SyncAction.SyncActionValue.ArchiveChatAction
+             * @instance
+             */
+            Object.defineProperty(ArchiveChatAction.prototype, "_archived", {
+                get: $util.oneOfGetter($oneOfFields = ["archived"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ArchiveChatAction _messageRange.
+             * @member {"messageRange"|undefined} _messageRange
+             * @memberof SyncAction.SyncActionValue.ArchiveChatAction
+             * @instance
+             */
+            Object.defineProperty(ArchiveChatAction.prototype, "_messageRange", {
+                get: $util.oneOfGetter($oneOfFields = ["messageRange"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ArchiveChatAction instance using the specified properties.
@@ -3446,13 +5231,19 @@ $root.SyncAction = (function() {
             ArchiveChatAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.archived != null && message.hasOwnProperty("archived"))
+                var properties = {};
+                if (message.archived != null && message.hasOwnProperty("archived")) {
+                    properties._archived = 1;
                     if (typeof message.archived !== "boolean")
                         return "archived: boolean expected";
+                }
                 if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
-                    var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
-                    if (error)
-                        return "messageRange." + error;
+                    properties._messageRange = 1;
+                    {
+                        var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
+                        if (error)
+                            return "messageRange." + error;
+                    }
                 }
                 return null;
             };
@@ -3492,14 +5283,16 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.archived = false;
-                    object.messageRange = null;
-                }
-                if (message.archived != null && message.hasOwnProperty("archived"))
+                if (message.archived != null && message.hasOwnProperty("archived")) {
                     object.archived = message.archived;
-                if (message.messageRange != null && message.hasOwnProperty("messageRange"))
+                    if (options.oneofs)
+                        object._archived = "archived";
+                }
+                if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
                     object.messageRange = $root.SyncAction.SyncActionValue.SyncActionMessageRange.toObject(message.messageRange, options);
+                    if (options.oneofs)
+                        object._messageRange = "messageRange";
+                }
                 return object;
             };
 
@@ -3532,6 +5325,314 @@ $root.SyncAction = (function() {
             return ArchiveChatAction;
         })();
 
+        SyncActionValue.AvatarUpdatedAction = (function() {
+
+            /**
+             * Properties of an AvatarUpdatedAction.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IAvatarUpdatedAction
+             * @property {SyncAction.SyncActionValue.AvatarUpdatedAction.AvatarEventType|null} [eventType] AvatarUpdatedAction eventType
+             * @property {Array.<SyncAction.SyncActionValue.IStickerAction>|null} [recentAvatarStickers] AvatarUpdatedAction recentAvatarStickers
+             */
+
+            /**
+             * Constructs a new AvatarUpdatedAction.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents an AvatarUpdatedAction.
+             * @implements IAvatarUpdatedAction
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IAvatarUpdatedAction=} [properties] Properties to set
+             */
+            function AvatarUpdatedAction(properties) {
+                this.recentAvatarStickers = [];
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AvatarUpdatedAction eventType.
+             * @member {SyncAction.SyncActionValue.AvatarUpdatedAction.AvatarEventType|null|undefined} eventType
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @instance
+             */
+            AvatarUpdatedAction.prototype.eventType = null;
+
+            /**
+             * AvatarUpdatedAction recentAvatarStickers.
+             * @member {Array.<SyncAction.SyncActionValue.IStickerAction>} recentAvatarStickers
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @instance
+             */
+            AvatarUpdatedAction.prototype.recentAvatarStickers = $util.emptyArray;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * AvatarUpdatedAction _eventType.
+             * @member {"eventType"|undefined} _eventType
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @instance
+             */
+            Object.defineProperty(AvatarUpdatedAction.prototype, "_eventType", {
+                get: $util.oneOfGetter($oneOfFields = ["eventType"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new AvatarUpdatedAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IAvatarUpdatedAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.AvatarUpdatedAction} AvatarUpdatedAction instance
+             */
+            AvatarUpdatedAction.create = function create(properties) {
+                return new AvatarUpdatedAction(properties);
+            };
+
+            /**
+             * Encodes the specified AvatarUpdatedAction message. Does not implicitly {@link SyncAction.SyncActionValue.AvatarUpdatedAction.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IAvatarUpdatedAction} message AvatarUpdatedAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AvatarUpdatedAction.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.eventType != null && Object.hasOwnProperty.call(message, "eventType"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.eventType);
+                if (message.recentAvatarStickers != null && message.recentAvatarStickers.length)
+                    for (var i = 0; i < message.recentAvatarStickers.length; ++i)
+                        $root.SyncAction.SyncActionValue.StickerAction.encode(message.recentAvatarStickers[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AvatarUpdatedAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.AvatarUpdatedAction.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IAvatarUpdatedAction} message AvatarUpdatedAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AvatarUpdatedAction.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AvatarUpdatedAction message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.AvatarUpdatedAction} AvatarUpdatedAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AvatarUpdatedAction.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.AvatarUpdatedAction();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.eventType = reader.int32();
+                            break;
+                        }
+                    case 2: {
+                            if (!(message.recentAvatarStickers && message.recentAvatarStickers.length))
+                                message.recentAvatarStickers = [];
+                            message.recentAvatarStickers.push($root.SyncAction.SyncActionValue.StickerAction.decode(reader, reader.uint32()));
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AvatarUpdatedAction message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.AvatarUpdatedAction} AvatarUpdatedAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AvatarUpdatedAction.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AvatarUpdatedAction message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AvatarUpdatedAction.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.eventType != null && message.hasOwnProperty("eventType")) {
+                    properties._eventType = 1;
+                    switch (message.eventType) {
+                    default:
+                        return "eventType: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                        break;
+                    }
+                }
+                if (message.recentAvatarStickers != null && message.hasOwnProperty("recentAvatarStickers")) {
+                    if (!Array.isArray(message.recentAvatarStickers))
+                        return "recentAvatarStickers: array expected";
+                    for (var i = 0; i < message.recentAvatarStickers.length; ++i) {
+                        var error = $root.SyncAction.SyncActionValue.StickerAction.verify(message.recentAvatarStickers[i]);
+                        if (error)
+                            return "recentAvatarStickers." + error;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates an AvatarUpdatedAction message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.AvatarUpdatedAction} AvatarUpdatedAction
+             */
+            AvatarUpdatedAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.AvatarUpdatedAction)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.AvatarUpdatedAction();
+                switch (object.eventType) {
+                default:
+                    if (typeof object.eventType === "number") {
+                        message.eventType = object.eventType;
+                        break;
+                    }
+                    break;
+                case "UPDATED":
+                case 0:
+                    message.eventType = 0;
+                    break;
+                case "CREATED":
+                case 1:
+                    message.eventType = 1;
+                    break;
+                case "DELETED":
+                case 2:
+                    message.eventType = 2;
+                    break;
+                }
+                if (object.recentAvatarStickers) {
+                    if (!Array.isArray(object.recentAvatarStickers))
+                        throw TypeError(".SyncAction.SyncActionValue.AvatarUpdatedAction.recentAvatarStickers: array expected");
+                    message.recentAvatarStickers = [];
+                    for (var i = 0; i < object.recentAvatarStickers.length; ++i) {
+                        if (typeof object.recentAvatarStickers[i] !== "object")
+                            throw TypeError(".SyncAction.SyncActionValue.AvatarUpdatedAction.recentAvatarStickers: object expected");
+                        message.recentAvatarStickers[i] = $root.SyncAction.SyncActionValue.StickerAction.fromObject(object.recentAvatarStickers[i]);
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AvatarUpdatedAction message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {SyncAction.SyncActionValue.AvatarUpdatedAction} message AvatarUpdatedAction
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AvatarUpdatedAction.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (options.arrays || options.defaults)
+                    object.recentAvatarStickers = [];
+                if (message.eventType != null && message.hasOwnProperty("eventType")) {
+                    object.eventType = options.enums === String ? $root.SyncAction.SyncActionValue.AvatarUpdatedAction.AvatarEventType[message.eventType] === undefined ? message.eventType : $root.SyncAction.SyncActionValue.AvatarUpdatedAction.AvatarEventType[message.eventType] : message.eventType;
+                    if (options.oneofs)
+                        object._eventType = "eventType";
+                }
+                if (message.recentAvatarStickers && message.recentAvatarStickers.length) {
+                    object.recentAvatarStickers = [];
+                    for (var j = 0; j < message.recentAvatarStickers.length; ++j)
+                        object.recentAvatarStickers[j] = $root.SyncAction.SyncActionValue.StickerAction.toObject(message.recentAvatarStickers[j], options);
+                }
+                return object;
+            };
+
+            /**
+             * Converts this AvatarUpdatedAction to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AvatarUpdatedAction.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AvatarUpdatedAction
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.AvatarUpdatedAction
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AvatarUpdatedAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.AvatarUpdatedAction";
+            };
+
+            /**
+             * AvatarEventType enum.
+             * @name SyncAction.SyncActionValue.AvatarUpdatedAction.AvatarEventType
+             * @enum {number}
+             * @property {number} UPDATED=0 UPDATED value
+             * @property {number} CREATED=1 CREATED value
+             * @property {number} DELETED=2 DELETED value
+             */
+            AvatarUpdatedAction.AvatarEventType = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "UPDATED"] = 0;
+                values[valuesById[1] = "CREATED"] = 1;
+                values[valuesById[2] = "DELETED"] = 2;
+                return values;
+            })();
+
+            return AvatarUpdatedAction;
+        })();
+
         SyncActionValue.BotWelcomeRequestAction = (function() {
 
             /**
@@ -3558,11 +5659,25 @@ $root.SyncAction = (function() {
 
             /**
              * BotWelcomeRequestAction isSent.
-             * @member {boolean} isSent
+             * @member {boolean|null|undefined} isSent
              * @memberof SyncAction.SyncActionValue.BotWelcomeRequestAction
              * @instance
              */
-            BotWelcomeRequestAction.prototype.isSent = false;
+            BotWelcomeRequestAction.prototype.isSent = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * BotWelcomeRequestAction _isSent.
+             * @member {"isSent"|undefined} _isSent
+             * @memberof SyncAction.SyncActionValue.BotWelcomeRequestAction
+             * @instance
+             */
+            Object.defineProperty(BotWelcomeRequestAction.prototype, "_isSent", {
+                get: $util.oneOfGetter($oneOfFields = ["isSent"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new BotWelcomeRequestAction instance using the specified properties.
@@ -3665,9 +5780,12 @@ $root.SyncAction = (function() {
             BotWelcomeRequestAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isSent != null && message.hasOwnProperty("isSent"))
+                var properties = {};
+                if (message.isSent != null && message.hasOwnProperty("isSent")) {
+                    properties._isSent = 1;
                     if (typeof message.isSent !== "boolean")
                         return "isSent: boolean expected";
+                }
                 return null;
             };
 
@@ -3701,10 +5819,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isSent = false;
-                if (message.isSent != null && message.hasOwnProperty("isSent"))
+                if (message.isSent != null && message.hasOwnProperty("isSent")) {
                     object.isSent = message.isSent;
+                    if (options.oneofs)
+                        object._isSent = "isSent";
+                }
                 return object;
             };
 
@@ -3737,6 +5856,267 @@ $root.SyncAction = (function() {
             return BotWelcomeRequestAction;
         })();
 
+        SyncActionValue.BroadcastListParticipant = (function() {
+
+            /**
+             * Properties of a BroadcastListParticipant.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IBroadcastListParticipant
+             * @property {string|null} [lidJid] BroadcastListParticipant lidJid
+             * @property {string|null} [pnJid] BroadcastListParticipant pnJid
+             */
+
+            /**
+             * Constructs a new BroadcastListParticipant.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents a BroadcastListParticipant.
+             * @implements IBroadcastListParticipant
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IBroadcastListParticipant=} [properties] Properties to set
+             */
+            function BroadcastListParticipant(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * BroadcastListParticipant lidJid.
+             * @member {string|null|undefined} lidJid
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @instance
+             */
+            BroadcastListParticipant.prototype.lidJid = null;
+
+            /**
+             * BroadcastListParticipant pnJid.
+             * @member {string|null|undefined} pnJid
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @instance
+             */
+            BroadcastListParticipant.prototype.pnJid = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * BroadcastListParticipant _lidJid.
+             * @member {"lidJid"|undefined} _lidJid
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @instance
+             */
+            Object.defineProperty(BroadcastListParticipant.prototype, "_lidJid", {
+                get: $util.oneOfGetter($oneOfFields = ["lidJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * BroadcastListParticipant _pnJid.
+             * @member {"pnJid"|undefined} _pnJid
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @instance
+             */
+            Object.defineProperty(BroadcastListParticipant.prototype, "_pnJid", {
+                get: $util.oneOfGetter($oneOfFields = ["pnJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new BroadcastListParticipant instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {SyncAction.SyncActionValue.IBroadcastListParticipant=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.BroadcastListParticipant} BroadcastListParticipant instance
+             */
+            BroadcastListParticipant.create = function create(properties) {
+                return new BroadcastListParticipant(properties);
+            };
+
+            /**
+             * Encodes the specified BroadcastListParticipant message. Does not implicitly {@link SyncAction.SyncActionValue.BroadcastListParticipant.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {SyncAction.SyncActionValue.IBroadcastListParticipant} message BroadcastListParticipant message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            BroadcastListParticipant.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.lidJid != null && Object.hasOwnProperty.call(message, "lidJid"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.lidJid);
+                if (message.pnJid != null && Object.hasOwnProperty.call(message, "pnJid"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.pnJid);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified BroadcastListParticipant message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.BroadcastListParticipant.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {SyncAction.SyncActionValue.IBroadcastListParticipant} message BroadcastListParticipant message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            BroadcastListParticipant.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a BroadcastListParticipant message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.BroadcastListParticipant} BroadcastListParticipant
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            BroadcastListParticipant.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.BroadcastListParticipant();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.lidJid = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            message.pnJid = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a BroadcastListParticipant message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.BroadcastListParticipant} BroadcastListParticipant
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            BroadcastListParticipant.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a BroadcastListParticipant message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            BroadcastListParticipant.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.lidJid != null && message.hasOwnProperty("lidJid")) {
+                    properties._lidJid = 1;
+                    if (!$util.isString(message.lidJid))
+                        return "lidJid: string expected";
+                }
+                if (message.pnJid != null && message.hasOwnProperty("pnJid")) {
+                    properties._pnJid = 1;
+                    if (!$util.isString(message.pnJid))
+                        return "pnJid: string expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a BroadcastListParticipant message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.BroadcastListParticipant} BroadcastListParticipant
+             */
+            BroadcastListParticipant.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.BroadcastListParticipant)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.BroadcastListParticipant();
+                if (object.lidJid != null)
+                    message.lidJid = String(object.lidJid);
+                if (object.pnJid != null)
+                    message.pnJid = String(object.pnJid);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a BroadcastListParticipant message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {SyncAction.SyncActionValue.BroadcastListParticipant} message BroadcastListParticipant
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            BroadcastListParticipant.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.lidJid != null && message.hasOwnProperty("lidJid")) {
+                    object.lidJid = message.lidJid;
+                    if (options.oneofs)
+                        object._lidJid = "lidJid";
+                }
+                if (message.pnJid != null && message.hasOwnProperty("pnJid")) {
+                    object.pnJid = message.pnJid;
+                    if (options.oneofs)
+                        object._pnJid = "pnJid";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this BroadcastListParticipant to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            BroadcastListParticipant.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for BroadcastListParticipant
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.BroadcastListParticipant
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            BroadcastListParticipant.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.BroadcastListParticipant";
+            };
+
+            return BroadcastListParticipant;
+        })();
+
         SyncActionValue.BusinessBroadcastAssociationAction = (function() {
 
             /**
@@ -3763,11 +6143,25 @@ $root.SyncAction = (function() {
 
             /**
              * BusinessBroadcastAssociationAction deleted.
-             * @member {boolean} deleted
+             * @member {boolean|null|undefined} deleted
              * @memberof SyncAction.SyncActionValue.BusinessBroadcastAssociationAction
              * @instance
              */
-            BusinessBroadcastAssociationAction.prototype.deleted = false;
+            BusinessBroadcastAssociationAction.prototype.deleted = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * BusinessBroadcastAssociationAction _deleted.
+             * @member {"deleted"|undefined} _deleted
+             * @memberof SyncAction.SyncActionValue.BusinessBroadcastAssociationAction
+             * @instance
+             */
+            Object.defineProperty(BusinessBroadcastAssociationAction.prototype, "_deleted", {
+                get: $util.oneOfGetter($oneOfFields = ["deleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new BusinessBroadcastAssociationAction instance using the specified properties.
@@ -3870,9 +6264,12 @@ $root.SyncAction = (function() {
             BusinessBroadcastAssociationAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                var properties = {};
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
+                    properties._deleted = 1;
                     if (typeof message.deleted !== "boolean")
                         return "deleted: boolean expected";
+                }
                 return null;
             };
 
@@ -3906,10 +6303,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.deleted = false;
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
                     object.deleted = message.deleted;
+                    if (options.oneofs)
+                        object._deleted = "deleted";
+                }
                 return object;
             };
 
@@ -3949,7 +6347,7 @@ $root.SyncAction = (function() {
              * @memberof SyncAction.SyncActionValue
              * @interface IBusinessBroadcastListAction
              * @property {boolean|null} [deleted] BusinessBroadcastListAction deleted
-             * @property {Array.<string>|null} [phoneNumbers] BusinessBroadcastListAction phoneNumbers
+             * @property {Array.<SyncAction.SyncActionValue.IBroadcastListParticipant>|null} [participants] BusinessBroadcastListAction participants
              * @property {string|null} [listName] BusinessBroadcastListAction listName
              */
 
@@ -3962,7 +6360,7 @@ $root.SyncAction = (function() {
              * @param {SyncAction.SyncActionValue.IBusinessBroadcastListAction=} [properties] Properties to set
              */
             function BusinessBroadcastListAction(properties) {
-                this.phoneNumbers = [];
+                this.participants = [];
                 if (properties)
                     for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -3971,27 +6369,52 @@ $root.SyncAction = (function() {
 
             /**
              * BusinessBroadcastListAction deleted.
-             * @member {boolean} deleted
+             * @member {boolean|null|undefined} deleted
              * @memberof SyncAction.SyncActionValue.BusinessBroadcastListAction
              * @instance
              */
-            BusinessBroadcastListAction.prototype.deleted = false;
+            BusinessBroadcastListAction.prototype.deleted = null;
 
             /**
-             * BusinessBroadcastListAction phoneNumbers.
-             * @member {Array.<string>} phoneNumbers
+             * BusinessBroadcastListAction participants.
+             * @member {Array.<SyncAction.SyncActionValue.IBroadcastListParticipant>} participants
              * @memberof SyncAction.SyncActionValue.BusinessBroadcastListAction
              * @instance
              */
-            BusinessBroadcastListAction.prototype.phoneNumbers = $util.emptyArray;
+            BusinessBroadcastListAction.prototype.participants = $util.emptyArray;
 
             /**
              * BusinessBroadcastListAction listName.
-             * @member {string} listName
+             * @member {string|null|undefined} listName
              * @memberof SyncAction.SyncActionValue.BusinessBroadcastListAction
              * @instance
              */
-            BusinessBroadcastListAction.prototype.listName = "";
+            BusinessBroadcastListAction.prototype.listName = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * BusinessBroadcastListAction _deleted.
+             * @member {"deleted"|undefined} _deleted
+             * @memberof SyncAction.SyncActionValue.BusinessBroadcastListAction
+             * @instance
+             */
+            Object.defineProperty(BusinessBroadcastListAction.prototype, "_deleted", {
+                get: $util.oneOfGetter($oneOfFields = ["deleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * BusinessBroadcastListAction _listName.
+             * @member {"listName"|undefined} _listName
+             * @memberof SyncAction.SyncActionValue.BusinessBroadcastListAction
+             * @instance
+             */
+            Object.defineProperty(BusinessBroadcastListAction.prototype, "_listName", {
+                get: $util.oneOfGetter($oneOfFields = ["listName"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new BusinessBroadcastListAction instance using the specified properties.
@@ -4019,9 +6442,9 @@ $root.SyncAction = (function() {
                     writer = $Writer.create();
                 if (message.deleted != null && Object.hasOwnProperty.call(message, "deleted"))
                     writer.uint32(/* id 1, wireType 0 =*/8).bool(message.deleted);
-                if (message.phoneNumbers != null && message.phoneNumbers.length)
-                    for (var i = 0; i < message.phoneNumbers.length; ++i)
-                        writer.uint32(/* id 2, wireType 2 =*/18).string(message.phoneNumbers[i]);
+                if (message.participants != null && message.participants.length)
+                    for (var i = 0; i < message.participants.length; ++i)
+                        $root.SyncAction.SyncActionValue.BroadcastListParticipant.encode(message.participants[i], writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
                 if (message.listName != null && Object.hasOwnProperty.call(message, "listName"))
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.listName);
                 return writer;
@@ -4065,9 +6488,9 @@ $root.SyncAction = (function() {
                             break;
                         }
                     case 2: {
-                            if (!(message.phoneNumbers && message.phoneNumbers.length))
-                                message.phoneNumbers = [];
-                            message.phoneNumbers.push(reader.string());
+                            if (!(message.participants && message.participants.length))
+                                message.participants = [];
+                            message.participants.push($root.SyncAction.SyncActionValue.BroadcastListParticipant.decode(reader, reader.uint32()));
                             break;
                         }
                     case 3: {
@@ -4109,19 +6532,26 @@ $root.SyncAction = (function() {
             BusinessBroadcastListAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                var properties = {};
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
+                    properties._deleted = 1;
                     if (typeof message.deleted !== "boolean")
                         return "deleted: boolean expected";
-                if (message.phoneNumbers != null && message.hasOwnProperty("phoneNumbers")) {
-                    if (!Array.isArray(message.phoneNumbers))
-                        return "phoneNumbers: array expected";
-                    for (var i = 0; i < message.phoneNumbers.length; ++i)
-                        if (!$util.isString(message.phoneNumbers[i]))
-                            return "phoneNumbers: string[] expected";
                 }
-                if (message.listName != null && message.hasOwnProperty("listName"))
+                if (message.participants != null && message.hasOwnProperty("participants")) {
+                    if (!Array.isArray(message.participants))
+                        return "participants: array expected";
+                    for (var i = 0; i < message.participants.length; ++i) {
+                        var error = $root.SyncAction.SyncActionValue.BroadcastListParticipant.verify(message.participants[i]);
+                        if (error)
+                            return "participants." + error;
+                    }
+                }
+                if (message.listName != null && message.hasOwnProperty("listName")) {
+                    properties._listName = 1;
                     if (!$util.isString(message.listName))
                         return "listName: string expected";
+                }
                 return null;
             };
 
@@ -4139,12 +6569,15 @@ $root.SyncAction = (function() {
                 var message = new $root.SyncAction.SyncActionValue.BusinessBroadcastListAction();
                 if (object.deleted != null)
                     message.deleted = Boolean(object.deleted);
-                if (object.phoneNumbers) {
-                    if (!Array.isArray(object.phoneNumbers))
-                        throw TypeError(".SyncAction.SyncActionValue.BusinessBroadcastListAction.phoneNumbers: array expected");
-                    message.phoneNumbers = [];
-                    for (var i = 0; i < object.phoneNumbers.length; ++i)
-                        message.phoneNumbers[i] = String(object.phoneNumbers[i]);
+                if (object.participants) {
+                    if (!Array.isArray(object.participants))
+                        throw TypeError(".SyncAction.SyncActionValue.BusinessBroadcastListAction.participants: array expected");
+                    message.participants = [];
+                    for (var i = 0; i < object.participants.length; ++i) {
+                        if (typeof object.participants[i] !== "object")
+                            throw TypeError(".SyncAction.SyncActionValue.BusinessBroadcastListAction.participants: object expected");
+                        message.participants[i] = $root.SyncAction.SyncActionValue.BroadcastListParticipant.fromObject(object.participants[i]);
+                    }
                 }
                 if (object.listName != null)
                     message.listName = String(object.listName);
@@ -4165,20 +6598,22 @@ $root.SyncAction = (function() {
                     options = {};
                 var object = {};
                 if (options.arrays || options.defaults)
-                    object.phoneNumbers = [];
-                if (options.defaults) {
-                    object.deleted = false;
-                    object.listName = "";
-                }
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                    object.participants = [];
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
                     object.deleted = message.deleted;
-                if (message.phoneNumbers && message.phoneNumbers.length) {
-                    object.phoneNumbers = [];
-                    for (var j = 0; j < message.phoneNumbers.length; ++j)
-                        object.phoneNumbers[j] = message.phoneNumbers[j];
+                    if (options.oneofs)
+                        object._deleted = "deleted";
                 }
-                if (message.listName != null && message.hasOwnProperty("listName"))
+                if (message.participants && message.participants.length) {
+                    object.participants = [];
+                    for (var j = 0; j < message.participants.length; ++j)
+                        object.participants[j] = $root.SyncAction.SyncActionValue.BroadcastListParticipant.toObject(message.participants[j], options);
+                }
+                if (message.listName != null && message.hasOwnProperty("listName")) {
                     object.listName = message.listName;
+                    if (options.oneofs)
+                        object._listName = "listName";
+                }
                 return object;
             };
 
@@ -4242,6 +6677,20 @@ $root.SyncAction = (function() {
              * @instance
              */
             CallLogAction.prototype.callLogRecord = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * CallLogAction _callLogRecord.
+             * @member {"callLogRecord"|undefined} _callLogRecord
+             * @memberof SyncAction.SyncActionValue.CallLogAction
+             * @instance
+             */
+            Object.defineProperty(CallLogAction.prototype, "_callLogRecord", {
+                get: $util.oneOfGetter($oneOfFields = ["callLogRecord"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new CallLogAction instance using the specified properties.
@@ -4344,10 +6793,14 @@ $root.SyncAction = (function() {
             CallLogAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                var properties = {};
                 if (message.callLogRecord != null && message.hasOwnProperty("callLogRecord")) {
-                    var error = $root.SyncAction.CallLogRecord.verify(message.callLogRecord);
-                    if (error)
-                        return "callLogRecord." + error;
+                    properties._callLogRecord = 1;
+                    {
+                        var error = $root.SyncAction.CallLogRecord.verify(message.callLogRecord);
+                        if (error)
+                            return "callLogRecord." + error;
+                    }
                 }
                 return null;
             };
@@ -4385,10 +6838,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.callLogRecord = null;
-                if (message.callLogRecord != null && message.hasOwnProperty("callLogRecord"))
+                if (message.callLogRecord != null && message.hasOwnProperty("callLogRecord")) {
                     object.callLogRecord = $root.SyncAction.CallLogRecord.toObject(message.callLogRecord, options);
+                    if (options.oneofs)
+                        object._callLogRecord = "callLogRecord";
+                }
                 return object;
             };
 
@@ -4447,11 +6901,25 @@ $root.SyncAction = (function() {
 
             /**
              * ChatAssignmentAction deviceAgentID.
-             * @member {string} deviceAgentID
+             * @member {string|null|undefined} deviceAgentID
              * @memberof SyncAction.SyncActionValue.ChatAssignmentAction
              * @instance
              */
-            ChatAssignmentAction.prototype.deviceAgentID = "";
+            ChatAssignmentAction.prototype.deviceAgentID = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ChatAssignmentAction _deviceAgentID.
+             * @member {"deviceAgentID"|undefined} _deviceAgentID
+             * @memberof SyncAction.SyncActionValue.ChatAssignmentAction
+             * @instance
+             */
+            Object.defineProperty(ChatAssignmentAction.prototype, "_deviceAgentID", {
+                get: $util.oneOfGetter($oneOfFields = ["deviceAgentID"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ChatAssignmentAction instance using the specified properties.
@@ -4554,9 +7022,12 @@ $root.SyncAction = (function() {
             ChatAssignmentAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.deviceAgentID != null && message.hasOwnProperty("deviceAgentID"))
+                var properties = {};
+                if (message.deviceAgentID != null && message.hasOwnProperty("deviceAgentID")) {
+                    properties._deviceAgentID = 1;
                     if (!$util.isString(message.deviceAgentID))
                         return "deviceAgentID: string expected";
+                }
                 return null;
             };
 
@@ -4590,10 +7061,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.deviceAgentID = "";
-                if (message.deviceAgentID != null && message.hasOwnProperty("deviceAgentID"))
+                if (message.deviceAgentID != null && message.hasOwnProperty("deviceAgentID")) {
                     object.deviceAgentID = message.deviceAgentID;
+                    if (options.oneofs)
+                        object._deviceAgentID = "deviceAgentID";
+                }
                 return object;
             };
 
@@ -4652,11 +7124,25 @@ $root.SyncAction = (function() {
 
             /**
              * ChatAssignmentOpenedStatusAction chatOpened.
-             * @member {boolean} chatOpened
+             * @member {boolean|null|undefined} chatOpened
              * @memberof SyncAction.SyncActionValue.ChatAssignmentOpenedStatusAction
              * @instance
              */
-            ChatAssignmentOpenedStatusAction.prototype.chatOpened = false;
+            ChatAssignmentOpenedStatusAction.prototype.chatOpened = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ChatAssignmentOpenedStatusAction _chatOpened.
+             * @member {"chatOpened"|undefined} _chatOpened
+             * @memberof SyncAction.SyncActionValue.ChatAssignmentOpenedStatusAction
+             * @instance
+             */
+            Object.defineProperty(ChatAssignmentOpenedStatusAction.prototype, "_chatOpened", {
+                get: $util.oneOfGetter($oneOfFields = ["chatOpened"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ChatAssignmentOpenedStatusAction instance using the specified properties.
@@ -4759,9 +7245,12 @@ $root.SyncAction = (function() {
             ChatAssignmentOpenedStatusAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.chatOpened != null && message.hasOwnProperty("chatOpened"))
+                var properties = {};
+                if (message.chatOpened != null && message.hasOwnProperty("chatOpened")) {
+                    properties._chatOpened = 1;
                     if (typeof message.chatOpened !== "boolean")
                         return "chatOpened: boolean expected";
+                }
                 return null;
             };
 
@@ -4795,10 +7284,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.chatOpened = false;
-                if (message.chatOpened != null && message.hasOwnProperty("chatOpened"))
+                if (message.chatOpened != null && message.hasOwnProperty("chatOpened")) {
                     object.chatOpened = message.chatOpened;
+                    if (options.oneofs)
+                        object._chatOpened = "chatOpened";
+                }
                 return object;
             };
 
@@ -4862,6 +7352,20 @@ $root.SyncAction = (function() {
              * @instance
              */
             ClearChatAction.prototype.messageRange = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ClearChatAction _messageRange.
+             * @member {"messageRange"|undefined} _messageRange
+             * @memberof SyncAction.SyncActionValue.ClearChatAction
+             * @instance
+             */
+            Object.defineProperty(ClearChatAction.prototype, "_messageRange", {
+                get: $util.oneOfGetter($oneOfFields = ["messageRange"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ClearChatAction instance using the specified properties.
@@ -4964,10 +7468,14 @@ $root.SyncAction = (function() {
             ClearChatAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                var properties = {};
                 if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
-                    var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
-                    if (error)
-                        return "messageRange." + error;
+                    properties._messageRange = 1;
+                    {
+                        var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
+                        if (error)
+                            return "messageRange." + error;
+                    }
                 }
                 return null;
             };
@@ -5005,10 +7513,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.messageRange = null;
-                if (message.messageRange != null && message.hasOwnProperty("messageRange"))
+                if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
                     object.messageRange = $root.SyncAction.SyncActionValue.SyncActionMessageRange.toObject(message.messageRange, options);
+                    if (options.oneofs)
+                        object._messageRange = "messageRange";
+                }
                 return object;
             };
 
@@ -5072,51 +7581,120 @@ $root.SyncAction = (function() {
 
             /**
              * ContactAction fullName.
-             * @member {string} fullName
+             * @member {string|null|undefined} fullName
              * @memberof SyncAction.SyncActionValue.ContactAction
              * @instance
              */
-            ContactAction.prototype.fullName = "";
+            ContactAction.prototype.fullName = null;
 
             /**
              * ContactAction firstName.
-             * @member {string} firstName
+             * @member {string|null|undefined} firstName
              * @memberof SyncAction.SyncActionValue.ContactAction
              * @instance
              */
-            ContactAction.prototype.firstName = "";
+            ContactAction.prototype.firstName = null;
 
             /**
              * ContactAction lidJid.
-             * @member {string} lidJid
+             * @member {string|null|undefined} lidJid
              * @memberof SyncAction.SyncActionValue.ContactAction
              * @instance
              */
-            ContactAction.prototype.lidJid = "";
+            ContactAction.prototype.lidJid = null;
 
             /**
              * ContactAction saveOnPrimaryAddressbook.
-             * @member {boolean} saveOnPrimaryAddressbook
+             * @member {boolean|null|undefined} saveOnPrimaryAddressbook
              * @memberof SyncAction.SyncActionValue.ContactAction
              * @instance
              */
-            ContactAction.prototype.saveOnPrimaryAddressbook = false;
+            ContactAction.prototype.saveOnPrimaryAddressbook = null;
 
             /**
              * ContactAction pnJid.
-             * @member {string} pnJid
+             * @member {string|null|undefined} pnJid
              * @memberof SyncAction.SyncActionValue.ContactAction
              * @instance
              */
-            ContactAction.prototype.pnJid = "";
+            ContactAction.prototype.pnJid = null;
 
             /**
              * ContactAction username.
-             * @member {string} username
+             * @member {string|null|undefined} username
              * @memberof SyncAction.SyncActionValue.ContactAction
              * @instance
              */
-            ContactAction.prototype.username = "";
+            ContactAction.prototype.username = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ContactAction _fullName.
+             * @member {"fullName"|undefined} _fullName
+             * @memberof SyncAction.SyncActionValue.ContactAction
+             * @instance
+             */
+            Object.defineProperty(ContactAction.prototype, "_fullName", {
+                get: $util.oneOfGetter($oneOfFields = ["fullName"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ContactAction _firstName.
+             * @member {"firstName"|undefined} _firstName
+             * @memberof SyncAction.SyncActionValue.ContactAction
+             * @instance
+             */
+            Object.defineProperty(ContactAction.prototype, "_firstName", {
+                get: $util.oneOfGetter($oneOfFields = ["firstName"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ContactAction _lidJid.
+             * @member {"lidJid"|undefined} _lidJid
+             * @memberof SyncAction.SyncActionValue.ContactAction
+             * @instance
+             */
+            Object.defineProperty(ContactAction.prototype, "_lidJid", {
+                get: $util.oneOfGetter($oneOfFields = ["lidJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ContactAction _saveOnPrimaryAddressbook.
+             * @member {"saveOnPrimaryAddressbook"|undefined} _saveOnPrimaryAddressbook
+             * @memberof SyncAction.SyncActionValue.ContactAction
+             * @instance
+             */
+            Object.defineProperty(ContactAction.prototype, "_saveOnPrimaryAddressbook", {
+                get: $util.oneOfGetter($oneOfFields = ["saveOnPrimaryAddressbook"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ContactAction _pnJid.
+             * @member {"pnJid"|undefined} _pnJid
+             * @memberof SyncAction.SyncActionValue.ContactAction
+             * @instance
+             */
+            Object.defineProperty(ContactAction.prototype, "_pnJid", {
+                get: $util.oneOfGetter($oneOfFields = ["pnJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ContactAction _username.
+             * @member {"username"|undefined} _username
+             * @memberof SyncAction.SyncActionValue.ContactAction
+             * @instance
+             */
+            Object.defineProperty(ContactAction.prototype, "_username", {
+                get: $util.oneOfGetter($oneOfFields = ["username"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ContactAction instance using the specified properties.
@@ -5249,24 +7827,37 @@ $root.SyncAction = (function() {
             ContactAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.fullName != null && message.hasOwnProperty("fullName"))
+                var properties = {};
+                if (message.fullName != null && message.hasOwnProperty("fullName")) {
+                    properties._fullName = 1;
                     if (!$util.isString(message.fullName))
                         return "fullName: string expected";
-                if (message.firstName != null && message.hasOwnProperty("firstName"))
+                }
+                if (message.firstName != null && message.hasOwnProperty("firstName")) {
+                    properties._firstName = 1;
                     if (!$util.isString(message.firstName))
                         return "firstName: string expected";
-                if (message.lidJid != null && message.hasOwnProperty("lidJid"))
+                }
+                if (message.lidJid != null && message.hasOwnProperty("lidJid")) {
+                    properties._lidJid = 1;
                     if (!$util.isString(message.lidJid))
                         return "lidJid: string expected";
-                if (message.saveOnPrimaryAddressbook != null && message.hasOwnProperty("saveOnPrimaryAddressbook"))
+                }
+                if (message.saveOnPrimaryAddressbook != null && message.hasOwnProperty("saveOnPrimaryAddressbook")) {
+                    properties._saveOnPrimaryAddressbook = 1;
                     if (typeof message.saveOnPrimaryAddressbook !== "boolean")
                         return "saveOnPrimaryAddressbook: boolean expected";
-                if (message.pnJid != null && message.hasOwnProperty("pnJid"))
+                }
+                if (message.pnJid != null && message.hasOwnProperty("pnJid")) {
+                    properties._pnJid = 1;
                     if (!$util.isString(message.pnJid))
                         return "pnJid: string expected";
-                if (message.username != null && message.hasOwnProperty("username"))
+                }
+                if (message.username != null && message.hasOwnProperty("username")) {
+                    properties._username = 1;
                     if (!$util.isString(message.username))
                         return "username: string expected";
+                }
                 return null;
             };
 
@@ -5310,26 +7901,36 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.fullName = "";
-                    object.firstName = "";
-                    object.lidJid = "";
-                    object.saveOnPrimaryAddressbook = false;
-                    object.pnJid = "";
-                    object.username = "";
-                }
-                if (message.fullName != null && message.hasOwnProperty("fullName"))
+                if (message.fullName != null && message.hasOwnProperty("fullName")) {
                     object.fullName = message.fullName;
-                if (message.firstName != null && message.hasOwnProperty("firstName"))
+                    if (options.oneofs)
+                        object._fullName = "fullName";
+                }
+                if (message.firstName != null && message.hasOwnProperty("firstName")) {
                     object.firstName = message.firstName;
-                if (message.lidJid != null && message.hasOwnProperty("lidJid"))
+                    if (options.oneofs)
+                        object._firstName = "firstName";
+                }
+                if (message.lidJid != null && message.hasOwnProperty("lidJid")) {
                     object.lidJid = message.lidJid;
-                if (message.saveOnPrimaryAddressbook != null && message.hasOwnProperty("saveOnPrimaryAddressbook"))
+                    if (options.oneofs)
+                        object._lidJid = "lidJid";
+                }
+                if (message.saveOnPrimaryAddressbook != null && message.hasOwnProperty("saveOnPrimaryAddressbook")) {
                     object.saveOnPrimaryAddressbook = message.saveOnPrimaryAddressbook;
-                if (message.pnJid != null && message.hasOwnProperty("pnJid"))
+                    if (options.oneofs)
+                        object._saveOnPrimaryAddressbook = "saveOnPrimaryAddressbook";
+                }
+                if (message.pnJid != null && message.hasOwnProperty("pnJid")) {
                     object.pnJid = message.pnJid;
-                if (message.username != null && message.hasOwnProperty("username"))
+                    if (options.oneofs)
+                        object._pnJid = "pnJid";
+                }
+                if (message.username != null && message.hasOwnProperty("username")) {
                     object.username = message.username;
+                    if (options.oneofs)
+                        object._username = "username";
+                }
                 return object;
             };
 
@@ -5388,11 +7989,25 @@ $root.SyncAction = (function() {
 
             /**
              * CtwaPerCustomerDataSharingAction isCtwaPerCustomerDataSharingEnabled.
-             * @member {boolean} isCtwaPerCustomerDataSharingEnabled
+             * @member {boolean|null|undefined} isCtwaPerCustomerDataSharingEnabled
              * @memberof SyncAction.SyncActionValue.CtwaPerCustomerDataSharingAction
              * @instance
              */
-            CtwaPerCustomerDataSharingAction.prototype.isCtwaPerCustomerDataSharingEnabled = false;
+            CtwaPerCustomerDataSharingAction.prototype.isCtwaPerCustomerDataSharingEnabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * CtwaPerCustomerDataSharingAction _isCtwaPerCustomerDataSharingEnabled.
+             * @member {"isCtwaPerCustomerDataSharingEnabled"|undefined} _isCtwaPerCustomerDataSharingEnabled
+             * @memberof SyncAction.SyncActionValue.CtwaPerCustomerDataSharingAction
+             * @instance
+             */
+            Object.defineProperty(CtwaPerCustomerDataSharingAction.prototype, "_isCtwaPerCustomerDataSharingEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isCtwaPerCustomerDataSharingEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new CtwaPerCustomerDataSharingAction instance using the specified properties.
@@ -5495,9 +8110,12 @@ $root.SyncAction = (function() {
             CtwaPerCustomerDataSharingAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isCtwaPerCustomerDataSharingEnabled != null && message.hasOwnProperty("isCtwaPerCustomerDataSharingEnabled"))
+                var properties = {};
+                if (message.isCtwaPerCustomerDataSharingEnabled != null && message.hasOwnProperty("isCtwaPerCustomerDataSharingEnabled")) {
+                    properties._isCtwaPerCustomerDataSharingEnabled = 1;
                     if (typeof message.isCtwaPerCustomerDataSharingEnabled !== "boolean")
                         return "isCtwaPerCustomerDataSharingEnabled: boolean expected";
+                }
                 return null;
             };
 
@@ -5531,10 +8149,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isCtwaPerCustomerDataSharingEnabled = false;
-                if (message.isCtwaPerCustomerDataSharingEnabled != null && message.hasOwnProperty("isCtwaPerCustomerDataSharingEnabled"))
+                if (message.isCtwaPerCustomerDataSharingEnabled != null && message.hasOwnProperty("isCtwaPerCustomerDataSharingEnabled")) {
                     object.isCtwaPerCustomerDataSharingEnabled = message.isCtwaPerCustomerDataSharingEnabled;
+                    if (options.oneofs)
+                        object._isCtwaPerCustomerDataSharingEnabled = "isCtwaPerCustomerDataSharingEnabled";
+                }
                 return object;
             };
 
@@ -5573,9 +8192,9 @@ $root.SyncAction = (function() {
              * Properties of a CustomPaymentMethod.
              * @memberof SyncAction.SyncActionValue
              * @interface ICustomPaymentMethod
-             * @property {string} credentialId CustomPaymentMethod credentialId
-             * @property {string} country CustomPaymentMethod country
-             * @property {string} type CustomPaymentMethod type
+             * @property {string|null} [credentialId] CustomPaymentMethod credentialId
+             * @property {string|null} [country] CustomPaymentMethod country
+             * @property {string|null} [type] CustomPaymentMethod type
              * @property {Array.<SyncAction.SyncActionValue.ICustomPaymentMethodMetadata>|null} [metadata] CustomPaymentMethod metadata
              */
 
@@ -5597,27 +8216,27 @@ $root.SyncAction = (function() {
 
             /**
              * CustomPaymentMethod credentialId.
-             * @member {string} credentialId
+             * @member {string|null|undefined} credentialId
              * @memberof SyncAction.SyncActionValue.CustomPaymentMethod
              * @instance
              */
-            CustomPaymentMethod.prototype.credentialId = "";
+            CustomPaymentMethod.prototype.credentialId = null;
 
             /**
              * CustomPaymentMethod country.
-             * @member {string} country
+             * @member {string|null|undefined} country
              * @memberof SyncAction.SyncActionValue.CustomPaymentMethod
              * @instance
              */
-            CustomPaymentMethod.prototype.country = "";
+            CustomPaymentMethod.prototype.country = null;
 
             /**
              * CustomPaymentMethod type.
-             * @member {string} type
+             * @member {string|null|undefined} type
              * @memberof SyncAction.SyncActionValue.CustomPaymentMethod
              * @instance
              */
-            CustomPaymentMethod.prototype.type = "";
+            CustomPaymentMethod.prototype.type = null;
 
             /**
              * CustomPaymentMethod metadata.
@@ -5626,6 +8245,42 @@ $root.SyncAction = (function() {
              * @instance
              */
             CustomPaymentMethod.prototype.metadata = $util.emptyArray;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * CustomPaymentMethod _credentialId.
+             * @member {"credentialId"|undefined} _credentialId
+             * @memberof SyncAction.SyncActionValue.CustomPaymentMethod
+             * @instance
+             */
+            Object.defineProperty(CustomPaymentMethod.prototype, "_credentialId", {
+                get: $util.oneOfGetter($oneOfFields = ["credentialId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * CustomPaymentMethod _country.
+             * @member {"country"|undefined} _country
+             * @memberof SyncAction.SyncActionValue.CustomPaymentMethod
+             * @instance
+             */
+            Object.defineProperty(CustomPaymentMethod.prototype, "_country", {
+                get: $util.oneOfGetter($oneOfFields = ["country"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * CustomPaymentMethod _type.
+             * @member {"type"|undefined} _type
+             * @memberof SyncAction.SyncActionValue.CustomPaymentMethod
+             * @instance
+             */
+            Object.defineProperty(CustomPaymentMethod.prototype, "_type", {
+                get: $util.oneOfGetter($oneOfFields = ["type"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new CustomPaymentMethod instance using the specified properties.
@@ -5651,9 +8306,12 @@ $root.SyncAction = (function() {
             CustomPaymentMethod.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                writer.uint32(/* id 1, wireType 2 =*/10).string(message.credentialId);
-                writer.uint32(/* id 2, wireType 2 =*/18).string(message.country);
-                writer.uint32(/* id 3, wireType 2 =*/26).string(message.type);
+                if (message.credentialId != null && Object.hasOwnProperty.call(message, "credentialId"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.credentialId);
+                if (message.country != null && Object.hasOwnProperty.call(message, "country"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.country);
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.type);
                 if (message.metadata != null && message.metadata.length)
                     for (var i = 0; i < message.metadata.length; ++i)
                         $root.SyncAction.SyncActionValue.CustomPaymentMethodMetadata.encode(message.metadata[i], writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
@@ -5716,12 +8374,6 @@ $root.SyncAction = (function() {
                         break;
                     }
                 }
-                if (!message.hasOwnProperty("credentialId"))
-                    throw $util.ProtocolError("missing required 'credentialId'", { instance: message });
-                if (!message.hasOwnProperty("country"))
-                    throw $util.ProtocolError("missing required 'country'", { instance: message });
-                if (!message.hasOwnProperty("type"))
-                    throw $util.ProtocolError("missing required 'type'", { instance: message });
                 return message;
             };
 
@@ -5752,12 +8404,22 @@ $root.SyncAction = (function() {
             CustomPaymentMethod.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (!$util.isString(message.credentialId))
-                    return "credentialId: string expected";
-                if (!$util.isString(message.country))
-                    return "country: string expected";
-                if (!$util.isString(message.type))
-                    return "type: string expected";
+                var properties = {};
+                if (message.credentialId != null && message.hasOwnProperty("credentialId")) {
+                    properties._credentialId = 1;
+                    if (!$util.isString(message.credentialId))
+                        return "credentialId: string expected";
+                }
+                if (message.country != null && message.hasOwnProperty("country")) {
+                    properties._country = 1;
+                    if (!$util.isString(message.country))
+                        return "country: string expected";
+                }
+                if (message.type != null && message.hasOwnProperty("type")) {
+                    properties._type = 1;
+                    if (!$util.isString(message.type))
+                        return "type: string expected";
+                }
                 if (message.metadata != null && message.hasOwnProperty("metadata")) {
                     if (!Array.isArray(message.metadata))
                         return "metadata: array expected";
@@ -5816,17 +8478,21 @@ $root.SyncAction = (function() {
                 var object = {};
                 if (options.arrays || options.defaults)
                     object.metadata = [];
-                if (options.defaults) {
-                    object.credentialId = "";
-                    object.country = "";
-                    object.type = "";
-                }
-                if (message.credentialId != null && message.hasOwnProperty("credentialId"))
+                if (message.credentialId != null && message.hasOwnProperty("credentialId")) {
                     object.credentialId = message.credentialId;
-                if (message.country != null && message.hasOwnProperty("country"))
+                    if (options.oneofs)
+                        object._credentialId = "credentialId";
+                }
+                if (message.country != null && message.hasOwnProperty("country")) {
                     object.country = message.country;
-                if (message.type != null && message.hasOwnProperty("type"))
+                    if (options.oneofs)
+                        object._country = "country";
+                }
+                if (message.type != null && message.hasOwnProperty("type")) {
                     object.type = message.type;
+                    if (options.oneofs)
+                        object._type = "type";
+                }
                 if (message.metadata && message.metadata.length) {
                     object.metadata = [];
                     for (var j = 0; j < message.metadata.length; ++j)
@@ -5870,8 +8536,8 @@ $root.SyncAction = (function() {
              * Properties of a CustomPaymentMethodMetadata.
              * @memberof SyncAction.SyncActionValue
              * @interface ICustomPaymentMethodMetadata
-             * @property {string} key CustomPaymentMethodMetadata key
-             * @property {string} value CustomPaymentMethodMetadata value
+             * @property {string|null} [key] CustomPaymentMethodMetadata key
+             * @property {string|null} [value] CustomPaymentMethodMetadata value
              */
 
             /**
@@ -5891,19 +8557,44 @@ $root.SyncAction = (function() {
 
             /**
              * CustomPaymentMethodMetadata key.
-             * @member {string} key
+             * @member {string|null|undefined} key
              * @memberof SyncAction.SyncActionValue.CustomPaymentMethodMetadata
              * @instance
              */
-            CustomPaymentMethodMetadata.prototype.key = "";
+            CustomPaymentMethodMetadata.prototype.key = null;
 
             /**
              * CustomPaymentMethodMetadata value.
-             * @member {string} value
+             * @member {string|null|undefined} value
              * @memberof SyncAction.SyncActionValue.CustomPaymentMethodMetadata
              * @instance
              */
-            CustomPaymentMethodMetadata.prototype.value = "";
+            CustomPaymentMethodMetadata.prototype.value = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * CustomPaymentMethodMetadata _key.
+             * @member {"key"|undefined} _key
+             * @memberof SyncAction.SyncActionValue.CustomPaymentMethodMetadata
+             * @instance
+             */
+            Object.defineProperty(CustomPaymentMethodMetadata.prototype, "_key", {
+                get: $util.oneOfGetter($oneOfFields = ["key"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * CustomPaymentMethodMetadata _value.
+             * @member {"value"|undefined} _value
+             * @memberof SyncAction.SyncActionValue.CustomPaymentMethodMetadata
+             * @instance
+             */
+            Object.defineProperty(CustomPaymentMethodMetadata.prototype, "_value", {
+                get: $util.oneOfGetter($oneOfFields = ["value"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new CustomPaymentMethodMetadata instance using the specified properties.
@@ -5929,8 +8620,10 @@ $root.SyncAction = (function() {
             CustomPaymentMethodMetadata.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                writer.uint32(/* id 1, wireType 2 =*/10).string(message.key);
-                writer.uint32(/* id 2, wireType 2 =*/18).string(message.value);
+                if (message.key != null && Object.hasOwnProperty.call(message, "key"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.key);
+                if (message.value != null && Object.hasOwnProperty.call(message, "value"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.value);
                 return writer;
             };
 
@@ -5980,10 +8673,6 @@ $root.SyncAction = (function() {
                         break;
                     }
                 }
-                if (!message.hasOwnProperty("key"))
-                    throw $util.ProtocolError("missing required 'key'", { instance: message });
-                if (!message.hasOwnProperty("value"))
-                    throw $util.ProtocolError("missing required 'value'", { instance: message });
                 return message;
             };
 
@@ -6014,10 +8703,17 @@ $root.SyncAction = (function() {
             CustomPaymentMethodMetadata.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (!$util.isString(message.key))
-                    return "key: string expected";
-                if (!$util.isString(message.value))
-                    return "value: string expected";
+                var properties = {};
+                if (message.key != null && message.hasOwnProperty("key")) {
+                    properties._key = 1;
+                    if (!$util.isString(message.key))
+                        return "key: string expected";
+                }
+                if (message.value != null && message.hasOwnProperty("value")) {
+                    properties._value = 1;
+                    if (!$util.isString(message.value))
+                        return "value: string expected";
+                }
                 return null;
             };
 
@@ -6053,14 +8749,16 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.key = "";
-                    object.value = "";
-                }
-                if (message.key != null && message.hasOwnProperty("key"))
+                if (message.key != null && message.hasOwnProperty("key")) {
                     object.key = message.key;
-                if (message.value != null && message.hasOwnProperty("value"))
+                    if (options.oneofs)
+                        object._key = "key";
+                }
+                if (message.value != null && message.hasOwnProperty("value")) {
                     object.value = message.value;
+                    if (options.oneofs)
+                        object._value = "value";
+                }
                 return object;
             };
 
@@ -6351,6 +9049,20 @@ $root.SyncAction = (function() {
              */
             DeleteChatAction.prototype.messageRange = null;
 
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * DeleteChatAction _messageRange.
+             * @member {"messageRange"|undefined} _messageRange
+             * @memberof SyncAction.SyncActionValue.DeleteChatAction
+             * @instance
+             */
+            Object.defineProperty(DeleteChatAction.prototype, "_messageRange", {
+                get: $util.oneOfGetter($oneOfFields = ["messageRange"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
             /**
              * Creates a new DeleteChatAction instance using the specified properties.
              * @function create
@@ -6452,10 +9164,14 @@ $root.SyncAction = (function() {
             DeleteChatAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                var properties = {};
                 if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
-                    var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
-                    if (error)
-                        return "messageRange." + error;
+                    properties._messageRange = 1;
+                    {
+                        var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
+                        if (error)
+                            return "messageRange." + error;
+                    }
                 }
                 return null;
             };
@@ -6493,10 +9209,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.messageRange = null;
-                if (message.messageRange != null && message.hasOwnProperty("messageRange"))
+                if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
                     object.messageRange = $root.SyncAction.SyncActionValue.SyncActionMessageRange.toObject(message.messageRange, options);
+                    if (options.oneofs)
+                        object._messageRange = "messageRange";
+                }
                 return object;
             };
 
@@ -6556,19 +9273,44 @@ $root.SyncAction = (function() {
 
             /**
              * DeleteIndividualCallLogAction peerJid.
-             * @member {string} peerJid
+             * @member {string|null|undefined} peerJid
              * @memberof SyncAction.SyncActionValue.DeleteIndividualCallLogAction
              * @instance
              */
-            DeleteIndividualCallLogAction.prototype.peerJid = "";
+            DeleteIndividualCallLogAction.prototype.peerJid = null;
 
             /**
              * DeleteIndividualCallLogAction isIncoming.
-             * @member {boolean} isIncoming
+             * @member {boolean|null|undefined} isIncoming
              * @memberof SyncAction.SyncActionValue.DeleteIndividualCallLogAction
              * @instance
              */
-            DeleteIndividualCallLogAction.prototype.isIncoming = false;
+            DeleteIndividualCallLogAction.prototype.isIncoming = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * DeleteIndividualCallLogAction _peerJid.
+             * @member {"peerJid"|undefined} _peerJid
+             * @memberof SyncAction.SyncActionValue.DeleteIndividualCallLogAction
+             * @instance
+             */
+            Object.defineProperty(DeleteIndividualCallLogAction.prototype, "_peerJid", {
+                get: $util.oneOfGetter($oneOfFields = ["peerJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * DeleteIndividualCallLogAction _isIncoming.
+             * @member {"isIncoming"|undefined} _isIncoming
+             * @memberof SyncAction.SyncActionValue.DeleteIndividualCallLogAction
+             * @instance
+             */
+            Object.defineProperty(DeleteIndividualCallLogAction.prototype, "_isIncoming", {
+                get: $util.oneOfGetter($oneOfFields = ["isIncoming"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new DeleteIndividualCallLogAction instance using the specified properties.
@@ -6677,12 +9419,17 @@ $root.SyncAction = (function() {
             DeleteIndividualCallLogAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.peerJid != null && message.hasOwnProperty("peerJid"))
+                var properties = {};
+                if (message.peerJid != null && message.hasOwnProperty("peerJid")) {
+                    properties._peerJid = 1;
                     if (!$util.isString(message.peerJid))
                         return "peerJid: string expected";
-                if (message.isIncoming != null && message.hasOwnProperty("isIncoming"))
+                }
+                if (message.isIncoming != null && message.hasOwnProperty("isIncoming")) {
+                    properties._isIncoming = 1;
                     if (typeof message.isIncoming !== "boolean")
                         return "isIncoming: boolean expected";
+                }
                 return null;
             };
 
@@ -6718,14 +9465,16 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.peerJid = "";
-                    object.isIncoming = false;
-                }
-                if (message.peerJid != null && message.hasOwnProperty("peerJid"))
+                if (message.peerJid != null && message.hasOwnProperty("peerJid")) {
                     object.peerJid = message.peerJid;
-                if (message.isIncoming != null && message.hasOwnProperty("isIncoming"))
+                    if (options.oneofs)
+                        object._peerJid = "peerJid";
+                }
+                if (message.isIncoming != null && message.hasOwnProperty("isIncoming")) {
                     object.isIncoming = message.isIncoming;
+                    if (options.oneofs)
+                        object._isIncoming = "isIncoming";
+                }
                 return object;
             };
 
@@ -6785,19 +9534,44 @@ $root.SyncAction = (function() {
 
             /**
              * DeleteMessageForMeAction deleteMedia.
-             * @member {boolean} deleteMedia
+             * @member {boolean|null|undefined} deleteMedia
              * @memberof SyncAction.SyncActionValue.DeleteMessageForMeAction
              * @instance
              */
-            DeleteMessageForMeAction.prototype.deleteMedia = false;
+            DeleteMessageForMeAction.prototype.deleteMedia = null;
 
             /**
              * DeleteMessageForMeAction messageTimestamp.
-             * @member {number|Long} messageTimestamp
+             * @member {number|Long|null|undefined} messageTimestamp
              * @memberof SyncAction.SyncActionValue.DeleteMessageForMeAction
              * @instance
              */
-            DeleteMessageForMeAction.prototype.messageTimestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            DeleteMessageForMeAction.prototype.messageTimestamp = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * DeleteMessageForMeAction _deleteMedia.
+             * @member {"deleteMedia"|undefined} _deleteMedia
+             * @memberof SyncAction.SyncActionValue.DeleteMessageForMeAction
+             * @instance
+             */
+            Object.defineProperty(DeleteMessageForMeAction.prototype, "_deleteMedia", {
+                get: $util.oneOfGetter($oneOfFields = ["deleteMedia"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * DeleteMessageForMeAction _messageTimestamp.
+             * @member {"messageTimestamp"|undefined} _messageTimestamp
+             * @memberof SyncAction.SyncActionValue.DeleteMessageForMeAction
+             * @instance
+             */
+            Object.defineProperty(DeleteMessageForMeAction.prototype, "_messageTimestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["messageTimestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new DeleteMessageForMeAction instance using the specified properties.
@@ -6906,12 +9680,17 @@ $root.SyncAction = (function() {
             DeleteMessageForMeAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.deleteMedia != null && message.hasOwnProperty("deleteMedia"))
+                var properties = {};
+                if (message.deleteMedia != null && message.hasOwnProperty("deleteMedia")) {
+                    properties._deleteMedia = 1;
                     if (typeof message.deleteMedia !== "boolean")
                         return "deleteMedia: boolean expected";
-                if (message.messageTimestamp != null && message.hasOwnProperty("messageTimestamp"))
+                }
+                if (message.messageTimestamp != null && message.hasOwnProperty("messageTimestamp")) {
+                    properties._messageTimestamp = 1;
                     if (!$util.isInteger(message.messageTimestamp) && !(message.messageTimestamp && $util.isInteger(message.messageTimestamp.low) && $util.isInteger(message.messageTimestamp.high)))
                         return "messageTimestamp: integer|Long expected";
+                }
                 return null;
             };
 
@@ -6954,21 +9733,19 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.deleteMedia = false;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.messageTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.messageTimestamp = options.longs === String ? "0" : 0;
-                }
-                if (message.deleteMedia != null && message.hasOwnProperty("deleteMedia"))
+                if (message.deleteMedia != null && message.hasOwnProperty("deleteMedia")) {
                     object.deleteMedia = message.deleteMedia;
-                if (message.messageTimestamp != null && message.hasOwnProperty("messageTimestamp"))
+                    if (options.oneofs)
+                        object._deleteMedia = "deleteMedia";
+                }
+                if (message.messageTimestamp != null && message.hasOwnProperty("messageTimestamp")) {
                     if (typeof message.messageTimestamp === "number")
                         object.messageTimestamp = options.longs === String ? String(message.messageTimestamp) : message.messageTimestamp;
                     else
                         object.messageTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.messageTimestamp) : options.longs === Number ? new $util.LongBits(message.messageTimestamp.low >>> 0, message.messageTimestamp.high >>> 0).toNumber() : message.messageTimestamp;
+                    if (options.oneofs)
+                        object._messageTimestamp = "messageTimestamp";
+                }
                 return object;
             };
 
@@ -7027,11 +9804,25 @@ $root.SyncAction = (function() {
 
             /**
              * DetectedOutcomesStatusAction isEnabled.
-             * @member {boolean} isEnabled
+             * @member {boolean|null|undefined} isEnabled
              * @memberof SyncAction.SyncActionValue.DetectedOutcomesStatusAction
              * @instance
              */
-            DetectedOutcomesStatusAction.prototype.isEnabled = false;
+            DetectedOutcomesStatusAction.prototype.isEnabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * DetectedOutcomesStatusAction _isEnabled.
+             * @member {"isEnabled"|undefined} _isEnabled
+             * @memberof SyncAction.SyncActionValue.DetectedOutcomesStatusAction
+             * @instance
+             */
+            Object.defineProperty(DetectedOutcomesStatusAction.prototype, "_isEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new DetectedOutcomesStatusAction instance using the specified properties.
@@ -7134,9 +9925,12 @@ $root.SyncAction = (function() {
             DetectedOutcomesStatusAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isEnabled != null && message.hasOwnProperty("isEnabled"))
+                var properties = {};
+                if (message.isEnabled != null && message.hasOwnProperty("isEnabled")) {
+                    properties._isEnabled = 1;
                     if (typeof message.isEnabled !== "boolean")
                         return "isEnabled: boolean expected";
+                }
                 return null;
             };
 
@@ -7170,10 +9964,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isEnabled = false;
-                if (message.isEnabled != null && message.hasOwnProperty("isEnabled"))
+                if (message.isEnabled != null && message.hasOwnProperty("isEnabled")) {
                     object.isEnabled = message.isEnabled;
+                    if (options.oneofs)
+                        object._isEnabled = "isEnabled";
+                }
                 return object;
             };
 
@@ -7232,11 +10027,25 @@ $root.SyncAction = (function() {
 
             /**
              * ExternalWebBetaAction isOptIn.
-             * @member {boolean} isOptIn
+             * @member {boolean|null|undefined} isOptIn
              * @memberof SyncAction.SyncActionValue.ExternalWebBetaAction
              * @instance
              */
-            ExternalWebBetaAction.prototype.isOptIn = false;
+            ExternalWebBetaAction.prototype.isOptIn = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ExternalWebBetaAction _isOptIn.
+             * @member {"isOptIn"|undefined} _isOptIn
+             * @memberof SyncAction.SyncActionValue.ExternalWebBetaAction
+             * @instance
+             */
+            Object.defineProperty(ExternalWebBetaAction.prototype, "_isOptIn", {
+                get: $util.oneOfGetter($oneOfFields = ["isOptIn"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ExternalWebBetaAction instance using the specified properties.
@@ -7339,9 +10148,12 @@ $root.SyncAction = (function() {
             ExternalWebBetaAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isOptIn != null && message.hasOwnProperty("isOptIn"))
+                var properties = {};
+                if (message.isOptIn != null && message.hasOwnProperty("isOptIn")) {
+                    properties._isOptIn = 1;
                     if (typeof message.isOptIn !== "boolean")
                         return "isOptIn: boolean expected";
+                }
                 return null;
             };
 
@@ -7375,10 +10187,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isOptIn = false;
-                if (message.isOptIn != null && message.hasOwnProperty("isOptIn"))
+                if (message.isOptIn != null && message.hasOwnProperty("isOptIn")) {
                     object.isOptIn = message.isOptIn;
+                    if (options.oneofs)
+                        object._isOptIn = "isOptIn";
+                }
                 return object;
             };
 
@@ -7660,11 +10473,25 @@ $root.SyncAction = (function() {
 
                 /**
                  * Favorite id.
-                 * @member {string} id
+                 * @member {string|null|undefined} id
                  * @memberof SyncAction.SyncActionValue.FavoritesAction.Favorite
                  * @instance
                  */
-                Favorite.prototype.id = "";
+                Favorite.prototype.id = null;
+
+                // OneOf field names bound to virtual getters and setters
+                var $oneOfFields;
+
+                /**
+                 * Favorite _id.
+                 * @member {"id"|undefined} _id
+                 * @memberof SyncAction.SyncActionValue.FavoritesAction.Favorite
+                 * @instance
+                 */
+                Object.defineProperty(Favorite.prototype, "_id", {
+                    get: $util.oneOfGetter($oneOfFields = ["id"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
 
                 /**
                  * Creates a new Favorite instance using the specified properties.
@@ -7767,9 +10594,12 @@ $root.SyncAction = (function() {
                 Favorite.verify = function verify(message) {
                     if (typeof message !== "object" || message === null)
                         return "object expected";
-                    if (message.id != null && message.hasOwnProperty("id"))
+                    var properties = {};
+                    if (message.id != null && message.hasOwnProperty("id")) {
+                        properties._id = 1;
                         if (!$util.isString(message.id))
                             return "id: string expected";
+                    }
                     return null;
                 };
 
@@ -7803,10 +10633,11 @@ $root.SyncAction = (function() {
                     if (!options)
                         options = {};
                     var object = {};
-                    if (options.defaults)
-                        object.id = "";
-                    if (message.id != null && message.hasOwnProperty("id"))
+                    if (message.id != null && message.hasOwnProperty("id")) {
                         object.id = message.id;
+                        if (options.oneofs)
+                            object._id = "id";
+                    }
                     return object;
                 };
 
@@ -7842,6 +10673,255 @@ $root.SyncAction = (function() {
             return FavoritesAction;
         })();
 
+        SyncActionValue.InteractiveMessageAction = (function() {
+
+            /**
+             * Properties of an InteractiveMessageAction.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IInteractiveMessageAction
+             * @property {SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode|null} [type] InteractiveMessageAction type
+             */
+
+            /**
+             * Constructs a new InteractiveMessageAction.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents an InteractiveMessageAction.
+             * @implements IInteractiveMessageAction
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IInteractiveMessageAction=} [properties] Properties to set
+             */
+            function InteractiveMessageAction(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * InteractiveMessageAction type.
+             * @member {SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode|null|undefined} type
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @instance
+             */
+            InteractiveMessageAction.prototype.type = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * InteractiveMessageAction _type.
+             * @member {"type"|undefined} _type
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @instance
+             */
+            Object.defineProperty(InteractiveMessageAction.prototype, "_type", {
+                get: $util.oneOfGetter($oneOfFields = ["type"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new InteractiveMessageAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IInteractiveMessageAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.InteractiveMessageAction} InteractiveMessageAction instance
+             */
+            InteractiveMessageAction.create = function create(properties) {
+                return new InteractiveMessageAction(properties);
+            };
+
+            /**
+             * Encodes the specified InteractiveMessageAction message. Does not implicitly {@link SyncAction.SyncActionValue.InteractiveMessageAction.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IInteractiveMessageAction} message InteractiveMessageAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            InteractiveMessageAction.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.type != null && Object.hasOwnProperty.call(message, "type"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.type);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified InteractiveMessageAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.InteractiveMessageAction.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IInteractiveMessageAction} message InteractiveMessageAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            InteractiveMessageAction.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an InteractiveMessageAction message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.InteractiveMessageAction} InteractiveMessageAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            InteractiveMessageAction.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.InteractiveMessageAction();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.type = reader.int32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an InteractiveMessageAction message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.InteractiveMessageAction} InteractiveMessageAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            InteractiveMessageAction.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an InteractiveMessageAction message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            InteractiveMessageAction.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.type != null && message.hasOwnProperty("type")) {
+                    properties._type = 1;
+                    switch (message.type) {
+                    default:
+                        return "type: enum value expected";
+                    case 1:
+                        break;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates an InteractiveMessageAction message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.InteractiveMessageAction} InteractiveMessageAction
+             */
+            InteractiveMessageAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.InteractiveMessageAction)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.InteractiveMessageAction();
+                switch (object.type) {
+                default:
+                    if (typeof object.type === "number") {
+                        message.type = object.type;
+                        break;
+                    }
+                    break;
+                case "DISABLE_CTA":
+                case 1:
+                    message.type = 1;
+                    break;
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an InteractiveMessageAction message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {SyncAction.SyncActionValue.InteractiveMessageAction} message InteractiveMessageAction
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            InteractiveMessageAction.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.type != null && message.hasOwnProperty("type")) {
+                    object.type = options.enums === String ? $root.SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode[message.type] === undefined ? message.type : $root.SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode[message.type] : message.type;
+                    if (options.oneofs)
+                        object._type = "type";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this InteractiveMessageAction to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            InteractiveMessageAction.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for InteractiveMessageAction
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.InteractiveMessageAction
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            InteractiveMessageAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.InteractiveMessageAction";
+            };
+
+            /**
+             * InteractiveMessageActionMode enum.
+             * @name SyncAction.SyncActionValue.InteractiveMessageAction.InteractiveMessageActionMode
+             * @enum {number}
+             * @property {number} DISABLE_CTA=1 DISABLE_CTA value
+             */
+            InteractiveMessageAction.InteractiveMessageActionMode = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[1] = "DISABLE_CTA"] = 1;
+                return values;
+            })();
+
+            return InteractiveMessageAction;
+        })();
+
         SyncActionValue.KeyExpiration = (function() {
 
             /**
@@ -7868,11 +10948,25 @@ $root.SyncAction = (function() {
 
             /**
              * KeyExpiration expiredKeyEpoch.
-             * @member {number} expiredKeyEpoch
+             * @member {number|null|undefined} expiredKeyEpoch
              * @memberof SyncAction.SyncActionValue.KeyExpiration
              * @instance
              */
-            KeyExpiration.prototype.expiredKeyEpoch = 0;
+            KeyExpiration.prototype.expiredKeyEpoch = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * KeyExpiration _expiredKeyEpoch.
+             * @member {"expiredKeyEpoch"|undefined} _expiredKeyEpoch
+             * @memberof SyncAction.SyncActionValue.KeyExpiration
+             * @instance
+             */
+            Object.defineProperty(KeyExpiration.prototype, "_expiredKeyEpoch", {
+                get: $util.oneOfGetter($oneOfFields = ["expiredKeyEpoch"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new KeyExpiration instance using the specified properties.
@@ -7975,9 +11069,12 @@ $root.SyncAction = (function() {
             KeyExpiration.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.expiredKeyEpoch != null && message.hasOwnProperty("expiredKeyEpoch"))
+                var properties = {};
+                if (message.expiredKeyEpoch != null && message.hasOwnProperty("expiredKeyEpoch")) {
+                    properties._expiredKeyEpoch = 1;
                     if (!$util.isInteger(message.expiredKeyEpoch))
                         return "expiredKeyEpoch: integer expected";
+                }
                 return null;
             };
 
@@ -8011,10 +11108,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.expiredKeyEpoch = 0;
-                if (message.expiredKeyEpoch != null && message.hasOwnProperty("expiredKeyEpoch"))
+                if (message.expiredKeyEpoch != null && message.hasOwnProperty("expiredKeyEpoch")) {
                     object.expiredKeyEpoch = message.expiredKeyEpoch;
+                    if (options.oneofs)
+                        object._expiredKeyEpoch = "expiredKeyEpoch";
+                }
                 return object;
             };
 
@@ -8073,11 +11171,25 @@ $root.SyncAction = (function() {
 
             /**
              * LabelAssociationAction labeled.
-             * @member {boolean} labeled
+             * @member {boolean|null|undefined} labeled
              * @memberof SyncAction.SyncActionValue.LabelAssociationAction
              * @instance
              */
-            LabelAssociationAction.prototype.labeled = false;
+            LabelAssociationAction.prototype.labeled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * LabelAssociationAction _labeled.
+             * @member {"labeled"|undefined} _labeled
+             * @memberof SyncAction.SyncActionValue.LabelAssociationAction
+             * @instance
+             */
+            Object.defineProperty(LabelAssociationAction.prototype, "_labeled", {
+                get: $util.oneOfGetter($oneOfFields = ["labeled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new LabelAssociationAction instance using the specified properties.
@@ -8180,9 +11292,12 @@ $root.SyncAction = (function() {
             LabelAssociationAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.labeled != null && message.hasOwnProperty("labeled"))
+                var properties = {};
+                if (message.labeled != null && message.hasOwnProperty("labeled")) {
+                    properties._labeled = 1;
                     if (typeof message.labeled !== "boolean")
                         return "labeled: boolean expected";
+                }
                 return null;
             };
 
@@ -8216,10 +11331,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.labeled = false;
-                if (message.labeled != null && message.hasOwnProperty("labeled"))
+                if (message.labeled != null && message.hasOwnProperty("labeled")) {
                     object.labeled = message.labeled;
+                    if (options.oneofs)
+                        object._labeled = "labeled";
+                }
                 return object;
             };
 
@@ -8266,6 +11382,7 @@ $root.SyncAction = (function() {
              * @property {boolean|null} [isActive] LabelEditAction isActive
              * @property {SyncAction.SyncActionValue.LabelEditAction.ListType|null} [type] LabelEditAction type
              * @property {boolean|null} [isImmutable] LabelEditAction isImmutable
+             * @property {number|Long|null} [muteEndTimeMs] LabelEditAction muteEndTimeMs
              */
 
             /**
@@ -8285,67 +11402,177 @@ $root.SyncAction = (function() {
 
             /**
              * LabelEditAction name.
-             * @member {string} name
+             * @member {string|null|undefined} name
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.name = "";
+            LabelEditAction.prototype.name = null;
 
             /**
              * LabelEditAction color.
-             * @member {number} color
+             * @member {number|null|undefined} color
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.color = 0;
+            LabelEditAction.prototype.color = null;
 
             /**
              * LabelEditAction predefinedId.
-             * @member {number} predefinedId
+             * @member {number|null|undefined} predefinedId
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.predefinedId = 0;
+            LabelEditAction.prototype.predefinedId = null;
 
             /**
              * LabelEditAction deleted.
-             * @member {boolean} deleted
+             * @member {boolean|null|undefined} deleted
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.deleted = false;
+            LabelEditAction.prototype.deleted = null;
 
             /**
              * LabelEditAction orderIndex.
-             * @member {number} orderIndex
+             * @member {number|null|undefined} orderIndex
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.orderIndex = 0;
+            LabelEditAction.prototype.orderIndex = null;
 
             /**
              * LabelEditAction isActive.
-             * @member {boolean} isActive
+             * @member {boolean|null|undefined} isActive
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.isActive = false;
+            LabelEditAction.prototype.isActive = null;
 
             /**
              * LabelEditAction type.
-             * @member {SyncAction.SyncActionValue.LabelEditAction.ListType} type
+             * @member {SyncAction.SyncActionValue.LabelEditAction.ListType|null|undefined} type
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.type = 0;
+            LabelEditAction.prototype.type = null;
 
             /**
              * LabelEditAction isImmutable.
-             * @member {boolean} isImmutable
+             * @member {boolean|null|undefined} isImmutable
              * @memberof SyncAction.SyncActionValue.LabelEditAction
              * @instance
              */
-            LabelEditAction.prototype.isImmutable = false;
+            LabelEditAction.prototype.isImmutable = null;
+
+            /**
+             * LabelEditAction muteEndTimeMs.
+             * @member {number|Long|null|undefined} muteEndTimeMs
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            LabelEditAction.prototype.muteEndTimeMs = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * LabelEditAction _name.
+             * @member {"name"|undefined} _name
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_name", {
+                get: $util.oneOfGetter($oneOfFields = ["name"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _color.
+             * @member {"color"|undefined} _color
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_color", {
+                get: $util.oneOfGetter($oneOfFields = ["color"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _predefinedId.
+             * @member {"predefinedId"|undefined} _predefinedId
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_predefinedId", {
+                get: $util.oneOfGetter($oneOfFields = ["predefinedId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _deleted.
+             * @member {"deleted"|undefined} _deleted
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_deleted", {
+                get: $util.oneOfGetter($oneOfFields = ["deleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _orderIndex.
+             * @member {"orderIndex"|undefined} _orderIndex
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_orderIndex", {
+                get: $util.oneOfGetter($oneOfFields = ["orderIndex"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _isActive.
+             * @member {"isActive"|undefined} _isActive
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_isActive", {
+                get: $util.oneOfGetter($oneOfFields = ["isActive"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _type.
+             * @member {"type"|undefined} _type
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_type", {
+                get: $util.oneOfGetter($oneOfFields = ["type"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _isImmutable.
+             * @member {"isImmutable"|undefined} _isImmutable
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_isImmutable", {
+                get: $util.oneOfGetter($oneOfFields = ["isImmutable"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LabelEditAction _muteEndTimeMs.
+             * @member {"muteEndTimeMs"|undefined} _muteEndTimeMs
+             * @memberof SyncAction.SyncActionValue.LabelEditAction
+             * @instance
+             */
+            Object.defineProperty(LabelEditAction.prototype, "_muteEndTimeMs", {
+                get: $util.oneOfGetter($oneOfFields = ["muteEndTimeMs"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new LabelEditAction instance using the specified properties.
@@ -8387,6 +11614,8 @@ $root.SyncAction = (function() {
                     writer.uint32(/* id 7, wireType 0 =*/56).int32(message.type);
                 if (message.isImmutable != null && Object.hasOwnProperty.call(message, "isImmutable"))
                     writer.uint32(/* id 8, wireType 0 =*/64).bool(message.isImmutable);
+                if (message.muteEndTimeMs != null && Object.hasOwnProperty.call(message, "muteEndTimeMs"))
+                    writer.uint32(/* id 9, wireType 0 =*/72).int64(message.muteEndTimeMs);
                 return writer;
             };
 
@@ -8455,6 +11684,10 @@ $root.SyncAction = (function() {
                             message.isImmutable = reader.bool();
                             break;
                         }
+                    case 9: {
+                            message.muteEndTimeMs = reader.int64();
+                            break;
+                        }
                     default:
                         reader.skipType(tag & 7);
                         break;
@@ -8490,25 +11723,39 @@ $root.SyncAction = (function() {
             LabelEditAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.name != null && message.hasOwnProperty("name"))
+                var properties = {};
+                if (message.name != null && message.hasOwnProperty("name")) {
+                    properties._name = 1;
                     if (!$util.isString(message.name))
                         return "name: string expected";
-                if (message.color != null && message.hasOwnProperty("color"))
+                }
+                if (message.color != null && message.hasOwnProperty("color")) {
+                    properties._color = 1;
                     if (!$util.isInteger(message.color))
                         return "color: integer expected";
-                if (message.predefinedId != null && message.hasOwnProperty("predefinedId"))
+                }
+                if (message.predefinedId != null && message.hasOwnProperty("predefinedId")) {
+                    properties._predefinedId = 1;
                     if (!$util.isInteger(message.predefinedId))
                         return "predefinedId: integer expected";
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                }
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
+                    properties._deleted = 1;
                     if (typeof message.deleted !== "boolean")
                         return "deleted: boolean expected";
-                if (message.orderIndex != null && message.hasOwnProperty("orderIndex"))
+                }
+                if (message.orderIndex != null && message.hasOwnProperty("orderIndex")) {
+                    properties._orderIndex = 1;
                     if (!$util.isInteger(message.orderIndex))
                         return "orderIndex: integer expected";
-                if (message.isActive != null && message.hasOwnProperty("isActive"))
+                }
+                if (message.isActive != null && message.hasOwnProperty("isActive")) {
+                    properties._isActive = 1;
                     if (typeof message.isActive !== "boolean")
                         return "isActive: boolean expected";
-                if (message.type != null && message.hasOwnProperty("type"))
+                }
+                if (message.type != null && message.hasOwnProperty("type")) {
+                    properties._type = 1;
                     switch (message.type) {
                     default:
                         return "type: enum value expected";
@@ -8520,11 +11767,21 @@ $root.SyncAction = (function() {
                     case 5:
                     case 6:
                     case 7:
+                    case 8:
+                    case 9:
                         break;
                     }
-                if (message.isImmutable != null && message.hasOwnProperty("isImmutable"))
+                }
+                if (message.isImmutable != null && message.hasOwnProperty("isImmutable")) {
+                    properties._isImmutable = 1;
                     if (typeof message.isImmutable !== "boolean")
                         return "isImmutable: boolean expected";
+                }
+                if (message.muteEndTimeMs != null && message.hasOwnProperty("muteEndTimeMs")) {
+                    properties._muteEndTimeMs = 1;
+                    if (!$util.isInteger(message.muteEndTimeMs) && !(message.muteEndTimeMs && $util.isInteger(message.muteEndTimeMs.low) && $util.isInteger(message.muteEndTimeMs.high)))
+                        return "muteEndTimeMs: integer|Long expected";
+                }
                 return null;
             };
 
@@ -8591,9 +11848,26 @@ $root.SyncAction = (function() {
                 case 7:
                     message.type = 7;
                     break;
+                case "DRAFTED":
+                case 8:
+                    message.type = 8;
+                    break;
+                case "AI_HANDOFF":
+                case 9:
+                    message.type = 9;
+                    break;
                 }
                 if (object.isImmutable != null)
                     message.isImmutable = Boolean(object.isImmutable);
+                if (object.muteEndTimeMs != null)
+                    if ($util.Long)
+                        (message.muteEndTimeMs = $util.Long.fromValue(object.muteEndTimeMs)).unsigned = false;
+                    else if (typeof object.muteEndTimeMs === "string")
+                        message.muteEndTimeMs = parseInt(object.muteEndTimeMs, 10);
+                    else if (typeof object.muteEndTimeMs === "number")
+                        message.muteEndTimeMs = object.muteEndTimeMs;
+                    else if (typeof object.muteEndTimeMs === "object")
+                        message.muteEndTimeMs = new $util.LongBits(object.muteEndTimeMs.low >>> 0, object.muteEndTimeMs.high >>> 0).toNumber();
                 return message;
             };
 
@@ -8610,32 +11884,54 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.name = "";
-                    object.color = 0;
-                    object.predefinedId = 0;
-                    object.deleted = false;
-                    object.orderIndex = 0;
-                    object.isActive = false;
-                    object.type = options.enums === String ? "NONE" : 0;
-                    object.isImmutable = false;
-                }
-                if (message.name != null && message.hasOwnProperty("name"))
+                if (message.name != null && message.hasOwnProperty("name")) {
                     object.name = message.name;
-                if (message.color != null && message.hasOwnProperty("color"))
+                    if (options.oneofs)
+                        object._name = "name";
+                }
+                if (message.color != null && message.hasOwnProperty("color")) {
                     object.color = message.color;
-                if (message.predefinedId != null && message.hasOwnProperty("predefinedId"))
+                    if (options.oneofs)
+                        object._color = "color";
+                }
+                if (message.predefinedId != null && message.hasOwnProperty("predefinedId")) {
                     object.predefinedId = message.predefinedId;
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                    if (options.oneofs)
+                        object._predefinedId = "predefinedId";
+                }
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
                     object.deleted = message.deleted;
-                if (message.orderIndex != null && message.hasOwnProperty("orderIndex"))
+                    if (options.oneofs)
+                        object._deleted = "deleted";
+                }
+                if (message.orderIndex != null && message.hasOwnProperty("orderIndex")) {
                     object.orderIndex = message.orderIndex;
-                if (message.isActive != null && message.hasOwnProperty("isActive"))
+                    if (options.oneofs)
+                        object._orderIndex = "orderIndex";
+                }
+                if (message.isActive != null && message.hasOwnProperty("isActive")) {
                     object.isActive = message.isActive;
-                if (message.type != null && message.hasOwnProperty("type"))
+                    if (options.oneofs)
+                        object._isActive = "isActive";
+                }
+                if (message.type != null && message.hasOwnProperty("type")) {
                     object.type = options.enums === String ? $root.SyncAction.SyncActionValue.LabelEditAction.ListType[message.type] === undefined ? message.type : $root.SyncAction.SyncActionValue.LabelEditAction.ListType[message.type] : message.type;
-                if (message.isImmutable != null && message.hasOwnProperty("isImmutable"))
+                    if (options.oneofs)
+                        object._type = "type";
+                }
+                if (message.isImmutable != null && message.hasOwnProperty("isImmutable")) {
                     object.isImmutable = message.isImmutable;
+                    if (options.oneofs)
+                        object._isImmutable = "isImmutable";
+                }
+                if (message.muteEndTimeMs != null && message.hasOwnProperty("muteEndTimeMs")) {
+                    if (typeof message.muteEndTimeMs === "number")
+                        object.muteEndTimeMs = options.longs === String ? String(message.muteEndTimeMs) : message.muteEndTimeMs;
+                    else
+                        object.muteEndTimeMs = options.longs === String ? $util.Long.prototype.toString.call(message.muteEndTimeMs) : options.longs === Number ? new $util.LongBits(message.muteEndTimeMs.low >>> 0, message.muteEndTimeMs.high >>> 0).toNumber() : message.muteEndTimeMs;
+                    if (options.oneofs)
+                        object._muteEndTimeMs = "muteEndTimeMs";
+                }
                 return object;
             };
 
@@ -8677,6 +11973,8 @@ $root.SyncAction = (function() {
              * @property {number} CUSTOM=5 CUSTOM value
              * @property {number} COMMUNITY=6 COMMUNITY value
              * @property {number} SERVER_ASSIGNED=7 SERVER_ASSIGNED value
+             * @property {number} DRAFTED=8 DRAFTED value
+             * @property {number} AI_HANDOFF=9 AI_HANDOFF value
              */
             LabelEditAction.ListType = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -8688,6 +11986,8 @@ $root.SyncAction = (function() {
                 values[valuesById[5] = "CUSTOM"] = 5;
                 values[valuesById[6] = "COMMUNITY"] = 6;
                 values[valuesById[7] = "SERVER_ASSIGNED"] = 7;
+                values[valuesById[8] = "DRAFTED"] = 8;
+                values[valuesById[9] = "AI_HANDOFF"] = 9;
                 return values;
             })();
 
@@ -8751,9 +12051,12 @@ $root.SyncAction = (function() {
             LabelReorderingAction.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.sortedLabelIds != null && message.sortedLabelIds.length)
+                if (message.sortedLabelIds != null && message.sortedLabelIds.length) {
+                    writer.uint32(/* id 1, wireType 2 =*/10).fork();
                     for (var i = 0; i < message.sortedLabelIds.length; ++i)
-                        writer.uint32(/* id 1, wireType 0 =*/8).int32(message.sortedLabelIds[i]);
+                        writer.int32(message.sortedLabelIds[i]);
+                    writer.ldelim();
+                }
                 return writer;
             };
 
@@ -8929,7 +12232,6 @@ $root.SyncAction = (function() {
              * @property {string|null} [fullName] LidContactAction fullName
              * @property {string|null} [firstName] LidContactAction firstName
              * @property {string|null} [username] LidContactAction username
-             * @property {boolean|null} [saveOnPrimaryAddressbook] LidContactAction saveOnPrimaryAddressbook
              */
 
             /**
@@ -8949,35 +12251,63 @@ $root.SyncAction = (function() {
 
             /**
              * LidContactAction fullName.
-             * @member {string} fullName
+             * @member {string|null|undefined} fullName
              * @memberof SyncAction.SyncActionValue.LidContactAction
              * @instance
              */
-            LidContactAction.prototype.fullName = "";
+            LidContactAction.prototype.fullName = null;
 
             /**
              * LidContactAction firstName.
-             * @member {string} firstName
+             * @member {string|null|undefined} firstName
              * @memberof SyncAction.SyncActionValue.LidContactAction
              * @instance
              */
-            LidContactAction.prototype.firstName = "";
+            LidContactAction.prototype.firstName = null;
 
             /**
              * LidContactAction username.
-             * @member {string} username
+             * @member {string|null|undefined} username
              * @memberof SyncAction.SyncActionValue.LidContactAction
              * @instance
              */
-            LidContactAction.prototype.username = "";
+            LidContactAction.prototype.username = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
 
             /**
-             * LidContactAction saveOnPrimaryAddressbook.
-             * @member {boolean} saveOnPrimaryAddressbook
+             * LidContactAction _fullName.
+             * @member {"fullName"|undefined} _fullName
              * @memberof SyncAction.SyncActionValue.LidContactAction
              * @instance
              */
-            LidContactAction.prototype.saveOnPrimaryAddressbook = false;
+            Object.defineProperty(LidContactAction.prototype, "_fullName", {
+                get: $util.oneOfGetter($oneOfFields = ["fullName"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LidContactAction _firstName.
+             * @member {"firstName"|undefined} _firstName
+             * @memberof SyncAction.SyncActionValue.LidContactAction
+             * @instance
+             */
+            Object.defineProperty(LidContactAction.prototype, "_firstName", {
+                get: $util.oneOfGetter($oneOfFields = ["firstName"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * LidContactAction _username.
+             * @member {"username"|undefined} _username
+             * @memberof SyncAction.SyncActionValue.LidContactAction
+             * @instance
+             */
+            Object.defineProperty(LidContactAction.prototype, "_username", {
+                get: $util.oneOfGetter($oneOfFields = ["username"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new LidContactAction instance using the specified properties.
@@ -9009,8 +12339,6 @@ $root.SyncAction = (function() {
                     writer.uint32(/* id 2, wireType 2 =*/18).string(message.firstName);
                 if (message.username != null && Object.hasOwnProperty.call(message, "username"))
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.username);
-                if (message.saveOnPrimaryAddressbook != null && Object.hasOwnProperty.call(message, "saveOnPrimaryAddressbook"))
-                    writer.uint32(/* id 4, wireType 0 =*/32).bool(message.saveOnPrimaryAddressbook);
                 return writer;
             };
 
@@ -9059,10 +12387,6 @@ $root.SyncAction = (function() {
                             message.username = reader.string();
                             break;
                         }
-                    case 4: {
-                            message.saveOnPrimaryAddressbook = reader.bool();
-                            break;
-                        }
                     default:
                         reader.skipType(tag & 7);
                         break;
@@ -9098,18 +12422,22 @@ $root.SyncAction = (function() {
             LidContactAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.fullName != null && message.hasOwnProperty("fullName"))
+                var properties = {};
+                if (message.fullName != null && message.hasOwnProperty("fullName")) {
+                    properties._fullName = 1;
                     if (!$util.isString(message.fullName))
                         return "fullName: string expected";
-                if (message.firstName != null && message.hasOwnProperty("firstName"))
+                }
+                if (message.firstName != null && message.hasOwnProperty("firstName")) {
+                    properties._firstName = 1;
                     if (!$util.isString(message.firstName))
                         return "firstName: string expected";
-                if (message.username != null && message.hasOwnProperty("username"))
+                }
+                if (message.username != null && message.hasOwnProperty("username")) {
+                    properties._username = 1;
                     if (!$util.isString(message.username))
                         return "username: string expected";
-                if (message.saveOnPrimaryAddressbook != null && message.hasOwnProperty("saveOnPrimaryAddressbook"))
-                    if (typeof message.saveOnPrimaryAddressbook !== "boolean")
-                        return "saveOnPrimaryAddressbook: boolean expected";
+                }
                 return null;
             };
 
@@ -9131,8 +12459,6 @@ $root.SyncAction = (function() {
                     message.firstName = String(object.firstName);
                 if (object.username != null)
                     message.username = String(object.username);
-                if (object.saveOnPrimaryAddressbook != null)
-                    message.saveOnPrimaryAddressbook = Boolean(object.saveOnPrimaryAddressbook);
                 return message;
             };
 
@@ -9149,20 +12475,21 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.fullName = "";
-                    object.firstName = "";
-                    object.username = "";
-                    object.saveOnPrimaryAddressbook = false;
-                }
-                if (message.fullName != null && message.hasOwnProperty("fullName"))
+                if (message.fullName != null && message.hasOwnProperty("fullName")) {
                     object.fullName = message.fullName;
-                if (message.firstName != null && message.hasOwnProperty("firstName"))
+                    if (options.oneofs)
+                        object._fullName = "fullName";
+                }
+                if (message.firstName != null && message.hasOwnProperty("firstName")) {
                     object.firstName = message.firstName;
-                if (message.username != null && message.hasOwnProperty("username"))
+                    if (options.oneofs)
+                        object._firstName = "firstName";
+                }
+                if (message.username != null && message.hasOwnProperty("username")) {
                     object.username = message.username;
-                if (message.saveOnPrimaryAddressbook != null && message.hasOwnProperty("saveOnPrimaryAddressbook"))
-                    object.saveOnPrimaryAddressbook = message.saveOnPrimaryAddressbook;
+                    if (options.oneofs)
+                        object._username = "username";
+                }
                 return object;
             };
 
@@ -9221,11 +12548,25 @@ $root.SyncAction = (function() {
 
             /**
              * LocaleSetting locale.
-             * @member {string} locale
+             * @member {string|null|undefined} locale
              * @memberof SyncAction.SyncActionValue.LocaleSetting
              * @instance
              */
-            LocaleSetting.prototype.locale = "";
+            LocaleSetting.prototype.locale = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * LocaleSetting _locale.
+             * @member {"locale"|undefined} _locale
+             * @memberof SyncAction.SyncActionValue.LocaleSetting
+             * @instance
+             */
+            Object.defineProperty(LocaleSetting.prototype, "_locale", {
+                get: $util.oneOfGetter($oneOfFields = ["locale"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new LocaleSetting instance using the specified properties.
@@ -9328,9 +12669,12 @@ $root.SyncAction = (function() {
             LocaleSetting.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.locale != null && message.hasOwnProperty("locale"))
+                var properties = {};
+                if (message.locale != null && message.hasOwnProperty("locale")) {
+                    properties._locale = 1;
                     if (!$util.isString(message.locale))
                         return "locale: string expected";
+                }
                 return null;
             };
 
@@ -9364,10 +12708,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.locale = "";
-                if (message.locale != null && message.hasOwnProperty("locale"))
+                if (message.locale != null && message.hasOwnProperty("locale")) {
                     object.locale = message.locale;
+                    if (options.oneofs)
+                        object._locale = "locale";
+                }
                 return object;
             };
 
@@ -9426,11 +12771,25 @@ $root.SyncAction = (function() {
 
             /**
              * LockChatAction locked.
-             * @member {boolean} locked
+             * @member {boolean|null|undefined} locked
              * @memberof SyncAction.SyncActionValue.LockChatAction
              * @instance
              */
-            LockChatAction.prototype.locked = false;
+            LockChatAction.prototype.locked = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * LockChatAction _locked.
+             * @member {"locked"|undefined} _locked
+             * @memberof SyncAction.SyncActionValue.LockChatAction
+             * @instance
+             */
+            Object.defineProperty(LockChatAction.prototype, "_locked", {
+                get: $util.oneOfGetter($oneOfFields = ["locked"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new LockChatAction instance using the specified properties.
@@ -9533,9 +12892,12 @@ $root.SyncAction = (function() {
             LockChatAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.locked != null && message.hasOwnProperty("locked"))
+                var properties = {};
+                if (message.locked != null && message.hasOwnProperty("locked")) {
+                    properties._locked = 1;
                     if (typeof message.locked !== "boolean")
                         return "locked: boolean expected";
+                }
                 return null;
             };
 
@@ -9569,10 +12931,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.locked = false;
-                if (message.locked != null && message.hasOwnProperty("locked"))
+                if (message.locked != null && message.hasOwnProperty("locked")) {
                     object.locked = message.locked;
+                    if (options.oneofs)
+                        object._locked = "locked";
+                }
                 return object;
             };
 
@@ -9631,11 +12994,25 @@ $root.SyncAction = (function() {
 
             /**
              * MaibaAIFeaturesControlAction aiFeatureStatus.
-             * @member {SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.MaibaAIFeatureStatus} aiFeatureStatus
+             * @member {SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.MaibaAIFeatureStatus|null|undefined} aiFeatureStatus
              * @memberof SyncAction.SyncActionValue.MaibaAIFeaturesControlAction
              * @instance
              */
-            MaibaAIFeaturesControlAction.prototype.aiFeatureStatus = 0;
+            MaibaAIFeaturesControlAction.prototype.aiFeatureStatus = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MaibaAIFeaturesControlAction _aiFeatureStatus.
+             * @member {"aiFeatureStatus"|undefined} _aiFeatureStatus
+             * @memberof SyncAction.SyncActionValue.MaibaAIFeaturesControlAction
+             * @instance
+             */
+            Object.defineProperty(MaibaAIFeaturesControlAction.prototype, "_aiFeatureStatus", {
+                get: $util.oneOfGetter($oneOfFields = ["aiFeatureStatus"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MaibaAIFeaturesControlAction instance using the specified properties.
@@ -9738,7 +13115,9 @@ $root.SyncAction = (function() {
             MaibaAIFeaturesControlAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.aiFeatureStatus != null && message.hasOwnProperty("aiFeatureStatus"))
+                var properties = {};
+                if (message.aiFeatureStatus != null && message.hasOwnProperty("aiFeatureStatus")) {
+                    properties._aiFeatureStatus = 1;
                     switch (message.aiFeatureStatus) {
                     default:
                         return "aiFeatureStatus: enum value expected";
@@ -9747,6 +13126,7 @@ $root.SyncAction = (function() {
                     case 2:
                         break;
                     }
+                }
                 return null;
             };
 
@@ -9798,10 +13178,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.aiFeatureStatus = options.enums === String ? "ENABLED" : 0;
-                if (message.aiFeatureStatus != null && message.hasOwnProperty("aiFeatureStatus"))
+                if (message.aiFeatureStatus != null && message.hasOwnProperty("aiFeatureStatus")) {
                     object.aiFeatureStatus = options.enums === String ? $root.SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.MaibaAIFeatureStatus[message.aiFeatureStatus] === undefined ? message.aiFeatureStatus : $root.SyncAction.SyncActionValue.MaibaAIFeaturesControlAction.MaibaAIFeatureStatus[message.aiFeatureStatus] : message.aiFeatureStatus;
+                    if (options.oneofs)
+                        object._aiFeatureStatus = "aiFeatureStatus";
+                }
                 return object;
             };
 
@@ -9877,11 +13258,11 @@ $root.SyncAction = (function() {
 
             /**
              * MarkChatAsReadAction read.
-             * @member {boolean} read
+             * @member {boolean|null|undefined} read
              * @memberof SyncAction.SyncActionValue.MarkChatAsReadAction
              * @instance
              */
-            MarkChatAsReadAction.prototype.read = false;
+            MarkChatAsReadAction.prototype.read = null;
 
             /**
              * MarkChatAsReadAction messageRange.
@@ -9890,6 +13271,31 @@ $root.SyncAction = (function() {
              * @instance
              */
             MarkChatAsReadAction.prototype.messageRange = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MarkChatAsReadAction _read.
+             * @member {"read"|undefined} _read
+             * @memberof SyncAction.SyncActionValue.MarkChatAsReadAction
+             * @instance
+             */
+            Object.defineProperty(MarkChatAsReadAction.prototype, "_read", {
+                get: $util.oneOfGetter($oneOfFields = ["read"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarkChatAsReadAction _messageRange.
+             * @member {"messageRange"|undefined} _messageRange
+             * @memberof SyncAction.SyncActionValue.MarkChatAsReadAction
+             * @instance
+             */
+            Object.defineProperty(MarkChatAsReadAction.prototype, "_messageRange", {
+                get: $util.oneOfGetter($oneOfFields = ["messageRange"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MarkChatAsReadAction instance using the specified properties.
@@ -9998,13 +13404,19 @@ $root.SyncAction = (function() {
             MarkChatAsReadAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.read != null && message.hasOwnProperty("read"))
+                var properties = {};
+                if (message.read != null && message.hasOwnProperty("read")) {
+                    properties._read = 1;
                     if (typeof message.read !== "boolean")
                         return "read: boolean expected";
+                }
                 if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
-                    var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
-                    if (error)
-                        return "messageRange." + error;
+                    properties._messageRange = 1;
+                    {
+                        var error = $root.SyncAction.SyncActionValue.SyncActionMessageRange.verify(message.messageRange);
+                        if (error)
+                            return "messageRange." + error;
+                    }
                 }
                 return null;
             };
@@ -10044,14 +13456,16 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.read = false;
-                    object.messageRange = null;
-                }
-                if (message.read != null && message.hasOwnProperty("read"))
+                if (message.read != null && message.hasOwnProperty("read")) {
                     object.read = message.read;
-                if (message.messageRange != null && message.hasOwnProperty("messageRange"))
+                    if (options.oneofs)
+                        object._read = "read";
+                }
+                if (message.messageRange != null && message.hasOwnProperty("messageRange")) {
                     object.messageRange = $root.SyncAction.SyncActionValue.SyncActionMessageRange.toObject(message.messageRange, options);
+                    if (options.oneofs)
+                        object._messageRange = "messageRange";
+                }
                 return object;
             };
 
@@ -10116,59 +13530,139 @@ $root.SyncAction = (function() {
 
             /**
              * MarketingMessageAction name.
-             * @member {string} name
+             * @member {string|null|undefined} name
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.name = "";
+            MarketingMessageAction.prototype.name = null;
 
             /**
              * MarketingMessageAction message.
-             * @member {string} message
+             * @member {string|null|undefined} message
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.message = "";
+            MarketingMessageAction.prototype.message = null;
 
             /**
              * MarketingMessageAction type.
-             * @member {SyncAction.SyncActionValue.MarketingMessageAction.MarketingMessagePrototypeType} type
+             * @member {SyncAction.SyncActionValue.MarketingMessageAction.MarketingMessagePrototypeType|null|undefined} type
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.type = 0;
+            MarketingMessageAction.prototype.type = null;
 
             /**
              * MarketingMessageAction createdAt.
-             * @member {number|Long} createdAt
+             * @member {number|Long|null|undefined} createdAt
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.createdAt = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            MarketingMessageAction.prototype.createdAt = null;
 
             /**
              * MarketingMessageAction lastSentAt.
-             * @member {number|Long} lastSentAt
+             * @member {number|Long|null|undefined} lastSentAt
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.lastSentAt = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            MarketingMessageAction.prototype.lastSentAt = null;
 
             /**
              * MarketingMessageAction isDeleted.
-             * @member {boolean} isDeleted
+             * @member {boolean|null|undefined} isDeleted
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.isDeleted = false;
+            MarketingMessageAction.prototype.isDeleted = null;
 
             /**
              * MarketingMessageAction mediaId.
-             * @member {string} mediaId
+             * @member {string|null|undefined} mediaId
              * @memberof SyncAction.SyncActionValue.MarketingMessageAction
              * @instance
              */
-            MarketingMessageAction.prototype.mediaId = "";
+            MarketingMessageAction.prototype.mediaId = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MarketingMessageAction _name.
+             * @member {"name"|undefined} _name
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_name", {
+                get: $util.oneOfGetter($oneOfFields = ["name"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarketingMessageAction _message.
+             * @member {"message"|undefined} _message
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_message", {
+                get: $util.oneOfGetter($oneOfFields = ["message"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarketingMessageAction _type.
+             * @member {"type"|undefined} _type
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_type", {
+                get: $util.oneOfGetter($oneOfFields = ["type"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarketingMessageAction _createdAt.
+             * @member {"createdAt"|undefined} _createdAt
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_createdAt", {
+                get: $util.oneOfGetter($oneOfFields = ["createdAt"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarketingMessageAction _lastSentAt.
+             * @member {"lastSentAt"|undefined} _lastSentAt
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_lastSentAt", {
+                get: $util.oneOfGetter($oneOfFields = ["lastSentAt"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarketingMessageAction _isDeleted.
+             * @member {"isDeleted"|undefined} _isDeleted
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_isDeleted", {
+                get: $util.oneOfGetter($oneOfFields = ["isDeleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MarketingMessageAction _mediaId.
+             * @member {"mediaId"|undefined} _mediaId
+             * @memberof SyncAction.SyncActionValue.MarketingMessageAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageAction.prototype, "_mediaId", {
+                get: $util.oneOfGetter($oneOfFields = ["mediaId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MarketingMessageAction instance using the specified properties.
@@ -10307,31 +13801,46 @@ $root.SyncAction = (function() {
             MarketingMessageAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.name != null && message.hasOwnProperty("name"))
+                var properties = {};
+                if (message.name != null && message.hasOwnProperty("name")) {
+                    properties._name = 1;
                     if (!$util.isString(message.name))
                         return "name: string expected";
-                if (message.message != null && message.hasOwnProperty("message"))
+                }
+                if (message.message != null && message.hasOwnProperty("message")) {
+                    properties._message = 1;
                     if (!$util.isString(message.message))
                         return "message: string expected";
-                if (message.type != null && message.hasOwnProperty("type"))
+                }
+                if (message.type != null && message.hasOwnProperty("type")) {
+                    properties._type = 1;
                     switch (message.type) {
                     default:
                         return "type: enum value expected";
                     case 0:
                         break;
                     }
-                if (message.createdAt != null && message.hasOwnProperty("createdAt"))
+                }
+                if (message.createdAt != null && message.hasOwnProperty("createdAt")) {
+                    properties._createdAt = 1;
                     if (!$util.isInteger(message.createdAt) && !(message.createdAt && $util.isInteger(message.createdAt.low) && $util.isInteger(message.createdAt.high)))
                         return "createdAt: integer|Long expected";
-                if (message.lastSentAt != null && message.hasOwnProperty("lastSentAt"))
+                }
+                if (message.lastSentAt != null && message.hasOwnProperty("lastSentAt")) {
+                    properties._lastSentAt = 1;
                     if (!$util.isInteger(message.lastSentAt) && !(message.lastSentAt && $util.isInteger(message.lastSentAt.low) && $util.isInteger(message.lastSentAt.high)))
                         return "lastSentAt: integer|Long expected";
-                if (message.isDeleted != null && message.hasOwnProperty("isDeleted"))
+                }
+                if (message.isDeleted != null && message.hasOwnProperty("isDeleted")) {
+                    properties._isDeleted = 1;
                     if (typeof message.isDeleted !== "boolean")
                         return "isDeleted: boolean expected";
-                if (message.mediaId != null && message.hasOwnProperty("mediaId"))
+                }
+                if (message.mediaId != null && message.hasOwnProperty("mediaId")) {
+                    properties._mediaId = 1;
                     if (!$util.isString(message.mediaId))
                         return "mediaId: string expected";
+                }
                 return null;
             };
 
@@ -10401,43 +13910,47 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.name = "";
-                    object.message = "";
-                    object.type = options.enums === String ? "PERSONALIZED" : 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.createdAt = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.createdAt = options.longs === String ? "0" : 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.lastSentAt = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.lastSentAt = options.longs === String ? "0" : 0;
-                    object.isDeleted = false;
-                    object.mediaId = "";
-                }
-                if (message.name != null && message.hasOwnProperty("name"))
+                if (message.name != null && message.hasOwnProperty("name")) {
                     object.name = message.name;
-                if (message.message != null && message.hasOwnProperty("message"))
+                    if (options.oneofs)
+                        object._name = "name";
+                }
+                if (message.message != null && message.hasOwnProperty("message")) {
                     object.message = message.message;
-                if (message.type != null && message.hasOwnProperty("type"))
+                    if (options.oneofs)
+                        object._message = "message";
+                }
+                if (message.type != null && message.hasOwnProperty("type")) {
                     object.type = options.enums === String ? $root.SyncAction.SyncActionValue.MarketingMessageAction.MarketingMessagePrototypeType[message.type] === undefined ? message.type : $root.SyncAction.SyncActionValue.MarketingMessageAction.MarketingMessagePrototypeType[message.type] : message.type;
-                if (message.createdAt != null && message.hasOwnProperty("createdAt"))
+                    if (options.oneofs)
+                        object._type = "type";
+                }
+                if (message.createdAt != null && message.hasOwnProperty("createdAt")) {
                     if (typeof message.createdAt === "number")
                         object.createdAt = options.longs === String ? String(message.createdAt) : message.createdAt;
                     else
                         object.createdAt = options.longs === String ? $util.Long.prototype.toString.call(message.createdAt) : options.longs === Number ? new $util.LongBits(message.createdAt.low >>> 0, message.createdAt.high >>> 0).toNumber() : message.createdAt;
-                if (message.lastSentAt != null && message.hasOwnProperty("lastSentAt"))
+                    if (options.oneofs)
+                        object._createdAt = "createdAt";
+                }
+                if (message.lastSentAt != null && message.hasOwnProperty("lastSentAt")) {
                     if (typeof message.lastSentAt === "number")
                         object.lastSentAt = options.longs === String ? String(message.lastSentAt) : message.lastSentAt;
                     else
                         object.lastSentAt = options.longs === String ? $util.Long.prototype.toString.call(message.lastSentAt) : options.longs === Number ? new $util.LongBits(message.lastSentAt.low >>> 0, message.lastSentAt.high >>> 0).toNumber() : message.lastSentAt;
-                if (message.isDeleted != null && message.hasOwnProperty("isDeleted"))
+                    if (options.oneofs)
+                        object._lastSentAt = "lastSentAt";
+                }
+                if (message.isDeleted != null && message.hasOwnProperty("isDeleted")) {
                     object.isDeleted = message.isDeleted;
-                if (message.mediaId != null && message.hasOwnProperty("mediaId"))
+                    if (options.oneofs)
+                        object._isDeleted = "isDeleted";
+                }
+                if (message.mediaId != null && message.hasOwnProperty("mediaId")) {
                     object.mediaId = message.mediaId;
+                    if (options.oneofs)
+                        object._mediaId = "mediaId";
+                }
                 return object;
             };
 
@@ -10508,11 +14021,25 @@ $root.SyncAction = (function() {
 
             /**
              * MarketingMessageBroadcastAction repliedCount.
-             * @member {number} repliedCount
+             * @member {number|null|undefined} repliedCount
              * @memberof SyncAction.SyncActionValue.MarketingMessageBroadcastAction
              * @instance
              */
-            MarketingMessageBroadcastAction.prototype.repliedCount = 0;
+            MarketingMessageBroadcastAction.prototype.repliedCount = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MarketingMessageBroadcastAction _repliedCount.
+             * @member {"repliedCount"|undefined} _repliedCount
+             * @memberof SyncAction.SyncActionValue.MarketingMessageBroadcastAction
+             * @instance
+             */
+            Object.defineProperty(MarketingMessageBroadcastAction.prototype, "_repliedCount", {
+                get: $util.oneOfGetter($oneOfFields = ["repliedCount"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MarketingMessageBroadcastAction instance using the specified properties.
@@ -10615,9 +14142,12 @@ $root.SyncAction = (function() {
             MarketingMessageBroadcastAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.repliedCount != null && message.hasOwnProperty("repliedCount"))
+                var properties = {};
+                if (message.repliedCount != null && message.hasOwnProperty("repliedCount")) {
+                    properties._repliedCount = 1;
                     if (!$util.isInteger(message.repliedCount))
                         return "repliedCount: integer expected";
+                }
                 return null;
             };
 
@@ -10651,10 +14181,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.repliedCount = 0;
-                if (message.repliedCount != null && message.hasOwnProperty("repliedCount"))
+                if (message.repliedCount != null && message.hasOwnProperty("repliedCount")) {
                     object.repliedCount = message.repliedCount;
+                    if (options.oneofs)
+                        object._repliedCount = "repliedCount";
+                }
                 return object;
             };
 
@@ -10693,8 +14224,8 @@ $root.SyncAction = (function() {
              * Properties of a MerchantPaymentPartnerAction.
              * @memberof SyncAction.SyncActionValue
              * @interface IMerchantPaymentPartnerAction
-             * @property {SyncAction.SyncActionValue.MerchantPaymentPartnerAction.Status} status MerchantPaymentPartnerAction status
-             * @property {string} country MerchantPaymentPartnerAction country
+             * @property {SyncAction.SyncActionValue.MerchantPaymentPartnerAction.Status|null} [status] MerchantPaymentPartnerAction status
+             * @property {string|null} [country] MerchantPaymentPartnerAction country
              * @property {string|null} [gatewayName] MerchantPaymentPartnerAction gatewayName
              * @property {string|null} [credentialId] MerchantPaymentPartnerAction credentialId
              */
@@ -10716,35 +14247,82 @@ $root.SyncAction = (function() {
 
             /**
              * MerchantPaymentPartnerAction status.
-             * @member {SyncAction.SyncActionValue.MerchantPaymentPartnerAction.Status} status
+             * @member {SyncAction.SyncActionValue.MerchantPaymentPartnerAction.Status|null|undefined} status
              * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
              * @instance
              */
-            MerchantPaymentPartnerAction.prototype.status = 0;
+            MerchantPaymentPartnerAction.prototype.status = null;
 
             /**
              * MerchantPaymentPartnerAction country.
-             * @member {string} country
+             * @member {string|null|undefined} country
              * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
              * @instance
              */
-            MerchantPaymentPartnerAction.prototype.country = "";
+            MerchantPaymentPartnerAction.prototype.country = null;
 
             /**
              * MerchantPaymentPartnerAction gatewayName.
-             * @member {string} gatewayName
+             * @member {string|null|undefined} gatewayName
              * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
              * @instance
              */
-            MerchantPaymentPartnerAction.prototype.gatewayName = "";
+            MerchantPaymentPartnerAction.prototype.gatewayName = null;
 
             /**
              * MerchantPaymentPartnerAction credentialId.
-             * @member {string} credentialId
+             * @member {string|null|undefined} credentialId
              * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
              * @instance
              */
-            MerchantPaymentPartnerAction.prototype.credentialId = "";
+            MerchantPaymentPartnerAction.prototype.credentialId = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MerchantPaymentPartnerAction _status.
+             * @member {"status"|undefined} _status
+             * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
+             * @instance
+             */
+            Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_status", {
+                get: $util.oneOfGetter($oneOfFields = ["status"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MerchantPaymentPartnerAction _country.
+             * @member {"country"|undefined} _country
+             * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
+             * @instance
+             */
+            Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_country", {
+                get: $util.oneOfGetter($oneOfFields = ["country"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MerchantPaymentPartnerAction _gatewayName.
+             * @member {"gatewayName"|undefined} _gatewayName
+             * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
+             * @instance
+             */
+            Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_gatewayName", {
+                get: $util.oneOfGetter($oneOfFields = ["gatewayName"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MerchantPaymentPartnerAction _credentialId.
+             * @member {"credentialId"|undefined} _credentialId
+             * @memberof SyncAction.SyncActionValue.MerchantPaymentPartnerAction
+             * @instance
+             */
+            Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_credentialId", {
+                get: $util.oneOfGetter($oneOfFields = ["credentialId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MerchantPaymentPartnerAction instance using the specified properties.
@@ -10770,8 +14348,10 @@ $root.SyncAction = (function() {
             MerchantPaymentPartnerAction.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.status);
-                writer.uint32(/* id 2, wireType 2 =*/18).string(message.country);
+                if (message.status != null && Object.hasOwnProperty.call(message, "status"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.status);
+                if (message.country != null && Object.hasOwnProperty.call(message, "country"))
+                    writer.uint32(/* id 2, wireType 2 =*/18).string(message.country);
                 if (message.gatewayName != null && Object.hasOwnProperty.call(message, "gatewayName"))
                     writer.uint32(/* id 3, wireType 2 =*/26).string(message.gatewayName);
                 if (message.credentialId != null && Object.hasOwnProperty.call(message, "credentialId"))
@@ -10833,10 +14413,6 @@ $root.SyncAction = (function() {
                         break;
                     }
                 }
-                if (!message.hasOwnProperty("status"))
-                    throw $util.ProtocolError("missing required 'status'", { instance: message });
-                if (!message.hasOwnProperty("country"))
-                    throw $util.ProtocolError("missing required 'country'", { instance: message });
                 return message;
             };
 
@@ -10867,21 +14443,32 @@ $root.SyncAction = (function() {
             MerchantPaymentPartnerAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                switch (message.status) {
-                default:
-                    return "status: enum value expected";
-                case 0:
-                case 1:
-                    break;
+                var properties = {};
+                if (message.status != null && message.hasOwnProperty("status")) {
+                    properties._status = 1;
+                    switch (message.status) {
+                    default:
+                        return "status: enum value expected";
+                    case 0:
+                    case 1:
+                        break;
+                    }
                 }
-                if (!$util.isString(message.country))
-                    return "country: string expected";
-                if (message.gatewayName != null && message.hasOwnProperty("gatewayName"))
+                if (message.country != null && message.hasOwnProperty("country")) {
+                    properties._country = 1;
+                    if (!$util.isString(message.country))
+                        return "country: string expected";
+                }
+                if (message.gatewayName != null && message.hasOwnProperty("gatewayName")) {
+                    properties._gatewayName = 1;
                     if (!$util.isString(message.gatewayName))
                         return "gatewayName: string expected";
-                if (message.credentialId != null && message.hasOwnProperty("credentialId"))
+                }
+                if (message.credentialId != null && message.hasOwnProperty("credentialId")) {
+                    properties._credentialId = 1;
                     if (!$util.isString(message.credentialId))
                         return "credentialId: string expected";
+                }
                 return null;
             };
 
@@ -10935,20 +14522,26 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.status = options.enums === String ? "ACTIVE" : 0;
-                    object.country = "";
-                    object.gatewayName = "";
-                    object.credentialId = "";
-                }
-                if (message.status != null && message.hasOwnProperty("status"))
+                if (message.status != null && message.hasOwnProperty("status")) {
                     object.status = options.enums === String ? $root.SyncAction.SyncActionValue.MerchantPaymentPartnerAction.Status[message.status] === undefined ? message.status : $root.SyncAction.SyncActionValue.MerchantPaymentPartnerAction.Status[message.status] : message.status;
-                if (message.country != null && message.hasOwnProperty("country"))
+                    if (options.oneofs)
+                        object._status = "status";
+                }
+                if (message.country != null && message.hasOwnProperty("country")) {
                     object.country = message.country;
-                if (message.gatewayName != null && message.hasOwnProperty("gatewayName"))
+                    if (options.oneofs)
+                        object._country = "country";
+                }
+                if (message.gatewayName != null && message.hasOwnProperty("gatewayName")) {
                     object.gatewayName = message.gatewayName;
-                if (message.credentialId != null && message.hasOwnProperty("credentialId"))
+                    if (options.oneofs)
+                        object._gatewayName = "gatewayName";
+                }
+                if (message.credentialId != null && message.hasOwnProperty("credentialId")) {
                     object.credentialId = message.credentialId;
+                    if (options.oneofs)
+                        object._credentialId = "credentialId";
+                }
                 return object;
             };
 
@@ -11002,6 +14595,7 @@ $root.SyncAction = (function() {
              * @memberof SyncAction.SyncActionValue
              * @interface IMusicUserIdAction
              * @property {string|null} [musicUserId] MusicUserIdAction musicUserId
+             * @property {Object.<string,string>|null} [musicUserIdMap] MusicUserIdAction musicUserIdMap
              */
 
             /**
@@ -11013,6 +14607,7 @@ $root.SyncAction = (function() {
              * @param {SyncAction.SyncActionValue.IMusicUserIdAction=} [properties] Properties to set
              */
             function MusicUserIdAction(properties) {
+                this.musicUserIdMap = {};
                 if (properties)
                     for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -11021,11 +14616,33 @@ $root.SyncAction = (function() {
 
             /**
              * MusicUserIdAction musicUserId.
-             * @member {string} musicUserId
+             * @member {string|null|undefined} musicUserId
              * @memberof SyncAction.SyncActionValue.MusicUserIdAction
              * @instance
              */
-            MusicUserIdAction.prototype.musicUserId = "";
+            MusicUserIdAction.prototype.musicUserId = null;
+
+            /**
+             * MusicUserIdAction musicUserIdMap.
+             * @member {Object.<string,string>} musicUserIdMap
+             * @memberof SyncAction.SyncActionValue.MusicUserIdAction
+             * @instance
+             */
+            MusicUserIdAction.prototype.musicUserIdMap = $util.emptyObject;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MusicUserIdAction _musicUserId.
+             * @member {"musicUserId"|undefined} _musicUserId
+             * @memberof SyncAction.SyncActionValue.MusicUserIdAction
+             * @instance
+             */
+            Object.defineProperty(MusicUserIdAction.prototype, "_musicUserId", {
+                get: $util.oneOfGetter($oneOfFields = ["musicUserId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MusicUserIdAction instance using the specified properties.
@@ -11053,6 +14670,9 @@ $root.SyncAction = (function() {
                     writer = $Writer.create();
                 if (message.musicUserId != null && Object.hasOwnProperty.call(message, "musicUserId"))
                     writer.uint32(/* id 1, wireType 2 =*/10).string(message.musicUserId);
+                if (message.musicUserIdMap != null && Object.hasOwnProperty.call(message, "musicUserIdMap"))
+                    for (var keys = Object.keys(message.musicUserIdMap), i = 0; i < keys.length; ++i)
+                        writer.uint32(/* id 2, wireType 2 =*/18).fork().uint32(/* id 1, wireType 2 =*/10).string(keys[i]).uint32(/* id 2, wireType 2 =*/18).string(message.musicUserIdMap[keys[i]]).ldelim();
                 return writer;
             };
 
@@ -11083,7 +14703,7 @@ $root.SyncAction = (function() {
             MusicUserIdAction.decode = function decode(reader, length, error) {
                 if (!(reader instanceof $Reader))
                     reader = $Reader.create(reader);
-                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.MusicUserIdAction();
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.MusicUserIdAction(), key, value;
                 while (reader.pos < end) {
                     var tag = reader.uint32();
                     if (tag === error)
@@ -11091,6 +14711,29 @@ $root.SyncAction = (function() {
                     switch (tag >>> 3) {
                     case 1: {
                             message.musicUserId = reader.string();
+                            break;
+                        }
+                    case 2: {
+                            if (message.musicUserIdMap === $util.emptyObject)
+                                message.musicUserIdMap = {};
+                            var end2 = reader.uint32() + reader.pos;
+                            key = "";
+                            value = "";
+                            while (reader.pos < end2) {
+                                var tag2 = reader.uint32();
+                                switch (tag2 >>> 3) {
+                                case 1:
+                                    key = reader.string();
+                                    break;
+                                case 2:
+                                    value = reader.string();
+                                    break;
+                                default:
+                                    reader.skipType(tag2 & 7);
+                                    break;
+                                }
+                            }
+                            message.musicUserIdMap[key] = value;
                             break;
                         }
                     default:
@@ -11128,9 +14771,20 @@ $root.SyncAction = (function() {
             MusicUserIdAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.musicUserId != null && message.hasOwnProperty("musicUserId"))
+                var properties = {};
+                if (message.musicUserId != null && message.hasOwnProperty("musicUserId")) {
+                    properties._musicUserId = 1;
                     if (!$util.isString(message.musicUserId))
                         return "musicUserId: string expected";
+                }
+                if (message.musicUserIdMap != null && message.hasOwnProperty("musicUserIdMap")) {
+                    if (!$util.isObject(message.musicUserIdMap))
+                        return "musicUserIdMap: object expected";
+                    var key = Object.keys(message.musicUserIdMap);
+                    for (var i = 0; i < key.length; ++i)
+                        if (!$util.isString(message.musicUserIdMap[key[i]]))
+                            return "musicUserIdMap: string{k:string} expected";
+                }
                 return null;
             };
 
@@ -11148,6 +14802,13 @@ $root.SyncAction = (function() {
                 var message = new $root.SyncAction.SyncActionValue.MusicUserIdAction();
                 if (object.musicUserId != null)
                     message.musicUserId = String(object.musicUserId);
+                if (object.musicUserIdMap) {
+                    if (typeof object.musicUserIdMap !== "object")
+                        throw TypeError(".SyncAction.SyncActionValue.MusicUserIdAction.musicUserIdMap: object expected");
+                    message.musicUserIdMap = {};
+                    for (var keys = Object.keys(object.musicUserIdMap), i = 0; i < keys.length; ++i)
+                        message.musicUserIdMap[keys[i]] = String(object.musicUserIdMap[keys[i]]);
+                }
                 return message;
             };
 
@@ -11164,10 +14825,19 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.musicUserId = "";
-                if (message.musicUserId != null && message.hasOwnProperty("musicUserId"))
+                if (options.objects || options.defaults)
+                    object.musicUserIdMap = {};
+                if (message.musicUserId != null && message.hasOwnProperty("musicUserId")) {
                     object.musicUserId = message.musicUserId;
+                    if (options.oneofs)
+                        object._musicUserId = "musicUserId";
+                }
+                var keys2;
+                if (message.musicUserIdMap && (keys2 = Object.keys(message.musicUserIdMap)).length) {
+                    object.musicUserIdMap = {};
+                    for (var j = 0; j < keys2.length; ++j)
+                        object.musicUserIdMap[keys2[j]] = message.musicUserIdMap[keys2[j]];
+                }
                 return object;
             };
 
@@ -11228,27 +14898,63 @@ $root.SyncAction = (function() {
 
             /**
              * MuteAction muted.
-             * @member {boolean} muted
+             * @member {boolean|null|undefined} muted
              * @memberof SyncAction.SyncActionValue.MuteAction
              * @instance
              */
-            MuteAction.prototype.muted = false;
+            MuteAction.prototype.muted = null;
 
             /**
              * MuteAction muteEndTimestamp.
-             * @member {number|Long} muteEndTimestamp
+             * @member {number|Long|null|undefined} muteEndTimestamp
              * @memberof SyncAction.SyncActionValue.MuteAction
              * @instance
              */
-            MuteAction.prototype.muteEndTimestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            MuteAction.prototype.muteEndTimestamp = null;
 
             /**
              * MuteAction autoMuted.
-             * @member {boolean} autoMuted
+             * @member {boolean|null|undefined} autoMuted
              * @memberof SyncAction.SyncActionValue.MuteAction
              * @instance
              */
-            MuteAction.prototype.autoMuted = false;
+            MuteAction.prototype.autoMuted = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * MuteAction _muted.
+             * @member {"muted"|undefined} _muted
+             * @memberof SyncAction.SyncActionValue.MuteAction
+             * @instance
+             */
+            Object.defineProperty(MuteAction.prototype, "_muted", {
+                get: $util.oneOfGetter($oneOfFields = ["muted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MuteAction _muteEndTimestamp.
+             * @member {"muteEndTimestamp"|undefined} _muteEndTimestamp
+             * @memberof SyncAction.SyncActionValue.MuteAction
+             * @instance
+             */
+            Object.defineProperty(MuteAction.prototype, "_muteEndTimestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["muteEndTimestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * MuteAction _autoMuted.
+             * @member {"autoMuted"|undefined} _autoMuted
+             * @memberof SyncAction.SyncActionValue.MuteAction
+             * @instance
+             */
+            Object.defineProperty(MuteAction.prototype, "_autoMuted", {
+                get: $util.oneOfGetter($oneOfFields = ["autoMuted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new MuteAction instance using the specified properties.
@@ -11363,15 +15069,22 @@ $root.SyncAction = (function() {
             MuteAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.muted != null && message.hasOwnProperty("muted"))
+                var properties = {};
+                if (message.muted != null && message.hasOwnProperty("muted")) {
+                    properties._muted = 1;
                     if (typeof message.muted !== "boolean")
                         return "muted: boolean expected";
-                if (message.muteEndTimestamp != null && message.hasOwnProperty("muteEndTimestamp"))
+                }
+                if (message.muteEndTimestamp != null && message.hasOwnProperty("muteEndTimestamp")) {
+                    properties._muteEndTimestamp = 1;
                     if (!$util.isInteger(message.muteEndTimestamp) && !(message.muteEndTimestamp && $util.isInteger(message.muteEndTimestamp.low) && $util.isInteger(message.muteEndTimestamp.high)))
                         return "muteEndTimestamp: integer|Long expected";
-                if (message.autoMuted != null && message.hasOwnProperty("autoMuted"))
+                }
+                if (message.autoMuted != null && message.hasOwnProperty("autoMuted")) {
+                    properties._autoMuted = 1;
                     if (typeof message.autoMuted !== "boolean")
                         return "autoMuted: boolean expected";
+                }
                 return null;
             };
 
@@ -11416,24 +15129,24 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.muted = false;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.muteEndTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.muteEndTimestamp = options.longs === String ? "0" : 0;
-                    object.autoMuted = false;
-                }
-                if (message.muted != null && message.hasOwnProperty("muted"))
+                if (message.muted != null && message.hasOwnProperty("muted")) {
                     object.muted = message.muted;
-                if (message.muteEndTimestamp != null && message.hasOwnProperty("muteEndTimestamp"))
+                    if (options.oneofs)
+                        object._muted = "muted";
+                }
+                if (message.muteEndTimestamp != null && message.hasOwnProperty("muteEndTimestamp")) {
                     if (typeof message.muteEndTimestamp === "number")
                         object.muteEndTimestamp = options.longs === String ? String(message.muteEndTimestamp) : message.muteEndTimestamp;
                     else
                         object.muteEndTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.muteEndTimestamp) : options.longs === Number ? new $util.LongBits(message.muteEndTimestamp.low >>> 0, message.muteEndTimestamp.high >>> 0).toNumber() : message.muteEndTimestamp;
-                if (message.autoMuted != null && message.hasOwnProperty("autoMuted"))
+                    if (options.oneofs)
+                        object._muteEndTimestamp = "muteEndTimestamp";
+                }
+                if (message.autoMuted != null && message.hasOwnProperty("autoMuted")) {
                     object.autoMuted = message.autoMuted;
+                    if (options.oneofs)
+                        object._autoMuted = "autoMuted";
+                }
                 return object;
             };
 
@@ -11466,6 +15179,229 @@ $root.SyncAction = (function() {
             return MuteAction;
         })();
 
+        SyncActionValue.NewsletterSavedInterestsAction = (function() {
+
+            /**
+             * Properties of a NewsletterSavedInterestsAction.
+             * @memberof SyncAction.SyncActionValue
+             * @interface INewsletterSavedInterestsAction
+             * @property {string|null} [newsletterSavedInterests] NewsletterSavedInterestsAction newsletterSavedInterests
+             */
+
+            /**
+             * Constructs a new NewsletterSavedInterestsAction.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents a NewsletterSavedInterestsAction.
+             * @implements INewsletterSavedInterestsAction
+             * @constructor
+             * @param {SyncAction.SyncActionValue.INewsletterSavedInterestsAction=} [properties] Properties to set
+             */
+            function NewsletterSavedInterestsAction(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * NewsletterSavedInterestsAction newsletterSavedInterests.
+             * @member {string|null|undefined} newsletterSavedInterests
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @instance
+             */
+            NewsletterSavedInterestsAction.prototype.newsletterSavedInterests = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * NewsletterSavedInterestsAction _newsletterSavedInterests.
+             * @member {"newsletterSavedInterests"|undefined} _newsletterSavedInterests
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @instance
+             */
+            Object.defineProperty(NewsletterSavedInterestsAction.prototype, "_newsletterSavedInterests", {
+                get: $util.oneOfGetter($oneOfFields = ["newsletterSavedInterests"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new NewsletterSavedInterestsAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {SyncAction.SyncActionValue.INewsletterSavedInterestsAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.NewsletterSavedInterestsAction} NewsletterSavedInterestsAction instance
+             */
+            NewsletterSavedInterestsAction.create = function create(properties) {
+                return new NewsletterSavedInterestsAction(properties);
+            };
+
+            /**
+             * Encodes the specified NewsletterSavedInterestsAction message. Does not implicitly {@link SyncAction.SyncActionValue.NewsletterSavedInterestsAction.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {SyncAction.SyncActionValue.INewsletterSavedInterestsAction} message NewsletterSavedInterestsAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            NewsletterSavedInterestsAction.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.newsletterSavedInterests != null && Object.hasOwnProperty.call(message, "newsletterSavedInterests"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).string(message.newsletterSavedInterests);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified NewsletterSavedInterestsAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.NewsletterSavedInterestsAction.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {SyncAction.SyncActionValue.INewsletterSavedInterestsAction} message NewsletterSavedInterestsAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            NewsletterSavedInterestsAction.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a NewsletterSavedInterestsAction message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.NewsletterSavedInterestsAction} NewsletterSavedInterestsAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            NewsletterSavedInterestsAction.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.newsletterSavedInterests = reader.string();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a NewsletterSavedInterestsAction message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.NewsletterSavedInterestsAction} NewsletterSavedInterestsAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            NewsletterSavedInterestsAction.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a NewsletterSavedInterestsAction message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            NewsletterSavedInterestsAction.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.newsletterSavedInterests != null && message.hasOwnProperty("newsletterSavedInterests")) {
+                    properties._newsletterSavedInterests = 1;
+                    if (!$util.isString(message.newsletterSavedInterests))
+                        return "newsletterSavedInterests: string expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a NewsletterSavedInterestsAction message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.NewsletterSavedInterestsAction} NewsletterSavedInterestsAction
+             */
+            NewsletterSavedInterestsAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.NewsletterSavedInterestsAction();
+                if (object.newsletterSavedInterests != null)
+                    message.newsletterSavedInterests = String(object.newsletterSavedInterests);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a NewsletterSavedInterestsAction message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {SyncAction.SyncActionValue.NewsletterSavedInterestsAction} message NewsletterSavedInterestsAction
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            NewsletterSavedInterestsAction.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.newsletterSavedInterests != null && message.hasOwnProperty("newsletterSavedInterests")) {
+                    object.newsletterSavedInterests = message.newsletterSavedInterests;
+                    if (options.oneofs)
+                        object._newsletterSavedInterests = "newsletterSavedInterests";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this NewsletterSavedInterestsAction to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            NewsletterSavedInterestsAction.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for NewsletterSavedInterestsAction
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.NewsletterSavedInterestsAction
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            NewsletterSavedInterestsAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.NewsletterSavedInterestsAction";
+            };
+
+            return NewsletterSavedInterestsAction;
+        })();
+
         SyncActionValue.NoteEditAction = (function() {
 
             /**
@@ -11496,43 +15432,101 @@ $root.SyncAction = (function() {
 
             /**
              * NoteEditAction type.
-             * @member {SyncAction.SyncActionValue.NoteEditAction.NoteType} type
+             * @member {SyncAction.SyncActionValue.NoteEditAction.NoteType|null|undefined} type
              * @memberof SyncAction.SyncActionValue.NoteEditAction
              * @instance
              */
-            NoteEditAction.prototype.type = 1;
+            NoteEditAction.prototype.type = null;
 
             /**
              * NoteEditAction chatJid.
-             * @member {string} chatJid
+             * @member {string|null|undefined} chatJid
              * @memberof SyncAction.SyncActionValue.NoteEditAction
              * @instance
              */
-            NoteEditAction.prototype.chatJid = "";
+            NoteEditAction.prototype.chatJid = null;
 
             /**
              * NoteEditAction createdAt.
-             * @member {number|Long} createdAt
+             * @member {number|Long|null|undefined} createdAt
              * @memberof SyncAction.SyncActionValue.NoteEditAction
              * @instance
              */
-            NoteEditAction.prototype.createdAt = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            NoteEditAction.prototype.createdAt = null;
 
             /**
              * NoteEditAction deleted.
-             * @member {boolean} deleted
+             * @member {boolean|null|undefined} deleted
              * @memberof SyncAction.SyncActionValue.NoteEditAction
              * @instance
              */
-            NoteEditAction.prototype.deleted = false;
+            NoteEditAction.prototype.deleted = null;
 
             /**
              * NoteEditAction unstructuredContent.
-             * @member {string} unstructuredContent
+             * @member {string|null|undefined} unstructuredContent
              * @memberof SyncAction.SyncActionValue.NoteEditAction
              * @instance
              */
-            NoteEditAction.prototype.unstructuredContent = "";
+            NoteEditAction.prototype.unstructuredContent = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * NoteEditAction _type.
+             * @member {"type"|undefined} _type
+             * @memberof SyncAction.SyncActionValue.NoteEditAction
+             * @instance
+             */
+            Object.defineProperty(NoteEditAction.prototype, "_type", {
+                get: $util.oneOfGetter($oneOfFields = ["type"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * NoteEditAction _chatJid.
+             * @member {"chatJid"|undefined} _chatJid
+             * @memberof SyncAction.SyncActionValue.NoteEditAction
+             * @instance
+             */
+            Object.defineProperty(NoteEditAction.prototype, "_chatJid", {
+                get: $util.oneOfGetter($oneOfFields = ["chatJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * NoteEditAction _createdAt.
+             * @member {"createdAt"|undefined} _createdAt
+             * @memberof SyncAction.SyncActionValue.NoteEditAction
+             * @instance
+             */
+            Object.defineProperty(NoteEditAction.prototype, "_createdAt", {
+                get: $util.oneOfGetter($oneOfFields = ["createdAt"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * NoteEditAction _deleted.
+             * @member {"deleted"|undefined} _deleted
+             * @memberof SyncAction.SyncActionValue.NoteEditAction
+             * @instance
+             */
+            Object.defineProperty(NoteEditAction.prototype, "_deleted", {
+                get: $util.oneOfGetter($oneOfFields = ["deleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * NoteEditAction _unstructuredContent.
+             * @member {"unstructuredContent"|undefined} _unstructuredContent
+             * @memberof SyncAction.SyncActionValue.NoteEditAction
+             * @instance
+             */
+            Object.defineProperty(NoteEditAction.prototype, "_unstructuredContent", {
+                get: $util.oneOfGetter($oneOfFields = ["unstructuredContent"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new NoteEditAction instance using the specified properties.
@@ -11659,7 +15653,9 @@ $root.SyncAction = (function() {
             NoteEditAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.type != null && message.hasOwnProperty("type"))
+                var properties = {};
+                if (message.type != null && message.hasOwnProperty("type")) {
+                    properties._type = 1;
                     switch (message.type) {
                     default:
                         return "type: enum value expected";
@@ -11667,18 +15663,27 @@ $root.SyncAction = (function() {
                     case 2:
                         break;
                     }
-                if (message.chatJid != null && message.hasOwnProperty("chatJid"))
+                }
+                if (message.chatJid != null && message.hasOwnProperty("chatJid")) {
+                    properties._chatJid = 1;
                     if (!$util.isString(message.chatJid))
                         return "chatJid: string expected";
-                if (message.createdAt != null && message.hasOwnProperty("createdAt"))
+                }
+                if (message.createdAt != null && message.hasOwnProperty("createdAt")) {
+                    properties._createdAt = 1;
                     if (!$util.isInteger(message.createdAt) && !(message.createdAt && $util.isInteger(message.createdAt.low) && $util.isInteger(message.createdAt.high)))
                         return "createdAt: integer|Long expected";
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                }
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
+                    properties._deleted = 1;
                     if (typeof message.deleted !== "boolean")
                         return "deleted: boolean expected";
-                if (message.unstructuredContent != null && message.hasOwnProperty("unstructuredContent"))
+                }
+                if (message.unstructuredContent != null && message.hasOwnProperty("unstructuredContent")) {
+                    properties._unstructuredContent = 1;
                     if (!$util.isString(message.unstructuredContent))
                         return "unstructuredContent: string expected";
+                }
                 return null;
             };
 
@@ -11741,30 +15746,34 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.type = options.enums === String ? "UNSTRUCTURED" : 1;
-                    object.chatJid = "";
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.createdAt = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.createdAt = options.longs === String ? "0" : 0;
-                    object.deleted = false;
-                    object.unstructuredContent = "";
-                }
-                if (message.type != null && message.hasOwnProperty("type"))
+                if (message.type != null && message.hasOwnProperty("type")) {
                     object.type = options.enums === String ? $root.SyncAction.SyncActionValue.NoteEditAction.NoteType[message.type] === undefined ? message.type : $root.SyncAction.SyncActionValue.NoteEditAction.NoteType[message.type] : message.type;
-                if (message.chatJid != null && message.hasOwnProperty("chatJid"))
+                    if (options.oneofs)
+                        object._type = "type";
+                }
+                if (message.chatJid != null && message.hasOwnProperty("chatJid")) {
                     object.chatJid = message.chatJid;
-                if (message.createdAt != null && message.hasOwnProperty("createdAt"))
+                    if (options.oneofs)
+                        object._chatJid = "chatJid";
+                }
+                if (message.createdAt != null && message.hasOwnProperty("createdAt")) {
                     if (typeof message.createdAt === "number")
                         object.createdAt = options.longs === String ? String(message.createdAt) : message.createdAt;
                     else
                         object.createdAt = options.longs === String ? $util.Long.prototype.toString.call(message.createdAt) : options.longs === Number ? new $util.LongBits(message.createdAt.low >>> 0, message.createdAt.high >>> 0).toNumber() : message.createdAt;
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                    if (options.oneofs)
+                        object._createdAt = "createdAt";
+                }
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
                     object.deleted = message.deleted;
-                if (message.unstructuredContent != null && message.hasOwnProperty("unstructuredContent"))
+                    if (options.oneofs)
+                        object._deleted = "deleted";
+                }
+                if (message.unstructuredContent != null && message.hasOwnProperty("unstructuredContent")) {
                     object.unstructuredContent = message.unstructuredContent;
+                    if (options.oneofs)
+                        object._unstructuredContent = "unstructuredContent";
+                }
                 return object;
             };
 
@@ -11837,11 +15846,25 @@ $root.SyncAction = (function() {
 
             /**
              * NotificationActivitySettingAction notificationActivitySetting.
-             * @member {SyncAction.SyncActionValue.NotificationActivitySettingAction.NotificationActivitySetting} notificationActivitySetting
+             * @member {SyncAction.SyncActionValue.NotificationActivitySettingAction.NotificationActivitySetting|null|undefined} notificationActivitySetting
              * @memberof SyncAction.SyncActionValue.NotificationActivitySettingAction
              * @instance
              */
-            NotificationActivitySettingAction.prototype.notificationActivitySetting = 0;
+            NotificationActivitySettingAction.prototype.notificationActivitySetting = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * NotificationActivitySettingAction _notificationActivitySetting.
+             * @member {"notificationActivitySetting"|undefined} _notificationActivitySetting
+             * @memberof SyncAction.SyncActionValue.NotificationActivitySettingAction
+             * @instance
+             */
+            Object.defineProperty(NotificationActivitySettingAction.prototype, "_notificationActivitySetting", {
+                get: $util.oneOfGetter($oneOfFields = ["notificationActivitySetting"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new NotificationActivitySettingAction instance using the specified properties.
@@ -11944,7 +15967,9 @@ $root.SyncAction = (function() {
             NotificationActivitySettingAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.notificationActivitySetting != null && message.hasOwnProperty("notificationActivitySetting"))
+                var properties = {};
+                if (message.notificationActivitySetting != null && message.hasOwnProperty("notificationActivitySetting")) {
+                    properties._notificationActivitySetting = 1;
                     switch (message.notificationActivitySetting) {
                     default:
                         return "notificationActivitySetting: enum value expected";
@@ -11954,6 +15979,7 @@ $root.SyncAction = (function() {
                     case 3:
                         break;
                     }
+                }
                 return null;
             };
 
@@ -12009,10 +16035,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.notificationActivitySetting = options.enums === String ? "DEFAULT_ALL_MESSAGES" : 0;
-                if (message.notificationActivitySetting != null && message.hasOwnProperty("notificationActivitySetting"))
+                if (message.notificationActivitySetting != null && message.hasOwnProperty("notificationActivitySetting")) {
                     object.notificationActivitySetting = options.enums === String ? $root.SyncAction.SyncActionValue.NotificationActivitySettingAction.NotificationActivitySetting[message.notificationActivitySetting] === undefined ? message.notificationActivitySetting : $root.SyncAction.SyncActionValue.NotificationActivitySettingAction.NotificationActivitySetting[message.notificationActivitySetting] : message.notificationActivitySetting;
+                    if (options.oneofs)
+                        object._notificationActivitySetting = "notificationActivitySetting";
+                }
                 return object;
             };
 
@@ -12089,11 +16116,25 @@ $root.SyncAction = (function() {
 
             /**
              * NuxAction acknowledged.
-             * @member {boolean} acknowledged
+             * @member {boolean|null|undefined} acknowledged
              * @memberof SyncAction.SyncActionValue.NuxAction
              * @instance
              */
-            NuxAction.prototype.acknowledged = false;
+            NuxAction.prototype.acknowledged = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * NuxAction _acknowledged.
+             * @member {"acknowledged"|undefined} _acknowledged
+             * @memberof SyncAction.SyncActionValue.NuxAction
+             * @instance
+             */
+            Object.defineProperty(NuxAction.prototype, "_acknowledged", {
+                get: $util.oneOfGetter($oneOfFields = ["acknowledged"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new NuxAction instance using the specified properties.
@@ -12196,9 +16237,12 @@ $root.SyncAction = (function() {
             NuxAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.acknowledged != null && message.hasOwnProperty("acknowledged"))
+                var properties = {};
+                if (message.acknowledged != null && message.hasOwnProperty("acknowledged")) {
+                    properties._acknowledged = 1;
                     if (typeof message.acknowledged !== "boolean")
                         return "acknowledged: boolean expected";
+                }
                 return null;
             };
 
@@ -12232,10 +16276,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.acknowledged = false;
-                if (message.acknowledged != null && message.hasOwnProperty("acknowledged"))
+                if (message.acknowledged != null && message.hasOwnProperty("acknowledged")) {
                     object.acknowledged = message.acknowledged;
+                    if (options.oneofs)
+                        object._acknowledged = "acknowledged";
+                }
                 return object;
             };
 
@@ -12294,11 +16339,25 @@ $root.SyncAction = (function() {
 
             /**
              * PaymentInfoAction cpi.
-             * @member {string} cpi
+             * @member {string|null|undefined} cpi
              * @memberof SyncAction.SyncActionValue.PaymentInfoAction
              * @instance
              */
-            PaymentInfoAction.prototype.cpi = "";
+            PaymentInfoAction.prototype.cpi = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PaymentInfoAction _cpi.
+             * @member {"cpi"|undefined} _cpi
+             * @memberof SyncAction.SyncActionValue.PaymentInfoAction
+             * @instance
+             */
+            Object.defineProperty(PaymentInfoAction.prototype, "_cpi", {
+                get: $util.oneOfGetter($oneOfFields = ["cpi"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PaymentInfoAction instance using the specified properties.
@@ -12401,9 +16460,12 @@ $root.SyncAction = (function() {
             PaymentInfoAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.cpi != null && message.hasOwnProperty("cpi"))
+                var properties = {};
+                if (message.cpi != null && message.hasOwnProperty("cpi")) {
+                    properties._cpi = 1;
                     if (!$util.isString(message.cpi))
                         return "cpi: string expected";
+                }
                 return null;
             };
 
@@ -12437,10 +16499,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.cpi = "";
-                if (message.cpi != null && message.hasOwnProperty("cpi"))
+                if (message.cpi != null && message.hasOwnProperty("cpi")) {
                     object.cpi = message.cpi;
+                    if (options.oneofs)
+                        object._cpi = "cpi";
+                }
                 return object;
             };
 
@@ -12479,8 +16542,8 @@ $root.SyncAction = (function() {
              * Properties of a PaymentTosAction.
              * @memberof SyncAction.SyncActionValue
              * @interface IPaymentTosAction
-             * @property {SyncAction.SyncActionValue.PaymentTosAction.PaymentNotice} paymentNotice PaymentTosAction paymentNotice
-             * @property {boolean} accepted PaymentTosAction accepted
+             * @property {SyncAction.SyncActionValue.PaymentTosAction.PaymentNotice|null} [paymentNotice] PaymentTosAction paymentNotice
+             * @property {boolean|null} [accepted] PaymentTosAction accepted
              */
 
             /**
@@ -12500,19 +16563,44 @@ $root.SyncAction = (function() {
 
             /**
              * PaymentTosAction paymentNotice.
-             * @member {SyncAction.SyncActionValue.PaymentTosAction.PaymentNotice} paymentNotice
+             * @member {SyncAction.SyncActionValue.PaymentTosAction.PaymentNotice|null|undefined} paymentNotice
              * @memberof SyncAction.SyncActionValue.PaymentTosAction
              * @instance
              */
-            PaymentTosAction.prototype.paymentNotice = 0;
+            PaymentTosAction.prototype.paymentNotice = null;
 
             /**
              * PaymentTosAction accepted.
-             * @member {boolean} accepted
+             * @member {boolean|null|undefined} accepted
              * @memberof SyncAction.SyncActionValue.PaymentTosAction
              * @instance
              */
-            PaymentTosAction.prototype.accepted = false;
+            PaymentTosAction.prototype.accepted = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PaymentTosAction _paymentNotice.
+             * @member {"paymentNotice"|undefined} _paymentNotice
+             * @memberof SyncAction.SyncActionValue.PaymentTosAction
+             * @instance
+             */
+            Object.defineProperty(PaymentTosAction.prototype, "_paymentNotice", {
+                get: $util.oneOfGetter($oneOfFields = ["paymentNotice"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * PaymentTosAction _accepted.
+             * @member {"accepted"|undefined} _accepted
+             * @memberof SyncAction.SyncActionValue.PaymentTosAction
+             * @instance
+             */
+            Object.defineProperty(PaymentTosAction.prototype, "_accepted", {
+                get: $util.oneOfGetter($oneOfFields = ["accepted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PaymentTosAction instance using the specified properties.
@@ -12538,8 +16626,10 @@ $root.SyncAction = (function() {
             PaymentTosAction.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                writer.uint32(/* id 1, wireType 0 =*/8).int32(message.paymentNotice);
-                writer.uint32(/* id 2, wireType 0 =*/16).bool(message.accepted);
+                if (message.paymentNotice != null && Object.hasOwnProperty.call(message, "paymentNotice"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.paymentNotice);
+                if (message.accepted != null && Object.hasOwnProperty.call(message, "accepted"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).bool(message.accepted);
                 return writer;
             };
 
@@ -12589,10 +16679,6 @@ $root.SyncAction = (function() {
                         break;
                     }
                 }
-                if (!message.hasOwnProperty("paymentNotice"))
-                    throw $util.ProtocolError("missing required 'paymentNotice'", { instance: message });
-                if (!message.hasOwnProperty("accepted"))
-                    throw $util.ProtocolError("missing required 'accepted'", { instance: message });
                 return message;
             };
 
@@ -12623,14 +16709,21 @@ $root.SyncAction = (function() {
             PaymentTosAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                switch (message.paymentNotice) {
-                default:
-                    return "paymentNotice: enum value expected";
-                case 0:
-                    break;
+                var properties = {};
+                if (message.paymentNotice != null && message.hasOwnProperty("paymentNotice")) {
+                    properties._paymentNotice = 1;
+                    switch (message.paymentNotice) {
+                    default:
+                        return "paymentNotice: enum value expected";
+                    case 0:
+                        break;
+                    }
                 }
-                if (typeof message.accepted !== "boolean")
-                    return "accepted: boolean expected";
+                if (message.accepted != null && message.hasOwnProperty("accepted")) {
+                    properties._accepted = 1;
+                    if (typeof message.accepted !== "boolean")
+                        return "accepted: boolean expected";
+                }
                 return null;
             };
 
@@ -12676,14 +16769,16 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.paymentNotice = options.enums === String ? "BR_PAY_PRIVACY_POLICY" : 0;
-                    object.accepted = false;
-                }
-                if (message.paymentNotice != null && message.hasOwnProperty("paymentNotice"))
+                if (message.paymentNotice != null && message.hasOwnProperty("paymentNotice")) {
                     object.paymentNotice = options.enums === String ? $root.SyncAction.SyncActionValue.PaymentTosAction.PaymentNotice[message.paymentNotice] === undefined ? message.paymentNotice : $root.SyncAction.SyncActionValue.PaymentTosAction.PaymentNotice[message.paymentNotice] : message.paymentNotice;
-                if (message.accepted != null && message.hasOwnProperty("accepted"))
+                    if (options.oneofs)
+                        object._paymentNotice = "paymentNotice";
+                }
+                if (message.accepted != null && message.hasOwnProperty("accepted")) {
                     object.accepted = message.accepted;
+                    if (options.oneofs)
+                        object._accepted = "accepted";
+                }
                 return object;
             };
 
@@ -12754,11 +16849,25 @@ $root.SyncAction = (function() {
 
             /**
              * PinAction pinned.
-             * @member {boolean} pinned
+             * @member {boolean|null|undefined} pinned
              * @memberof SyncAction.SyncActionValue.PinAction
              * @instance
              */
-            PinAction.prototype.pinned = false;
+            PinAction.prototype.pinned = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PinAction _pinned.
+             * @member {"pinned"|undefined} _pinned
+             * @memberof SyncAction.SyncActionValue.PinAction
+             * @instance
+             */
+            Object.defineProperty(PinAction.prototype, "_pinned", {
+                get: $util.oneOfGetter($oneOfFields = ["pinned"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PinAction instance using the specified properties.
@@ -12861,9 +16970,12 @@ $root.SyncAction = (function() {
             PinAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.pinned != null && message.hasOwnProperty("pinned"))
+                var properties = {};
+                if (message.pinned != null && message.hasOwnProperty("pinned")) {
+                    properties._pinned = 1;
                     if (typeof message.pinned !== "boolean")
                         return "pinned: boolean expected";
+                }
                 return null;
             };
 
@@ -12897,10 +17009,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.pinned = false;
-                if (message.pinned != null && message.hasOwnProperty("pinned"))
+                if (message.pinned != null && message.hasOwnProperty("pinned")) {
                     object.pinned = message.pinned;
+                    if (options.oneofs)
+                        object._pinned = "pinned";
+                }
                 return object;
             };
 
@@ -12959,11 +17072,25 @@ $root.SyncAction = (function() {
 
             /**
              * PnForLidChatAction pnJid.
-             * @member {string} pnJid
+             * @member {string|null|undefined} pnJid
              * @memberof SyncAction.SyncActionValue.PnForLidChatAction
              * @instance
              */
-            PnForLidChatAction.prototype.pnJid = "";
+            PnForLidChatAction.prototype.pnJid = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PnForLidChatAction _pnJid.
+             * @member {"pnJid"|undefined} _pnJid
+             * @memberof SyncAction.SyncActionValue.PnForLidChatAction
+             * @instance
+             */
+            Object.defineProperty(PnForLidChatAction.prototype, "_pnJid", {
+                get: $util.oneOfGetter($oneOfFields = ["pnJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PnForLidChatAction instance using the specified properties.
@@ -13066,9 +17193,12 @@ $root.SyncAction = (function() {
             PnForLidChatAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.pnJid != null && message.hasOwnProperty("pnJid"))
+                var properties = {};
+                if (message.pnJid != null && message.hasOwnProperty("pnJid")) {
+                    properties._pnJid = 1;
                     if (!$util.isString(message.pnJid))
                         return "pnJid: string expected";
+                }
                 return null;
             };
 
@@ -13102,10 +17232,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.pnJid = "";
-                if (message.pnJid != null && message.hasOwnProperty("pnJid"))
+                if (message.pnJid != null && message.hasOwnProperty("pnJid")) {
                     object.pnJid = message.pnJid;
+                    if (options.oneofs)
+                        object._pnJid = "pnJid";
+                }
                 return object;
             };
 
@@ -13385,11 +17516,25 @@ $root.SyncAction = (function() {
 
             /**
              * PrimaryVersionAction version.
-             * @member {string} version
+             * @member {string|null|undefined} version
              * @memberof SyncAction.SyncActionValue.PrimaryVersionAction
              * @instance
              */
-            PrimaryVersionAction.prototype.version = "";
+            PrimaryVersionAction.prototype.version = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PrimaryVersionAction _version.
+             * @member {"version"|undefined} _version
+             * @memberof SyncAction.SyncActionValue.PrimaryVersionAction
+             * @instance
+             */
+            Object.defineProperty(PrimaryVersionAction.prototype, "_version", {
+                get: $util.oneOfGetter($oneOfFields = ["version"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PrimaryVersionAction instance using the specified properties.
@@ -13492,9 +17637,12 @@ $root.SyncAction = (function() {
             PrimaryVersionAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.version != null && message.hasOwnProperty("version"))
+                var properties = {};
+                if (message.version != null && message.hasOwnProperty("version")) {
+                    properties._version = 1;
                     if (!$util.isString(message.version))
                         return "version: string expected";
+                }
                 return null;
             };
 
@@ -13528,10 +17676,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.version = "";
-                if (message.version != null && message.hasOwnProperty("version"))
+                if (message.version != null && message.hasOwnProperty("version")) {
                     object.version = message.version;
+                    if (options.oneofs)
+                        object._version = "version";
+                }
                 return object;
             };
 
@@ -13590,11 +17739,25 @@ $root.SyncAction = (function() {
 
             /**
              * PrivacySettingChannelsPersonalisedRecommendationAction isUserOptedOut.
-             * @member {boolean} isUserOptedOut
+             * @member {boolean|null|undefined} isUserOptedOut
              * @memberof SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction
              * @instance
              */
-            PrivacySettingChannelsPersonalisedRecommendationAction.prototype.isUserOptedOut = false;
+            PrivacySettingChannelsPersonalisedRecommendationAction.prototype.isUserOptedOut = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PrivacySettingChannelsPersonalisedRecommendationAction _isUserOptedOut.
+             * @member {"isUserOptedOut"|undefined} _isUserOptedOut
+             * @memberof SyncAction.SyncActionValue.PrivacySettingChannelsPersonalisedRecommendationAction
+             * @instance
+             */
+            Object.defineProperty(PrivacySettingChannelsPersonalisedRecommendationAction.prototype, "_isUserOptedOut", {
+                get: $util.oneOfGetter($oneOfFields = ["isUserOptedOut"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PrivacySettingChannelsPersonalisedRecommendationAction instance using the specified properties.
@@ -13697,9 +17860,12 @@ $root.SyncAction = (function() {
             PrivacySettingChannelsPersonalisedRecommendationAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isUserOptedOut != null && message.hasOwnProperty("isUserOptedOut"))
+                var properties = {};
+                if (message.isUserOptedOut != null && message.hasOwnProperty("isUserOptedOut")) {
+                    properties._isUserOptedOut = 1;
                     if (typeof message.isUserOptedOut !== "boolean")
                         return "isUserOptedOut: boolean expected";
+                }
                 return null;
             };
 
@@ -13733,10 +17899,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isUserOptedOut = false;
-                if (message.isUserOptedOut != null && message.hasOwnProperty("isUserOptedOut"))
+                if (message.isUserOptedOut != null && message.hasOwnProperty("isUserOptedOut")) {
                     object.isUserOptedOut = message.isUserOptedOut;
+                    if (options.oneofs)
+                        object._isUserOptedOut = "isUserOptedOut";
+                }
                 return object;
             };
 
@@ -13795,11 +17962,25 @@ $root.SyncAction = (function() {
 
             /**
              * PrivacySettingDisableLinkPreviewsAction isPreviewsDisabled.
-             * @member {boolean} isPreviewsDisabled
+             * @member {boolean|null|undefined} isPreviewsDisabled
              * @memberof SyncAction.SyncActionValue.PrivacySettingDisableLinkPreviewsAction
              * @instance
              */
-            PrivacySettingDisableLinkPreviewsAction.prototype.isPreviewsDisabled = false;
+            PrivacySettingDisableLinkPreviewsAction.prototype.isPreviewsDisabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PrivacySettingDisableLinkPreviewsAction _isPreviewsDisabled.
+             * @member {"isPreviewsDisabled"|undefined} _isPreviewsDisabled
+             * @memberof SyncAction.SyncActionValue.PrivacySettingDisableLinkPreviewsAction
+             * @instance
+             */
+            Object.defineProperty(PrivacySettingDisableLinkPreviewsAction.prototype, "_isPreviewsDisabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isPreviewsDisabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PrivacySettingDisableLinkPreviewsAction instance using the specified properties.
@@ -13902,9 +18083,12 @@ $root.SyncAction = (function() {
             PrivacySettingDisableLinkPreviewsAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isPreviewsDisabled != null && message.hasOwnProperty("isPreviewsDisabled"))
+                var properties = {};
+                if (message.isPreviewsDisabled != null && message.hasOwnProperty("isPreviewsDisabled")) {
+                    properties._isPreviewsDisabled = 1;
                     if (typeof message.isPreviewsDisabled !== "boolean")
                         return "isPreviewsDisabled: boolean expected";
+                }
                 return null;
             };
 
@@ -13938,10 +18122,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isPreviewsDisabled = false;
-                if (message.isPreviewsDisabled != null && message.hasOwnProperty("isPreviewsDisabled"))
+                if (message.isPreviewsDisabled != null && message.hasOwnProperty("isPreviewsDisabled")) {
                     object.isPreviewsDisabled = message.isPreviewsDisabled;
+                    if (options.oneofs)
+                        object._isPreviewsDisabled = "isPreviewsDisabled";
+                }
                 return object;
             };
 
@@ -14000,11 +18185,25 @@ $root.SyncAction = (function() {
 
             /**
              * PrivacySettingRelayAllCalls isEnabled.
-             * @member {boolean} isEnabled
+             * @member {boolean|null|undefined} isEnabled
              * @memberof SyncAction.SyncActionValue.PrivacySettingRelayAllCalls
              * @instance
              */
-            PrivacySettingRelayAllCalls.prototype.isEnabled = false;
+            PrivacySettingRelayAllCalls.prototype.isEnabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PrivacySettingRelayAllCalls _isEnabled.
+             * @member {"isEnabled"|undefined} _isEnabled
+             * @memberof SyncAction.SyncActionValue.PrivacySettingRelayAllCalls
+             * @instance
+             */
+            Object.defineProperty(PrivacySettingRelayAllCalls.prototype, "_isEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PrivacySettingRelayAllCalls instance using the specified properties.
@@ -14107,9 +18306,12 @@ $root.SyncAction = (function() {
             PrivacySettingRelayAllCalls.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isEnabled != null && message.hasOwnProperty("isEnabled"))
+                var properties = {};
+                if (message.isEnabled != null && message.hasOwnProperty("isEnabled")) {
+                    properties._isEnabled = 1;
                     if (typeof message.isEnabled !== "boolean")
                         return "isEnabled: boolean expected";
+                }
                 return null;
             };
 
@@ -14143,10 +18345,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isEnabled = false;
-                if (message.isEnabled != null && message.hasOwnProperty("isEnabled"))
+                if (message.isEnabled != null && message.hasOwnProperty("isEnabled")) {
                     object.isEnabled = message.isEnabled;
+                    if (options.oneofs)
+                        object._isEnabled = "isEnabled";
+                }
                 return object;
             };
 
@@ -14179,6 +18382,269 @@ $root.SyncAction = (function() {
             return PrivacySettingRelayAllCalls;
         })();
 
+        SyncActionValue.PrivateProcessingSettingAction = (function() {
+
+            /**
+             * Properties of a PrivateProcessingSettingAction.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IPrivateProcessingSettingAction
+             * @property {SyncAction.SyncActionValue.PrivateProcessingSettingAction.PrivateProcessingStatus|null} [privateProcessingStatus] PrivateProcessingSettingAction privateProcessingStatus
+             */
+
+            /**
+             * Constructs a new PrivateProcessingSettingAction.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents a PrivateProcessingSettingAction.
+             * @implements IPrivateProcessingSettingAction
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IPrivateProcessingSettingAction=} [properties] Properties to set
+             */
+            function PrivateProcessingSettingAction(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * PrivateProcessingSettingAction privateProcessingStatus.
+             * @member {SyncAction.SyncActionValue.PrivateProcessingSettingAction.PrivateProcessingStatus|null|undefined} privateProcessingStatus
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @instance
+             */
+            PrivateProcessingSettingAction.prototype.privateProcessingStatus = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PrivateProcessingSettingAction _privateProcessingStatus.
+             * @member {"privateProcessingStatus"|undefined} _privateProcessingStatus
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @instance
+             */
+            Object.defineProperty(PrivateProcessingSettingAction.prototype, "_privateProcessingStatus", {
+                get: $util.oneOfGetter($oneOfFields = ["privateProcessingStatus"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new PrivateProcessingSettingAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IPrivateProcessingSettingAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.PrivateProcessingSettingAction} PrivateProcessingSettingAction instance
+             */
+            PrivateProcessingSettingAction.create = function create(properties) {
+                return new PrivateProcessingSettingAction(properties);
+            };
+
+            /**
+             * Encodes the specified PrivateProcessingSettingAction message. Does not implicitly {@link SyncAction.SyncActionValue.PrivateProcessingSettingAction.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IPrivateProcessingSettingAction} message PrivateProcessingSettingAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PrivateProcessingSettingAction.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.privateProcessingStatus != null && Object.hasOwnProperty.call(message, "privateProcessingStatus"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.privateProcessingStatus);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified PrivateProcessingSettingAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.PrivateProcessingSettingAction.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IPrivateProcessingSettingAction} message PrivateProcessingSettingAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            PrivateProcessingSettingAction.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a PrivateProcessingSettingAction message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.PrivateProcessingSettingAction} PrivateProcessingSettingAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PrivateProcessingSettingAction.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.privateProcessingStatus = reader.int32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a PrivateProcessingSettingAction message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.PrivateProcessingSettingAction} PrivateProcessingSettingAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            PrivateProcessingSettingAction.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a PrivateProcessingSettingAction message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            PrivateProcessingSettingAction.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.privateProcessingStatus != null && message.hasOwnProperty("privateProcessingStatus")) {
+                    properties._privateProcessingStatus = 1;
+                    switch (message.privateProcessingStatus) {
+                    default:
+                        return "privateProcessingStatus: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                        break;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates a PrivateProcessingSettingAction message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.PrivateProcessingSettingAction} PrivateProcessingSettingAction
+             */
+            PrivateProcessingSettingAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction();
+                switch (object.privateProcessingStatus) {
+                default:
+                    if (typeof object.privateProcessingStatus === "number") {
+                        message.privateProcessingStatus = object.privateProcessingStatus;
+                        break;
+                    }
+                    break;
+                case "UNDEFINED":
+                case 0:
+                    message.privateProcessingStatus = 0;
+                    break;
+                case "ENABLED":
+                case 1:
+                    message.privateProcessingStatus = 1;
+                    break;
+                case "DISABLED":
+                case 2:
+                    message.privateProcessingStatus = 2;
+                    break;
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a PrivateProcessingSettingAction message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {SyncAction.SyncActionValue.PrivateProcessingSettingAction} message PrivateProcessingSettingAction
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            PrivateProcessingSettingAction.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.privateProcessingStatus != null && message.hasOwnProperty("privateProcessingStatus")) {
+                    object.privateProcessingStatus = options.enums === String ? $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.PrivateProcessingStatus[message.privateProcessingStatus] === undefined ? message.privateProcessingStatus : $root.SyncAction.SyncActionValue.PrivateProcessingSettingAction.PrivateProcessingStatus[message.privateProcessingStatus] : message.privateProcessingStatus;
+                    if (options.oneofs)
+                        object._privateProcessingStatus = "privateProcessingStatus";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this PrivateProcessingSettingAction to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            PrivateProcessingSettingAction.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for PrivateProcessingSettingAction
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.PrivateProcessingSettingAction
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            PrivateProcessingSettingAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.PrivateProcessingSettingAction";
+            };
+
+            /**
+             * PrivateProcessingStatus enum.
+             * @name SyncAction.SyncActionValue.PrivateProcessingSettingAction.PrivateProcessingStatus
+             * @enum {number}
+             * @property {number} UNDEFINED=0 UNDEFINED value
+             * @property {number} ENABLED=1 ENABLED value
+             * @property {number} DISABLED=2 DISABLED value
+             */
+            PrivateProcessingSettingAction.PrivateProcessingStatus = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "UNDEFINED"] = 0;
+                values[valuesById[1] = "ENABLED"] = 1;
+                values[valuesById[2] = "DISABLED"] = 2;
+                return values;
+            })();
+
+            return PrivateProcessingSettingAction;
+        })();
+
         SyncActionValue.PushNameSetting = (function() {
 
             /**
@@ -14205,11 +18671,25 @@ $root.SyncAction = (function() {
 
             /**
              * PushNameSetting name.
-             * @member {string} name
+             * @member {string|null|undefined} name
              * @memberof SyncAction.SyncActionValue.PushNameSetting
              * @instance
              */
-            PushNameSetting.prototype.name = "";
+            PushNameSetting.prototype.name = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * PushNameSetting _name.
+             * @member {"name"|undefined} _name
+             * @memberof SyncAction.SyncActionValue.PushNameSetting
+             * @instance
+             */
+            Object.defineProperty(PushNameSetting.prototype, "_name", {
+                get: $util.oneOfGetter($oneOfFields = ["name"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new PushNameSetting instance using the specified properties.
@@ -14312,9 +18792,12 @@ $root.SyncAction = (function() {
             PushNameSetting.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.name != null && message.hasOwnProperty("name"))
+                var properties = {};
+                if (message.name != null && message.hasOwnProperty("name")) {
+                    properties._name = 1;
                     if (!$util.isString(message.name))
                         return "name: string expected";
+                }
                 return null;
             };
 
@@ -14348,10 +18831,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.name = "";
-                if (message.name != null && message.hasOwnProperty("name"))
+                if (message.name != null && message.hasOwnProperty("name")) {
                     object.name = message.name;
+                    if (options.oneofs)
+                        object._name = "name";
+                }
                 return object;
             };
 
@@ -14415,19 +18899,19 @@ $root.SyncAction = (function() {
 
             /**
              * QuickReplyAction shortcut.
-             * @member {string} shortcut
+             * @member {string|null|undefined} shortcut
              * @memberof SyncAction.SyncActionValue.QuickReplyAction
              * @instance
              */
-            QuickReplyAction.prototype.shortcut = "";
+            QuickReplyAction.prototype.shortcut = null;
 
             /**
              * QuickReplyAction message.
-             * @member {string} message
+             * @member {string|null|undefined} message
              * @memberof SyncAction.SyncActionValue.QuickReplyAction
              * @instance
              */
-            QuickReplyAction.prototype.message = "";
+            QuickReplyAction.prototype.message = null;
 
             /**
              * QuickReplyAction keywords.
@@ -14439,19 +18923,66 @@ $root.SyncAction = (function() {
 
             /**
              * QuickReplyAction count.
-             * @member {number} count
+             * @member {number|null|undefined} count
              * @memberof SyncAction.SyncActionValue.QuickReplyAction
              * @instance
              */
-            QuickReplyAction.prototype.count = 0;
+            QuickReplyAction.prototype.count = null;
 
             /**
              * QuickReplyAction deleted.
-             * @member {boolean} deleted
+             * @member {boolean|null|undefined} deleted
              * @memberof SyncAction.SyncActionValue.QuickReplyAction
              * @instance
              */
-            QuickReplyAction.prototype.deleted = false;
+            QuickReplyAction.prototype.deleted = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * QuickReplyAction _shortcut.
+             * @member {"shortcut"|undefined} _shortcut
+             * @memberof SyncAction.SyncActionValue.QuickReplyAction
+             * @instance
+             */
+            Object.defineProperty(QuickReplyAction.prototype, "_shortcut", {
+                get: $util.oneOfGetter($oneOfFields = ["shortcut"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * QuickReplyAction _message.
+             * @member {"message"|undefined} _message
+             * @memberof SyncAction.SyncActionValue.QuickReplyAction
+             * @instance
+             */
+            Object.defineProperty(QuickReplyAction.prototype, "_message", {
+                get: $util.oneOfGetter($oneOfFields = ["message"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * QuickReplyAction _count.
+             * @member {"count"|undefined} _count
+             * @memberof SyncAction.SyncActionValue.QuickReplyAction
+             * @instance
+             */
+            Object.defineProperty(QuickReplyAction.prototype, "_count", {
+                get: $util.oneOfGetter($oneOfFields = ["count"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * QuickReplyAction _deleted.
+             * @member {"deleted"|undefined} _deleted
+             * @memberof SyncAction.SyncActionValue.QuickReplyAction
+             * @instance
+             */
+            Object.defineProperty(QuickReplyAction.prototype, "_deleted", {
+                get: $util.oneOfGetter($oneOfFields = ["deleted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new QuickReplyAction instance using the specified properties.
@@ -14581,12 +19112,17 @@ $root.SyncAction = (function() {
             QuickReplyAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.shortcut != null && message.hasOwnProperty("shortcut"))
+                var properties = {};
+                if (message.shortcut != null && message.hasOwnProperty("shortcut")) {
+                    properties._shortcut = 1;
                     if (!$util.isString(message.shortcut))
                         return "shortcut: string expected";
-                if (message.message != null && message.hasOwnProperty("message"))
+                }
+                if (message.message != null && message.hasOwnProperty("message")) {
+                    properties._message = 1;
                     if (!$util.isString(message.message))
                         return "message: string expected";
+                }
                 if (message.keywords != null && message.hasOwnProperty("keywords")) {
                     if (!Array.isArray(message.keywords))
                         return "keywords: array expected";
@@ -14594,12 +19130,16 @@ $root.SyncAction = (function() {
                         if (!$util.isString(message.keywords[i]))
                             return "keywords: string[] expected";
                 }
-                if (message.count != null && message.hasOwnProperty("count"))
+                if (message.count != null && message.hasOwnProperty("count")) {
+                    properties._count = 1;
                     if (!$util.isInteger(message.count))
                         return "count: integer expected";
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                }
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
+                    properties._deleted = 1;
                     if (typeof message.deleted !== "boolean")
                         return "deleted: boolean expected";
+                }
                 return null;
             };
 
@@ -14648,25 +19188,31 @@ $root.SyncAction = (function() {
                 var object = {};
                 if (options.arrays || options.defaults)
                     object.keywords = [];
-                if (options.defaults) {
-                    object.shortcut = "";
-                    object.message = "";
-                    object.count = 0;
-                    object.deleted = false;
-                }
-                if (message.shortcut != null && message.hasOwnProperty("shortcut"))
+                if (message.shortcut != null && message.hasOwnProperty("shortcut")) {
                     object.shortcut = message.shortcut;
-                if (message.message != null && message.hasOwnProperty("message"))
+                    if (options.oneofs)
+                        object._shortcut = "shortcut";
+                }
+                if (message.message != null && message.hasOwnProperty("message")) {
                     object.message = message.message;
+                    if (options.oneofs)
+                        object._message = "message";
+                }
                 if (message.keywords && message.keywords.length) {
                     object.keywords = [];
                     for (var j = 0; j < message.keywords.length; ++j)
                         object.keywords[j] = message.keywords[j];
                 }
-                if (message.count != null && message.hasOwnProperty("count"))
+                if (message.count != null && message.hasOwnProperty("count")) {
                     object.count = message.count;
-                if (message.deleted != null && message.hasOwnProperty("deleted"))
+                    if (options.oneofs)
+                        object._count = "count";
+                }
+                if (message.deleted != null && message.hasOwnProperty("deleted")) {
                     object.deleted = message.deleted;
+                    if (options.oneofs)
+                        object._deleted = "deleted";
+                }
                 return object;
             };
 
@@ -14951,11 +19497,25 @@ $root.SyncAction = (function() {
 
             /**
              * RemoveRecentStickerAction lastStickerSentTs.
-             * @member {number|Long} lastStickerSentTs
+             * @member {number|Long|null|undefined} lastStickerSentTs
              * @memberof SyncAction.SyncActionValue.RemoveRecentStickerAction
              * @instance
              */
-            RemoveRecentStickerAction.prototype.lastStickerSentTs = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            RemoveRecentStickerAction.prototype.lastStickerSentTs = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * RemoveRecentStickerAction _lastStickerSentTs.
+             * @member {"lastStickerSentTs"|undefined} _lastStickerSentTs
+             * @memberof SyncAction.SyncActionValue.RemoveRecentStickerAction
+             * @instance
+             */
+            Object.defineProperty(RemoveRecentStickerAction.prototype, "_lastStickerSentTs", {
+                get: $util.oneOfGetter($oneOfFields = ["lastStickerSentTs"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new RemoveRecentStickerAction instance using the specified properties.
@@ -15058,9 +19618,12 @@ $root.SyncAction = (function() {
             RemoveRecentStickerAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.lastStickerSentTs != null && message.hasOwnProperty("lastStickerSentTs"))
+                var properties = {};
+                if (message.lastStickerSentTs != null && message.hasOwnProperty("lastStickerSentTs")) {
+                    properties._lastStickerSentTs = 1;
                     if (!$util.isInteger(message.lastStickerSentTs) && !(message.lastStickerSentTs && $util.isInteger(message.lastStickerSentTs.low) && $util.isInteger(message.lastStickerSentTs.high)))
                         return "lastStickerSentTs: integer|Long expected";
+                }
                 return null;
             };
 
@@ -15101,17 +19664,14 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.lastStickerSentTs = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.lastStickerSentTs = options.longs === String ? "0" : 0;
-                if (message.lastStickerSentTs != null && message.hasOwnProperty("lastStickerSentTs"))
+                if (message.lastStickerSentTs != null && message.hasOwnProperty("lastStickerSentTs")) {
                     if (typeof message.lastStickerSentTs === "number")
                         object.lastStickerSentTs = options.longs === String ? String(message.lastStickerSentTs) : message.lastStickerSentTs;
                     else
                         object.lastStickerSentTs = options.longs === String ? $util.Long.prototype.toString.call(message.lastStickerSentTs) : options.longs === Number ? new $util.LongBits(message.lastStickerSentTs.low >>> 0, message.lastStickerSentTs.high >>> 0).toNumber() : message.lastStickerSentTs;
+                    if (options.oneofs)
+                        object._lastStickerSentTs = "lastStickerSentTs";
+                }
                 return object;
             };
 
@@ -15144,24 +19704,46 @@ $root.SyncAction = (function() {
             return RemoveRecentStickerAction;
         })();
 
-        SyncActionValue.SecurityNotificationSetting = (function() {
+        SyncActionValue.SettingsSyncAction = (function() {
 
             /**
-             * Properties of a SecurityNotificationSetting.
+             * Properties of a SettingsSyncAction.
              * @memberof SyncAction.SyncActionValue
-             * @interface ISecurityNotificationSetting
-             * @property {boolean|null} [showNotification] SecurityNotificationSetting showNotification
+             * @interface ISettingsSyncAction
+             * @property {boolean|null} [startAtLogin] SettingsSyncAction startAtLogin
+             * @property {boolean|null} [minimizeToTray] SettingsSyncAction minimizeToTray
+             * @property {string|null} [language] SettingsSyncAction language
+             * @property {boolean|null} [replaceTextWithEmoji] SettingsSyncAction replaceTextWithEmoji
+             * @property {SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode|null} [bannerNotificationDisplayMode] SettingsSyncAction bannerNotificationDisplayMode
+             * @property {SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode|null} [unreadCounterBadgeDisplayMode] SettingsSyncAction unreadCounterBadgeDisplayMode
+             * @property {boolean|null} [isMessagesNotificationEnabled] SettingsSyncAction isMessagesNotificationEnabled
+             * @property {boolean|null} [isCallsNotificationEnabled] SettingsSyncAction isCallsNotificationEnabled
+             * @property {boolean|null} [isReactionsNotificationEnabled] SettingsSyncAction isReactionsNotificationEnabled
+             * @property {boolean|null} [isStatusReactionsNotificationEnabled] SettingsSyncAction isStatusReactionsNotificationEnabled
+             * @property {boolean|null} [isTextPreviewForNotificationEnabled] SettingsSyncAction isTextPreviewForNotificationEnabled
+             * @property {number|null} [defaultNotificationToneId] SettingsSyncAction defaultNotificationToneId
+             * @property {number|null} [groupDefaultNotificationToneId] SettingsSyncAction groupDefaultNotificationToneId
+             * @property {number|null} [appTheme] SettingsSyncAction appTheme
+             * @property {number|null} [wallpaperId] SettingsSyncAction wallpaperId
+             * @property {boolean|null} [isDoodleWallpaperEnabled] SettingsSyncAction isDoodleWallpaperEnabled
+             * @property {number|null} [fontSize] SettingsSyncAction fontSize
+             * @property {boolean|null} [isPhotosAutodownloadEnabled] SettingsSyncAction isPhotosAutodownloadEnabled
+             * @property {boolean|null} [isAudiosAutodownloadEnabled] SettingsSyncAction isAudiosAutodownloadEnabled
+             * @property {boolean|null} [isVideosAutodownloadEnabled] SettingsSyncAction isVideosAutodownloadEnabled
+             * @property {boolean|null} [isDocumentsAutodownloadEnabled] SettingsSyncAction isDocumentsAutodownloadEnabled
+             * @property {boolean|null} [disableLinkPreviews] SettingsSyncAction disableLinkPreviews
+             * @property {number|null} [notificationToneId] SettingsSyncAction notificationToneId
              */
 
             /**
-             * Constructs a new SecurityNotificationSetting.
+             * Constructs a new SettingsSyncAction.
              * @memberof SyncAction.SyncActionValue
-             * @classdesc Represents a SecurityNotificationSetting.
-             * @implements ISecurityNotificationSetting
+             * @classdesc Represents a SettingsSyncAction.
+             * @implements ISettingsSyncAction
              * @constructor
-             * @param {SyncAction.SyncActionValue.ISecurityNotificationSetting=} [properties] Properties to set
+             * @param {SyncAction.SyncActionValue.ISettingsSyncAction=} [properties] Properties to set
              */
-            function SecurityNotificationSetting(properties) {
+            function SettingsSyncAction(properties) {
                 if (properties)
                     for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
                         if (properties[keys[i]] != null)
@@ -15169,77 +19751,641 @@ $root.SyncAction = (function() {
             }
 
             /**
-             * SecurityNotificationSetting showNotification.
-             * @member {boolean} showNotification
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * SettingsSyncAction startAtLogin.
+             * @member {boolean|null|undefined} startAtLogin
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @instance
              */
-            SecurityNotificationSetting.prototype.showNotification = false;
+            SettingsSyncAction.prototype.startAtLogin = null;
 
             /**
-             * Creates a new SecurityNotificationSetting instance using the specified properties.
-             * @function create
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
-             * @static
-             * @param {SyncAction.SyncActionValue.ISecurityNotificationSetting=} [properties] Properties to set
-             * @returns {SyncAction.SyncActionValue.SecurityNotificationSetting} SecurityNotificationSetting instance
+             * SettingsSyncAction minimizeToTray.
+             * @member {boolean|null|undefined} minimizeToTray
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
              */
-            SecurityNotificationSetting.create = function create(properties) {
-                return new SecurityNotificationSetting(properties);
+            SettingsSyncAction.prototype.minimizeToTray = null;
+
+            /**
+             * SettingsSyncAction language.
+             * @member {string|null|undefined} language
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.language = null;
+
+            /**
+             * SettingsSyncAction replaceTextWithEmoji.
+             * @member {boolean|null|undefined} replaceTextWithEmoji
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.replaceTextWithEmoji = null;
+
+            /**
+             * SettingsSyncAction bannerNotificationDisplayMode.
+             * @member {SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode|null|undefined} bannerNotificationDisplayMode
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.bannerNotificationDisplayMode = null;
+
+            /**
+             * SettingsSyncAction unreadCounterBadgeDisplayMode.
+             * @member {SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode|null|undefined} unreadCounterBadgeDisplayMode
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.unreadCounterBadgeDisplayMode = null;
+
+            /**
+             * SettingsSyncAction isMessagesNotificationEnabled.
+             * @member {boolean|null|undefined} isMessagesNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isMessagesNotificationEnabled = null;
+
+            /**
+             * SettingsSyncAction isCallsNotificationEnabled.
+             * @member {boolean|null|undefined} isCallsNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isCallsNotificationEnabled = null;
+
+            /**
+             * SettingsSyncAction isReactionsNotificationEnabled.
+             * @member {boolean|null|undefined} isReactionsNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isReactionsNotificationEnabled = null;
+
+            /**
+             * SettingsSyncAction isStatusReactionsNotificationEnabled.
+             * @member {boolean|null|undefined} isStatusReactionsNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isStatusReactionsNotificationEnabled = null;
+
+            /**
+             * SettingsSyncAction isTextPreviewForNotificationEnabled.
+             * @member {boolean|null|undefined} isTextPreviewForNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isTextPreviewForNotificationEnabled = null;
+
+            /**
+             * SettingsSyncAction defaultNotificationToneId.
+             * @member {number|null|undefined} defaultNotificationToneId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.defaultNotificationToneId = null;
+
+            /**
+             * SettingsSyncAction groupDefaultNotificationToneId.
+             * @member {number|null|undefined} groupDefaultNotificationToneId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.groupDefaultNotificationToneId = null;
+
+            /**
+             * SettingsSyncAction appTheme.
+             * @member {number|null|undefined} appTheme
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.appTheme = null;
+
+            /**
+             * SettingsSyncAction wallpaperId.
+             * @member {number|null|undefined} wallpaperId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.wallpaperId = null;
+
+            /**
+             * SettingsSyncAction isDoodleWallpaperEnabled.
+             * @member {boolean|null|undefined} isDoodleWallpaperEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isDoodleWallpaperEnabled = null;
+
+            /**
+             * SettingsSyncAction fontSize.
+             * @member {number|null|undefined} fontSize
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.fontSize = null;
+
+            /**
+             * SettingsSyncAction isPhotosAutodownloadEnabled.
+             * @member {boolean|null|undefined} isPhotosAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isPhotosAutodownloadEnabled = null;
+
+            /**
+             * SettingsSyncAction isAudiosAutodownloadEnabled.
+             * @member {boolean|null|undefined} isAudiosAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isAudiosAutodownloadEnabled = null;
+
+            /**
+             * SettingsSyncAction isVideosAutodownloadEnabled.
+             * @member {boolean|null|undefined} isVideosAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isVideosAutodownloadEnabled = null;
+
+            /**
+             * SettingsSyncAction isDocumentsAutodownloadEnabled.
+             * @member {boolean|null|undefined} isDocumentsAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.isDocumentsAutodownloadEnabled = null;
+
+            /**
+             * SettingsSyncAction disableLinkPreviews.
+             * @member {boolean|null|undefined} disableLinkPreviews
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.disableLinkPreviews = null;
+
+            /**
+             * SettingsSyncAction notificationToneId.
+             * @member {number|null|undefined} notificationToneId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            SettingsSyncAction.prototype.notificationToneId = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * SettingsSyncAction _startAtLogin.
+             * @member {"startAtLogin"|undefined} _startAtLogin
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_startAtLogin", {
+                get: $util.oneOfGetter($oneOfFields = ["startAtLogin"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _minimizeToTray.
+             * @member {"minimizeToTray"|undefined} _minimizeToTray
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_minimizeToTray", {
+                get: $util.oneOfGetter($oneOfFields = ["minimizeToTray"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _language.
+             * @member {"language"|undefined} _language
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_language", {
+                get: $util.oneOfGetter($oneOfFields = ["language"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _replaceTextWithEmoji.
+             * @member {"replaceTextWithEmoji"|undefined} _replaceTextWithEmoji
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_replaceTextWithEmoji", {
+                get: $util.oneOfGetter($oneOfFields = ["replaceTextWithEmoji"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _bannerNotificationDisplayMode.
+             * @member {"bannerNotificationDisplayMode"|undefined} _bannerNotificationDisplayMode
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_bannerNotificationDisplayMode", {
+                get: $util.oneOfGetter($oneOfFields = ["bannerNotificationDisplayMode"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _unreadCounterBadgeDisplayMode.
+             * @member {"unreadCounterBadgeDisplayMode"|undefined} _unreadCounterBadgeDisplayMode
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_unreadCounterBadgeDisplayMode", {
+                get: $util.oneOfGetter($oneOfFields = ["unreadCounterBadgeDisplayMode"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isMessagesNotificationEnabled.
+             * @member {"isMessagesNotificationEnabled"|undefined} _isMessagesNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isMessagesNotificationEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isMessagesNotificationEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isCallsNotificationEnabled.
+             * @member {"isCallsNotificationEnabled"|undefined} _isCallsNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isCallsNotificationEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isCallsNotificationEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isReactionsNotificationEnabled.
+             * @member {"isReactionsNotificationEnabled"|undefined} _isReactionsNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isReactionsNotificationEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isReactionsNotificationEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isStatusReactionsNotificationEnabled.
+             * @member {"isStatusReactionsNotificationEnabled"|undefined} _isStatusReactionsNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isStatusReactionsNotificationEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isStatusReactionsNotificationEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isTextPreviewForNotificationEnabled.
+             * @member {"isTextPreviewForNotificationEnabled"|undefined} _isTextPreviewForNotificationEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isTextPreviewForNotificationEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isTextPreviewForNotificationEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _defaultNotificationToneId.
+             * @member {"defaultNotificationToneId"|undefined} _defaultNotificationToneId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_defaultNotificationToneId", {
+                get: $util.oneOfGetter($oneOfFields = ["defaultNotificationToneId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _groupDefaultNotificationToneId.
+             * @member {"groupDefaultNotificationToneId"|undefined} _groupDefaultNotificationToneId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_groupDefaultNotificationToneId", {
+                get: $util.oneOfGetter($oneOfFields = ["groupDefaultNotificationToneId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _appTheme.
+             * @member {"appTheme"|undefined} _appTheme
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_appTheme", {
+                get: $util.oneOfGetter($oneOfFields = ["appTheme"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _wallpaperId.
+             * @member {"wallpaperId"|undefined} _wallpaperId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_wallpaperId", {
+                get: $util.oneOfGetter($oneOfFields = ["wallpaperId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isDoodleWallpaperEnabled.
+             * @member {"isDoodleWallpaperEnabled"|undefined} _isDoodleWallpaperEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isDoodleWallpaperEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isDoodleWallpaperEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _fontSize.
+             * @member {"fontSize"|undefined} _fontSize
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_fontSize", {
+                get: $util.oneOfGetter($oneOfFields = ["fontSize"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isPhotosAutodownloadEnabled.
+             * @member {"isPhotosAutodownloadEnabled"|undefined} _isPhotosAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isPhotosAutodownloadEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isPhotosAutodownloadEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isAudiosAutodownloadEnabled.
+             * @member {"isAudiosAutodownloadEnabled"|undefined} _isAudiosAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isAudiosAutodownloadEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isAudiosAutodownloadEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isVideosAutodownloadEnabled.
+             * @member {"isVideosAutodownloadEnabled"|undefined} _isVideosAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isVideosAutodownloadEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isVideosAutodownloadEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _isDocumentsAutodownloadEnabled.
+             * @member {"isDocumentsAutodownloadEnabled"|undefined} _isDocumentsAutodownloadEnabled
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_isDocumentsAutodownloadEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isDocumentsAutodownloadEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _disableLinkPreviews.
+             * @member {"disableLinkPreviews"|undefined} _disableLinkPreviews
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_disableLinkPreviews", {
+                get: $util.oneOfGetter($oneOfFields = ["disableLinkPreviews"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SettingsSyncAction _notificationToneId.
+             * @member {"notificationToneId"|undefined} _notificationToneId
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @instance
+             */
+            Object.defineProperty(SettingsSyncAction.prototype, "_notificationToneId", {
+                get: $util.oneOfGetter($oneOfFields = ["notificationToneId"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new SettingsSyncAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
+             * @static
+             * @param {SyncAction.SyncActionValue.ISettingsSyncAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.SettingsSyncAction} SettingsSyncAction instance
+             */
+            SettingsSyncAction.create = function create(properties) {
+                return new SettingsSyncAction(properties);
             };
 
             /**
-             * Encodes the specified SecurityNotificationSetting message. Does not implicitly {@link SyncAction.SyncActionValue.SecurityNotificationSetting.verify|verify} messages.
+             * Encodes the specified SettingsSyncAction message. Does not implicitly {@link SyncAction.SyncActionValue.SettingsSyncAction.verify|verify} messages.
              * @function encode
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
-             * @param {SyncAction.SyncActionValue.ISecurityNotificationSetting} message SecurityNotificationSetting message or plain object to encode
+             * @param {SyncAction.SyncActionValue.ISettingsSyncAction} message SettingsSyncAction message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            SecurityNotificationSetting.encode = function encode(message, writer) {
+            SettingsSyncAction.encode = function encode(message, writer) {
                 if (!writer)
                     writer = $Writer.create();
-                if (message.showNotification != null && Object.hasOwnProperty.call(message, "showNotification"))
-                    writer.uint32(/* id 1, wireType 0 =*/8).bool(message.showNotification);
+                if (message.startAtLogin != null && Object.hasOwnProperty.call(message, "startAtLogin"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).bool(message.startAtLogin);
+                if (message.minimizeToTray != null && Object.hasOwnProperty.call(message, "minimizeToTray"))
+                    writer.uint32(/* id 2, wireType 0 =*/16).bool(message.minimizeToTray);
+                if (message.language != null && Object.hasOwnProperty.call(message, "language"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).string(message.language);
+                if (message.replaceTextWithEmoji != null && Object.hasOwnProperty.call(message, "replaceTextWithEmoji"))
+                    writer.uint32(/* id 4, wireType 0 =*/32).bool(message.replaceTextWithEmoji);
+                if (message.bannerNotificationDisplayMode != null && Object.hasOwnProperty.call(message, "bannerNotificationDisplayMode"))
+                    writer.uint32(/* id 5, wireType 0 =*/40).int32(message.bannerNotificationDisplayMode);
+                if (message.unreadCounterBadgeDisplayMode != null && Object.hasOwnProperty.call(message, "unreadCounterBadgeDisplayMode"))
+                    writer.uint32(/* id 6, wireType 0 =*/48).int32(message.unreadCounterBadgeDisplayMode);
+                if (message.isMessagesNotificationEnabled != null && Object.hasOwnProperty.call(message, "isMessagesNotificationEnabled"))
+                    writer.uint32(/* id 7, wireType 0 =*/56).bool(message.isMessagesNotificationEnabled);
+                if (message.isCallsNotificationEnabled != null && Object.hasOwnProperty.call(message, "isCallsNotificationEnabled"))
+                    writer.uint32(/* id 8, wireType 0 =*/64).bool(message.isCallsNotificationEnabled);
+                if (message.isReactionsNotificationEnabled != null && Object.hasOwnProperty.call(message, "isReactionsNotificationEnabled"))
+                    writer.uint32(/* id 9, wireType 0 =*/72).bool(message.isReactionsNotificationEnabled);
+                if (message.isStatusReactionsNotificationEnabled != null && Object.hasOwnProperty.call(message, "isStatusReactionsNotificationEnabled"))
+                    writer.uint32(/* id 10, wireType 0 =*/80).bool(message.isStatusReactionsNotificationEnabled);
+                if (message.isTextPreviewForNotificationEnabled != null && Object.hasOwnProperty.call(message, "isTextPreviewForNotificationEnabled"))
+                    writer.uint32(/* id 11, wireType 0 =*/88).bool(message.isTextPreviewForNotificationEnabled);
+                if (message.defaultNotificationToneId != null && Object.hasOwnProperty.call(message, "defaultNotificationToneId"))
+                    writer.uint32(/* id 12, wireType 0 =*/96).int32(message.defaultNotificationToneId);
+                if (message.groupDefaultNotificationToneId != null && Object.hasOwnProperty.call(message, "groupDefaultNotificationToneId"))
+                    writer.uint32(/* id 13, wireType 0 =*/104).int32(message.groupDefaultNotificationToneId);
+                if (message.appTheme != null && Object.hasOwnProperty.call(message, "appTheme"))
+                    writer.uint32(/* id 14, wireType 0 =*/112).int32(message.appTheme);
+                if (message.wallpaperId != null && Object.hasOwnProperty.call(message, "wallpaperId"))
+                    writer.uint32(/* id 15, wireType 0 =*/120).int32(message.wallpaperId);
+                if (message.isDoodleWallpaperEnabled != null && Object.hasOwnProperty.call(message, "isDoodleWallpaperEnabled"))
+                    writer.uint32(/* id 16, wireType 0 =*/128).bool(message.isDoodleWallpaperEnabled);
+                if (message.fontSize != null && Object.hasOwnProperty.call(message, "fontSize"))
+                    writer.uint32(/* id 17, wireType 0 =*/136).int32(message.fontSize);
+                if (message.isPhotosAutodownloadEnabled != null && Object.hasOwnProperty.call(message, "isPhotosAutodownloadEnabled"))
+                    writer.uint32(/* id 18, wireType 0 =*/144).bool(message.isPhotosAutodownloadEnabled);
+                if (message.isAudiosAutodownloadEnabled != null && Object.hasOwnProperty.call(message, "isAudiosAutodownloadEnabled"))
+                    writer.uint32(/* id 19, wireType 0 =*/152).bool(message.isAudiosAutodownloadEnabled);
+                if (message.isVideosAutodownloadEnabled != null && Object.hasOwnProperty.call(message, "isVideosAutodownloadEnabled"))
+                    writer.uint32(/* id 20, wireType 0 =*/160).bool(message.isVideosAutodownloadEnabled);
+                if (message.isDocumentsAutodownloadEnabled != null && Object.hasOwnProperty.call(message, "isDocumentsAutodownloadEnabled"))
+                    writer.uint32(/* id 21, wireType 0 =*/168).bool(message.isDocumentsAutodownloadEnabled);
+                if (message.disableLinkPreviews != null && Object.hasOwnProperty.call(message, "disableLinkPreviews"))
+                    writer.uint32(/* id 22, wireType 0 =*/176).bool(message.disableLinkPreviews);
+                if (message.notificationToneId != null && Object.hasOwnProperty.call(message, "notificationToneId"))
+                    writer.uint32(/* id 23, wireType 0 =*/184).int32(message.notificationToneId);
                 return writer;
             };
 
             /**
-             * Encodes the specified SecurityNotificationSetting message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.SecurityNotificationSetting.verify|verify} messages.
+             * Encodes the specified SettingsSyncAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.SettingsSyncAction.verify|verify} messages.
              * @function encodeDelimited
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
-             * @param {SyncAction.SyncActionValue.ISecurityNotificationSetting} message SecurityNotificationSetting message or plain object to encode
+             * @param {SyncAction.SyncActionValue.ISettingsSyncAction} message SettingsSyncAction message or plain object to encode
              * @param {$protobuf.Writer} [writer] Writer to encode to
              * @returns {$protobuf.Writer} Writer
              */
-            SecurityNotificationSetting.encodeDelimited = function encodeDelimited(message, writer) {
+            SettingsSyncAction.encodeDelimited = function encodeDelimited(message, writer) {
                 return this.encode(message, writer).ldelim();
             };
 
             /**
-             * Decodes a SecurityNotificationSetting message from the specified reader or buffer.
+             * Decodes a SettingsSyncAction message from the specified reader or buffer.
              * @function decode
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
              * @param {number} [length] Message length if known beforehand
-             * @returns {SyncAction.SyncActionValue.SecurityNotificationSetting} SecurityNotificationSetting
+             * @returns {SyncAction.SyncActionValue.SettingsSyncAction} SettingsSyncAction
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            SecurityNotificationSetting.decode = function decode(reader, length, error) {
+            SettingsSyncAction.decode = function decode(reader, length, error) {
                 if (!(reader instanceof $Reader))
                     reader = $Reader.create(reader);
-                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.SecurityNotificationSetting();
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.SettingsSyncAction();
                 while (reader.pos < end) {
                     var tag = reader.uint32();
                     if (tag === error)
                         break;
                     switch (tag >>> 3) {
                     case 1: {
-                            message.showNotification = reader.bool();
+                            message.startAtLogin = reader.bool();
+                            break;
+                        }
+                    case 2: {
+                            message.minimizeToTray = reader.bool();
+                            break;
+                        }
+                    case 3: {
+                            message.language = reader.string();
+                            break;
+                        }
+                    case 4: {
+                            message.replaceTextWithEmoji = reader.bool();
+                            break;
+                        }
+                    case 5: {
+                            message.bannerNotificationDisplayMode = reader.int32();
+                            break;
+                        }
+                    case 6: {
+                            message.unreadCounterBadgeDisplayMode = reader.int32();
+                            break;
+                        }
+                    case 7: {
+                            message.isMessagesNotificationEnabled = reader.bool();
+                            break;
+                        }
+                    case 8: {
+                            message.isCallsNotificationEnabled = reader.bool();
+                            break;
+                        }
+                    case 9: {
+                            message.isReactionsNotificationEnabled = reader.bool();
+                            break;
+                        }
+                    case 10: {
+                            message.isStatusReactionsNotificationEnabled = reader.bool();
+                            break;
+                        }
+                    case 11: {
+                            message.isTextPreviewForNotificationEnabled = reader.bool();
+                            break;
+                        }
+                    case 12: {
+                            message.defaultNotificationToneId = reader.int32();
+                            break;
+                        }
+                    case 13: {
+                            message.groupDefaultNotificationToneId = reader.int32();
+                            break;
+                        }
+                    case 14: {
+                            message.appTheme = reader.int32();
+                            break;
+                        }
+                    case 15: {
+                            message.wallpaperId = reader.int32();
+                            break;
+                        }
+                    case 16: {
+                            message.isDoodleWallpaperEnabled = reader.bool();
+                            break;
+                        }
+                    case 17: {
+                            message.fontSize = reader.int32();
+                            break;
+                        }
+                    case 18: {
+                            message.isPhotosAutodownloadEnabled = reader.bool();
+                            break;
+                        }
+                    case 19: {
+                            message.isAudiosAutodownloadEnabled = reader.bool();
+                            break;
+                        }
+                    case 20: {
+                            message.isVideosAutodownloadEnabled = reader.bool();
+                            break;
+                        }
+                    case 21: {
+                            message.isDocumentsAutodownloadEnabled = reader.bool();
+                            break;
+                        }
+                    case 22: {
+                            message.disableLinkPreviews = reader.bool();
+                            break;
+                        }
+                    case 23: {
+                            message.notificationToneId = reader.int32();
                             break;
                         }
                     default:
@@ -15251,102 +20397,524 @@ $root.SyncAction = (function() {
             };
 
             /**
-             * Decodes a SecurityNotificationSetting message from the specified reader or buffer, length delimited.
+             * Decodes a SettingsSyncAction message from the specified reader or buffer, length delimited.
              * @function decodeDelimited
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
              * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
-             * @returns {SyncAction.SyncActionValue.SecurityNotificationSetting} SecurityNotificationSetting
+             * @returns {SyncAction.SyncActionValue.SettingsSyncAction} SettingsSyncAction
              * @throws {Error} If the payload is not a reader or valid buffer
              * @throws {$protobuf.util.ProtocolError} If required fields are missing
              */
-            SecurityNotificationSetting.decodeDelimited = function decodeDelimited(reader) {
+            SettingsSyncAction.decodeDelimited = function decodeDelimited(reader) {
                 if (!(reader instanceof $Reader))
                     reader = new $Reader(reader);
                 return this.decode(reader, reader.uint32());
             };
 
             /**
-             * Verifies a SecurityNotificationSetting message.
+             * Verifies a SettingsSyncAction message.
              * @function verify
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
              * @param {Object.<string,*>} message Plain object to verify
              * @returns {string|null} `null` if valid, otherwise the reason why it is not
              */
-            SecurityNotificationSetting.verify = function verify(message) {
+            SettingsSyncAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.showNotification != null && message.hasOwnProperty("showNotification"))
-                    if (typeof message.showNotification !== "boolean")
-                        return "showNotification: boolean expected";
+                var properties = {};
+                if (message.startAtLogin != null && message.hasOwnProperty("startAtLogin")) {
+                    properties._startAtLogin = 1;
+                    if (typeof message.startAtLogin !== "boolean")
+                        return "startAtLogin: boolean expected";
+                }
+                if (message.minimizeToTray != null && message.hasOwnProperty("minimizeToTray")) {
+                    properties._minimizeToTray = 1;
+                    if (typeof message.minimizeToTray !== "boolean")
+                        return "minimizeToTray: boolean expected";
+                }
+                if (message.language != null && message.hasOwnProperty("language")) {
+                    properties._language = 1;
+                    if (!$util.isString(message.language))
+                        return "language: string expected";
+                }
+                if (message.replaceTextWithEmoji != null && message.hasOwnProperty("replaceTextWithEmoji")) {
+                    properties._replaceTextWithEmoji = 1;
+                    if (typeof message.replaceTextWithEmoji !== "boolean")
+                        return "replaceTextWithEmoji: boolean expected";
+                }
+                if (message.bannerNotificationDisplayMode != null && message.hasOwnProperty("bannerNotificationDisplayMode")) {
+                    properties._bannerNotificationDisplayMode = 1;
+                    switch (message.bannerNotificationDisplayMode) {
+                    default:
+                        return "bannerNotificationDisplayMode: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                        break;
+                    }
+                }
+                if (message.unreadCounterBadgeDisplayMode != null && message.hasOwnProperty("unreadCounterBadgeDisplayMode")) {
+                    properties._unreadCounterBadgeDisplayMode = 1;
+                    switch (message.unreadCounterBadgeDisplayMode) {
+                    default:
+                        return "unreadCounterBadgeDisplayMode: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                        break;
+                    }
+                }
+                if (message.isMessagesNotificationEnabled != null && message.hasOwnProperty("isMessagesNotificationEnabled")) {
+                    properties._isMessagesNotificationEnabled = 1;
+                    if (typeof message.isMessagesNotificationEnabled !== "boolean")
+                        return "isMessagesNotificationEnabled: boolean expected";
+                }
+                if (message.isCallsNotificationEnabled != null && message.hasOwnProperty("isCallsNotificationEnabled")) {
+                    properties._isCallsNotificationEnabled = 1;
+                    if (typeof message.isCallsNotificationEnabled !== "boolean")
+                        return "isCallsNotificationEnabled: boolean expected";
+                }
+                if (message.isReactionsNotificationEnabled != null && message.hasOwnProperty("isReactionsNotificationEnabled")) {
+                    properties._isReactionsNotificationEnabled = 1;
+                    if (typeof message.isReactionsNotificationEnabled !== "boolean")
+                        return "isReactionsNotificationEnabled: boolean expected";
+                }
+                if (message.isStatusReactionsNotificationEnabled != null && message.hasOwnProperty("isStatusReactionsNotificationEnabled")) {
+                    properties._isStatusReactionsNotificationEnabled = 1;
+                    if (typeof message.isStatusReactionsNotificationEnabled !== "boolean")
+                        return "isStatusReactionsNotificationEnabled: boolean expected";
+                }
+                if (message.isTextPreviewForNotificationEnabled != null && message.hasOwnProperty("isTextPreviewForNotificationEnabled")) {
+                    properties._isTextPreviewForNotificationEnabled = 1;
+                    if (typeof message.isTextPreviewForNotificationEnabled !== "boolean")
+                        return "isTextPreviewForNotificationEnabled: boolean expected";
+                }
+                if (message.defaultNotificationToneId != null && message.hasOwnProperty("defaultNotificationToneId")) {
+                    properties._defaultNotificationToneId = 1;
+                    if (!$util.isInteger(message.defaultNotificationToneId))
+                        return "defaultNotificationToneId: integer expected";
+                }
+                if (message.groupDefaultNotificationToneId != null && message.hasOwnProperty("groupDefaultNotificationToneId")) {
+                    properties._groupDefaultNotificationToneId = 1;
+                    if (!$util.isInteger(message.groupDefaultNotificationToneId))
+                        return "groupDefaultNotificationToneId: integer expected";
+                }
+                if (message.appTheme != null && message.hasOwnProperty("appTheme")) {
+                    properties._appTheme = 1;
+                    if (!$util.isInteger(message.appTheme))
+                        return "appTheme: integer expected";
+                }
+                if (message.wallpaperId != null && message.hasOwnProperty("wallpaperId")) {
+                    properties._wallpaperId = 1;
+                    if (!$util.isInteger(message.wallpaperId))
+                        return "wallpaperId: integer expected";
+                }
+                if (message.isDoodleWallpaperEnabled != null && message.hasOwnProperty("isDoodleWallpaperEnabled")) {
+                    properties._isDoodleWallpaperEnabled = 1;
+                    if (typeof message.isDoodleWallpaperEnabled !== "boolean")
+                        return "isDoodleWallpaperEnabled: boolean expected";
+                }
+                if (message.fontSize != null && message.hasOwnProperty("fontSize")) {
+                    properties._fontSize = 1;
+                    if (!$util.isInteger(message.fontSize))
+                        return "fontSize: integer expected";
+                }
+                if (message.isPhotosAutodownloadEnabled != null && message.hasOwnProperty("isPhotosAutodownloadEnabled")) {
+                    properties._isPhotosAutodownloadEnabled = 1;
+                    if (typeof message.isPhotosAutodownloadEnabled !== "boolean")
+                        return "isPhotosAutodownloadEnabled: boolean expected";
+                }
+                if (message.isAudiosAutodownloadEnabled != null && message.hasOwnProperty("isAudiosAutodownloadEnabled")) {
+                    properties._isAudiosAutodownloadEnabled = 1;
+                    if (typeof message.isAudiosAutodownloadEnabled !== "boolean")
+                        return "isAudiosAutodownloadEnabled: boolean expected";
+                }
+                if (message.isVideosAutodownloadEnabled != null && message.hasOwnProperty("isVideosAutodownloadEnabled")) {
+                    properties._isVideosAutodownloadEnabled = 1;
+                    if (typeof message.isVideosAutodownloadEnabled !== "boolean")
+                        return "isVideosAutodownloadEnabled: boolean expected";
+                }
+                if (message.isDocumentsAutodownloadEnabled != null && message.hasOwnProperty("isDocumentsAutodownloadEnabled")) {
+                    properties._isDocumentsAutodownloadEnabled = 1;
+                    if (typeof message.isDocumentsAutodownloadEnabled !== "boolean")
+                        return "isDocumentsAutodownloadEnabled: boolean expected";
+                }
+                if (message.disableLinkPreviews != null && message.hasOwnProperty("disableLinkPreviews")) {
+                    properties._disableLinkPreviews = 1;
+                    if (typeof message.disableLinkPreviews !== "boolean")
+                        return "disableLinkPreviews: boolean expected";
+                }
+                if (message.notificationToneId != null && message.hasOwnProperty("notificationToneId")) {
+                    properties._notificationToneId = 1;
+                    if (!$util.isInteger(message.notificationToneId))
+                        return "notificationToneId: integer expected";
+                }
                 return null;
             };
 
             /**
-             * Creates a SecurityNotificationSetting message from a plain object. Also converts values to their respective internal types.
+             * Creates a SettingsSyncAction message from a plain object. Also converts values to their respective internal types.
              * @function fromObject
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
              * @param {Object.<string,*>} object Plain object
-             * @returns {SyncAction.SyncActionValue.SecurityNotificationSetting} SecurityNotificationSetting
+             * @returns {SyncAction.SyncActionValue.SettingsSyncAction} SettingsSyncAction
              */
-            SecurityNotificationSetting.fromObject = function fromObject(object) {
-                if (object instanceof $root.SyncAction.SyncActionValue.SecurityNotificationSetting)
+            SettingsSyncAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.SettingsSyncAction)
                     return object;
-                var message = new $root.SyncAction.SyncActionValue.SecurityNotificationSetting();
-                if (object.showNotification != null)
-                    message.showNotification = Boolean(object.showNotification);
+                var message = new $root.SyncAction.SyncActionValue.SettingsSyncAction();
+                if (object.startAtLogin != null)
+                    message.startAtLogin = Boolean(object.startAtLogin);
+                if (object.minimizeToTray != null)
+                    message.minimizeToTray = Boolean(object.minimizeToTray);
+                if (object.language != null)
+                    message.language = String(object.language);
+                if (object.replaceTextWithEmoji != null)
+                    message.replaceTextWithEmoji = Boolean(object.replaceTextWithEmoji);
+                switch (object.bannerNotificationDisplayMode) {
+                default:
+                    if (typeof object.bannerNotificationDisplayMode === "number") {
+                        message.bannerNotificationDisplayMode = object.bannerNotificationDisplayMode;
+                        break;
+                    }
+                    break;
+                case "DISPLAY_MODE_UNKNOWN":
+                case 0:
+                    message.bannerNotificationDisplayMode = 0;
+                    break;
+                case "ALWAYS":
+                case 1:
+                    message.bannerNotificationDisplayMode = 1;
+                    break;
+                case "NEVER":
+                case 2:
+                    message.bannerNotificationDisplayMode = 2;
+                    break;
+                case "ONLY_WHEN_APP_IS_OPEN":
+                case 3:
+                    message.bannerNotificationDisplayMode = 3;
+                    break;
+                }
+                switch (object.unreadCounterBadgeDisplayMode) {
+                default:
+                    if (typeof object.unreadCounterBadgeDisplayMode === "number") {
+                        message.unreadCounterBadgeDisplayMode = object.unreadCounterBadgeDisplayMode;
+                        break;
+                    }
+                    break;
+                case "DISPLAY_MODE_UNKNOWN":
+                case 0:
+                    message.unreadCounterBadgeDisplayMode = 0;
+                    break;
+                case "ALWAYS":
+                case 1:
+                    message.unreadCounterBadgeDisplayMode = 1;
+                    break;
+                case "NEVER":
+                case 2:
+                    message.unreadCounterBadgeDisplayMode = 2;
+                    break;
+                case "ONLY_WHEN_APP_IS_OPEN":
+                case 3:
+                    message.unreadCounterBadgeDisplayMode = 3;
+                    break;
+                }
+                if (object.isMessagesNotificationEnabled != null)
+                    message.isMessagesNotificationEnabled = Boolean(object.isMessagesNotificationEnabled);
+                if (object.isCallsNotificationEnabled != null)
+                    message.isCallsNotificationEnabled = Boolean(object.isCallsNotificationEnabled);
+                if (object.isReactionsNotificationEnabled != null)
+                    message.isReactionsNotificationEnabled = Boolean(object.isReactionsNotificationEnabled);
+                if (object.isStatusReactionsNotificationEnabled != null)
+                    message.isStatusReactionsNotificationEnabled = Boolean(object.isStatusReactionsNotificationEnabled);
+                if (object.isTextPreviewForNotificationEnabled != null)
+                    message.isTextPreviewForNotificationEnabled = Boolean(object.isTextPreviewForNotificationEnabled);
+                if (object.defaultNotificationToneId != null)
+                    message.defaultNotificationToneId = object.defaultNotificationToneId | 0;
+                if (object.groupDefaultNotificationToneId != null)
+                    message.groupDefaultNotificationToneId = object.groupDefaultNotificationToneId | 0;
+                if (object.appTheme != null)
+                    message.appTheme = object.appTheme | 0;
+                if (object.wallpaperId != null)
+                    message.wallpaperId = object.wallpaperId | 0;
+                if (object.isDoodleWallpaperEnabled != null)
+                    message.isDoodleWallpaperEnabled = Boolean(object.isDoodleWallpaperEnabled);
+                if (object.fontSize != null)
+                    message.fontSize = object.fontSize | 0;
+                if (object.isPhotosAutodownloadEnabled != null)
+                    message.isPhotosAutodownloadEnabled = Boolean(object.isPhotosAutodownloadEnabled);
+                if (object.isAudiosAutodownloadEnabled != null)
+                    message.isAudiosAutodownloadEnabled = Boolean(object.isAudiosAutodownloadEnabled);
+                if (object.isVideosAutodownloadEnabled != null)
+                    message.isVideosAutodownloadEnabled = Boolean(object.isVideosAutodownloadEnabled);
+                if (object.isDocumentsAutodownloadEnabled != null)
+                    message.isDocumentsAutodownloadEnabled = Boolean(object.isDocumentsAutodownloadEnabled);
+                if (object.disableLinkPreviews != null)
+                    message.disableLinkPreviews = Boolean(object.disableLinkPreviews);
+                if (object.notificationToneId != null)
+                    message.notificationToneId = object.notificationToneId | 0;
                 return message;
             };
 
             /**
-             * Creates a plain object from a SecurityNotificationSetting message. Also converts values to other types if specified.
+             * Creates a plain object from a SettingsSyncAction message. Also converts values to other types if specified.
              * @function toObject
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
-             * @param {SyncAction.SyncActionValue.SecurityNotificationSetting} message SecurityNotificationSetting
+             * @param {SyncAction.SyncActionValue.SettingsSyncAction} message SettingsSyncAction
              * @param {$protobuf.IConversionOptions} [options] Conversion options
              * @returns {Object.<string,*>} Plain object
              */
-            SecurityNotificationSetting.toObject = function toObject(message, options) {
+            SettingsSyncAction.toObject = function toObject(message, options) {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.showNotification = false;
-                if (message.showNotification != null && message.hasOwnProperty("showNotification"))
-                    object.showNotification = message.showNotification;
+                if (message.startAtLogin != null && message.hasOwnProperty("startAtLogin")) {
+                    object.startAtLogin = message.startAtLogin;
+                    if (options.oneofs)
+                        object._startAtLogin = "startAtLogin";
+                }
+                if (message.minimizeToTray != null && message.hasOwnProperty("minimizeToTray")) {
+                    object.minimizeToTray = message.minimizeToTray;
+                    if (options.oneofs)
+                        object._minimizeToTray = "minimizeToTray";
+                }
+                if (message.language != null && message.hasOwnProperty("language")) {
+                    object.language = message.language;
+                    if (options.oneofs)
+                        object._language = "language";
+                }
+                if (message.replaceTextWithEmoji != null && message.hasOwnProperty("replaceTextWithEmoji")) {
+                    object.replaceTextWithEmoji = message.replaceTextWithEmoji;
+                    if (options.oneofs)
+                        object._replaceTextWithEmoji = "replaceTextWithEmoji";
+                }
+                if (message.bannerNotificationDisplayMode != null && message.hasOwnProperty("bannerNotificationDisplayMode")) {
+                    object.bannerNotificationDisplayMode = options.enums === String ? $root.SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode[message.bannerNotificationDisplayMode] === undefined ? message.bannerNotificationDisplayMode : $root.SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode[message.bannerNotificationDisplayMode] : message.bannerNotificationDisplayMode;
+                    if (options.oneofs)
+                        object._bannerNotificationDisplayMode = "bannerNotificationDisplayMode";
+                }
+                if (message.unreadCounterBadgeDisplayMode != null && message.hasOwnProperty("unreadCounterBadgeDisplayMode")) {
+                    object.unreadCounterBadgeDisplayMode = options.enums === String ? $root.SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode[message.unreadCounterBadgeDisplayMode] === undefined ? message.unreadCounterBadgeDisplayMode : $root.SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode[message.unreadCounterBadgeDisplayMode] : message.unreadCounterBadgeDisplayMode;
+                    if (options.oneofs)
+                        object._unreadCounterBadgeDisplayMode = "unreadCounterBadgeDisplayMode";
+                }
+                if (message.isMessagesNotificationEnabled != null && message.hasOwnProperty("isMessagesNotificationEnabled")) {
+                    object.isMessagesNotificationEnabled = message.isMessagesNotificationEnabled;
+                    if (options.oneofs)
+                        object._isMessagesNotificationEnabled = "isMessagesNotificationEnabled";
+                }
+                if (message.isCallsNotificationEnabled != null && message.hasOwnProperty("isCallsNotificationEnabled")) {
+                    object.isCallsNotificationEnabled = message.isCallsNotificationEnabled;
+                    if (options.oneofs)
+                        object._isCallsNotificationEnabled = "isCallsNotificationEnabled";
+                }
+                if (message.isReactionsNotificationEnabled != null && message.hasOwnProperty("isReactionsNotificationEnabled")) {
+                    object.isReactionsNotificationEnabled = message.isReactionsNotificationEnabled;
+                    if (options.oneofs)
+                        object._isReactionsNotificationEnabled = "isReactionsNotificationEnabled";
+                }
+                if (message.isStatusReactionsNotificationEnabled != null && message.hasOwnProperty("isStatusReactionsNotificationEnabled")) {
+                    object.isStatusReactionsNotificationEnabled = message.isStatusReactionsNotificationEnabled;
+                    if (options.oneofs)
+                        object._isStatusReactionsNotificationEnabled = "isStatusReactionsNotificationEnabled";
+                }
+                if (message.isTextPreviewForNotificationEnabled != null && message.hasOwnProperty("isTextPreviewForNotificationEnabled")) {
+                    object.isTextPreviewForNotificationEnabled = message.isTextPreviewForNotificationEnabled;
+                    if (options.oneofs)
+                        object._isTextPreviewForNotificationEnabled = "isTextPreviewForNotificationEnabled";
+                }
+                if (message.defaultNotificationToneId != null && message.hasOwnProperty("defaultNotificationToneId")) {
+                    object.defaultNotificationToneId = message.defaultNotificationToneId;
+                    if (options.oneofs)
+                        object._defaultNotificationToneId = "defaultNotificationToneId";
+                }
+                if (message.groupDefaultNotificationToneId != null && message.hasOwnProperty("groupDefaultNotificationToneId")) {
+                    object.groupDefaultNotificationToneId = message.groupDefaultNotificationToneId;
+                    if (options.oneofs)
+                        object._groupDefaultNotificationToneId = "groupDefaultNotificationToneId";
+                }
+                if (message.appTheme != null && message.hasOwnProperty("appTheme")) {
+                    object.appTheme = message.appTheme;
+                    if (options.oneofs)
+                        object._appTheme = "appTheme";
+                }
+                if (message.wallpaperId != null && message.hasOwnProperty("wallpaperId")) {
+                    object.wallpaperId = message.wallpaperId;
+                    if (options.oneofs)
+                        object._wallpaperId = "wallpaperId";
+                }
+                if (message.isDoodleWallpaperEnabled != null && message.hasOwnProperty("isDoodleWallpaperEnabled")) {
+                    object.isDoodleWallpaperEnabled = message.isDoodleWallpaperEnabled;
+                    if (options.oneofs)
+                        object._isDoodleWallpaperEnabled = "isDoodleWallpaperEnabled";
+                }
+                if (message.fontSize != null && message.hasOwnProperty("fontSize")) {
+                    object.fontSize = message.fontSize;
+                    if (options.oneofs)
+                        object._fontSize = "fontSize";
+                }
+                if (message.isPhotosAutodownloadEnabled != null && message.hasOwnProperty("isPhotosAutodownloadEnabled")) {
+                    object.isPhotosAutodownloadEnabled = message.isPhotosAutodownloadEnabled;
+                    if (options.oneofs)
+                        object._isPhotosAutodownloadEnabled = "isPhotosAutodownloadEnabled";
+                }
+                if (message.isAudiosAutodownloadEnabled != null && message.hasOwnProperty("isAudiosAutodownloadEnabled")) {
+                    object.isAudiosAutodownloadEnabled = message.isAudiosAutodownloadEnabled;
+                    if (options.oneofs)
+                        object._isAudiosAutodownloadEnabled = "isAudiosAutodownloadEnabled";
+                }
+                if (message.isVideosAutodownloadEnabled != null && message.hasOwnProperty("isVideosAutodownloadEnabled")) {
+                    object.isVideosAutodownloadEnabled = message.isVideosAutodownloadEnabled;
+                    if (options.oneofs)
+                        object._isVideosAutodownloadEnabled = "isVideosAutodownloadEnabled";
+                }
+                if (message.isDocumentsAutodownloadEnabled != null && message.hasOwnProperty("isDocumentsAutodownloadEnabled")) {
+                    object.isDocumentsAutodownloadEnabled = message.isDocumentsAutodownloadEnabled;
+                    if (options.oneofs)
+                        object._isDocumentsAutodownloadEnabled = "isDocumentsAutodownloadEnabled";
+                }
+                if (message.disableLinkPreviews != null && message.hasOwnProperty("disableLinkPreviews")) {
+                    object.disableLinkPreviews = message.disableLinkPreviews;
+                    if (options.oneofs)
+                        object._disableLinkPreviews = "disableLinkPreviews";
+                }
+                if (message.notificationToneId != null && message.hasOwnProperty("notificationToneId")) {
+                    object.notificationToneId = message.notificationToneId;
+                    if (options.oneofs)
+                        object._notificationToneId = "notificationToneId";
+                }
                 return object;
             };
 
             /**
-             * Converts this SecurityNotificationSetting to JSON.
+             * Converts this SettingsSyncAction to JSON.
              * @function toJSON
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @instance
              * @returns {Object.<string,*>} JSON object
              */
-            SecurityNotificationSetting.prototype.toJSON = function toJSON() {
+            SettingsSyncAction.prototype.toJSON = function toJSON() {
                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
             };
 
             /**
-             * Gets the default type url for SecurityNotificationSetting
+             * Gets the default type url for SettingsSyncAction
              * @function getTypeUrl
-             * @memberof SyncAction.SyncActionValue.SecurityNotificationSetting
+             * @memberof SyncAction.SyncActionValue.SettingsSyncAction
              * @static
              * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
              * @returns {string} The default type url
              */
-            SecurityNotificationSetting.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            SettingsSyncAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
                 if (typeUrlPrefix === undefined) {
                     typeUrlPrefix = "type.googleapis.com";
                 }
-                return typeUrlPrefix + "/SyncAction.SyncActionValue.SecurityNotificationSetting";
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.SettingsSyncAction";
             };
 
-            return SecurityNotificationSetting;
+            /**
+             * DisplayMode enum.
+             * @name SyncAction.SyncActionValue.SettingsSyncAction.DisplayMode
+             * @enum {number}
+             * @property {number} DISPLAY_MODE_UNKNOWN=0 DISPLAY_MODE_UNKNOWN value
+             * @property {number} ALWAYS=1 ALWAYS value
+             * @property {number} NEVER=2 NEVER value
+             * @property {number} ONLY_WHEN_APP_IS_OPEN=3 ONLY_WHEN_APP_IS_OPEN value
+             */
+            SettingsSyncAction.DisplayMode = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "DISPLAY_MODE_UNKNOWN"] = 0;
+                values[valuesById[1] = "ALWAYS"] = 1;
+                values[valuesById[2] = "NEVER"] = 2;
+                values[valuesById[3] = "ONLY_WHEN_APP_IS_OPEN"] = 3;
+                return values;
+            })();
+
+            /**
+             * SettingKey enum.
+             * @name SyncAction.SyncActionValue.SettingsSyncAction.SettingKey
+             * @enum {number}
+             * @property {number} SETTING_KEY_UNKNOWN=0 SETTING_KEY_UNKNOWN value
+             * @property {number} START_AT_LOGIN=1 START_AT_LOGIN value
+             * @property {number} MINIMIZE_TO_TRAY=2 MINIMIZE_TO_TRAY value
+             * @property {number} LANGUAGE=3 LANGUAGE value
+             * @property {number} REPLACE_TEXT_WITH_EMOJI=4 REPLACE_TEXT_WITH_EMOJI value
+             * @property {number} BANNER_NOTIFICATION_DISPLAY_MODE=5 BANNER_NOTIFICATION_DISPLAY_MODE value
+             * @property {number} UNREAD_COUNTER_BADGE_DISPLAY_MODE=6 UNREAD_COUNTER_BADGE_DISPLAY_MODE value
+             * @property {number} IS_MESSAGES_NOTIFICATION_ENABLED=7 IS_MESSAGES_NOTIFICATION_ENABLED value
+             * @property {number} IS_CALLS_NOTIFICATION_ENABLED=8 IS_CALLS_NOTIFICATION_ENABLED value
+             * @property {number} IS_REACTIONS_NOTIFICATION_ENABLED=9 IS_REACTIONS_NOTIFICATION_ENABLED value
+             * @property {number} IS_STATUS_REACTIONS_NOTIFICATION_ENABLED=10 IS_STATUS_REACTIONS_NOTIFICATION_ENABLED value
+             * @property {number} IS_TEXT_PREVIEW_FOR_NOTIFICATION_ENABLED=11 IS_TEXT_PREVIEW_FOR_NOTIFICATION_ENABLED value
+             * @property {number} DEFAULT_NOTIFICATION_TONE_ID=12 DEFAULT_NOTIFICATION_TONE_ID value
+             * @property {number} GROUP_DEFAULT_NOTIFICATION_TONE_ID=13 GROUP_DEFAULT_NOTIFICATION_TONE_ID value
+             * @property {number} APP_THEME=14 APP_THEME value
+             * @property {number} WALLPAPER_ID=15 WALLPAPER_ID value
+             * @property {number} IS_DOODLE_WALLPAPER_ENABLED=16 IS_DOODLE_WALLPAPER_ENABLED value
+             * @property {number} FONT_SIZE=17 FONT_SIZE value
+             * @property {number} IS_PHOTOS_AUTODOWNLOAD_ENABLED=18 IS_PHOTOS_AUTODOWNLOAD_ENABLED value
+             * @property {number} IS_AUDIOS_AUTODOWNLOAD_ENABLED=19 IS_AUDIOS_AUTODOWNLOAD_ENABLED value
+             * @property {number} IS_VIDEOS_AUTODOWNLOAD_ENABLED=20 IS_VIDEOS_AUTODOWNLOAD_ENABLED value
+             * @property {number} IS_DOCUMENTS_AUTODOWNLOAD_ENABLED=21 IS_DOCUMENTS_AUTODOWNLOAD_ENABLED value
+             * @property {number} DISABLE_LINK_PREVIEWS=22 DISABLE_LINK_PREVIEWS value
+             * @property {number} NOTIFICATION_TONE_ID=23 NOTIFICATION_TONE_ID value
+             */
+            SettingsSyncAction.SettingKey = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "SETTING_KEY_UNKNOWN"] = 0;
+                values[valuesById[1] = "START_AT_LOGIN"] = 1;
+                values[valuesById[2] = "MINIMIZE_TO_TRAY"] = 2;
+                values[valuesById[3] = "LANGUAGE"] = 3;
+                values[valuesById[4] = "REPLACE_TEXT_WITH_EMOJI"] = 4;
+                values[valuesById[5] = "BANNER_NOTIFICATION_DISPLAY_MODE"] = 5;
+                values[valuesById[6] = "UNREAD_COUNTER_BADGE_DISPLAY_MODE"] = 6;
+                values[valuesById[7] = "IS_MESSAGES_NOTIFICATION_ENABLED"] = 7;
+                values[valuesById[8] = "IS_CALLS_NOTIFICATION_ENABLED"] = 8;
+                values[valuesById[9] = "IS_REACTIONS_NOTIFICATION_ENABLED"] = 9;
+                values[valuesById[10] = "IS_STATUS_REACTIONS_NOTIFICATION_ENABLED"] = 10;
+                values[valuesById[11] = "IS_TEXT_PREVIEW_FOR_NOTIFICATION_ENABLED"] = 11;
+                values[valuesById[12] = "DEFAULT_NOTIFICATION_TONE_ID"] = 12;
+                values[valuesById[13] = "GROUP_DEFAULT_NOTIFICATION_TONE_ID"] = 13;
+                values[valuesById[14] = "APP_THEME"] = 14;
+                values[valuesById[15] = "WALLPAPER_ID"] = 15;
+                values[valuesById[16] = "IS_DOODLE_WALLPAPER_ENABLED"] = 16;
+                values[valuesById[17] = "FONT_SIZE"] = 17;
+                values[valuesById[18] = "IS_PHOTOS_AUTODOWNLOAD_ENABLED"] = 18;
+                values[valuesById[19] = "IS_AUDIOS_AUTODOWNLOAD_ENABLED"] = 19;
+                values[valuesById[20] = "IS_VIDEOS_AUTODOWNLOAD_ENABLED"] = 20;
+                values[valuesById[21] = "IS_DOCUMENTS_AUTODOWNLOAD_ENABLED"] = 21;
+                values[valuesById[22] = "DISABLE_LINK_PREVIEWS"] = 22;
+                values[valuesById[23] = "NOTIFICATION_TONE_ID"] = 23;
+                return values;
+            })();
+
+            /**
+             * SettingPlatform enum.
+             * @name SyncAction.SyncActionValue.SettingsSyncAction.SettingPlatform
+             * @enum {number}
+             * @property {number} PLATFORM_UNKNOWN=0 PLATFORM_UNKNOWN value
+             * @property {number} WEB=1 WEB value
+             * @property {number} HYBRID=2 HYBRID value
+             * @property {number} WINDOWS=3 WINDOWS value
+             * @property {number} MAC=4 MAC value
+             */
+            SettingsSyncAction.SettingPlatform = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "PLATFORM_UNKNOWN"] = 0;
+                values[valuesById[1] = "WEB"] = 1;
+                values[valuesById[2] = "HYBRID"] = 2;
+                values[valuesById[3] = "WINDOWS"] = 3;
+                values[valuesById[4] = "MAC"] = 4;
+                return values;
+            })();
+
+            return SettingsSyncAction;
         })();
 
         SyncActionValue.StarAction = (function() {
@@ -15375,11 +20943,25 @@ $root.SyncAction = (function() {
 
             /**
              * StarAction starred.
-             * @member {boolean} starred
+             * @member {boolean|null|undefined} starred
              * @memberof SyncAction.SyncActionValue.StarAction
              * @instance
              */
-            StarAction.prototype.starred = false;
+            StarAction.prototype.starred = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * StarAction _starred.
+             * @member {"starred"|undefined} _starred
+             * @memberof SyncAction.SyncActionValue.StarAction
+             * @instance
+             */
+            Object.defineProperty(StarAction.prototype, "_starred", {
+                get: $util.oneOfGetter($oneOfFields = ["starred"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new StarAction instance using the specified properties.
@@ -15482,9 +21064,12 @@ $root.SyncAction = (function() {
             StarAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.starred != null && message.hasOwnProperty("starred"))
+                var properties = {};
+                if (message.starred != null && message.hasOwnProperty("starred")) {
+                    properties._starred = 1;
                     if (typeof message.starred !== "boolean")
                         return "starred: boolean expected";
+                }
                 return null;
             };
 
@@ -15518,10 +21103,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.starred = false;
-                if (message.starred != null && message.hasOwnProperty("starred"))
+                if (message.starred != null && message.hasOwnProperty("starred")) {
                     object.starred = message.starred;
+                    if (options.oneofs)
+                        object._starred = "starred";
+                }
                 return object;
             };
 
@@ -15554,6 +21140,229 @@ $root.SyncAction = (function() {
             return StarAction;
         })();
 
+        SyncActionValue.StatusPostOptInNotificationPreferencesAction = (function() {
+
+            /**
+             * Properties of a StatusPostOptInNotificationPreferencesAction.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IStatusPostOptInNotificationPreferencesAction
+             * @property {boolean|null} [enabled] StatusPostOptInNotificationPreferencesAction enabled
+             */
+
+            /**
+             * Constructs a new StatusPostOptInNotificationPreferencesAction.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents a StatusPostOptInNotificationPreferencesAction.
+             * @implements IStatusPostOptInNotificationPreferencesAction
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IStatusPostOptInNotificationPreferencesAction=} [properties] Properties to set
+             */
+            function StatusPostOptInNotificationPreferencesAction(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * StatusPostOptInNotificationPreferencesAction enabled.
+             * @member {boolean|null|undefined} enabled
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @instance
+             */
+            StatusPostOptInNotificationPreferencesAction.prototype.enabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * StatusPostOptInNotificationPreferencesAction _enabled.
+             * @member {"enabled"|undefined} _enabled
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @instance
+             */
+            Object.defineProperty(StatusPostOptInNotificationPreferencesAction.prototype, "_enabled", {
+                get: $util.oneOfGetter($oneOfFields = ["enabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new StatusPostOptInNotificationPreferencesAction instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IStatusPostOptInNotificationPreferencesAction=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction} StatusPostOptInNotificationPreferencesAction instance
+             */
+            StatusPostOptInNotificationPreferencesAction.create = function create(properties) {
+                return new StatusPostOptInNotificationPreferencesAction(properties);
+            };
+
+            /**
+             * Encodes the specified StatusPostOptInNotificationPreferencesAction message. Does not implicitly {@link SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IStatusPostOptInNotificationPreferencesAction} message StatusPostOptInNotificationPreferencesAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            StatusPostOptInNotificationPreferencesAction.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.enabled != null && Object.hasOwnProperty.call(message, "enabled"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).bool(message.enabled);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified StatusPostOptInNotificationPreferencesAction message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {SyncAction.SyncActionValue.IStatusPostOptInNotificationPreferencesAction} message StatusPostOptInNotificationPreferencesAction message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            StatusPostOptInNotificationPreferencesAction.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a StatusPostOptInNotificationPreferencesAction message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction} StatusPostOptInNotificationPreferencesAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            StatusPostOptInNotificationPreferencesAction.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.enabled = reader.bool();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a StatusPostOptInNotificationPreferencesAction message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction} StatusPostOptInNotificationPreferencesAction
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            StatusPostOptInNotificationPreferencesAction.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a StatusPostOptInNotificationPreferencesAction message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            StatusPostOptInNotificationPreferencesAction.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.enabled != null && message.hasOwnProperty("enabled")) {
+                    properties._enabled = 1;
+                    if (typeof message.enabled !== "boolean")
+                        return "enabled: boolean expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a StatusPostOptInNotificationPreferencesAction message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction} StatusPostOptInNotificationPreferencesAction
+             */
+            StatusPostOptInNotificationPreferencesAction.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction();
+                if (object.enabled != null)
+                    message.enabled = Boolean(object.enabled);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a StatusPostOptInNotificationPreferencesAction message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction} message StatusPostOptInNotificationPreferencesAction
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            StatusPostOptInNotificationPreferencesAction.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.enabled != null && message.hasOwnProperty("enabled")) {
+                    object.enabled = message.enabled;
+                    if (options.oneofs)
+                        object._enabled = "enabled";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this StatusPostOptInNotificationPreferencesAction to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            StatusPostOptInNotificationPreferencesAction.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for StatusPostOptInNotificationPreferencesAction
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            StatusPostOptInNotificationPreferencesAction.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.StatusPostOptInNotificationPreferencesAction";
+            };
+
+            return StatusPostOptInNotificationPreferencesAction;
+        })();
+
         SyncActionValue.StatusPrivacyAction = (function() {
 
             /**
@@ -15582,11 +21391,11 @@ $root.SyncAction = (function() {
 
             /**
              * StatusPrivacyAction mode.
-             * @member {SyncAction.SyncActionValue.StatusPrivacyAction.StatusDistributionMode} mode
+             * @member {SyncAction.SyncActionValue.StatusPrivacyAction.StatusDistributionMode|null|undefined} mode
              * @memberof SyncAction.SyncActionValue.StatusPrivacyAction
              * @instance
              */
-            StatusPrivacyAction.prototype.mode = 0;
+            StatusPrivacyAction.prototype.mode = null;
 
             /**
              * StatusPrivacyAction userJid.
@@ -15595,6 +21404,20 @@ $root.SyncAction = (function() {
              * @instance
              */
             StatusPrivacyAction.prototype.userJid = $util.emptyArray;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * StatusPrivacyAction _mode.
+             * @member {"mode"|undefined} _mode
+             * @memberof SyncAction.SyncActionValue.StatusPrivacyAction
+             * @instance
+             */
+            Object.defineProperty(StatusPrivacyAction.prototype, "_mode", {
+                get: $util.oneOfGetter($oneOfFields = ["mode"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new StatusPrivacyAction instance using the specified properties.
@@ -15706,15 +21529,19 @@ $root.SyncAction = (function() {
             StatusPrivacyAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.mode != null && message.hasOwnProperty("mode"))
+                var properties = {};
+                if (message.mode != null && message.hasOwnProperty("mode")) {
+                    properties._mode = 1;
                     switch (message.mode) {
                     default:
                         return "mode: enum value expected";
                     case 0:
                     case 1:
                     case 2:
+                    case 3:
                         break;
                     }
+                }
                 if (message.userJid != null && message.hasOwnProperty("userJid")) {
                     if (!Array.isArray(message.userJid))
                         return "userJid: array expected";
@@ -15756,6 +21583,10 @@ $root.SyncAction = (function() {
                 case 2:
                     message.mode = 2;
                     break;
+                case "CLOSE_FRIENDS":
+                case 3:
+                    message.mode = 3;
+                    break;
                 }
                 if (object.userJid) {
                     if (!Array.isArray(object.userJid))
@@ -15782,10 +21613,11 @@ $root.SyncAction = (function() {
                 var object = {};
                 if (options.arrays || options.defaults)
                     object.userJid = [];
-                if (options.defaults)
-                    object.mode = options.enums === String ? "ALLOW_LIST" : 0;
-                if (message.mode != null && message.hasOwnProperty("mode"))
+                if (message.mode != null && message.hasOwnProperty("mode")) {
                     object.mode = options.enums === String ? $root.SyncAction.SyncActionValue.StatusPrivacyAction.StatusDistributionMode[message.mode] === undefined ? message.mode : $root.SyncAction.SyncActionValue.StatusPrivacyAction.StatusDistributionMode[message.mode] : message.mode;
+                    if (options.oneofs)
+                        object._mode = "mode";
+                }
                 if (message.userJid && message.userJid.length) {
                     object.userJid = [];
                     for (var j = 0; j < message.userJid.length; ++j)
@@ -15827,12 +21659,14 @@ $root.SyncAction = (function() {
              * @property {number} ALLOW_LIST=0 ALLOW_LIST value
              * @property {number} DENY_LIST=1 DENY_LIST value
              * @property {number} CONTACTS=2 CONTACTS value
+             * @property {number} CLOSE_FRIENDS=3 CLOSE_FRIENDS value
              */
             StatusPrivacyAction.StatusDistributionMode = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
                 values[valuesById[0] = "ALLOW_LIST"] = 0;
                 values[valuesById[1] = "DENY_LIST"] = 1;
                 values[valuesById[2] = "CONTACTS"] = 2;
+                values[valuesById[3] = "CLOSE_FRIENDS"] = 3;
                 return values;
             })();
 
@@ -15877,107 +21711,253 @@ $root.SyncAction = (function() {
 
             /**
              * StickerAction url.
-             * @member {string} url
+             * @member {string|null|undefined} url
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.url = "";
+            StickerAction.prototype.url = null;
 
             /**
              * StickerAction fileEncSha256.
-             * @member {Uint8Array} fileEncSha256
+             * @member {Uint8Array|null|undefined} fileEncSha256
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.fileEncSha256 = $util.newBuffer([]);
+            StickerAction.prototype.fileEncSha256 = null;
 
             /**
              * StickerAction mediaKey.
-             * @member {Uint8Array} mediaKey
+             * @member {Uint8Array|null|undefined} mediaKey
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.mediaKey = $util.newBuffer([]);
+            StickerAction.prototype.mediaKey = null;
 
             /**
              * StickerAction mimetype.
-             * @member {string} mimetype
+             * @member {string|null|undefined} mimetype
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.mimetype = "";
+            StickerAction.prototype.mimetype = null;
 
             /**
              * StickerAction height.
-             * @member {number} height
+             * @member {number|null|undefined} height
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.height = 0;
+            StickerAction.prototype.height = null;
 
             /**
              * StickerAction width.
-             * @member {number} width
+             * @member {number|null|undefined} width
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.width = 0;
+            StickerAction.prototype.width = null;
 
             /**
              * StickerAction directPath.
-             * @member {string} directPath
+             * @member {string|null|undefined} directPath
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.directPath = "";
+            StickerAction.prototype.directPath = null;
 
             /**
              * StickerAction fileLength.
-             * @member {number|Long} fileLength
+             * @member {number|Long|null|undefined} fileLength
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.fileLength = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+            StickerAction.prototype.fileLength = null;
 
             /**
              * StickerAction isFavorite.
-             * @member {boolean} isFavorite
+             * @member {boolean|null|undefined} isFavorite
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.isFavorite = false;
+            StickerAction.prototype.isFavorite = null;
 
             /**
              * StickerAction deviceIdHint.
-             * @member {number} deviceIdHint
+             * @member {number|null|undefined} deviceIdHint
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.deviceIdHint = 0;
+            StickerAction.prototype.deviceIdHint = null;
 
             /**
              * StickerAction isLottie.
-             * @member {boolean} isLottie
+             * @member {boolean|null|undefined} isLottie
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.isLottie = false;
+            StickerAction.prototype.isLottie = null;
 
             /**
              * StickerAction imageHash.
-             * @member {string} imageHash
+             * @member {string|null|undefined} imageHash
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.imageHash = "";
+            StickerAction.prototype.imageHash = null;
 
             /**
              * StickerAction isAvatarSticker.
-             * @member {boolean} isAvatarSticker
+             * @member {boolean|null|undefined} isAvatarSticker
              * @memberof SyncAction.SyncActionValue.StickerAction
              * @instance
              */
-            StickerAction.prototype.isAvatarSticker = false;
+            StickerAction.prototype.isAvatarSticker = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * StickerAction _url.
+             * @member {"url"|undefined} _url
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _fileEncSha256.
+             * @member {"fileEncSha256"|undefined} _fileEncSha256
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_fileEncSha256", {
+                get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _mediaKey.
+             * @member {"mediaKey"|undefined} _mediaKey
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_mediaKey", {
+                get: $util.oneOfGetter($oneOfFields = ["mediaKey"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _mimetype.
+             * @member {"mimetype"|undefined} _mimetype
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_mimetype", {
+                get: $util.oneOfGetter($oneOfFields = ["mimetype"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _height.
+             * @member {"height"|undefined} _height
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_height", {
+                get: $util.oneOfGetter($oneOfFields = ["height"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _width.
+             * @member {"width"|undefined} _width
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_width", {
+                get: $util.oneOfGetter($oneOfFields = ["width"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _directPath.
+             * @member {"directPath"|undefined} _directPath
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_directPath", {
+                get: $util.oneOfGetter($oneOfFields = ["directPath"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _fileLength.
+             * @member {"fileLength"|undefined} _fileLength
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_fileLength", {
+                get: $util.oneOfGetter($oneOfFields = ["fileLength"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _isFavorite.
+             * @member {"isFavorite"|undefined} _isFavorite
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_isFavorite", {
+                get: $util.oneOfGetter($oneOfFields = ["isFavorite"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _deviceIdHint.
+             * @member {"deviceIdHint"|undefined} _deviceIdHint
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_deviceIdHint", {
+                get: $util.oneOfGetter($oneOfFields = ["deviceIdHint"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _isLottie.
+             * @member {"isLottie"|undefined} _isLottie
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_isLottie", {
+                get: $util.oneOfGetter($oneOfFields = ["isLottie"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _imageHash.
+             * @member {"imageHash"|undefined} _imageHash
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_imageHash", {
+                get: $util.oneOfGetter($oneOfFields = ["imageHash"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * StickerAction _isAvatarSticker.
+             * @member {"isAvatarSticker"|undefined} _isAvatarSticker
+             * @memberof SyncAction.SyncActionValue.StickerAction
+             * @instance
+             */
+            Object.defineProperty(StickerAction.prototype, "_isAvatarSticker", {
+                get: $util.oneOfGetter($oneOfFields = ["isAvatarSticker"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new StickerAction instance using the specified properties.
@@ -16152,45 +22132,72 @@ $root.SyncAction = (function() {
             StickerAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.url != null && message.hasOwnProperty("url"))
+                var properties = {};
+                if (message.url != null && message.hasOwnProperty("url")) {
+                    properties._url = 1;
                     if (!$util.isString(message.url))
                         return "url: string expected";
-                if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256"))
+                }
+                if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256")) {
+                    properties._fileEncSha256 = 1;
                     if (!(message.fileEncSha256 && typeof message.fileEncSha256.length === "number" || $util.isString(message.fileEncSha256)))
                         return "fileEncSha256: buffer expected";
-                if (message.mediaKey != null && message.hasOwnProperty("mediaKey"))
+                }
+                if (message.mediaKey != null && message.hasOwnProperty("mediaKey")) {
+                    properties._mediaKey = 1;
                     if (!(message.mediaKey && typeof message.mediaKey.length === "number" || $util.isString(message.mediaKey)))
                         return "mediaKey: buffer expected";
-                if (message.mimetype != null && message.hasOwnProperty("mimetype"))
+                }
+                if (message.mimetype != null && message.hasOwnProperty("mimetype")) {
+                    properties._mimetype = 1;
                     if (!$util.isString(message.mimetype))
                         return "mimetype: string expected";
-                if (message.height != null && message.hasOwnProperty("height"))
+                }
+                if (message.height != null && message.hasOwnProperty("height")) {
+                    properties._height = 1;
                     if (!$util.isInteger(message.height))
                         return "height: integer expected";
-                if (message.width != null && message.hasOwnProperty("width"))
+                }
+                if (message.width != null && message.hasOwnProperty("width")) {
+                    properties._width = 1;
                     if (!$util.isInteger(message.width))
                         return "width: integer expected";
-                if (message.directPath != null && message.hasOwnProperty("directPath"))
+                }
+                if (message.directPath != null && message.hasOwnProperty("directPath")) {
+                    properties._directPath = 1;
                     if (!$util.isString(message.directPath))
                         return "directPath: string expected";
-                if (message.fileLength != null && message.hasOwnProperty("fileLength"))
+                }
+                if (message.fileLength != null && message.hasOwnProperty("fileLength")) {
+                    properties._fileLength = 1;
                     if (!$util.isInteger(message.fileLength) && !(message.fileLength && $util.isInteger(message.fileLength.low) && $util.isInteger(message.fileLength.high)))
                         return "fileLength: integer|Long expected";
-                if (message.isFavorite != null && message.hasOwnProperty("isFavorite"))
+                }
+                if (message.isFavorite != null && message.hasOwnProperty("isFavorite")) {
+                    properties._isFavorite = 1;
                     if (typeof message.isFavorite !== "boolean")
                         return "isFavorite: boolean expected";
-                if (message.deviceIdHint != null && message.hasOwnProperty("deviceIdHint"))
+                }
+                if (message.deviceIdHint != null && message.hasOwnProperty("deviceIdHint")) {
+                    properties._deviceIdHint = 1;
                     if (!$util.isInteger(message.deviceIdHint))
                         return "deviceIdHint: integer expected";
-                if (message.isLottie != null && message.hasOwnProperty("isLottie"))
+                }
+                if (message.isLottie != null && message.hasOwnProperty("isLottie")) {
+                    properties._isLottie = 1;
                     if (typeof message.isLottie !== "boolean")
                         return "isLottie: boolean expected";
-                if (message.imageHash != null && message.hasOwnProperty("imageHash"))
+                }
+                if (message.imageHash != null && message.hasOwnProperty("imageHash")) {
+                    properties._imageHash = 1;
                     if (!$util.isString(message.imageHash))
                         return "imageHash: string expected";
-                if (message.isAvatarSticker != null && message.hasOwnProperty("isAvatarSticker"))
+                }
+                if (message.isAvatarSticker != null && message.hasOwnProperty("isAvatarSticker")) {
+                    properties._isAvatarSticker = 1;
                     if (typeof message.isAvatarSticker !== "boolean")
                         return "isAvatarSticker: boolean expected";
+                }
                 return null;
             };
 
@@ -16261,66 +22268,74 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.url = "";
-                    if (options.bytes === String)
-                        object.fileEncSha256 = "";
-                    else {
-                        object.fileEncSha256 = [];
-                        if (options.bytes !== Array)
-                            object.fileEncSha256 = $util.newBuffer(object.fileEncSha256);
-                    }
-                    if (options.bytes === String)
-                        object.mediaKey = "";
-                    else {
-                        object.mediaKey = [];
-                        if (options.bytes !== Array)
-                            object.mediaKey = $util.newBuffer(object.mediaKey);
-                    }
-                    object.mimetype = "";
-                    object.height = 0;
-                    object.width = 0;
-                    object.directPath = "";
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, true);
-                        object.fileLength = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.fileLength = options.longs === String ? "0" : 0;
-                    object.isFavorite = false;
-                    object.deviceIdHint = 0;
-                    object.isLottie = false;
-                    object.imageHash = "";
-                    object.isAvatarSticker = false;
-                }
-                if (message.url != null && message.hasOwnProperty("url"))
+                if (message.url != null && message.hasOwnProperty("url")) {
                     object.url = message.url;
-                if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256"))
+                    if (options.oneofs)
+                        object._url = "url";
+                }
+                if (message.fileEncSha256 != null && message.hasOwnProperty("fileEncSha256")) {
                     object.fileEncSha256 = options.bytes === String ? $util.base64.encode(message.fileEncSha256, 0, message.fileEncSha256.length) : options.bytes === Array ? Array.prototype.slice.call(message.fileEncSha256) : message.fileEncSha256;
-                if (message.mediaKey != null && message.hasOwnProperty("mediaKey"))
+                    if (options.oneofs)
+                        object._fileEncSha256 = "fileEncSha256";
+                }
+                if (message.mediaKey != null && message.hasOwnProperty("mediaKey")) {
                     object.mediaKey = options.bytes === String ? $util.base64.encode(message.mediaKey, 0, message.mediaKey.length) : options.bytes === Array ? Array.prototype.slice.call(message.mediaKey) : message.mediaKey;
-                if (message.mimetype != null && message.hasOwnProperty("mimetype"))
+                    if (options.oneofs)
+                        object._mediaKey = "mediaKey";
+                }
+                if (message.mimetype != null && message.hasOwnProperty("mimetype")) {
                     object.mimetype = message.mimetype;
-                if (message.height != null && message.hasOwnProperty("height"))
+                    if (options.oneofs)
+                        object._mimetype = "mimetype";
+                }
+                if (message.height != null && message.hasOwnProperty("height")) {
                     object.height = message.height;
-                if (message.width != null && message.hasOwnProperty("width"))
+                    if (options.oneofs)
+                        object._height = "height";
+                }
+                if (message.width != null && message.hasOwnProperty("width")) {
                     object.width = message.width;
-                if (message.directPath != null && message.hasOwnProperty("directPath"))
+                    if (options.oneofs)
+                        object._width = "width";
+                }
+                if (message.directPath != null && message.hasOwnProperty("directPath")) {
                     object.directPath = message.directPath;
-                if (message.fileLength != null && message.hasOwnProperty("fileLength"))
+                    if (options.oneofs)
+                        object._directPath = "directPath";
+                }
+                if (message.fileLength != null && message.hasOwnProperty("fileLength")) {
                     if (typeof message.fileLength === "number")
                         object.fileLength = options.longs === String ? String(message.fileLength) : message.fileLength;
                     else
                         object.fileLength = options.longs === String ? $util.Long.prototype.toString.call(message.fileLength) : options.longs === Number ? new $util.LongBits(message.fileLength.low >>> 0, message.fileLength.high >>> 0).toNumber(true) : message.fileLength;
-                if (message.isFavorite != null && message.hasOwnProperty("isFavorite"))
+                    if (options.oneofs)
+                        object._fileLength = "fileLength";
+                }
+                if (message.isFavorite != null && message.hasOwnProperty("isFavorite")) {
                     object.isFavorite = message.isFavorite;
-                if (message.deviceIdHint != null && message.hasOwnProperty("deviceIdHint"))
+                    if (options.oneofs)
+                        object._isFavorite = "isFavorite";
+                }
+                if (message.deviceIdHint != null && message.hasOwnProperty("deviceIdHint")) {
                     object.deviceIdHint = message.deviceIdHint;
-                if (message.isLottie != null && message.hasOwnProperty("isLottie"))
+                    if (options.oneofs)
+                        object._deviceIdHint = "deviceIdHint";
+                }
+                if (message.isLottie != null && message.hasOwnProperty("isLottie")) {
                     object.isLottie = message.isLottie;
-                if (message.imageHash != null && message.hasOwnProperty("imageHash"))
+                    if (options.oneofs)
+                        object._isLottie = "isLottie";
+                }
+                if (message.imageHash != null && message.hasOwnProperty("imageHash")) {
                     object.imageHash = message.imageHash;
-                if (message.isAvatarSticker != null && message.hasOwnProperty("isAvatarSticker"))
+                    if (options.oneofs)
+                        object._imageHash = "imageHash";
+                }
+                if (message.isAvatarSticker != null && message.hasOwnProperty("isAvatarSticker")) {
                     object.isAvatarSticker = message.isAvatarSticker;
+                    if (options.oneofs)
+                        object._isAvatarSticker = "isAvatarSticker";
+                }
                 return object;
             };
 
@@ -16381,27 +22396,63 @@ $root.SyncAction = (function() {
 
             /**
              * SubscriptionAction isDeactivated.
-             * @member {boolean} isDeactivated
+             * @member {boolean|null|undefined} isDeactivated
              * @memberof SyncAction.SyncActionValue.SubscriptionAction
              * @instance
              */
-            SubscriptionAction.prototype.isDeactivated = false;
+            SubscriptionAction.prototype.isDeactivated = null;
 
             /**
              * SubscriptionAction isAutoRenewing.
-             * @member {boolean} isAutoRenewing
+             * @member {boolean|null|undefined} isAutoRenewing
              * @memberof SyncAction.SyncActionValue.SubscriptionAction
              * @instance
              */
-            SubscriptionAction.prototype.isAutoRenewing = false;
+            SubscriptionAction.prototype.isAutoRenewing = null;
 
             /**
              * SubscriptionAction expirationDate.
-             * @member {number|Long} expirationDate
+             * @member {number|Long|null|undefined} expirationDate
              * @memberof SyncAction.SyncActionValue.SubscriptionAction
              * @instance
              */
-            SubscriptionAction.prototype.expirationDate = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            SubscriptionAction.prototype.expirationDate = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * SubscriptionAction _isDeactivated.
+             * @member {"isDeactivated"|undefined} _isDeactivated
+             * @memberof SyncAction.SyncActionValue.SubscriptionAction
+             * @instance
+             */
+            Object.defineProperty(SubscriptionAction.prototype, "_isDeactivated", {
+                get: $util.oneOfGetter($oneOfFields = ["isDeactivated"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SubscriptionAction _isAutoRenewing.
+             * @member {"isAutoRenewing"|undefined} _isAutoRenewing
+             * @memberof SyncAction.SyncActionValue.SubscriptionAction
+             * @instance
+             */
+            Object.defineProperty(SubscriptionAction.prototype, "_isAutoRenewing", {
+                get: $util.oneOfGetter($oneOfFields = ["isAutoRenewing"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SubscriptionAction _expirationDate.
+             * @member {"expirationDate"|undefined} _expirationDate
+             * @memberof SyncAction.SyncActionValue.SubscriptionAction
+             * @instance
+             */
+            Object.defineProperty(SubscriptionAction.prototype, "_expirationDate", {
+                get: $util.oneOfGetter($oneOfFields = ["expirationDate"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new SubscriptionAction instance using the specified properties.
@@ -16516,15 +22567,22 @@ $root.SyncAction = (function() {
             SubscriptionAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isDeactivated != null && message.hasOwnProperty("isDeactivated"))
+                var properties = {};
+                if (message.isDeactivated != null && message.hasOwnProperty("isDeactivated")) {
+                    properties._isDeactivated = 1;
                     if (typeof message.isDeactivated !== "boolean")
                         return "isDeactivated: boolean expected";
-                if (message.isAutoRenewing != null && message.hasOwnProperty("isAutoRenewing"))
+                }
+                if (message.isAutoRenewing != null && message.hasOwnProperty("isAutoRenewing")) {
+                    properties._isAutoRenewing = 1;
                     if (typeof message.isAutoRenewing !== "boolean")
                         return "isAutoRenewing: boolean expected";
-                if (message.expirationDate != null && message.hasOwnProperty("expirationDate"))
+                }
+                if (message.expirationDate != null && message.hasOwnProperty("expirationDate")) {
+                    properties._expirationDate = 1;
                     if (!$util.isInteger(message.expirationDate) && !(message.expirationDate && $util.isInteger(message.expirationDate.low) && $util.isInteger(message.expirationDate.high)))
                         return "expirationDate: integer|Long expected";
+                }
                 return null;
             };
 
@@ -16569,24 +22627,24 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.isDeactivated = false;
-                    object.isAutoRenewing = false;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.expirationDate = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.expirationDate = options.longs === String ? "0" : 0;
-                }
-                if (message.isDeactivated != null && message.hasOwnProperty("isDeactivated"))
+                if (message.isDeactivated != null && message.hasOwnProperty("isDeactivated")) {
                     object.isDeactivated = message.isDeactivated;
-                if (message.isAutoRenewing != null && message.hasOwnProperty("isAutoRenewing"))
+                    if (options.oneofs)
+                        object._isDeactivated = "isDeactivated";
+                }
+                if (message.isAutoRenewing != null && message.hasOwnProperty("isAutoRenewing")) {
                     object.isAutoRenewing = message.isAutoRenewing;
-                if (message.expirationDate != null && message.hasOwnProperty("expirationDate"))
+                    if (options.oneofs)
+                        object._isAutoRenewing = "isAutoRenewing";
+                }
+                if (message.expirationDate != null && message.hasOwnProperty("expirationDate")) {
                     if (typeof message.expirationDate === "number")
                         object.expirationDate = options.longs === String ? String(message.expirationDate) : message.expirationDate;
                     else
                         object.expirationDate = options.longs === String ? $util.Long.prototype.toString.call(message.expirationDate) : options.longs === Number ? new $util.LongBits(message.expirationDate.low >>> 0, message.expirationDate.high >>> 0).toNumber() : message.expirationDate;
+                    if (options.oneofs)
+                        object._expirationDate = "expirationDate";
+                }
                 return object;
             };
 
@@ -16654,11 +22712,36 @@ $root.SyncAction = (function() {
 
             /**
              * SyncActionMessage timestamp.
-             * @member {number|Long} timestamp
+             * @member {number|Long|null|undefined} timestamp
              * @memberof SyncAction.SyncActionValue.SyncActionMessage
              * @instance
              */
-            SyncActionMessage.prototype.timestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            SyncActionMessage.prototype.timestamp = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * SyncActionMessage _key.
+             * @member {"key"|undefined} _key
+             * @memberof SyncAction.SyncActionValue.SyncActionMessage
+             * @instance
+             */
+            Object.defineProperty(SyncActionMessage.prototype, "_key", {
+                get: $util.oneOfGetter($oneOfFields = ["key"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SyncActionMessage _timestamp.
+             * @member {"timestamp"|undefined} _timestamp
+             * @memberof SyncAction.SyncActionValue.SyncActionMessage
+             * @instance
+             */
+            Object.defineProperty(SyncActionMessage.prototype, "_timestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["timestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new SyncActionMessage instance using the specified properties.
@@ -16767,14 +22850,20 @@ $root.SyncAction = (function() {
             SyncActionMessage.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
+                var properties = {};
                 if (message.key != null && message.hasOwnProperty("key")) {
-                    var error = $root.Protocol.MessageKey.verify(message.key);
-                    if (error)
-                        return "key." + error;
+                    properties._key = 1;
+                    {
+                        var error = $root.Protocol.MessageKey.verify(message.key);
+                        if (error)
+                            return "key." + error;
+                    }
                 }
-                if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+                if (message.timestamp != null && message.hasOwnProperty("timestamp")) {
+                    properties._timestamp = 1;
                     if (!$util.isInteger(message.timestamp) && !(message.timestamp && $util.isInteger(message.timestamp.low) && $util.isInteger(message.timestamp.high)))
                         return "timestamp: integer|Long expected";
+                }
                 return null;
             };
 
@@ -16820,21 +22909,19 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.key = null;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.timestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.timestamp = options.longs === String ? "0" : 0;
-                }
-                if (message.key != null && message.hasOwnProperty("key"))
+                if (message.key != null && message.hasOwnProperty("key")) {
                     object.key = $root.Protocol.MessageKey.toObject(message.key, options);
-                if (message.timestamp != null && message.hasOwnProperty("timestamp"))
+                    if (options.oneofs)
+                        object._key = "key";
+                }
+                if (message.timestamp != null && message.hasOwnProperty("timestamp")) {
                     if (typeof message.timestamp === "number")
                         object.timestamp = options.longs === String ? String(message.timestamp) : message.timestamp;
                     else
                         object.timestamp = options.longs === String ? $util.Long.prototype.toString.call(message.timestamp) : options.longs === Number ? new $util.LongBits(message.timestamp.low >>> 0, message.timestamp.high >>> 0).toNumber() : message.timestamp;
+                    if (options.oneofs)
+                        object._timestamp = "timestamp";
+                }
                 return object;
             };
 
@@ -16896,19 +22983,19 @@ $root.SyncAction = (function() {
 
             /**
              * SyncActionMessageRange lastMessageTimestamp.
-             * @member {number|Long} lastMessageTimestamp
+             * @member {number|Long|null|undefined} lastMessageTimestamp
              * @memberof SyncAction.SyncActionValue.SyncActionMessageRange
              * @instance
              */
-            SyncActionMessageRange.prototype.lastMessageTimestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            SyncActionMessageRange.prototype.lastMessageTimestamp = null;
 
             /**
              * SyncActionMessageRange lastSystemMessageTimestamp.
-             * @member {number|Long} lastSystemMessageTimestamp
+             * @member {number|Long|null|undefined} lastSystemMessageTimestamp
              * @memberof SyncAction.SyncActionValue.SyncActionMessageRange
              * @instance
              */
-            SyncActionMessageRange.prototype.lastSystemMessageTimestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+            SyncActionMessageRange.prototype.lastSystemMessageTimestamp = null;
 
             /**
              * SyncActionMessageRange messages.
@@ -16917,6 +23004,31 @@ $root.SyncAction = (function() {
              * @instance
              */
             SyncActionMessageRange.prototype.messages = $util.emptyArray;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * SyncActionMessageRange _lastMessageTimestamp.
+             * @member {"lastMessageTimestamp"|undefined} _lastMessageTimestamp
+             * @memberof SyncAction.SyncActionValue.SyncActionMessageRange
+             * @instance
+             */
+            Object.defineProperty(SyncActionMessageRange.prototype, "_lastMessageTimestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["lastMessageTimestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * SyncActionMessageRange _lastSystemMessageTimestamp.
+             * @member {"lastSystemMessageTimestamp"|undefined} _lastSystemMessageTimestamp
+             * @memberof SyncAction.SyncActionValue.SyncActionMessageRange
+             * @instance
+             */
+            Object.defineProperty(SyncActionMessageRange.prototype, "_lastSystemMessageTimestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["lastSystemMessageTimestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new SyncActionMessageRange instance using the specified properties.
@@ -17034,12 +23146,17 @@ $root.SyncAction = (function() {
             SyncActionMessageRange.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.lastMessageTimestamp != null && message.hasOwnProperty("lastMessageTimestamp"))
+                var properties = {};
+                if (message.lastMessageTimestamp != null && message.hasOwnProperty("lastMessageTimestamp")) {
+                    properties._lastMessageTimestamp = 1;
                     if (!$util.isInteger(message.lastMessageTimestamp) && !(message.lastMessageTimestamp && $util.isInteger(message.lastMessageTimestamp.low) && $util.isInteger(message.lastMessageTimestamp.high)))
                         return "lastMessageTimestamp: integer|Long expected";
-                if (message.lastSystemMessageTimestamp != null && message.hasOwnProperty("lastSystemMessageTimestamp"))
+                }
+                if (message.lastSystemMessageTimestamp != null && message.hasOwnProperty("lastSystemMessageTimestamp")) {
+                    properties._lastSystemMessageTimestamp = 1;
                     if (!$util.isInteger(message.lastSystemMessageTimestamp) && !(message.lastSystemMessageTimestamp && $util.isInteger(message.lastSystemMessageTimestamp.low) && $util.isInteger(message.lastSystemMessageTimestamp.high)))
                         return "lastSystemMessageTimestamp: integer|Long expected";
+                }
                 if (message.messages != null && message.hasOwnProperty("messages")) {
                     if (!Array.isArray(message.messages))
                         return "messages: array expected";
@@ -17110,28 +23227,22 @@ $root.SyncAction = (function() {
                 var object = {};
                 if (options.arrays || options.defaults)
                     object.messages = [];
-                if (options.defaults) {
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.lastMessageTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.lastMessageTimestamp = options.longs === String ? "0" : 0;
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, false);
-                        object.lastSystemMessageTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.lastSystemMessageTimestamp = options.longs === String ? "0" : 0;
-                }
-                if (message.lastMessageTimestamp != null && message.hasOwnProperty("lastMessageTimestamp"))
+                if (message.lastMessageTimestamp != null && message.hasOwnProperty("lastMessageTimestamp")) {
                     if (typeof message.lastMessageTimestamp === "number")
                         object.lastMessageTimestamp = options.longs === String ? String(message.lastMessageTimestamp) : message.lastMessageTimestamp;
                     else
                         object.lastMessageTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.lastMessageTimestamp) : options.longs === Number ? new $util.LongBits(message.lastMessageTimestamp.low >>> 0, message.lastMessageTimestamp.high >>> 0).toNumber() : message.lastMessageTimestamp;
-                if (message.lastSystemMessageTimestamp != null && message.hasOwnProperty("lastSystemMessageTimestamp"))
+                    if (options.oneofs)
+                        object._lastMessageTimestamp = "lastMessageTimestamp";
+                }
+                if (message.lastSystemMessageTimestamp != null && message.hasOwnProperty("lastSystemMessageTimestamp")) {
                     if (typeof message.lastSystemMessageTimestamp === "number")
                         object.lastSystemMessageTimestamp = options.longs === String ? String(message.lastSystemMessageTimestamp) : message.lastSystemMessageTimestamp;
                     else
                         object.lastSystemMessageTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.lastSystemMessageTimestamp) : options.longs === Number ? new $util.LongBits(message.lastSystemMessageTimestamp.low >>> 0, message.lastSystemMessageTimestamp.high >>> 0).toNumber() : message.lastSystemMessageTimestamp;
+                    if (options.oneofs)
+                        object._lastSystemMessageTimestamp = "lastSystemMessageTimestamp";
+                }
                 if (message.messages && message.messages.length) {
                     object.messages = [];
                     for (var j = 0; j < message.messages.length; ++j)
@@ -17195,11 +23306,25 @@ $root.SyncAction = (function() {
 
             /**
              * TimeFormatAction isTwentyFourHourFormatEnabled.
-             * @member {boolean} isTwentyFourHourFormatEnabled
+             * @member {boolean|null|undefined} isTwentyFourHourFormatEnabled
              * @memberof SyncAction.SyncActionValue.TimeFormatAction
              * @instance
              */
-            TimeFormatAction.prototype.isTwentyFourHourFormatEnabled = false;
+            TimeFormatAction.prototype.isTwentyFourHourFormatEnabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * TimeFormatAction _isTwentyFourHourFormatEnabled.
+             * @member {"isTwentyFourHourFormatEnabled"|undefined} _isTwentyFourHourFormatEnabled
+             * @memberof SyncAction.SyncActionValue.TimeFormatAction
+             * @instance
+             */
+            Object.defineProperty(TimeFormatAction.prototype, "_isTwentyFourHourFormatEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["isTwentyFourHourFormatEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new TimeFormatAction instance using the specified properties.
@@ -17302,9 +23427,12 @@ $root.SyncAction = (function() {
             TimeFormatAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.isTwentyFourHourFormatEnabled != null && message.hasOwnProperty("isTwentyFourHourFormatEnabled"))
+                var properties = {};
+                if (message.isTwentyFourHourFormatEnabled != null && message.hasOwnProperty("isTwentyFourHourFormatEnabled")) {
+                    properties._isTwentyFourHourFormatEnabled = 1;
                     if (typeof message.isTwentyFourHourFormatEnabled !== "boolean")
                         return "isTwentyFourHourFormatEnabled: boolean expected";
+                }
                 return null;
             };
 
@@ -17338,10 +23466,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.isTwentyFourHourFormatEnabled = false;
-                if (message.isTwentyFourHourFormatEnabled != null && message.hasOwnProperty("isTwentyFourHourFormatEnabled"))
+                if (message.isTwentyFourHourFormatEnabled != null && message.hasOwnProperty("isTwentyFourHourFormatEnabled")) {
                     object.isTwentyFourHourFormatEnabled = message.isTwentyFourHourFormatEnabled;
+                    if (options.oneofs)
+                        object._isTwentyFourHourFormatEnabled = "isTwentyFourHourFormatEnabled";
+                }
                 return object;
             };
 
@@ -17374,6 +23503,232 @@ $root.SyncAction = (function() {
             return TimeFormatAction;
         })();
 
+        SyncActionValue.UGCBot = (function() {
+
+            /**
+             * Properties of a UGCBot.
+             * @memberof SyncAction.SyncActionValue
+             * @interface IUGCBot
+             * @property {Uint8Array|null} [definition] UGCBot definition
+             */
+
+            /**
+             * Constructs a new UGCBot.
+             * @memberof SyncAction.SyncActionValue
+             * @classdesc Represents a UGCBot.
+             * @implements IUGCBot
+             * @constructor
+             * @param {SyncAction.SyncActionValue.IUGCBot=} [properties] Properties to set
+             */
+            function UGCBot(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * UGCBot definition.
+             * @member {Uint8Array|null|undefined} definition
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @instance
+             */
+            UGCBot.prototype.definition = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * UGCBot _definition.
+             * @member {"definition"|undefined} _definition
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @instance
+             */
+            Object.defineProperty(UGCBot.prototype, "_definition", {
+                get: $util.oneOfGetter($oneOfFields = ["definition"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new UGCBot instance using the specified properties.
+             * @function create
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {SyncAction.SyncActionValue.IUGCBot=} [properties] Properties to set
+             * @returns {SyncAction.SyncActionValue.UGCBot} UGCBot instance
+             */
+            UGCBot.create = function create(properties) {
+                return new UGCBot(properties);
+            };
+
+            /**
+             * Encodes the specified UGCBot message. Does not implicitly {@link SyncAction.SyncActionValue.UGCBot.verify|verify} messages.
+             * @function encode
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {SyncAction.SyncActionValue.IUGCBot} message UGCBot message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            UGCBot.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.definition != null && Object.hasOwnProperty.call(message, "definition"))
+                    writer.uint32(/* id 1, wireType 2 =*/10).bytes(message.definition);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified UGCBot message, length delimited. Does not implicitly {@link SyncAction.SyncActionValue.UGCBot.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {SyncAction.SyncActionValue.IUGCBot} message UGCBot message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            UGCBot.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a UGCBot message from the specified reader or buffer.
+             * @function decode
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {SyncAction.SyncActionValue.UGCBot} UGCBot
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            UGCBot.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.SyncAction.SyncActionValue.UGCBot();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.definition = reader.bytes();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a UGCBot message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {SyncAction.SyncActionValue.UGCBot} UGCBot
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            UGCBot.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a UGCBot message.
+             * @function verify
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            UGCBot.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.definition != null && message.hasOwnProperty("definition")) {
+                    properties._definition = 1;
+                    if (!(message.definition && typeof message.definition.length === "number" || $util.isString(message.definition)))
+                        return "definition: buffer expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a UGCBot message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {SyncAction.SyncActionValue.UGCBot} UGCBot
+             */
+            UGCBot.fromObject = function fromObject(object) {
+                if (object instanceof $root.SyncAction.SyncActionValue.UGCBot)
+                    return object;
+                var message = new $root.SyncAction.SyncActionValue.UGCBot();
+                if (object.definition != null)
+                    if (typeof object.definition === "string")
+                        $util.base64.decode(object.definition, message.definition = $util.newBuffer($util.base64.length(object.definition)), 0);
+                    else if (object.definition.length >= 0)
+                        message.definition = object.definition;
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a UGCBot message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {SyncAction.SyncActionValue.UGCBot} message UGCBot
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            UGCBot.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.definition != null && message.hasOwnProperty("definition")) {
+                    object.definition = options.bytes === String ? $util.base64.encode(message.definition, 0, message.definition.length) : options.bytes === Array ? Array.prototype.slice.call(message.definition) : message.definition;
+                    if (options.oneofs)
+                        object._definition = "definition";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this UGCBot to JSON.
+             * @function toJSON
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            UGCBot.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for UGCBot
+             * @function getTypeUrl
+             * @memberof SyncAction.SyncActionValue.UGCBot
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            UGCBot.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/SyncAction.SyncActionValue.UGCBot";
+            };
+
+            return UGCBot;
+        })();
+
         SyncActionValue.UnarchiveChatsSetting = (function() {
 
             /**
@@ -17400,11 +23755,25 @@ $root.SyncAction = (function() {
 
             /**
              * UnarchiveChatsSetting unarchiveChats.
-             * @member {boolean} unarchiveChats
+             * @member {boolean|null|undefined} unarchiveChats
              * @memberof SyncAction.SyncActionValue.UnarchiveChatsSetting
              * @instance
              */
-            UnarchiveChatsSetting.prototype.unarchiveChats = false;
+            UnarchiveChatsSetting.prototype.unarchiveChats = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * UnarchiveChatsSetting _unarchiveChats.
+             * @member {"unarchiveChats"|undefined} _unarchiveChats
+             * @memberof SyncAction.SyncActionValue.UnarchiveChatsSetting
+             * @instance
+             */
+            Object.defineProperty(UnarchiveChatsSetting.prototype, "_unarchiveChats", {
+                get: $util.oneOfGetter($oneOfFields = ["unarchiveChats"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new UnarchiveChatsSetting instance using the specified properties.
@@ -17507,9 +23876,12 @@ $root.SyncAction = (function() {
             UnarchiveChatsSetting.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.unarchiveChats != null && message.hasOwnProperty("unarchiveChats"))
+                var properties = {};
+                if (message.unarchiveChats != null && message.hasOwnProperty("unarchiveChats")) {
+                    properties._unarchiveChats = 1;
                     if (typeof message.unarchiveChats !== "boolean")
                         return "unarchiveChats: boolean expected";
+                }
                 return null;
             };
 
@@ -17543,10 +23915,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.unarchiveChats = false;
-                if (message.unarchiveChats != null && message.hasOwnProperty("unarchiveChats"))
+                if (message.unarchiveChats != null && message.hasOwnProperty("unarchiveChats")) {
                     object.unarchiveChats = message.unarchiveChats;
+                    if (options.oneofs)
+                        object._unarchiveChats = "unarchiveChats";
+                }
                 return object;
             };
 
@@ -17605,11 +23978,25 @@ $root.SyncAction = (function() {
 
             /**
              * UserStatusMuteAction muted.
-             * @member {boolean} muted
+             * @member {boolean|null|undefined} muted
              * @memberof SyncAction.SyncActionValue.UserStatusMuteAction
              * @instance
              */
-            UserStatusMuteAction.prototype.muted = false;
+            UserStatusMuteAction.prototype.muted = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * UserStatusMuteAction _muted.
+             * @member {"muted"|undefined} _muted
+             * @memberof SyncAction.SyncActionValue.UserStatusMuteAction
+             * @instance
+             */
+            Object.defineProperty(UserStatusMuteAction.prototype, "_muted", {
+                get: $util.oneOfGetter($oneOfFields = ["muted"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new UserStatusMuteAction instance using the specified properties.
@@ -17712,9 +24099,12 @@ $root.SyncAction = (function() {
             UserStatusMuteAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.muted != null && message.hasOwnProperty("muted"))
+                var properties = {};
+                if (message.muted != null && message.hasOwnProperty("muted")) {
+                    properties._muted = 1;
                     if (typeof message.muted !== "boolean")
                         return "muted: boolean expected";
+                }
                 return null;
             };
 
@@ -17748,10 +24138,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.muted = false;
-                if (message.muted != null && message.hasOwnProperty("muted"))
+                if (message.muted != null && message.hasOwnProperty("muted")) {
                     object.muted = message.muted;
+                    if (options.oneofs)
+                        object._muted = "muted";
+                }
                 return object;
             };
 
@@ -17810,11 +24201,25 @@ $root.SyncAction = (function() {
 
             /**
              * UsernameChatStartModeAction chatStartMode.
-             * @member {SyncAction.SyncActionValue.UsernameChatStartModeAction.ChatStartMode} chatStartMode
+             * @member {SyncAction.SyncActionValue.UsernameChatStartModeAction.ChatStartMode|null|undefined} chatStartMode
              * @memberof SyncAction.SyncActionValue.UsernameChatStartModeAction
              * @instance
              */
-            UsernameChatStartModeAction.prototype.chatStartMode = 1;
+            UsernameChatStartModeAction.prototype.chatStartMode = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * UsernameChatStartModeAction _chatStartMode.
+             * @member {"chatStartMode"|undefined} _chatStartMode
+             * @memberof SyncAction.SyncActionValue.UsernameChatStartModeAction
+             * @instance
+             */
+            Object.defineProperty(UsernameChatStartModeAction.prototype, "_chatStartMode", {
+                get: $util.oneOfGetter($oneOfFields = ["chatStartMode"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new UsernameChatStartModeAction instance using the specified properties.
@@ -17917,7 +24322,9 @@ $root.SyncAction = (function() {
             UsernameChatStartModeAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.chatStartMode != null && message.hasOwnProperty("chatStartMode"))
+                var properties = {};
+                if (message.chatStartMode != null && message.hasOwnProperty("chatStartMode")) {
+                    properties._chatStartMode = 1;
                     switch (message.chatStartMode) {
                     default:
                         return "chatStartMode: enum value expected";
@@ -17925,6 +24332,7 @@ $root.SyncAction = (function() {
                     case 2:
                         break;
                     }
+                }
                 return null;
             };
 
@@ -17972,10 +24380,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.chatStartMode = options.enums === String ? "LID" : 1;
-                if (message.chatStartMode != null && message.hasOwnProperty("chatStartMode"))
+                if (message.chatStartMode != null && message.hasOwnProperty("chatStartMode")) {
                     object.chatStartMode = options.enums === String ? $root.SyncAction.SyncActionValue.UsernameChatStartModeAction.ChatStartMode[message.chatStartMode] === undefined ? message.chatStartMode : $root.SyncAction.SyncActionValue.UsernameChatStartModeAction.ChatStartMode[message.chatStartMode] : message.chatStartMode;
+                    if (options.oneofs)
+                        object._chatStartMode = "chatStartMode";
+                }
                 return object;
             };
 
@@ -18048,11 +24457,25 @@ $root.SyncAction = (function() {
 
             /**
              * WaffleAccountLinkStateAction linkState.
-             * @member {SyncAction.SyncActionValue.WaffleAccountLinkStateAction.AccountLinkState} linkState
+             * @member {SyncAction.SyncActionValue.WaffleAccountLinkStateAction.AccountLinkState|null|undefined} linkState
              * @memberof SyncAction.SyncActionValue.WaffleAccountLinkStateAction
              * @instance
              */
-            WaffleAccountLinkStateAction.prototype.linkState = 0;
+            WaffleAccountLinkStateAction.prototype.linkState = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * WaffleAccountLinkStateAction _linkState.
+             * @member {"linkState"|undefined} _linkState
+             * @memberof SyncAction.SyncActionValue.WaffleAccountLinkStateAction
+             * @instance
+             */
+            Object.defineProperty(WaffleAccountLinkStateAction.prototype, "_linkState", {
+                get: $util.oneOfGetter($oneOfFields = ["linkState"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new WaffleAccountLinkStateAction instance using the specified properties.
@@ -18155,13 +24578,18 @@ $root.SyncAction = (function() {
             WaffleAccountLinkStateAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.linkState != null && message.hasOwnProperty("linkState"))
+                var properties = {};
+                if (message.linkState != null && message.hasOwnProperty("linkState")) {
+                    properties._linkState = 1;
                     switch (message.linkState) {
                     default:
                         return "linkState: enum value expected";
                     case 0:
+                    case 1:
+                    case 2:
                         break;
                     }
+                }
                 return null;
             };
 
@@ -18188,6 +24616,14 @@ $root.SyncAction = (function() {
                 case 0:
                     message.linkState = 0;
                     break;
+                case "PAUSED":
+                case 1:
+                    message.linkState = 1;
+                    break;
+                case "UNLINKED":
+                case 2:
+                    message.linkState = 2;
+                    break;
                 }
                 return message;
             };
@@ -18205,10 +24641,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.linkState = options.enums === String ? "ACTIVE" : 0;
-                if (message.linkState != null && message.hasOwnProperty("linkState"))
+                if (message.linkState != null && message.hasOwnProperty("linkState")) {
                     object.linkState = options.enums === String ? $root.SyncAction.SyncActionValue.WaffleAccountLinkStateAction.AccountLinkState[message.linkState] === undefined ? message.linkState : $root.SyncAction.SyncActionValue.WaffleAccountLinkStateAction.AccountLinkState[message.linkState] : message.linkState;
+                    if (options.oneofs)
+                        object._linkState = "linkState";
+                }
                 return object;
             };
 
@@ -18243,10 +24680,14 @@ $root.SyncAction = (function() {
              * @name SyncAction.SyncActionValue.WaffleAccountLinkStateAction.AccountLinkState
              * @enum {number}
              * @property {number} ACTIVE=0 ACTIVE value
+             * @property {number} PAUSED=1 PAUSED value
+             * @property {number} UNLINKED=2 UNLINKED value
              */
             WaffleAccountLinkStateAction.AccountLinkState = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
                 values[valuesById[0] = "ACTIVE"] = 0;
+                values[valuesById[1] = "PAUSED"] = 1;
+                values[valuesById[2] = "UNLINKED"] = 2;
                 return values;
             })();
 
@@ -18279,11 +24720,25 @@ $root.SyncAction = (function() {
 
             /**
              * WamoUserIdentifierAction identifier.
-             * @member {string} identifier
+             * @member {string|null|undefined} identifier
              * @memberof SyncAction.SyncActionValue.WamoUserIdentifierAction
              * @instance
              */
-            WamoUserIdentifierAction.prototype.identifier = "";
+            WamoUserIdentifierAction.prototype.identifier = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * WamoUserIdentifierAction _identifier.
+             * @member {"identifier"|undefined} _identifier
+             * @memberof SyncAction.SyncActionValue.WamoUserIdentifierAction
+             * @instance
+             */
+            Object.defineProperty(WamoUserIdentifierAction.prototype, "_identifier", {
+                get: $util.oneOfGetter($oneOfFields = ["identifier"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new WamoUserIdentifierAction instance using the specified properties.
@@ -18386,9 +24841,12 @@ $root.SyncAction = (function() {
             WamoUserIdentifierAction.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.identifier != null && message.hasOwnProperty("identifier"))
+                var properties = {};
+                if (message.identifier != null && message.hasOwnProperty("identifier")) {
+                    properties._identifier = 1;
                     if (!$util.isString(message.identifier))
                         return "identifier: string expected";
+                }
                 return null;
             };
 
@@ -18422,10 +24880,11 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    object.identifier = "";
-                if (message.identifier != null && message.hasOwnProperty("identifier"))
+                if (message.identifier != null && message.hasOwnProperty("identifier")) {
                     object.identifier = message.identifier;
+                    if (options.oneofs)
+                        object._identifier = "identifier";
+                }
                 return object;
             };
 
@@ -18502,107 +24961,107 @@ $root.SyncAction = (function() {
 
         /**
          * CallLogRecord callResult.
-         * @member {SyncAction.CallLogRecord.CallResult} callResult
+         * @member {SyncAction.CallLogRecord.CallResult|null|undefined} callResult
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.callResult = 0;
+        CallLogRecord.prototype.callResult = null;
 
         /**
          * CallLogRecord isDndMode.
-         * @member {boolean} isDndMode
+         * @member {boolean|null|undefined} isDndMode
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.isDndMode = false;
+        CallLogRecord.prototype.isDndMode = null;
 
         /**
          * CallLogRecord silenceReason.
-         * @member {SyncAction.CallLogRecord.SilenceReason} silenceReason
+         * @member {SyncAction.CallLogRecord.SilenceReason|null|undefined} silenceReason
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.silenceReason = 0;
+        CallLogRecord.prototype.silenceReason = null;
 
         /**
          * CallLogRecord duration.
-         * @member {number|Long} duration
+         * @member {number|Long|null|undefined} duration
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.duration = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        CallLogRecord.prototype.duration = null;
 
         /**
          * CallLogRecord startTime.
-         * @member {number|Long} startTime
+         * @member {number|Long|null|undefined} startTime
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.startTime = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        CallLogRecord.prototype.startTime = null;
 
         /**
          * CallLogRecord isIncoming.
-         * @member {boolean} isIncoming
+         * @member {boolean|null|undefined} isIncoming
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.isIncoming = false;
+        CallLogRecord.prototype.isIncoming = null;
 
         /**
          * CallLogRecord isVideo.
-         * @member {boolean} isVideo
+         * @member {boolean|null|undefined} isVideo
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.isVideo = false;
+        CallLogRecord.prototype.isVideo = null;
 
         /**
          * CallLogRecord isCallLink.
-         * @member {boolean} isCallLink
+         * @member {boolean|null|undefined} isCallLink
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.isCallLink = false;
+        CallLogRecord.prototype.isCallLink = null;
 
         /**
          * CallLogRecord callLinkToken.
-         * @member {string} callLinkToken
+         * @member {string|null|undefined} callLinkToken
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.callLinkToken = "";
+        CallLogRecord.prototype.callLinkToken = null;
 
         /**
          * CallLogRecord scheduledCallId.
-         * @member {string} scheduledCallId
+         * @member {string|null|undefined} scheduledCallId
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.scheduledCallId = "";
+        CallLogRecord.prototype.scheduledCallId = null;
 
         /**
          * CallLogRecord callId.
-         * @member {string} callId
+         * @member {string|null|undefined} callId
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.callId = "";
+        CallLogRecord.prototype.callId = null;
 
         /**
          * CallLogRecord callCreatorJid.
-         * @member {string} callCreatorJid
+         * @member {string|null|undefined} callCreatorJid
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.callCreatorJid = "";
+        CallLogRecord.prototype.callCreatorJid = null;
 
         /**
          * CallLogRecord groupJid.
-         * @member {string} groupJid
+         * @member {string|null|undefined} groupJid
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.groupJid = "";
+        CallLogRecord.prototype.groupJid = null;
 
         /**
          * CallLogRecord participants.
@@ -18614,11 +25073,168 @@ $root.SyncAction = (function() {
 
         /**
          * CallLogRecord callType.
-         * @member {SyncAction.CallLogRecord.CallType} callType
+         * @member {SyncAction.CallLogRecord.CallType|null|undefined} callType
          * @memberof SyncAction.CallLogRecord
          * @instance
          */
-        CallLogRecord.prototype.callType = 0;
+        CallLogRecord.prototype.callType = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * CallLogRecord _callResult.
+         * @member {"callResult"|undefined} _callResult
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_callResult", {
+            get: $util.oneOfGetter($oneOfFields = ["callResult"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _isDndMode.
+         * @member {"isDndMode"|undefined} _isDndMode
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_isDndMode", {
+            get: $util.oneOfGetter($oneOfFields = ["isDndMode"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _silenceReason.
+         * @member {"silenceReason"|undefined} _silenceReason
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_silenceReason", {
+            get: $util.oneOfGetter($oneOfFields = ["silenceReason"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _duration.
+         * @member {"duration"|undefined} _duration
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_duration", {
+            get: $util.oneOfGetter($oneOfFields = ["duration"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _startTime.
+         * @member {"startTime"|undefined} _startTime
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_startTime", {
+            get: $util.oneOfGetter($oneOfFields = ["startTime"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _isIncoming.
+         * @member {"isIncoming"|undefined} _isIncoming
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_isIncoming", {
+            get: $util.oneOfGetter($oneOfFields = ["isIncoming"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _isVideo.
+         * @member {"isVideo"|undefined} _isVideo
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_isVideo", {
+            get: $util.oneOfGetter($oneOfFields = ["isVideo"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _isCallLink.
+         * @member {"isCallLink"|undefined} _isCallLink
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_isCallLink", {
+            get: $util.oneOfGetter($oneOfFields = ["isCallLink"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _callLinkToken.
+         * @member {"callLinkToken"|undefined} _callLinkToken
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_callLinkToken", {
+            get: $util.oneOfGetter($oneOfFields = ["callLinkToken"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _scheduledCallId.
+         * @member {"scheduledCallId"|undefined} _scheduledCallId
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_scheduledCallId", {
+            get: $util.oneOfGetter($oneOfFields = ["scheduledCallId"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _callId.
+         * @member {"callId"|undefined} _callId
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_callId", {
+            get: $util.oneOfGetter($oneOfFields = ["callId"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _callCreatorJid.
+         * @member {"callCreatorJid"|undefined} _callCreatorJid
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_callCreatorJid", {
+            get: $util.oneOfGetter($oneOfFields = ["callCreatorJid"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _groupJid.
+         * @member {"groupJid"|undefined} _groupJid
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_groupJid", {
+            get: $util.oneOfGetter($oneOfFields = ["groupJid"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * CallLogRecord _callType.
+         * @member {"callType"|undefined} _callType
+         * @memberof SyncAction.CallLogRecord
+         * @instance
+         */
+        Object.defineProperty(CallLogRecord.prototype, "_callType", {
+            get: $util.oneOfGetter($oneOfFields = ["callType"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new CallLogRecord instance using the specified properties.
@@ -18808,7 +25424,9 @@ $root.SyncAction = (function() {
         CallLogRecord.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.callResult != null && message.hasOwnProperty("callResult"))
+            var properties = {};
+            if (message.callResult != null && message.hasOwnProperty("callResult")) {
+                properties._callResult = 1;
                 switch (message.callResult) {
                 default:
                     return "callResult: enum value expected";
@@ -18825,10 +25443,14 @@ $root.SyncAction = (function() {
                 case 10:
                     break;
                 }
-            if (message.isDndMode != null && message.hasOwnProperty("isDndMode"))
+            }
+            if (message.isDndMode != null && message.hasOwnProperty("isDndMode")) {
+                properties._isDndMode = 1;
                 if (typeof message.isDndMode !== "boolean")
                     return "isDndMode: boolean expected";
-            if (message.silenceReason != null && message.hasOwnProperty("silenceReason"))
+            }
+            if (message.silenceReason != null && message.hasOwnProperty("silenceReason")) {
+                properties._silenceReason = 1;
                 switch (message.silenceReason) {
                 default:
                     return "silenceReason: enum value expected";
@@ -18838,36 +25460,57 @@ $root.SyncAction = (function() {
                 case 3:
                     break;
                 }
-            if (message.duration != null && message.hasOwnProperty("duration"))
+            }
+            if (message.duration != null && message.hasOwnProperty("duration")) {
+                properties._duration = 1;
                 if (!$util.isInteger(message.duration) && !(message.duration && $util.isInteger(message.duration.low) && $util.isInteger(message.duration.high)))
                     return "duration: integer|Long expected";
-            if (message.startTime != null && message.hasOwnProperty("startTime"))
+            }
+            if (message.startTime != null && message.hasOwnProperty("startTime")) {
+                properties._startTime = 1;
                 if (!$util.isInteger(message.startTime) && !(message.startTime && $util.isInteger(message.startTime.low) && $util.isInteger(message.startTime.high)))
                     return "startTime: integer|Long expected";
-            if (message.isIncoming != null && message.hasOwnProperty("isIncoming"))
+            }
+            if (message.isIncoming != null && message.hasOwnProperty("isIncoming")) {
+                properties._isIncoming = 1;
                 if (typeof message.isIncoming !== "boolean")
                     return "isIncoming: boolean expected";
-            if (message.isVideo != null && message.hasOwnProperty("isVideo"))
+            }
+            if (message.isVideo != null && message.hasOwnProperty("isVideo")) {
+                properties._isVideo = 1;
                 if (typeof message.isVideo !== "boolean")
                     return "isVideo: boolean expected";
-            if (message.isCallLink != null && message.hasOwnProperty("isCallLink"))
+            }
+            if (message.isCallLink != null && message.hasOwnProperty("isCallLink")) {
+                properties._isCallLink = 1;
                 if (typeof message.isCallLink !== "boolean")
                     return "isCallLink: boolean expected";
-            if (message.callLinkToken != null && message.hasOwnProperty("callLinkToken"))
+            }
+            if (message.callLinkToken != null && message.hasOwnProperty("callLinkToken")) {
+                properties._callLinkToken = 1;
                 if (!$util.isString(message.callLinkToken))
                     return "callLinkToken: string expected";
-            if (message.scheduledCallId != null && message.hasOwnProperty("scheduledCallId"))
+            }
+            if (message.scheduledCallId != null && message.hasOwnProperty("scheduledCallId")) {
+                properties._scheduledCallId = 1;
                 if (!$util.isString(message.scheduledCallId))
                     return "scheduledCallId: string expected";
-            if (message.callId != null && message.hasOwnProperty("callId"))
+            }
+            if (message.callId != null && message.hasOwnProperty("callId")) {
+                properties._callId = 1;
                 if (!$util.isString(message.callId))
                     return "callId: string expected";
-            if (message.callCreatorJid != null && message.hasOwnProperty("callCreatorJid"))
+            }
+            if (message.callCreatorJid != null && message.hasOwnProperty("callCreatorJid")) {
+                properties._callCreatorJid = 1;
                 if (!$util.isString(message.callCreatorJid))
                     return "callCreatorJid: string expected";
-            if (message.groupJid != null && message.hasOwnProperty("groupJid"))
+            }
+            if (message.groupJid != null && message.hasOwnProperty("groupJid")) {
+                properties._groupJid = 1;
                 if (!$util.isString(message.groupJid))
                     return "groupJid: string expected";
+            }
             if (message.participants != null && message.hasOwnProperty("participants")) {
                 if (!Array.isArray(message.participants))
                     return "participants: array expected";
@@ -18877,7 +25520,8 @@ $root.SyncAction = (function() {
                         return "participants." + error;
                 }
             }
-            if (message.callType != null && message.hasOwnProperty("callType"))
+            if (message.callType != null && message.hasOwnProperty("callType")) {
+                properties._callType = 1;
                 switch (message.callType) {
                 default:
                     return "callType: enum value expected";
@@ -18886,6 +25530,7 @@ $root.SyncAction = (function() {
                 case 2:
                     break;
                 }
+            }
             return null;
         };
 
@@ -19061,69 +25706,87 @@ $root.SyncAction = (function() {
             var object = {};
             if (options.arrays || options.defaults)
                 object.participants = [];
-            if (options.defaults) {
-                object.callResult = options.enums === String ? "CONNECTED" : 0;
-                object.isDndMode = false;
-                object.silenceReason = options.enums === String ? "NONE" : 0;
-                if ($util.Long) {
-                    var long = new $util.Long(0, 0, false);
-                    object.duration = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                } else
-                    object.duration = options.longs === String ? "0" : 0;
-                if ($util.Long) {
-                    var long = new $util.Long(0, 0, false);
-                    object.startTime = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                } else
-                    object.startTime = options.longs === String ? "0" : 0;
-                object.isIncoming = false;
-                object.isVideo = false;
-                object.isCallLink = false;
-                object.callLinkToken = "";
-                object.scheduledCallId = "";
-                object.callId = "";
-                object.callCreatorJid = "";
-                object.groupJid = "";
-                object.callType = options.enums === String ? "REGULAR" : 0;
-            }
-            if (message.callResult != null && message.hasOwnProperty("callResult"))
+            if (message.callResult != null && message.hasOwnProperty("callResult")) {
                 object.callResult = options.enums === String ? $root.SyncAction.CallLogRecord.CallResult[message.callResult] === undefined ? message.callResult : $root.SyncAction.CallLogRecord.CallResult[message.callResult] : message.callResult;
-            if (message.isDndMode != null && message.hasOwnProperty("isDndMode"))
+                if (options.oneofs)
+                    object._callResult = "callResult";
+            }
+            if (message.isDndMode != null && message.hasOwnProperty("isDndMode")) {
                 object.isDndMode = message.isDndMode;
-            if (message.silenceReason != null && message.hasOwnProperty("silenceReason"))
+                if (options.oneofs)
+                    object._isDndMode = "isDndMode";
+            }
+            if (message.silenceReason != null && message.hasOwnProperty("silenceReason")) {
                 object.silenceReason = options.enums === String ? $root.SyncAction.CallLogRecord.SilenceReason[message.silenceReason] === undefined ? message.silenceReason : $root.SyncAction.CallLogRecord.SilenceReason[message.silenceReason] : message.silenceReason;
-            if (message.duration != null && message.hasOwnProperty("duration"))
+                if (options.oneofs)
+                    object._silenceReason = "silenceReason";
+            }
+            if (message.duration != null && message.hasOwnProperty("duration")) {
                 if (typeof message.duration === "number")
                     object.duration = options.longs === String ? String(message.duration) : message.duration;
                 else
                     object.duration = options.longs === String ? $util.Long.prototype.toString.call(message.duration) : options.longs === Number ? new $util.LongBits(message.duration.low >>> 0, message.duration.high >>> 0).toNumber() : message.duration;
-            if (message.startTime != null && message.hasOwnProperty("startTime"))
+                if (options.oneofs)
+                    object._duration = "duration";
+            }
+            if (message.startTime != null && message.hasOwnProperty("startTime")) {
                 if (typeof message.startTime === "number")
                     object.startTime = options.longs === String ? String(message.startTime) : message.startTime;
                 else
                     object.startTime = options.longs === String ? $util.Long.prototype.toString.call(message.startTime) : options.longs === Number ? new $util.LongBits(message.startTime.low >>> 0, message.startTime.high >>> 0).toNumber() : message.startTime;
-            if (message.isIncoming != null && message.hasOwnProperty("isIncoming"))
+                if (options.oneofs)
+                    object._startTime = "startTime";
+            }
+            if (message.isIncoming != null && message.hasOwnProperty("isIncoming")) {
                 object.isIncoming = message.isIncoming;
-            if (message.isVideo != null && message.hasOwnProperty("isVideo"))
+                if (options.oneofs)
+                    object._isIncoming = "isIncoming";
+            }
+            if (message.isVideo != null && message.hasOwnProperty("isVideo")) {
                 object.isVideo = message.isVideo;
-            if (message.isCallLink != null && message.hasOwnProperty("isCallLink"))
+                if (options.oneofs)
+                    object._isVideo = "isVideo";
+            }
+            if (message.isCallLink != null && message.hasOwnProperty("isCallLink")) {
                 object.isCallLink = message.isCallLink;
-            if (message.callLinkToken != null && message.hasOwnProperty("callLinkToken"))
+                if (options.oneofs)
+                    object._isCallLink = "isCallLink";
+            }
+            if (message.callLinkToken != null && message.hasOwnProperty("callLinkToken")) {
                 object.callLinkToken = message.callLinkToken;
-            if (message.scheduledCallId != null && message.hasOwnProperty("scheduledCallId"))
+                if (options.oneofs)
+                    object._callLinkToken = "callLinkToken";
+            }
+            if (message.scheduledCallId != null && message.hasOwnProperty("scheduledCallId")) {
                 object.scheduledCallId = message.scheduledCallId;
-            if (message.callId != null && message.hasOwnProperty("callId"))
+                if (options.oneofs)
+                    object._scheduledCallId = "scheduledCallId";
+            }
+            if (message.callId != null && message.hasOwnProperty("callId")) {
                 object.callId = message.callId;
-            if (message.callCreatorJid != null && message.hasOwnProperty("callCreatorJid"))
+                if (options.oneofs)
+                    object._callId = "callId";
+            }
+            if (message.callCreatorJid != null && message.hasOwnProperty("callCreatorJid")) {
                 object.callCreatorJid = message.callCreatorJid;
-            if (message.groupJid != null && message.hasOwnProperty("groupJid"))
+                if (options.oneofs)
+                    object._callCreatorJid = "callCreatorJid";
+            }
+            if (message.groupJid != null && message.hasOwnProperty("groupJid")) {
                 object.groupJid = message.groupJid;
+                if (options.oneofs)
+                    object._groupJid = "groupJid";
+            }
             if (message.participants && message.participants.length) {
                 object.participants = [];
                 for (var j = 0; j < message.participants.length; ++j)
                     object.participants[j] = $root.SyncAction.CallLogRecord.ParticipantInfo.toObject(message.participants[j], options);
             }
-            if (message.callType != null && message.hasOwnProperty("callType"))
+            if (message.callType != null && message.hasOwnProperty("callType")) {
                 object.callType = options.enums === String ? $root.SyncAction.CallLogRecord.CallType[message.callType] === undefined ? message.callType : $root.SyncAction.CallLogRecord.CallType[message.callType] : message.callType;
+                if (options.oneofs)
+                    object._callType = "callType";
+            }
             return object;
         };
 
@@ -19228,19 +25891,44 @@ $root.SyncAction = (function() {
 
             /**
              * ParticipantInfo userJid.
-             * @member {string} userJid
+             * @member {string|null|undefined} userJid
              * @memberof SyncAction.CallLogRecord.ParticipantInfo
              * @instance
              */
-            ParticipantInfo.prototype.userJid = "";
+            ParticipantInfo.prototype.userJid = null;
 
             /**
              * ParticipantInfo callResult.
-             * @member {SyncAction.CallLogRecord.CallResult} callResult
+             * @member {SyncAction.CallLogRecord.CallResult|null|undefined} callResult
              * @memberof SyncAction.CallLogRecord.ParticipantInfo
              * @instance
              */
-            ParticipantInfo.prototype.callResult = 0;
+            ParticipantInfo.prototype.callResult = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * ParticipantInfo _userJid.
+             * @member {"userJid"|undefined} _userJid
+             * @memberof SyncAction.CallLogRecord.ParticipantInfo
+             * @instance
+             */
+            Object.defineProperty(ParticipantInfo.prototype, "_userJid", {
+                get: $util.oneOfGetter($oneOfFields = ["userJid"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ParticipantInfo _callResult.
+             * @member {"callResult"|undefined} _callResult
+             * @memberof SyncAction.CallLogRecord.ParticipantInfo
+             * @instance
+             */
+            Object.defineProperty(ParticipantInfo.prototype, "_callResult", {
+                get: $util.oneOfGetter($oneOfFields = ["callResult"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new ParticipantInfo instance using the specified properties.
@@ -19349,10 +26037,14 @@ $root.SyncAction = (function() {
             ParticipantInfo.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.userJid != null && message.hasOwnProperty("userJid"))
+                var properties = {};
+                if (message.userJid != null && message.hasOwnProperty("userJid")) {
+                    properties._userJid = 1;
                     if (!$util.isString(message.userJid))
                         return "userJid: string expected";
-                if (message.callResult != null && message.hasOwnProperty("callResult"))
+                }
+                if (message.callResult != null && message.hasOwnProperty("callResult")) {
+                    properties._callResult = 1;
                     switch (message.callResult) {
                     default:
                         return "callResult: enum value expected";
@@ -19369,6 +26061,7 @@ $root.SyncAction = (function() {
                     case 10:
                         break;
                     }
+                }
                 return null;
             };
 
@@ -19454,14 +26147,16 @@ $root.SyncAction = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.userJid = "";
-                    object.callResult = options.enums === String ? "CONNECTED" : 0;
-                }
-                if (message.userJid != null && message.hasOwnProperty("userJid"))
+                if (message.userJid != null && message.hasOwnProperty("userJid")) {
                     object.userJid = message.userJid;
-                if (message.callResult != null && message.hasOwnProperty("callResult"))
+                    if (options.oneofs)
+                        object._userJid = "userJid";
+                }
+                if (message.callResult != null && message.hasOwnProperty("callResult")) {
                     object.callResult = options.enums === String ? $root.SyncAction.CallLogRecord.CallResult[message.callResult] === undefined ? message.callResult : $root.SyncAction.CallLogRecord.CallResult[message.callResult] : message.callResult;
+                    if (options.oneofs)
+                        object._callResult = "callResult";
+                }
                 return object;
             };
 
@@ -19542,19 +26237,44 @@ $root.SyncAction = (function() {
 
         /**
          * RecentEmojiWeight emoji.
-         * @member {string} emoji
+         * @member {string|null|undefined} emoji
          * @memberof SyncAction.RecentEmojiWeight
          * @instance
          */
-        RecentEmojiWeight.prototype.emoji = "";
+        RecentEmojiWeight.prototype.emoji = null;
 
         /**
          * RecentEmojiWeight weight.
-         * @member {number} weight
+         * @member {number|null|undefined} weight
          * @memberof SyncAction.RecentEmojiWeight
          * @instance
          */
-        RecentEmojiWeight.prototype.weight = 0;
+        RecentEmojiWeight.prototype.weight = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * RecentEmojiWeight _emoji.
+         * @member {"emoji"|undefined} _emoji
+         * @memberof SyncAction.RecentEmojiWeight
+         * @instance
+         */
+        Object.defineProperty(RecentEmojiWeight.prototype, "_emoji", {
+            get: $util.oneOfGetter($oneOfFields = ["emoji"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * RecentEmojiWeight _weight.
+         * @member {"weight"|undefined} _weight
+         * @memberof SyncAction.RecentEmojiWeight
+         * @instance
+         */
+        Object.defineProperty(RecentEmojiWeight.prototype, "_weight", {
+            get: $util.oneOfGetter($oneOfFields = ["weight"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new RecentEmojiWeight instance using the specified properties.
@@ -19663,12 +26383,17 @@ $root.SyncAction = (function() {
         RecentEmojiWeight.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.emoji != null && message.hasOwnProperty("emoji"))
+            var properties = {};
+            if (message.emoji != null && message.hasOwnProperty("emoji")) {
+                properties._emoji = 1;
                 if (!$util.isString(message.emoji))
                     return "emoji: string expected";
-            if (message.weight != null && message.hasOwnProperty("weight"))
+            }
+            if (message.weight != null && message.hasOwnProperty("weight")) {
+                properties._weight = 1;
                 if (typeof message.weight !== "number")
                     return "weight: number expected";
+            }
             return null;
         };
 
@@ -19704,14 +26429,16 @@ $root.SyncAction = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.emoji = "";
-                object.weight = 0;
-            }
-            if (message.emoji != null && message.hasOwnProperty("emoji"))
+            if (message.emoji != null && message.hasOwnProperty("emoji")) {
                 object.emoji = message.emoji;
-            if (message.weight != null && message.hasOwnProperty("weight"))
+                if (options.oneofs)
+                    object._emoji = "emoji";
+            }
+            if (message.weight != null && message.hasOwnProperty("weight")) {
                 object.weight = options.json && !isFinite(message.weight) ? String(message.weight) : message.weight;
+                if (options.oneofs)
+                    object._weight = "weight";
+            }
             return object;
         };
 
@@ -19742,6 +26469,186 @@ $root.SyncAction = (function() {
         };
 
         return RecentEmojiWeight;
+    })();
+
+    /**
+     * MutationProps enum.
+     * @name SyncAction.MutationProps
+     * @enum {number}
+     * @property {number} STAR_ACTION=2 STAR_ACTION value
+     * @property {number} CONTACT_ACTION=3 CONTACT_ACTION value
+     * @property {number} MUTE_ACTION=4 MUTE_ACTION value
+     * @property {number} PIN_ACTION=5 PIN_ACTION value
+     * @property {number} SECURITY_NOTIFICATION_SETTING=6 SECURITY_NOTIFICATION_SETTING value
+     * @property {number} PUSH_NAME_SETTING=7 PUSH_NAME_SETTING value
+     * @property {number} QUICK_REPLY_ACTION=8 QUICK_REPLY_ACTION value
+     * @property {number} RECENT_EMOJI_WEIGHTS_ACTION=11 RECENT_EMOJI_WEIGHTS_ACTION value
+     * @property {number} LABEL_MESSAGE_ACTION=13 LABEL_MESSAGE_ACTION value
+     * @property {number} LABEL_EDIT_ACTION=14 LABEL_EDIT_ACTION value
+     * @property {number} LABEL_ASSOCIATION_ACTION=15 LABEL_ASSOCIATION_ACTION value
+     * @property {number} LOCALE_SETTING=16 LOCALE_SETTING value
+     * @property {number} ARCHIVE_CHAT_ACTION=17 ARCHIVE_CHAT_ACTION value
+     * @property {number} DELETE_MESSAGE_FOR_ME_ACTION=18 DELETE_MESSAGE_FOR_ME_ACTION value
+     * @property {number} KEY_EXPIRATION=19 KEY_EXPIRATION value
+     * @property {number} MARK_CHAT_AS_READ_ACTION=20 MARK_CHAT_AS_READ_ACTION value
+     * @property {number} CLEAR_CHAT_ACTION=21 CLEAR_CHAT_ACTION value
+     * @property {number} DELETE_CHAT_ACTION=22 DELETE_CHAT_ACTION value
+     * @property {number} UNARCHIVE_CHATS_SETTING=23 UNARCHIVE_CHATS_SETTING value
+     * @property {number} PRIMARY_FEATURE=24 PRIMARY_FEATURE value
+     * @property {number} ANDROID_UNSUPPORTED_ACTIONS=26 ANDROID_UNSUPPORTED_ACTIONS value
+     * @property {number} AGENT_ACTION=27 AGENT_ACTION value
+     * @property {number} SUBSCRIPTION_ACTION=28 SUBSCRIPTION_ACTION value
+     * @property {number} USER_STATUS_MUTE_ACTION=29 USER_STATUS_MUTE_ACTION value
+     * @property {number} TIME_FORMAT_ACTION=30 TIME_FORMAT_ACTION value
+     * @property {number} NUX_ACTION=31 NUX_ACTION value
+     * @property {number} PRIMARY_VERSION_ACTION=32 PRIMARY_VERSION_ACTION value
+     * @property {number} STICKER_ACTION=33 STICKER_ACTION value
+     * @property {number} REMOVE_RECENT_STICKER_ACTION=34 REMOVE_RECENT_STICKER_ACTION value
+     * @property {number} CHAT_ASSIGNMENT=35 CHAT_ASSIGNMENT value
+     * @property {number} CHAT_ASSIGNMENT_OPENED_STATUS=36 CHAT_ASSIGNMENT_OPENED_STATUS value
+     * @property {number} PN_FOR_LID_CHAT_ACTION=37 PN_FOR_LID_CHAT_ACTION value
+     * @property {number} MARKETING_MESSAGE_ACTION=38 MARKETING_MESSAGE_ACTION value
+     * @property {number} MARKETING_MESSAGE_BROADCAST_ACTION=39 MARKETING_MESSAGE_BROADCAST_ACTION value
+     * @property {number} EXTERNAL_WEB_BETA_ACTION=40 EXTERNAL_WEB_BETA_ACTION value
+     * @property {number} PRIVACY_SETTING_RELAY_ALL_CALLS=41 PRIVACY_SETTING_RELAY_ALL_CALLS value
+     * @property {number} CALL_LOG_ACTION=42 CALL_LOG_ACTION value
+     * @property {number} UGC_BOT=43 UGC_BOT value
+     * @property {number} STATUS_PRIVACY=44 STATUS_PRIVACY value
+     * @property {number} BOT_WELCOME_REQUEST_ACTION=45 BOT_WELCOME_REQUEST_ACTION value
+     * @property {number} DELETE_INDIVIDUAL_CALL_LOG=46 DELETE_INDIVIDUAL_CALL_LOG value
+     * @property {number} LABEL_REORDERING_ACTION=47 LABEL_REORDERING_ACTION value
+     * @property {number} PAYMENT_INFO_ACTION=48 PAYMENT_INFO_ACTION value
+     * @property {number} CUSTOM_PAYMENT_METHODS_ACTION=49 CUSTOM_PAYMENT_METHODS_ACTION value
+     * @property {number} LOCK_CHAT_ACTION=50 LOCK_CHAT_ACTION value
+     * @property {number} CHAT_LOCK_SETTINGS=51 CHAT_LOCK_SETTINGS value
+     * @property {number} WAMO_USER_IDENTIFIER_ACTION=52 WAMO_USER_IDENTIFIER_ACTION value
+     * @property {number} PRIVACY_SETTING_DISABLE_LINK_PREVIEWS_ACTION=53 PRIVACY_SETTING_DISABLE_LINK_PREVIEWS_ACTION value
+     * @property {number} DEVICE_CAPABILITIES=54 DEVICE_CAPABILITIES value
+     * @property {number} NOTE_EDIT_ACTION=55 NOTE_EDIT_ACTION value
+     * @property {number} FAVORITES_ACTION=56 FAVORITES_ACTION value
+     * @property {number} MERCHANT_PAYMENT_PARTNER_ACTION=57 MERCHANT_PAYMENT_PARTNER_ACTION value
+     * @property {number} WAFFLE_ACCOUNT_LINK_STATE_ACTION=58 WAFFLE_ACCOUNT_LINK_STATE_ACTION value
+     * @property {number} USERNAME_CHAT_START_MODE=59 USERNAME_CHAT_START_MODE value
+     * @property {number} NOTIFICATION_ACTIVITY_SETTING_ACTION=60 NOTIFICATION_ACTIVITY_SETTING_ACTION value
+     * @property {number} LID_CONTACT_ACTION=61 LID_CONTACT_ACTION value
+     * @property {number} CTWA_PER_CUSTOMER_DATA_SHARING_ACTION=62 CTWA_PER_CUSTOMER_DATA_SHARING_ACTION value
+     * @property {number} PAYMENT_TOS_ACTION=63 PAYMENT_TOS_ACTION value
+     * @property {number} PRIVACY_SETTING_CHANNELS_PERSONALISED_RECOMMENDATION_ACTION=64 PRIVACY_SETTING_CHANNELS_PERSONALISED_RECOMMENDATION_ACTION value
+     * @property {number} BUSINESS_BROADCAST_ASSOCIATION_ACTION=65 BUSINESS_BROADCAST_ASSOCIATION_ACTION value
+     * @property {number} DETECTED_OUTCOMES_STATUS_ACTION=66 DETECTED_OUTCOMES_STATUS_ACTION value
+     * @property {number} MAIBA_AI_FEATURES_CONTROL_ACTION=68 MAIBA_AI_FEATURES_CONTROL_ACTION value
+     * @property {number} BUSINESS_BROADCAST_LIST_ACTION=69 BUSINESS_BROADCAST_LIST_ACTION value
+     * @property {number} MUSIC_USER_ID_ACTION=70 MUSIC_USER_ID_ACTION value
+     * @property {number} STATUS_POST_OPT_IN_NOTIFICATION_PREFERENCES_ACTION=71 STATUS_POST_OPT_IN_NOTIFICATION_PREFERENCES_ACTION value
+     * @property {number} AVATAR_UPDATED_ACTION=72 AVATAR_UPDATED_ACTION value
+     * @property {number} GALAXY_FLOW_ACTION=73 GALAXY_FLOW_ACTION value
+     * @property {number} PRIVATE_PROCESSING_SETTING_ACTION=74 PRIVATE_PROCESSING_SETTING_ACTION value
+     * @property {number} NEWSLETTER_SAVED_INTERESTS_ACTION=75 NEWSLETTER_SAVED_INTERESTS_ACTION value
+     * @property {number} AI_THREAD_RENAME_ACTION=76 AI_THREAD_RENAME_ACTION value
+     * @property {number} INTERACTIVE_MESSAGE_ACTION=77 INTERACTIVE_MESSAGE_ACTION value
+     * @property {number} SETTINGS_SYNC_ACTION=78 SETTINGS_SYNC_ACTION value
+     * @property {number} SHARE_OWN_PN=10001 SHARE_OWN_PN value
+     * @property {number} BUSINESS_BROADCAST_ACTION=10002 BUSINESS_BROADCAST_ACTION value
+     */
+    SyncAction.MutationProps = (function() {
+        var valuesById = {}, values = Object.create(valuesById);
+        values[valuesById[2] = "STAR_ACTION"] = 2;
+        values[valuesById[3] = "CONTACT_ACTION"] = 3;
+        values[valuesById[4] = "MUTE_ACTION"] = 4;
+        values[valuesById[5] = "PIN_ACTION"] = 5;
+        values[valuesById[6] = "SECURITY_NOTIFICATION_SETTING"] = 6;
+        values[valuesById[7] = "PUSH_NAME_SETTING"] = 7;
+        values[valuesById[8] = "QUICK_REPLY_ACTION"] = 8;
+        values[valuesById[11] = "RECENT_EMOJI_WEIGHTS_ACTION"] = 11;
+        values[valuesById[13] = "LABEL_MESSAGE_ACTION"] = 13;
+        values[valuesById[14] = "LABEL_EDIT_ACTION"] = 14;
+        values[valuesById[15] = "LABEL_ASSOCIATION_ACTION"] = 15;
+        values[valuesById[16] = "LOCALE_SETTING"] = 16;
+        values[valuesById[17] = "ARCHIVE_CHAT_ACTION"] = 17;
+        values[valuesById[18] = "DELETE_MESSAGE_FOR_ME_ACTION"] = 18;
+        values[valuesById[19] = "KEY_EXPIRATION"] = 19;
+        values[valuesById[20] = "MARK_CHAT_AS_READ_ACTION"] = 20;
+        values[valuesById[21] = "CLEAR_CHAT_ACTION"] = 21;
+        values[valuesById[22] = "DELETE_CHAT_ACTION"] = 22;
+        values[valuesById[23] = "UNARCHIVE_CHATS_SETTING"] = 23;
+        values[valuesById[24] = "PRIMARY_FEATURE"] = 24;
+        values[valuesById[26] = "ANDROID_UNSUPPORTED_ACTIONS"] = 26;
+        values[valuesById[27] = "AGENT_ACTION"] = 27;
+        values[valuesById[28] = "SUBSCRIPTION_ACTION"] = 28;
+        values[valuesById[29] = "USER_STATUS_MUTE_ACTION"] = 29;
+        values[valuesById[30] = "TIME_FORMAT_ACTION"] = 30;
+        values[valuesById[31] = "NUX_ACTION"] = 31;
+        values[valuesById[32] = "PRIMARY_VERSION_ACTION"] = 32;
+        values[valuesById[33] = "STICKER_ACTION"] = 33;
+        values[valuesById[34] = "REMOVE_RECENT_STICKER_ACTION"] = 34;
+        values[valuesById[35] = "CHAT_ASSIGNMENT"] = 35;
+        values[valuesById[36] = "CHAT_ASSIGNMENT_OPENED_STATUS"] = 36;
+        values[valuesById[37] = "PN_FOR_LID_CHAT_ACTION"] = 37;
+        values[valuesById[38] = "MARKETING_MESSAGE_ACTION"] = 38;
+        values[valuesById[39] = "MARKETING_MESSAGE_BROADCAST_ACTION"] = 39;
+        values[valuesById[40] = "EXTERNAL_WEB_BETA_ACTION"] = 40;
+        values[valuesById[41] = "PRIVACY_SETTING_RELAY_ALL_CALLS"] = 41;
+        values[valuesById[42] = "CALL_LOG_ACTION"] = 42;
+        values[valuesById[43] = "UGC_BOT"] = 43;
+        values[valuesById[44] = "STATUS_PRIVACY"] = 44;
+        values[valuesById[45] = "BOT_WELCOME_REQUEST_ACTION"] = 45;
+        values[valuesById[46] = "DELETE_INDIVIDUAL_CALL_LOG"] = 46;
+        values[valuesById[47] = "LABEL_REORDERING_ACTION"] = 47;
+        values[valuesById[48] = "PAYMENT_INFO_ACTION"] = 48;
+        values[valuesById[49] = "CUSTOM_PAYMENT_METHODS_ACTION"] = 49;
+        values[valuesById[50] = "LOCK_CHAT_ACTION"] = 50;
+        values[valuesById[51] = "CHAT_LOCK_SETTINGS"] = 51;
+        values[valuesById[52] = "WAMO_USER_IDENTIFIER_ACTION"] = 52;
+        values[valuesById[53] = "PRIVACY_SETTING_DISABLE_LINK_PREVIEWS_ACTION"] = 53;
+        values[valuesById[54] = "DEVICE_CAPABILITIES"] = 54;
+        values[valuesById[55] = "NOTE_EDIT_ACTION"] = 55;
+        values[valuesById[56] = "FAVORITES_ACTION"] = 56;
+        values[valuesById[57] = "MERCHANT_PAYMENT_PARTNER_ACTION"] = 57;
+        values[valuesById[58] = "WAFFLE_ACCOUNT_LINK_STATE_ACTION"] = 58;
+        values[valuesById[59] = "USERNAME_CHAT_START_MODE"] = 59;
+        values[valuesById[60] = "NOTIFICATION_ACTIVITY_SETTING_ACTION"] = 60;
+        values[valuesById[61] = "LID_CONTACT_ACTION"] = 61;
+        values[valuesById[62] = "CTWA_PER_CUSTOMER_DATA_SHARING_ACTION"] = 62;
+        values[valuesById[63] = "PAYMENT_TOS_ACTION"] = 63;
+        values[valuesById[64] = "PRIVACY_SETTING_CHANNELS_PERSONALISED_RECOMMENDATION_ACTION"] = 64;
+        values[valuesById[65] = "BUSINESS_BROADCAST_ASSOCIATION_ACTION"] = 65;
+        values[valuesById[66] = "DETECTED_OUTCOMES_STATUS_ACTION"] = 66;
+        values[valuesById[68] = "MAIBA_AI_FEATURES_CONTROL_ACTION"] = 68;
+        values[valuesById[69] = "BUSINESS_BROADCAST_LIST_ACTION"] = 69;
+        values[valuesById[70] = "MUSIC_USER_ID_ACTION"] = 70;
+        values[valuesById[71] = "STATUS_POST_OPT_IN_NOTIFICATION_PREFERENCES_ACTION"] = 71;
+        values[valuesById[72] = "AVATAR_UPDATED_ACTION"] = 72;
+        values[valuesById[73] = "GALAXY_FLOW_ACTION"] = 73;
+        values[valuesById[74] = "PRIVATE_PROCESSING_SETTING_ACTION"] = 74;
+        values[valuesById[75] = "NEWSLETTER_SAVED_INTERESTS_ACTION"] = 75;
+        values[valuesById[76] = "AI_THREAD_RENAME_ACTION"] = 76;
+        values[valuesById[77] = "INTERACTIVE_MESSAGE_ACTION"] = 77;
+        values[valuesById[78] = "SETTINGS_SYNC_ACTION"] = 78;
+        values[valuesById[10001] = "SHARE_OWN_PN"] = 10001;
+        values[valuesById[10002] = "BUSINESS_BROADCAST_ACTION"] = 10002;
+        return values;
+    })();
+
+    /**
+     * CollectionName enum.
+     * @name SyncAction.CollectionName
+     * @enum {number}
+     * @property {number} COLLECTION_NAME_UNKNOWN=0 COLLECTION_NAME_UNKNOWN value
+     * @property {number} REGULAR=1 REGULAR value
+     * @property {number} REGULAR_LOW=2 REGULAR_LOW value
+     * @property {number} REGULAR_HIGH=3 REGULAR_HIGH value
+     * @property {number} CRITICAL_BLOCK=4 CRITICAL_BLOCK value
+     * @property {number} CRITICAL_UNBLOCK_LOW=5 CRITICAL_UNBLOCK_LOW value
+     */
+    SyncAction.CollectionName = (function() {
+        var valuesById = {}, values = Object.create(valuesById);
+        values[valuesById[0] = "COLLECTION_NAME_UNKNOWN"] = 0;
+        values[valuesById[1] = "REGULAR"] = 1;
+        values[valuesById[2] = "REGULAR_LOW"] = 2;
+        values[valuesById[3] = "REGULAR_HIGH"] = 3;
+        values[valuesById[4] = "CRITICAL_BLOCK"] = 4;
+        values[valuesById[5] = "CRITICAL_UNBLOCK_LOW"] = 5;
+        return values;
     })();
 
     return SyncAction;
@@ -19783,11 +26690,11 @@ $root.ChatLockSettings = (function() {
 
         /**
          * ChatLockSettings hideLockedChats.
-         * @member {boolean} hideLockedChats
+         * @member {boolean|null|undefined} hideLockedChats
          * @memberof ChatLockSettings.ChatLockSettings
          * @instance
          */
-        ChatLockSettings.prototype.hideLockedChats = false;
+        ChatLockSettings.prototype.hideLockedChats = null;
 
         /**
          * ChatLockSettings secretCode.
@@ -19796,6 +26703,31 @@ $root.ChatLockSettings = (function() {
          * @instance
          */
         ChatLockSettings.prototype.secretCode = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * ChatLockSettings _hideLockedChats.
+         * @member {"hideLockedChats"|undefined} _hideLockedChats
+         * @memberof ChatLockSettings.ChatLockSettings
+         * @instance
+         */
+        Object.defineProperty(ChatLockSettings.prototype, "_hideLockedChats", {
+            get: $util.oneOfGetter($oneOfFields = ["hideLockedChats"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * ChatLockSettings _secretCode.
+         * @member {"secretCode"|undefined} _secretCode
+         * @memberof ChatLockSettings.ChatLockSettings
+         * @instance
+         */
+        Object.defineProperty(ChatLockSettings.prototype, "_secretCode", {
+            get: $util.oneOfGetter($oneOfFields = ["secretCode"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new ChatLockSettings instance using the specified properties.
@@ -19904,13 +26836,19 @@ $root.ChatLockSettings = (function() {
         ChatLockSettings.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.hideLockedChats != null && message.hasOwnProperty("hideLockedChats"))
+            var properties = {};
+            if (message.hideLockedChats != null && message.hasOwnProperty("hideLockedChats")) {
+                properties._hideLockedChats = 1;
                 if (typeof message.hideLockedChats !== "boolean")
                     return "hideLockedChats: boolean expected";
+            }
             if (message.secretCode != null && message.hasOwnProperty("secretCode")) {
-                var error = $root.UserPassword.UserPassword.verify(message.secretCode);
-                if (error)
-                    return "secretCode." + error;
+                properties._secretCode = 1;
+                {
+                    var error = $root.UserPassword.UserPassword.verify(message.secretCode);
+                    if (error)
+                        return "secretCode." + error;
+                }
             }
             return null;
         };
@@ -19950,14 +26888,16 @@ $root.ChatLockSettings = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.hideLockedChats = false;
-                object.secretCode = null;
-            }
-            if (message.hideLockedChats != null && message.hasOwnProperty("hideLockedChats"))
+            if (message.hideLockedChats != null && message.hasOwnProperty("hideLockedChats")) {
                 object.hideLockedChats = message.hideLockedChats;
-            if (message.secretCode != null && message.hasOwnProperty("secretCode"))
+                if (options.oneofs)
+                    object._hideLockedChats = "hideLockedChats";
+            }
+            if (message.secretCode != null && message.hasOwnProperty("secretCode")) {
                 object.secretCode = $root.UserPassword.UserPassword.toObject(message.secretCode, options);
+                if (options.oneofs)
+                    object._secretCode = "secretCode";
+            }
             return object;
         };
 
@@ -20032,19 +26972,19 @@ $root.UserPassword = (function() {
 
         /**
          * UserPassword encoding.
-         * @member {UserPassword.UserPassword.Encoding} encoding
+         * @member {UserPassword.UserPassword.Encoding|null|undefined} encoding
          * @memberof UserPassword.UserPassword
          * @instance
          */
-        UserPassword.prototype.encoding = 0;
+        UserPassword.prototype.encoding = null;
 
         /**
          * UserPassword transformer.
-         * @member {UserPassword.UserPassword.Transformer} transformer
+         * @member {UserPassword.UserPassword.Transformer|null|undefined} transformer
          * @memberof UserPassword.UserPassword
          * @instance
          */
-        UserPassword.prototype.transformer = 0;
+        UserPassword.prototype.transformer = null;
 
         /**
          * UserPassword transformerArg.
@@ -20056,11 +26996,47 @@ $root.UserPassword = (function() {
 
         /**
          * UserPassword transformedData.
-         * @member {Uint8Array} transformedData
+         * @member {Uint8Array|null|undefined} transformedData
          * @memberof UserPassword.UserPassword
          * @instance
          */
-        UserPassword.prototype.transformedData = $util.newBuffer([]);
+        UserPassword.prototype.transformedData = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * UserPassword _encoding.
+         * @member {"encoding"|undefined} _encoding
+         * @memberof UserPassword.UserPassword
+         * @instance
+         */
+        Object.defineProperty(UserPassword.prototype, "_encoding", {
+            get: $util.oneOfGetter($oneOfFields = ["encoding"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * UserPassword _transformer.
+         * @member {"transformer"|undefined} _transformer
+         * @memberof UserPassword.UserPassword
+         * @instance
+         */
+        Object.defineProperty(UserPassword.prototype, "_transformer", {
+            get: $util.oneOfGetter($oneOfFields = ["transformer"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * UserPassword _transformedData.
+         * @member {"transformedData"|undefined} _transformedData
+         * @memberof UserPassword.UserPassword
+         * @instance
+         */
+        Object.defineProperty(UserPassword.prototype, "_transformedData", {
+            get: $util.oneOfGetter($oneOfFields = ["transformedData"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new UserPassword instance using the specified properties.
@@ -20184,7 +27160,9 @@ $root.UserPassword = (function() {
         UserPassword.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.encoding != null && message.hasOwnProperty("encoding"))
+            var properties = {};
+            if (message.encoding != null && message.hasOwnProperty("encoding")) {
+                properties._encoding = 1;
                 switch (message.encoding) {
                 default:
                     return "encoding: enum value expected";
@@ -20192,7 +27170,9 @@ $root.UserPassword = (function() {
                 case 1:
                     break;
                 }
-            if (message.transformer != null && message.hasOwnProperty("transformer"))
+            }
+            if (message.transformer != null && message.hasOwnProperty("transformer")) {
+                properties._transformer = 1;
                 switch (message.transformer) {
                 default:
                     return "transformer: enum value expected";
@@ -20201,6 +27181,7 @@ $root.UserPassword = (function() {
                 case 2:
                     break;
                 }
+            }
             if (message.transformerArg != null && message.hasOwnProperty("transformerArg")) {
                 if (!Array.isArray(message.transformerArg))
                     return "transformerArg: array expected";
@@ -20210,9 +27191,11 @@ $root.UserPassword = (function() {
                         return "transformerArg." + error;
                 }
             }
-            if (message.transformedData != null && message.hasOwnProperty("transformedData"))
+            if (message.transformedData != null && message.hasOwnProperty("transformedData")) {
+                properties._transformedData = 1;
                 if (!(message.transformedData && typeof message.transformedData.length === "number" || $util.isString(message.transformedData)))
                     return "transformedData: buffer expected";
+            }
             return null;
         };
 
@@ -20297,28 +27280,26 @@ $root.UserPassword = (function() {
             var object = {};
             if (options.arrays || options.defaults)
                 object.transformerArg = [];
-            if (options.defaults) {
-                object.encoding = options.enums === String ? "UTF8" : 0;
-                object.transformer = options.enums === String ? "NONE" : 0;
-                if (options.bytes === String)
-                    object.transformedData = "";
-                else {
-                    object.transformedData = [];
-                    if (options.bytes !== Array)
-                        object.transformedData = $util.newBuffer(object.transformedData);
-                }
-            }
-            if (message.encoding != null && message.hasOwnProperty("encoding"))
+            if (message.encoding != null && message.hasOwnProperty("encoding")) {
                 object.encoding = options.enums === String ? $root.UserPassword.UserPassword.Encoding[message.encoding] === undefined ? message.encoding : $root.UserPassword.UserPassword.Encoding[message.encoding] : message.encoding;
-            if (message.transformer != null && message.hasOwnProperty("transformer"))
+                if (options.oneofs)
+                    object._encoding = "encoding";
+            }
+            if (message.transformer != null && message.hasOwnProperty("transformer")) {
                 object.transformer = options.enums === String ? $root.UserPassword.UserPassword.Transformer[message.transformer] === undefined ? message.transformer : $root.UserPassword.UserPassword.Transformer[message.transformer] : message.transformer;
+                if (options.oneofs)
+                    object._transformer = "transformer";
+            }
             if (message.transformerArg && message.transformerArg.length) {
                 object.transformerArg = [];
                 for (var j = 0; j < message.transformerArg.length; ++j)
                     object.transformerArg[j] = $root.UserPassword.UserPassword.TransformerArg.toObject(message.transformerArg[j], options);
             }
-            if (message.transformedData != null && message.hasOwnProperty("transformedData"))
+            if (message.transformedData != null && message.hasOwnProperty("transformedData")) {
                 object.transformedData = options.bytes === String ? $util.base64.encode(message.transformedData, 0, message.transformedData.length) : options.bytes === Array ? Array.prototype.slice.call(message.transformedData) : message.transformedData;
+                if (options.oneofs)
+                    object._transformedData = "transformedData";
+            }
             return object;
         };
 
@@ -20405,11 +27386,11 @@ $root.UserPassword = (function() {
 
             /**
              * TransformerArg key.
-             * @member {string} key
+             * @member {string|null|undefined} key
              * @memberof UserPassword.UserPassword.TransformerArg
              * @instance
              */
-            TransformerArg.prototype.key = "";
+            TransformerArg.prototype.key = null;
 
             /**
              * TransformerArg value.
@@ -20418,6 +27399,31 @@ $root.UserPassword = (function() {
              * @instance
              */
             TransformerArg.prototype.value = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * TransformerArg _key.
+             * @member {"key"|undefined} _key
+             * @memberof UserPassword.UserPassword.TransformerArg
+             * @instance
+             */
+            Object.defineProperty(TransformerArg.prototype, "_key", {
+                get: $util.oneOfGetter($oneOfFields = ["key"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * TransformerArg _value.
+             * @member {"value"|undefined} _value
+             * @memberof UserPassword.UserPassword.TransformerArg
+             * @instance
+             */
+            Object.defineProperty(TransformerArg.prototype, "_value", {
+                get: $util.oneOfGetter($oneOfFields = ["value"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new TransformerArg instance using the specified properties.
@@ -20526,13 +27532,19 @@ $root.UserPassword = (function() {
             TransformerArg.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.key != null && message.hasOwnProperty("key"))
+                var properties = {};
+                if (message.key != null && message.hasOwnProperty("key")) {
+                    properties._key = 1;
                     if (!$util.isString(message.key))
                         return "key: string expected";
+                }
                 if (message.value != null && message.hasOwnProperty("value")) {
-                    var error = $root.UserPassword.UserPassword.TransformerArg.Value.verify(message.value);
-                    if (error)
-                        return "value." + error;
+                    properties._value = 1;
+                    {
+                        var error = $root.UserPassword.UserPassword.TransformerArg.Value.verify(message.value);
+                        if (error)
+                            return "value." + error;
+                    }
                 }
                 return null;
             };
@@ -20572,14 +27584,16 @@ $root.UserPassword = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults) {
-                    object.key = "";
-                    object.value = null;
-                }
-                if (message.key != null && message.hasOwnProperty("key"))
+                if (message.key != null && message.hasOwnProperty("key")) {
                     object.key = message.key;
-                if (message.value != null && message.hasOwnProperty("value"))
+                    if (options.oneofs)
+                        object._key = "key";
+                }
+                if (message.value != null && message.hasOwnProperty("value")) {
                     object.value = $root.UserPassword.UserPassword.TransformerArg.Value.toObject(message.value, options);
+                    if (options.oneofs)
+                        object._value = "value";
+                }
                 return object;
             };
 
@@ -20890,6 +27904,10 @@ $root.DeviceCapabilities = (function() {
          * @interface IDeviceCapabilities
          * @property {DeviceCapabilities.DeviceCapabilities.ChatLockSupportLevel|null} [chatLockSupportLevel] DeviceCapabilities chatLockSupportLevel
          * @property {DeviceCapabilities.DeviceCapabilities.ILIDMigration|null} [lidMigration] DeviceCapabilities lidMigration
+         * @property {DeviceCapabilities.DeviceCapabilities.IBusinessBroadcast|null} [businessBroadcast] DeviceCapabilities businessBroadcast
+         * @property {DeviceCapabilities.DeviceCapabilities.IUserHasAvatar|null} [userHasAvatar] DeviceCapabilities userHasAvatar
+         * @property {DeviceCapabilities.DeviceCapabilities.MemberNameTagPrimarySupport|null} [memberNameTagPrimarySupport] DeviceCapabilities memberNameTagPrimarySupport
+         * @property {DeviceCapabilities.DeviceCapabilities.IAiThread|null} [aiThread] DeviceCapabilities aiThread
          */
 
         /**
@@ -20909,11 +27927,11 @@ $root.DeviceCapabilities = (function() {
 
         /**
          * DeviceCapabilities chatLockSupportLevel.
-         * @member {DeviceCapabilities.DeviceCapabilities.ChatLockSupportLevel} chatLockSupportLevel
+         * @member {DeviceCapabilities.DeviceCapabilities.ChatLockSupportLevel|null|undefined} chatLockSupportLevel
          * @memberof DeviceCapabilities.DeviceCapabilities
          * @instance
          */
-        DeviceCapabilities.prototype.chatLockSupportLevel = 0;
+        DeviceCapabilities.prototype.chatLockSupportLevel = null;
 
         /**
          * DeviceCapabilities lidMigration.
@@ -20922,6 +27940,107 @@ $root.DeviceCapabilities = (function() {
          * @instance
          */
         DeviceCapabilities.prototype.lidMigration = null;
+
+        /**
+         * DeviceCapabilities businessBroadcast.
+         * @member {DeviceCapabilities.DeviceCapabilities.IBusinessBroadcast|null|undefined} businessBroadcast
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        DeviceCapabilities.prototype.businessBroadcast = null;
+
+        /**
+         * DeviceCapabilities userHasAvatar.
+         * @member {DeviceCapabilities.DeviceCapabilities.IUserHasAvatar|null|undefined} userHasAvatar
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        DeviceCapabilities.prototype.userHasAvatar = null;
+
+        /**
+         * DeviceCapabilities memberNameTagPrimarySupport.
+         * @member {DeviceCapabilities.DeviceCapabilities.MemberNameTagPrimarySupport|null|undefined} memberNameTagPrimarySupport
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        DeviceCapabilities.prototype.memberNameTagPrimarySupport = null;
+
+        /**
+         * DeviceCapabilities aiThread.
+         * @member {DeviceCapabilities.DeviceCapabilities.IAiThread|null|undefined} aiThread
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        DeviceCapabilities.prototype.aiThread = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * DeviceCapabilities _chatLockSupportLevel.
+         * @member {"chatLockSupportLevel"|undefined} _chatLockSupportLevel
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        Object.defineProperty(DeviceCapabilities.prototype, "_chatLockSupportLevel", {
+            get: $util.oneOfGetter($oneOfFields = ["chatLockSupportLevel"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * DeviceCapabilities _lidMigration.
+         * @member {"lidMigration"|undefined} _lidMigration
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        Object.defineProperty(DeviceCapabilities.prototype, "_lidMigration", {
+            get: $util.oneOfGetter($oneOfFields = ["lidMigration"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * DeviceCapabilities _businessBroadcast.
+         * @member {"businessBroadcast"|undefined} _businessBroadcast
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        Object.defineProperty(DeviceCapabilities.prototype, "_businessBroadcast", {
+            get: $util.oneOfGetter($oneOfFields = ["businessBroadcast"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * DeviceCapabilities _userHasAvatar.
+         * @member {"userHasAvatar"|undefined} _userHasAvatar
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        Object.defineProperty(DeviceCapabilities.prototype, "_userHasAvatar", {
+            get: $util.oneOfGetter($oneOfFields = ["userHasAvatar"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * DeviceCapabilities _memberNameTagPrimarySupport.
+         * @member {"memberNameTagPrimarySupport"|undefined} _memberNameTagPrimarySupport
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        Object.defineProperty(DeviceCapabilities.prototype, "_memberNameTagPrimarySupport", {
+            get: $util.oneOfGetter($oneOfFields = ["memberNameTagPrimarySupport"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * DeviceCapabilities _aiThread.
+         * @member {"aiThread"|undefined} _aiThread
+         * @memberof DeviceCapabilities.DeviceCapabilities
+         * @instance
+         */
+        Object.defineProperty(DeviceCapabilities.prototype, "_aiThread", {
+            get: $util.oneOfGetter($oneOfFields = ["aiThread"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new DeviceCapabilities instance using the specified properties.
@@ -20951,6 +28070,14 @@ $root.DeviceCapabilities = (function() {
                 writer.uint32(/* id 1, wireType 0 =*/8).int32(message.chatLockSupportLevel);
             if (message.lidMigration != null && Object.hasOwnProperty.call(message, "lidMigration"))
                 $root.DeviceCapabilities.DeviceCapabilities.LIDMigration.encode(message.lidMigration, writer.uint32(/* id 2, wireType 2 =*/18).fork()).ldelim();
+            if (message.businessBroadcast != null && Object.hasOwnProperty.call(message, "businessBroadcast"))
+                $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.encode(message.businessBroadcast, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
+            if (message.userHasAvatar != null && Object.hasOwnProperty.call(message, "userHasAvatar"))
+                $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar.encode(message.userHasAvatar, writer.uint32(/* id 4, wireType 2 =*/34).fork()).ldelim();
+            if (message.memberNameTagPrimarySupport != null && Object.hasOwnProperty.call(message, "memberNameTagPrimarySupport"))
+                writer.uint32(/* id 5, wireType 0 =*/40).int32(message.memberNameTagPrimarySupport);
+            if (message.aiThread != null && Object.hasOwnProperty.call(message, "aiThread"))
+                $root.DeviceCapabilities.DeviceCapabilities.AiThread.encode(message.aiThread, writer.uint32(/* id 6, wireType 2 =*/50).fork()).ldelim();
             return writer;
         };
 
@@ -20995,6 +28122,22 @@ $root.DeviceCapabilities = (function() {
                         message.lidMigration = $root.DeviceCapabilities.DeviceCapabilities.LIDMigration.decode(reader, reader.uint32());
                         break;
                     }
+                case 3: {
+                        message.businessBroadcast = $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 4: {
+                        message.userHasAvatar = $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar.decode(reader, reader.uint32());
+                        break;
+                    }
+                case 5: {
+                        message.memberNameTagPrimarySupport = reader.int32();
+                        break;
+                    }
+                case 6: {
+                        message.aiThread = $root.DeviceCapabilities.DeviceCapabilities.AiThread.decode(reader, reader.uint32());
+                        break;
+                    }
                 default:
                     reader.skipType(tag & 7);
                     break;
@@ -21030,7 +28173,9 @@ $root.DeviceCapabilities = (function() {
         DeviceCapabilities.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.chatLockSupportLevel != null && message.hasOwnProperty("chatLockSupportLevel"))
+            var properties = {};
+            if (message.chatLockSupportLevel != null && message.hasOwnProperty("chatLockSupportLevel")) {
+                properties._chatLockSupportLevel = 1;
                 switch (message.chatLockSupportLevel) {
                 default:
                     return "chatLockSupportLevel: enum value expected";
@@ -21039,10 +28184,49 @@ $root.DeviceCapabilities = (function() {
                 case 2:
                     break;
                 }
+            }
             if (message.lidMigration != null && message.hasOwnProperty("lidMigration")) {
-                var error = $root.DeviceCapabilities.DeviceCapabilities.LIDMigration.verify(message.lidMigration);
-                if (error)
-                    return "lidMigration." + error;
+                properties._lidMigration = 1;
+                {
+                    var error = $root.DeviceCapabilities.DeviceCapabilities.LIDMigration.verify(message.lidMigration);
+                    if (error)
+                        return "lidMigration." + error;
+                }
+            }
+            if (message.businessBroadcast != null && message.hasOwnProperty("businessBroadcast")) {
+                properties._businessBroadcast = 1;
+                {
+                    var error = $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.verify(message.businessBroadcast);
+                    if (error)
+                        return "businessBroadcast." + error;
+                }
+            }
+            if (message.userHasAvatar != null && message.hasOwnProperty("userHasAvatar")) {
+                properties._userHasAvatar = 1;
+                {
+                    var error = $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar.verify(message.userHasAvatar);
+                    if (error)
+                        return "userHasAvatar." + error;
+                }
+            }
+            if (message.memberNameTagPrimarySupport != null && message.hasOwnProperty("memberNameTagPrimarySupport")) {
+                properties._memberNameTagPrimarySupport = 1;
+                switch (message.memberNameTagPrimarySupport) {
+                default:
+                    return "memberNameTagPrimarySupport: enum value expected";
+                case 0:
+                case 1:
+                case 2:
+                    break;
+                }
+            }
+            if (message.aiThread != null && message.hasOwnProperty("aiThread")) {
+                properties._aiThread = 1;
+                {
+                    var error = $root.DeviceCapabilities.DeviceCapabilities.AiThread.verify(message.aiThread);
+                    if (error)
+                        return "aiThread." + error;
+                }
             }
             return null;
         };
@@ -21084,6 +28268,41 @@ $root.DeviceCapabilities = (function() {
                     throw TypeError(".DeviceCapabilities.DeviceCapabilities.lidMigration: object expected");
                 message.lidMigration = $root.DeviceCapabilities.DeviceCapabilities.LIDMigration.fromObject(object.lidMigration);
             }
+            if (object.businessBroadcast != null) {
+                if (typeof object.businessBroadcast !== "object")
+                    throw TypeError(".DeviceCapabilities.DeviceCapabilities.businessBroadcast: object expected");
+                message.businessBroadcast = $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.fromObject(object.businessBroadcast);
+            }
+            if (object.userHasAvatar != null) {
+                if (typeof object.userHasAvatar !== "object")
+                    throw TypeError(".DeviceCapabilities.DeviceCapabilities.userHasAvatar: object expected");
+                message.userHasAvatar = $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar.fromObject(object.userHasAvatar);
+            }
+            switch (object.memberNameTagPrimarySupport) {
+            default:
+                if (typeof object.memberNameTagPrimarySupport === "number") {
+                    message.memberNameTagPrimarySupport = object.memberNameTagPrimarySupport;
+                    break;
+                }
+                break;
+            case "DISABLED":
+            case 0:
+                message.memberNameTagPrimarySupport = 0;
+                break;
+            case "RECEIVER_ENABLED":
+            case 1:
+                message.memberNameTagPrimarySupport = 1;
+                break;
+            case "SENDER_ENABLED":
+            case 2:
+                message.memberNameTagPrimarySupport = 2;
+                break;
+            }
+            if (object.aiThread != null) {
+                if (typeof object.aiThread !== "object")
+                    throw TypeError(".DeviceCapabilities.DeviceCapabilities.aiThread: object expected");
+                message.aiThread = $root.DeviceCapabilities.DeviceCapabilities.AiThread.fromObject(object.aiThread);
+            }
             return message;
         };
 
@@ -21100,14 +28319,36 @@ $root.DeviceCapabilities = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.chatLockSupportLevel = options.enums === String ? "NONE" : 0;
-                object.lidMigration = null;
-            }
-            if (message.chatLockSupportLevel != null && message.hasOwnProperty("chatLockSupportLevel"))
+            if (message.chatLockSupportLevel != null && message.hasOwnProperty("chatLockSupportLevel")) {
                 object.chatLockSupportLevel = options.enums === String ? $root.DeviceCapabilities.DeviceCapabilities.ChatLockSupportLevel[message.chatLockSupportLevel] === undefined ? message.chatLockSupportLevel : $root.DeviceCapabilities.DeviceCapabilities.ChatLockSupportLevel[message.chatLockSupportLevel] : message.chatLockSupportLevel;
-            if (message.lidMigration != null && message.hasOwnProperty("lidMigration"))
+                if (options.oneofs)
+                    object._chatLockSupportLevel = "chatLockSupportLevel";
+            }
+            if (message.lidMigration != null && message.hasOwnProperty("lidMigration")) {
                 object.lidMigration = $root.DeviceCapabilities.DeviceCapabilities.LIDMigration.toObject(message.lidMigration, options);
+                if (options.oneofs)
+                    object._lidMigration = "lidMigration";
+            }
+            if (message.businessBroadcast != null && message.hasOwnProperty("businessBroadcast")) {
+                object.businessBroadcast = $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.toObject(message.businessBroadcast, options);
+                if (options.oneofs)
+                    object._businessBroadcast = "businessBroadcast";
+            }
+            if (message.userHasAvatar != null && message.hasOwnProperty("userHasAvatar")) {
+                object.userHasAvatar = $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar.toObject(message.userHasAvatar, options);
+                if (options.oneofs)
+                    object._userHasAvatar = "userHasAvatar";
+            }
+            if (message.memberNameTagPrimarySupport != null && message.hasOwnProperty("memberNameTagPrimarySupport")) {
+                object.memberNameTagPrimarySupport = options.enums === String ? $root.DeviceCapabilities.DeviceCapabilities.MemberNameTagPrimarySupport[message.memberNameTagPrimarySupport] === undefined ? message.memberNameTagPrimarySupport : $root.DeviceCapabilities.DeviceCapabilities.MemberNameTagPrimarySupport[message.memberNameTagPrimarySupport] : message.memberNameTagPrimarySupport;
+                if (options.oneofs)
+                    object._memberNameTagPrimarySupport = "memberNameTagPrimarySupport";
+            }
+            if (message.aiThread != null && message.hasOwnProperty("aiThread")) {
+                object.aiThread = $root.DeviceCapabilities.DeviceCapabilities.AiThread.toObject(message.aiThread, options);
+                if (options.oneofs)
+                    object._aiThread = "aiThread";
+            }
             return object;
         };
 
@@ -21136,6 +28377,492 @@ $root.DeviceCapabilities = (function() {
             }
             return typeUrlPrefix + "/DeviceCapabilities.DeviceCapabilities";
         };
+
+        DeviceCapabilities.AiThread = (function() {
+
+            /**
+             * Properties of an AiThread.
+             * @memberof DeviceCapabilities.DeviceCapabilities
+             * @interface IAiThread
+             * @property {DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel|null} [supportLevel] AiThread supportLevel
+             */
+
+            /**
+             * Constructs a new AiThread.
+             * @memberof DeviceCapabilities.DeviceCapabilities
+             * @classdesc Represents an AiThread.
+             * @implements IAiThread
+             * @constructor
+             * @param {DeviceCapabilities.DeviceCapabilities.IAiThread=} [properties] Properties to set
+             */
+            function AiThread(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * AiThread supportLevel.
+             * @member {DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel|null|undefined} supportLevel
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @instance
+             */
+            AiThread.prototype.supportLevel = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * AiThread _supportLevel.
+             * @member {"supportLevel"|undefined} _supportLevel
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @instance
+             */
+            Object.defineProperty(AiThread.prototype, "_supportLevel", {
+                get: $util.oneOfGetter($oneOfFields = ["supportLevel"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new AiThread instance using the specified properties.
+             * @function create
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IAiThread=} [properties] Properties to set
+             * @returns {DeviceCapabilities.DeviceCapabilities.AiThread} AiThread instance
+             */
+            AiThread.create = function create(properties) {
+                return new AiThread(properties);
+            };
+
+            /**
+             * Encodes the specified AiThread message. Does not implicitly {@link DeviceCapabilities.DeviceCapabilities.AiThread.verify|verify} messages.
+             * @function encode
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IAiThread} message AiThread message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AiThread.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.supportLevel != null && Object.hasOwnProperty.call(message, "supportLevel"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).int32(message.supportLevel);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified AiThread message, length delimited. Does not implicitly {@link DeviceCapabilities.DeviceCapabilities.AiThread.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IAiThread} message AiThread message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            AiThread.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes an AiThread message from the specified reader or buffer.
+             * @function decode
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {DeviceCapabilities.DeviceCapabilities.AiThread} AiThread
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AiThread.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.DeviceCapabilities.DeviceCapabilities.AiThread();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.supportLevel = reader.int32();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes an AiThread message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {DeviceCapabilities.DeviceCapabilities.AiThread} AiThread
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            AiThread.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies an AiThread message.
+             * @function verify
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            AiThread.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.supportLevel != null && message.hasOwnProperty("supportLevel")) {
+                    properties._supportLevel = 1;
+                    switch (message.supportLevel) {
+                    default:
+                        return "supportLevel: enum value expected";
+                    case 0:
+                    case 1:
+                    case 2:
+                        break;
+                    }
+                }
+                return null;
+            };
+
+            /**
+             * Creates an AiThread message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {DeviceCapabilities.DeviceCapabilities.AiThread} AiThread
+             */
+            AiThread.fromObject = function fromObject(object) {
+                if (object instanceof $root.DeviceCapabilities.DeviceCapabilities.AiThread)
+                    return object;
+                var message = new $root.DeviceCapabilities.DeviceCapabilities.AiThread();
+                switch (object.supportLevel) {
+                default:
+                    if (typeof object.supportLevel === "number") {
+                        message.supportLevel = object.supportLevel;
+                        break;
+                    }
+                    break;
+                case "NONE":
+                case 0:
+                    message.supportLevel = 0;
+                    break;
+                case "INFRA":
+                case 1:
+                    message.supportLevel = 1;
+                    break;
+                case "FULL":
+                case 2:
+                    message.supportLevel = 2;
+                    break;
+                }
+                return message;
+            };
+
+            /**
+             * Creates a plain object from an AiThread message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.AiThread} message AiThread
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            AiThread.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.supportLevel != null && message.hasOwnProperty("supportLevel")) {
+                    object.supportLevel = options.enums === String ? $root.DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel[message.supportLevel] === undefined ? message.supportLevel : $root.DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel[message.supportLevel] : message.supportLevel;
+                    if (options.oneofs)
+                        object._supportLevel = "supportLevel";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this AiThread to JSON.
+             * @function toJSON
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            AiThread.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for AiThread
+             * @function getTypeUrl
+             * @memberof DeviceCapabilities.DeviceCapabilities.AiThread
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            AiThread.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/DeviceCapabilities.DeviceCapabilities.AiThread";
+            };
+
+            /**
+             * SupportLevel enum.
+             * @name DeviceCapabilities.DeviceCapabilities.AiThread.SupportLevel
+             * @enum {number}
+             * @property {number} NONE=0 NONE value
+             * @property {number} INFRA=1 INFRA value
+             * @property {number} FULL=2 FULL value
+             */
+            AiThread.SupportLevel = (function() {
+                var valuesById = {}, values = Object.create(valuesById);
+                values[valuesById[0] = "NONE"] = 0;
+                values[valuesById[1] = "INFRA"] = 1;
+                values[valuesById[2] = "FULL"] = 2;
+                return values;
+            })();
+
+            return AiThread;
+        })();
+
+        DeviceCapabilities.BusinessBroadcast = (function() {
+
+            /**
+             * Properties of a BusinessBroadcast.
+             * @memberof DeviceCapabilities.DeviceCapabilities
+             * @interface IBusinessBroadcast
+             * @property {boolean|null} [importListEnabled] BusinessBroadcast importListEnabled
+             */
+
+            /**
+             * Constructs a new BusinessBroadcast.
+             * @memberof DeviceCapabilities.DeviceCapabilities
+             * @classdesc Represents a BusinessBroadcast.
+             * @implements IBusinessBroadcast
+             * @constructor
+             * @param {DeviceCapabilities.DeviceCapabilities.IBusinessBroadcast=} [properties] Properties to set
+             */
+            function BusinessBroadcast(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * BusinessBroadcast importListEnabled.
+             * @member {boolean|null|undefined} importListEnabled
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @instance
+             */
+            BusinessBroadcast.prototype.importListEnabled = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * BusinessBroadcast _importListEnabled.
+             * @member {"importListEnabled"|undefined} _importListEnabled
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @instance
+             */
+            Object.defineProperty(BusinessBroadcast.prototype, "_importListEnabled", {
+                get: $util.oneOfGetter($oneOfFields = ["importListEnabled"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new BusinessBroadcast instance using the specified properties.
+             * @function create
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IBusinessBroadcast=} [properties] Properties to set
+             * @returns {DeviceCapabilities.DeviceCapabilities.BusinessBroadcast} BusinessBroadcast instance
+             */
+            BusinessBroadcast.create = function create(properties) {
+                return new BusinessBroadcast(properties);
+            };
+
+            /**
+             * Encodes the specified BusinessBroadcast message. Does not implicitly {@link DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.verify|verify} messages.
+             * @function encode
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IBusinessBroadcast} message BusinessBroadcast message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            BusinessBroadcast.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.importListEnabled != null && Object.hasOwnProperty.call(message, "importListEnabled"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).bool(message.importListEnabled);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified BusinessBroadcast message, length delimited. Does not implicitly {@link DeviceCapabilities.DeviceCapabilities.BusinessBroadcast.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IBusinessBroadcast} message BusinessBroadcast message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            BusinessBroadcast.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a BusinessBroadcast message from the specified reader or buffer.
+             * @function decode
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {DeviceCapabilities.DeviceCapabilities.BusinessBroadcast} BusinessBroadcast
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            BusinessBroadcast.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.importListEnabled = reader.bool();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a BusinessBroadcast message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {DeviceCapabilities.DeviceCapabilities.BusinessBroadcast} BusinessBroadcast
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            BusinessBroadcast.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a BusinessBroadcast message.
+             * @function verify
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            BusinessBroadcast.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.importListEnabled != null && message.hasOwnProperty("importListEnabled")) {
+                    properties._importListEnabled = 1;
+                    if (typeof message.importListEnabled !== "boolean")
+                        return "importListEnabled: boolean expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a BusinessBroadcast message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {DeviceCapabilities.DeviceCapabilities.BusinessBroadcast} BusinessBroadcast
+             */
+            BusinessBroadcast.fromObject = function fromObject(object) {
+                if (object instanceof $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast)
+                    return object;
+                var message = new $root.DeviceCapabilities.DeviceCapabilities.BusinessBroadcast();
+                if (object.importListEnabled != null)
+                    message.importListEnabled = Boolean(object.importListEnabled);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a BusinessBroadcast message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.BusinessBroadcast} message BusinessBroadcast
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            BusinessBroadcast.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.importListEnabled != null && message.hasOwnProperty("importListEnabled")) {
+                    object.importListEnabled = message.importListEnabled;
+                    if (options.oneofs)
+                        object._importListEnabled = "importListEnabled";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this BusinessBroadcast to JSON.
+             * @function toJSON
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            BusinessBroadcast.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for BusinessBroadcast
+             * @function getTypeUrl
+             * @memberof DeviceCapabilities.DeviceCapabilities.BusinessBroadcast
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            BusinessBroadcast.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/DeviceCapabilities.DeviceCapabilities.BusinessBroadcast";
+            };
+
+            return BusinessBroadcast;
+        })();
 
         /**
          * ChatLockSupportLevel enum.
@@ -21179,11 +28906,25 @@ $root.DeviceCapabilities = (function() {
 
             /**
              * LIDMigration chatDbMigrationTimestamp.
-             * @member {number|Long} chatDbMigrationTimestamp
+             * @member {number|Long|null|undefined} chatDbMigrationTimestamp
              * @memberof DeviceCapabilities.DeviceCapabilities.LIDMigration
              * @instance
              */
-            LIDMigration.prototype.chatDbMigrationTimestamp = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+            LIDMigration.prototype.chatDbMigrationTimestamp = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * LIDMigration _chatDbMigrationTimestamp.
+             * @member {"chatDbMigrationTimestamp"|undefined} _chatDbMigrationTimestamp
+             * @memberof DeviceCapabilities.DeviceCapabilities.LIDMigration
+             * @instance
+             */
+            Object.defineProperty(LIDMigration.prototype, "_chatDbMigrationTimestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["chatDbMigrationTimestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
 
             /**
              * Creates a new LIDMigration instance using the specified properties.
@@ -21286,9 +29027,12 @@ $root.DeviceCapabilities = (function() {
             LIDMigration.verify = function verify(message) {
                 if (typeof message !== "object" || message === null)
                     return "object expected";
-                if (message.chatDbMigrationTimestamp != null && message.hasOwnProperty("chatDbMigrationTimestamp"))
+                var properties = {};
+                if (message.chatDbMigrationTimestamp != null && message.hasOwnProperty("chatDbMigrationTimestamp")) {
+                    properties._chatDbMigrationTimestamp = 1;
                     if (!$util.isInteger(message.chatDbMigrationTimestamp) && !(message.chatDbMigrationTimestamp && $util.isInteger(message.chatDbMigrationTimestamp.low) && $util.isInteger(message.chatDbMigrationTimestamp.high)))
                         return "chatDbMigrationTimestamp: integer|Long expected";
+                }
                 return null;
             };
 
@@ -21329,17 +29073,14 @@ $root.DeviceCapabilities = (function() {
                 if (!options)
                     options = {};
                 var object = {};
-                if (options.defaults)
-                    if ($util.Long) {
-                        var long = new $util.Long(0, 0, true);
-                        object.chatDbMigrationTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                    } else
-                        object.chatDbMigrationTimestamp = options.longs === String ? "0" : 0;
-                if (message.chatDbMigrationTimestamp != null && message.hasOwnProperty("chatDbMigrationTimestamp"))
+                if (message.chatDbMigrationTimestamp != null && message.hasOwnProperty("chatDbMigrationTimestamp")) {
                     if (typeof message.chatDbMigrationTimestamp === "number")
                         object.chatDbMigrationTimestamp = options.longs === String ? String(message.chatDbMigrationTimestamp) : message.chatDbMigrationTimestamp;
                     else
                         object.chatDbMigrationTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.chatDbMigrationTimestamp) : options.longs === Number ? new $util.LongBits(message.chatDbMigrationTimestamp.low >>> 0, message.chatDbMigrationTimestamp.high >>> 0).toNumber(true) : message.chatDbMigrationTimestamp;
+                    if (options.oneofs)
+                        object._chatDbMigrationTimestamp = "chatDbMigrationTimestamp";
+                }
                 return object;
             };
 
@@ -21370,6 +29111,245 @@ $root.DeviceCapabilities = (function() {
             };
 
             return LIDMigration;
+        })();
+
+        /**
+         * MemberNameTagPrimarySupport enum.
+         * @name DeviceCapabilities.DeviceCapabilities.MemberNameTagPrimarySupport
+         * @enum {number}
+         * @property {number} DISABLED=0 DISABLED value
+         * @property {number} RECEIVER_ENABLED=1 RECEIVER_ENABLED value
+         * @property {number} SENDER_ENABLED=2 SENDER_ENABLED value
+         */
+        DeviceCapabilities.MemberNameTagPrimarySupport = (function() {
+            var valuesById = {}, values = Object.create(valuesById);
+            values[valuesById[0] = "DISABLED"] = 0;
+            values[valuesById[1] = "RECEIVER_ENABLED"] = 1;
+            values[valuesById[2] = "SENDER_ENABLED"] = 2;
+            return values;
+        })();
+
+        DeviceCapabilities.UserHasAvatar = (function() {
+
+            /**
+             * Properties of a UserHasAvatar.
+             * @memberof DeviceCapabilities.DeviceCapabilities
+             * @interface IUserHasAvatar
+             * @property {boolean|null} [userHasAvatar] UserHasAvatar userHasAvatar
+             */
+
+            /**
+             * Constructs a new UserHasAvatar.
+             * @memberof DeviceCapabilities.DeviceCapabilities
+             * @classdesc Represents a UserHasAvatar.
+             * @implements IUserHasAvatar
+             * @constructor
+             * @param {DeviceCapabilities.DeviceCapabilities.IUserHasAvatar=} [properties] Properties to set
+             */
+            function UserHasAvatar(properties) {
+                if (properties)
+                    for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                        if (properties[keys[i]] != null)
+                            this[keys[i]] = properties[keys[i]];
+            }
+
+            /**
+             * UserHasAvatar userHasAvatar.
+             * @member {boolean|null|undefined} userHasAvatar
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @instance
+             */
+            UserHasAvatar.prototype.userHasAvatar = null;
+
+            // OneOf field names bound to virtual getters and setters
+            var $oneOfFields;
+
+            /**
+             * UserHasAvatar _userHasAvatar.
+             * @member {"userHasAvatar"|undefined} _userHasAvatar
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @instance
+             */
+            Object.defineProperty(UserHasAvatar.prototype, "_userHasAvatar", {
+                get: $util.oneOfGetter($oneOfFields = ["userHasAvatar"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * Creates a new UserHasAvatar instance using the specified properties.
+             * @function create
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IUserHasAvatar=} [properties] Properties to set
+             * @returns {DeviceCapabilities.DeviceCapabilities.UserHasAvatar} UserHasAvatar instance
+             */
+            UserHasAvatar.create = function create(properties) {
+                return new UserHasAvatar(properties);
+            };
+
+            /**
+             * Encodes the specified UserHasAvatar message. Does not implicitly {@link DeviceCapabilities.DeviceCapabilities.UserHasAvatar.verify|verify} messages.
+             * @function encode
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IUserHasAvatar} message UserHasAvatar message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            UserHasAvatar.encode = function encode(message, writer) {
+                if (!writer)
+                    writer = $Writer.create();
+                if (message.userHasAvatar != null && Object.hasOwnProperty.call(message, "userHasAvatar"))
+                    writer.uint32(/* id 1, wireType 0 =*/8).bool(message.userHasAvatar);
+                return writer;
+            };
+
+            /**
+             * Encodes the specified UserHasAvatar message, length delimited. Does not implicitly {@link DeviceCapabilities.DeviceCapabilities.UserHasAvatar.verify|verify} messages.
+             * @function encodeDelimited
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.IUserHasAvatar} message UserHasAvatar message or plain object to encode
+             * @param {$protobuf.Writer} [writer] Writer to encode to
+             * @returns {$protobuf.Writer} Writer
+             */
+            UserHasAvatar.encodeDelimited = function encodeDelimited(message, writer) {
+                return this.encode(message, writer).ldelim();
+            };
+
+            /**
+             * Decodes a UserHasAvatar message from the specified reader or buffer.
+             * @function decode
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @param {number} [length] Message length if known beforehand
+             * @returns {DeviceCapabilities.DeviceCapabilities.UserHasAvatar} UserHasAvatar
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            UserHasAvatar.decode = function decode(reader, length, error) {
+                if (!(reader instanceof $Reader))
+                    reader = $Reader.create(reader);
+                var end = length === undefined ? reader.len : reader.pos + length, message = new $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar();
+                while (reader.pos < end) {
+                    var tag = reader.uint32();
+                    if (tag === error)
+                        break;
+                    switch (tag >>> 3) {
+                    case 1: {
+                            message.userHasAvatar = reader.bool();
+                            break;
+                        }
+                    default:
+                        reader.skipType(tag & 7);
+                        break;
+                    }
+                }
+                return message;
+            };
+
+            /**
+             * Decodes a UserHasAvatar message from the specified reader or buffer, length delimited.
+             * @function decodeDelimited
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+             * @returns {DeviceCapabilities.DeviceCapabilities.UserHasAvatar} UserHasAvatar
+             * @throws {Error} If the payload is not a reader or valid buffer
+             * @throws {$protobuf.util.ProtocolError} If required fields are missing
+             */
+            UserHasAvatar.decodeDelimited = function decodeDelimited(reader) {
+                if (!(reader instanceof $Reader))
+                    reader = new $Reader(reader);
+                return this.decode(reader, reader.uint32());
+            };
+
+            /**
+             * Verifies a UserHasAvatar message.
+             * @function verify
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {Object.<string,*>} message Plain object to verify
+             * @returns {string|null} `null` if valid, otherwise the reason why it is not
+             */
+            UserHasAvatar.verify = function verify(message) {
+                if (typeof message !== "object" || message === null)
+                    return "object expected";
+                var properties = {};
+                if (message.userHasAvatar != null && message.hasOwnProperty("userHasAvatar")) {
+                    properties._userHasAvatar = 1;
+                    if (typeof message.userHasAvatar !== "boolean")
+                        return "userHasAvatar: boolean expected";
+                }
+                return null;
+            };
+
+            /**
+             * Creates a UserHasAvatar message from a plain object. Also converts values to their respective internal types.
+             * @function fromObject
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {Object.<string,*>} object Plain object
+             * @returns {DeviceCapabilities.DeviceCapabilities.UserHasAvatar} UserHasAvatar
+             */
+            UserHasAvatar.fromObject = function fromObject(object) {
+                if (object instanceof $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar)
+                    return object;
+                var message = new $root.DeviceCapabilities.DeviceCapabilities.UserHasAvatar();
+                if (object.userHasAvatar != null)
+                    message.userHasAvatar = Boolean(object.userHasAvatar);
+                return message;
+            };
+
+            /**
+             * Creates a plain object from a UserHasAvatar message. Also converts values to other types if specified.
+             * @function toObject
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {DeviceCapabilities.DeviceCapabilities.UserHasAvatar} message UserHasAvatar
+             * @param {$protobuf.IConversionOptions} [options] Conversion options
+             * @returns {Object.<string,*>} Plain object
+             */
+            UserHasAvatar.toObject = function toObject(message, options) {
+                if (!options)
+                    options = {};
+                var object = {};
+                if (message.userHasAvatar != null && message.hasOwnProperty("userHasAvatar")) {
+                    object.userHasAvatar = message.userHasAvatar;
+                    if (options.oneofs)
+                        object._userHasAvatar = "userHasAvatar";
+                }
+                return object;
+            };
+
+            /**
+             * Converts this UserHasAvatar to JSON.
+             * @function toJSON
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @instance
+             * @returns {Object.<string,*>} JSON object
+             */
+            UserHasAvatar.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            /**
+             * Gets the default type url for UserHasAvatar
+             * @function getTypeUrl
+             * @memberof DeviceCapabilities.DeviceCapabilities.UserHasAvatar
+             * @static
+             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+             * @returns {string} The default type url
+             */
+            UserHasAvatar.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/DeviceCapabilities.DeviceCapabilities.UserHasAvatar";
+            };
+
+            return UserHasAvatar;
         })();
 
         return DeviceCapabilities;
@@ -21416,35 +29396,82 @@ $root.Protocol = (function() {
 
         /**
          * LimitSharing sharingLimited.
-         * @member {boolean} sharingLimited
+         * @member {boolean|null|undefined} sharingLimited
          * @memberof Protocol.LimitSharing
          * @instance
          */
-        LimitSharing.prototype.sharingLimited = false;
+        LimitSharing.prototype.sharingLimited = null;
 
         /**
          * LimitSharing trigger.
-         * @member {Protocol.LimitSharing.TriggerType} trigger
+         * @member {Protocol.LimitSharing.TriggerType|null|undefined} trigger
          * @memberof Protocol.LimitSharing
          * @instance
          */
-        LimitSharing.prototype.trigger = 0;
+        LimitSharing.prototype.trigger = null;
 
         /**
          * LimitSharing limitSharingSettingTimestamp.
-         * @member {number|Long} limitSharingSettingTimestamp
+         * @member {number|Long|null|undefined} limitSharingSettingTimestamp
          * @memberof Protocol.LimitSharing
          * @instance
          */
-        LimitSharing.prototype.limitSharingSettingTimestamp = $util.Long ? $util.Long.fromBits(0,0,false) : 0;
+        LimitSharing.prototype.limitSharingSettingTimestamp = null;
 
         /**
          * LimitSharing initiatedByMe.
-         * @member {boolean} initiatedByMe
+         * @member {boolean|null|undefined} initiatedByMe
          * @memberof Protocol.LimitSharing
          * @instance
          */
-        LimitSharing.prototype.initiatedByMe = false;
+        LimitSharing.prototype.initiatedByMe = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * LimitSharing _sharingLimited.
+         * @member {"sharingLimited"|undefined} _sharingLimited
+         * @memberof Protocol.LimitSharing
+         * @instance
+         */
+        Object.defineProperty(LimitSharing.prototype, "_sharingLimited", {
+            get: $util.oneOfGetter($oneOfFields = ["sharingLimited"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * LimitSharing _trigger.
+         * @member {"trigger"|undefined} _trigger
+         * @memberof Protocol.LimitSharing
+         * @instance
+         */
+        Object.defineProperty(LimitSharing.prototype, "_trigger", {
+            get: $util.oneOfGetter($oneOfFields = ["trigger"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * LimitSharing _limitSharingSettingTimestamp.
+         * @member {"limitSharingSettingTimestamp"|undefined} _limitSharingSettingTimestamp
+         * @memberof Protocol.LimitSharing
+         * @instance
+         */
+        Object.defineProperty(LimitSharing.prototype, "_limitSharingSettingTimestamp", {
+            get: $util.oneOfGetter($oneOfFields = ["limitSharingSettingTimestamp"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * LimitSharing _initiatedByMe.
+         * @member {"initiatedByMe"|undefined} _initiatedByMe
+         * @memberof Protocol.LimitSharing
+         * @instance
+         */
+        Object.defineProperty(LimitSharing.prototype, "_initiatedByMe", {
+            get: $util.oneOfGetter($oneOfFields = ["initiatedByMe"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new LimitSharing instance using the specified properties.
@@ -21565,10 +29592,14 @@ $root.Protocol = (function() {
         LimitSharing.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.sharingLimited != null && message.hasOwnProperty("sharingLimited"))
+            var properties = {};
+            if (message.sharingLimited != null && message.hasOwnProperty("sharingLimited")) {
+                properties._sharingLimited = 1;
                 if (typeof message.sharingLimited !== "boolean")
                     return "sharingLimited: boolean expected";
-            if (message.trigger != null && message.hasOwnProperty("trigger"))
+            }
+            if (message.trigger != null && message.hasOwnProperty("trigger")) {
+                properties._trigger = 1;
                 switch (message.trigger) {
                 default:
                     return "trigger: enum value expected";
@@ -21578,12 +29609,17 @@ $root.Protocol = (function() {
                 case 3:
                     break;
                 }
-            if (message.limitSharingSettingTimestamp != null && message.hasOwnProperty("limitSharingSettingTimestamp"))
+            }
+            if (message.limitSharingSettingTimestamp != null && message.hasOwnProperty("limitSharingSettingTimestamp")) {
+                properties._limitSharingSettingTimestamp = 1;
                 if (!$util.isInteger(message.limitSharingSettingTimestamp) && !(message.limitSharingSettingTimestamp && $util.isInteger(message.limitSharingSettingTimestamp.low) && $util.isInteger(message.limitSharingSettingTimestamp.high)))
                     return "limitSharingSettingTimestamp: integer|Long expected";
-            if (message.initiatedByMe != null && message.hasOwnProperty("initiatedByMe"))
+            }
+            if (message.initiatedByMe != null && message.hasOwnProperty("initiatedByMe")) {
+                properties._initiatedByMe = 1;
                 if (typeof message.initiatedByMe !== "boolean")
                     return "initiatedByMe: boolean expected";
+            }
             return null;
         };
 
@@ -21652,27 +29688,29 @@ $root.Protocol = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.sharingLimited = false;
-                object.trigger = options.enums === String ? "UNKNOWN" : 0;
-                if ($util.Long) {
-                    var long = new $util.Long(0, 0, false);
-                    object.limitSharingSettingTimestamp = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
-                } else
-                    object.limitSharingSettingTimestamp = options.longs === String ? "0" : 0;
-                object.initiatedByMe = false;
-            }
-            if (message.sharingLimited != null && message.hasOwnProperty("sharingLimited"))
+            if (message.sharingLimited != null && message.hasOwnProperty("sharingLimited")) {
                 object.sharingLimited = message.sharingLimited;
-            if (message.trigger != null && message.hasOwnProperty("trigger"))
+                if (options.oneofs)
+                    object._sharingLimited = "sharingLimited";
+            }
+            if (message.trigger != null && message.hasOwnProperty("trigger")) {
                 object.trigger = options.enums === String ? $root.Protocol.LimitSharing.TriggerType[message.trigger] === undefined ? message.trigger : $root.Protocol.LimitSharing.TriggerType[message.trigger] : message.trigger;
-            if (message.limitSharingSettingTimestamp != null && message.hasOwnProperty("limitSharingSettingTimestamp"))
+                if (options.oneofs)
+                    object._trigger = "trigger";
+            }
+            if (message.limitSharingSettingTimestamp != null && message.hasOwnProperty("limitSharingSettingTimestamp")) {
                 if (typeof message.limitSharingSettingTimestamp === "number")
                     object.limitSharingSettingTimestamp = options.longs === String ? String(message.limitSharingSettingTimestamp) : message.limitSharingSettingTimestamp;
                 else
                     object.limitSharingSettingTimestamp = options.longs === String ? $util.Long.prototype.toString.call(message.limitSharingSettingTimestamp) : options.longs === Number ? new $util.LongBits(message.limitSharingSettingTimestamp.low >>> 0, message.limitSharingSettingTimestamp.high >>> 0).toNumber() : message.limitSharingSettingTimestamp;
-            if (message.initiatedByMe != null && message.hasOwnProperty("initiatedByMe"))
+                if (options.oneofs)
+                    object._limitSharingSettingTimestamp = "limitSharingSettingTimestamp";
+            }
+            if (message.initiatedByMe != null && message.hasOwnProperty("initiatedByMe")) {
                 object.initiatedByMe = message.initiatedByMe;
+                if (options.oneofs)
+                    object._initiatedByMe = "initiatedByMe";
+            }
             return object;
         };
 
@@ -21752,35 +29790,82 @@ $root.Protocol = (function() {
 
         /**
          * MessageKey remoteJid.
-         * @member {string} remoteJid
+         * @member {string|null|undefined} remoteJid
          * @memberof Protocol.MessageKey
          * @instance
          */
-        MessageKey.prototype.remoteJid = "";
+        MessageKey.prototype.remoteJid = null;
 
         /**
          * MessageKey fromMe.
-         * @member {boolean} fromMe
+         * @member {boolean|null|undefined} fromMe
          * @memberof Protocol.MessageKey
          * @instance
          */
-        MessageKey.prototype.fromMe = false;
+        MessageKey.prototype.fromMe = null;
 
         /**
          * MessageKey id.
-         * @member {string} id
+         * @member {string|null|undefined} id
          * @memberof Protocol.MessageKey
          * @instance
          */
-        MessageKey.prototype.id = "";
+        MessageKey.prototype.id = null;
 
         /**
          * MessageKey participant.
-         * @member {string} participant
+         * @member {string|null|undefined} participant
          * @memberof Protocol.MessageKey
          * @instance
          */
-        MessageKey.prototype.participant = "";
+        MessageKey.prototype.participant = null;
+
+        // OneOf field names bound to virtual getters and setters
+        var $oneOfFields;
+
+        /**
+         * MessageKey _remoteJid.
+         * @member {"remoteJid"|undefined} _remoteJid
+         * @memberof Protocol.MessageKey
+         * @instance
+         */
+        Object.defineProperty(MessageKey.prototype, "_remoteJid", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteJid"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * MessageKey _fromMe.
+         * @member {"fromMe"|undefined} _fromMe
+         * @memberof Protocol.MessageKey
+         * @instance
+         */
+        Object.defineProperty(MessageKey.prototype, "_fromMe", {
+            get: $util.oneOfGetter($oneOfFields = ["fromMe"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * MessageKey _id.
+         * @member {"id"|undefined} _id
+         * @memberof Protocol.MessageKey
+         * @instance
+         */
+        Object.defineProperty(MessageKey.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * MessageKey _participant.
+         * @member {"participant"|undefined} _participant
+         * @memberof Protocol.MessageKey
+         * @instance
+         */
+        Object.defineProperty(MessageKey.prototype, "_participant", {
+            get: $util.oneOfGetter($oneOfFields = ["participant"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
 
         /**
          * Creates a new MessageKey instance using the specified properties.
@@ -21901,18 +29986,27 @@ $root.Protocol = (function() {
         MessageKey.verify = function verify(message) {
             if (typeof message !== "object" || message === null)
                 return "object expected";
-            if (message.remoteJid != null && message.hasOwnProperty("remoteJid"))
+            var properties = {};
+            if (message.remoteJid != null && message.hasOwnProperty("remoteJid")) {
+                properties._remoteJid = 1;
                 if (!$util.isString(message.remoteJid))
                     return "remoteJid: string expected";
-            if (message.fromMe != null && message.hasOwnProperty("fromMe"))
+            }
+            if (message.fromMe != null && message.hasOwnProperty("fromMe")) {
+                properties._fromMe = 1;
                 if (typeof message.fromMe !== "boolean")
                     return "fromMe: boolean expected";
-            if (message.id != null && message.hasOwnProperty("id"))
+            }
+            if (message.id != null && message.hasOwnProperty("id")) {
+                properties._id = 1;
                 if (!$util.isString(message.id))
                     return "id: string expected";
-            if (message.participant != null && message.hasOwnProperty("participant"))
+            }
+            if (message.participant != null && message.hasOwnProperty("participant")) {
+                properties._participant = 1;
                 if (!$util.isString(message.participant))
                     return "participant: string expected";
+            }
             return null;
         };
 
@@ -21952,20 +30046,26 @@ $root.Protocol = (function() {
             if (!options)
                 options = {};
             var object = {};
-            if (options.defaults) {
-                object.remoteJid = "";
-                object.fromMe = false;
-                object.id = "";
-                object.participant = "";
-            }
-            if (message.remoteJid != null && message.hasOwnProperty("remoteJid"))
+            if (message.remoteJid != null && message.hasOwnProperty("remoteJid")) {
                 object.remoteJid = message.remoteJid;
-            if (message.fromMe != null && message.hasOwnProperty("fromMe"))
+                if (options.oneofs)
+                    object._remoteJid = "remoteJid";
+            }
+            if (message.fromMe != null && message.hasOwnProperty("fromMe")) {
                 object.fromMe = message.fromMe;
-            if (message.id != null && message.hasOwnProperty("id"))
+                if (options.oneofs)
+                    object._fromMe = "fromMe";
+            }
+            if (message.id != null && message.hasOwnProperty("id")) {
                 object.id = message.id;
-            if (message.participant != null && message.hasOwnProperty("participant"))
+                if (options.oneofs)
+                    object._id = "id";
+            }
+            if (message.participant != null && message.hasOwnProperty("participant")) {
                 object.participant = message.participant;
+                if (options.oneofs)
+                    object._participant = "participant";
+            }
             return object;
         };
 

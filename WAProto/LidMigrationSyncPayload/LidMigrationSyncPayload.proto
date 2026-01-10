@@ -7,7 +7,7 @@ message LIDMigrationMappingSyncPayload {
 }
 
 message LIDMigrationMapping {
-    required uint64 pn = 1;
-    required uint64 assignedLid = 2;
+    optional uint64 pn = 1;
+    optional uint64 assignedLid = 2;
     optional uint64 latestLid = 3;
 }

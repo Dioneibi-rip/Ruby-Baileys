@@ -54,6 +54,10 @@ $root.Wa6 = (function() {
          * @property {Wa6.ClientPayload.TrafficAnonymization|null} [trafficAnonymization] ClientPayload trafficAnonymization
          * @property {boolean|null} [lidDbMigrated] ClientPayload lidDbMigrated
          * @property {Wa6.ClientPayload.AccountType|null} [accountType] ClientPayload accountType
+         * @property {number|null} [connectionSequenceInfo] ClientPayload connectionSequenceInfo
+         * @property {boolean|null} [paaLink] ClientPayload paaLink
+         * @property {number|null} [preacksCount] ClientPayload preacksCount
+         * @property {number|null} [processingQueueSize] ClientPayload processingQueueSize
          */
 
         /**
@@ -311,6 +315,38 @@ $root.Wa6 = (function() {
          * @instance
          */
         ClientPayload.prototype.accountType = null;
+
+        /**
+         * ClientPayload connectionSequenceInfo.
+         * @member {number|null|undefined} connectionSequenceInfo
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        ClientPayload.prototype.connectionSequenceInfo = null;
+
+        /**
+         * ClientPayload paaLink.
+         * @member {boolean|null|undefined} paaLink
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        ClientPayload.prototype.paaLink = null;
+
+        /**
+         * ClientPayload preacksCount.
+         * @member {number|null|undefined} preacksCount
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        ClientPayload.prototype.preacksCount = null;
+
+        /**
+         * ClientPayload processingQueueSize.
+         * @member {number|null|undefined} processingQueueSize
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        ClientPayload.prototype.processingQueueSize = null;
 
         // OneOf field names bound to virtual getters and setters
         var $oneOfFields;
@@ -635,6 +671,50 @@ $root.Wa6 = (function() {
         });
 
         /**
+         * ClientPayload _connectionSequenceInfo.
+         * @member {"connectionSequenceInfo"|undefined} _connectionSequenceInfo
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        Object.defineProperty(ClientPayload.prototype, "_connectionSequenceInfo", {
+            get: $util.oneOfGetter($oneOfFields = ["connectionSequenceInfo"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * ClientPayload _paaLink.
+         * @member {"paaLink"|undefined} _paaLink
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        Object.defineProperty(ClientPayload.prototype, "_paaLink", {
+            get: $util.oneOfGetter($oneOfFields = ["paaLink"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * ClientPayload _preacksCount.
+         * @member {"preacksCount"|undefined} _preacksCount
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        Object.defineProperty(ClientPayload.prototype, "_preacksCount", {
+            get: $util.oneOfGetter($oneOfFields = ["preacksCount"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
+         * ClientPayload _processingQueueSize.
+         * @member {"processingQueueSize"|undefined} _processingQueueSize
+         * @memberof Wa6.ClientPayload
+         * @instance
+         */
+        Object.defineProperty(ClientPayload.prototype, "_processingQueueSize", {
+            get: $util.oneOfGetter($oneOfFields = ["processingQueueSize"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        /**
          * Creates a new ClientPayload instance using the specified properties.
          * @function create
          * @memberof Wa6.ClientPayload
@@ -722,6 +802,14 @@ $root.Wa6 = (function() {
                 writer.uint32(/* id 41, wireType 0 =*/328).bool(message.lidDbMigrated);
             if (message.accountType != null && Object.hasOwnProperty.call(message, "accountType"))
                 writer.uint32(/* id 42, wireType 0 =*/336).int32(message.accountType);
+            if (message.connectionSequenceInfo != null && Object.hasOwnProperty.call(message, "connectionSequenceInfo"))
+                writer.uint32(/* id 43, wireType 5 =*/349).sfixed32(message.connectionSequenceInfo);
+            if (message.paaLink != null && Object.hasOwnProperty.call(message, "paaLink"))
+                writer.uint32(/* id 44, wireType 0 =*/352).bool(message.paaLink);
+            if (message.preacksCount != null && Object.hasOwnProperty.call(message, "preacksCount"))
+                writer.uint32(/* id 45, wireType 0 =*/360).int32(message.preacksCount);
+            if (message.processingQueueSize != null && Object.hasOwnProperty.call(message, "processingQueueSize"))
+                writer.uint32(/* id 46, wireType 0 =*/368).int32(message.processingQueueSize);
             return writer;
         };
 
@@ -883,6 +971,22 @@ $root.Wa6 = (function() {
                     }
                 case 42: {
                         message.accountType = reader.int32();
+                        break;
+                    }
+                case 43: {
+                        message.connectionSequenceInfo = reader.sfixed32();
+                        break;
+                    }
+                case 44: {
+                        message.paaLink = reader.bool();
+                        break;
+                    }
+                case 45: {
+                        message.preacksCount = reader.int32();
+                        break;
+                    }
+                case 46: {
+                        message.processingQueueSize = reader.int32();
                         break;
                     }
                 default:
@@ -1139,6 +1243,26 @@ $root.Wa6 = (function() {
                 case 1:
                     break;
                 }
+            }
+            if (message.connectionSequenceInfo != null && message.hasOwnProperty("connectionSequenceInfo")) {
+                properties._connectionSequenceInfo = 1;
+                if (!$util.isInteger(message.connectionSequenceInfo))
+                    return "connectionSequenceInfo: integer expected";
+            }
+            if (message.paaLink != null && message.hasOwnProperty("paaLink")) {
+                properties._paaLink = 1;
+                if (typeof message.paaLink !== "boolean")
+                    return "paaLink: boolean expected";
+            }
+            if (message.preacksCount != null && message.hasOwnProperty("preacksCount")) {
+                properties._preacksCount = 1;
+                if (!$util.isInteger(message.preacksCount))
+                    return "preacksCount: integer expected";
+            }
+            if (message.processingQueueSize != null && message.hasOwnProperty("processingQueueSize")) {
+                properties._processingQueueSize = 1;
+                if (!$util.isInteger(message.processingQueueSize))
+                    return "processingQueueSize: integer expected";
             }
             return null;
         };
@@ -1433,6 +1557,14 @@ $root.Wa6 = (function() {
                 message.accountType = 1;
                 break;
             }
+            if (object.connectionSequenceInfo != null)
+                message.connectionSequenceInfo = object.connectionSequenceInfo | 0;
+            if (object.paaLink != null)
+                message.paaLink = Boolean(object.paaLink);
+            if (object.preacksCount != null)
+                message.preacksCount = object.preacksCount | 0;
+            if (object.processingQueueSize != null)
+                message.processingQueueSize = object.processingQueueSize | 0;
             return message;
         };
 
@@ -1606,6 +1738,26 @@ $root.Wa6 = (function() {
                 object.accountType = options.enums === String ? $root.Wa6.ClientPayload.AccountType[message.accountType] === undefined ? message.accountType : $root.Wa6.ClientPayload.AccountType[message.accountType] : message.accountType;
                 if (options.oneofs)
                     object._accountType = "accountType";
+            }
+            if (message.connectionSequenceInfo != null && message.hasOwnProperty("connectionSequenceInfo")) {
+                object.connectionSequenceInfo = message.connectionSequenceInfo;
+                if (options.oneofs)
+                    object._connectionSequenceInfo = "connectionSequenceInfo";
+            }
+            if (message.paaLink != null && message.hasOwnProperty("paaLink")) {
+                object.paaLink = message.paaLink;
+                if (options.oneofs)
+                    object._paaLink = "paaLink";
+            }
+            if (message.preacksCount != null && message.hasOwnProperty("preacksCount")) {
+                object.preacksCount = message.preacksCount;
+                if (options.oneofs)
+                    object._preacksCount = "preacksCount";
+            }
+            if (message.processingQueueSize != null && message.hasOwnProperty("processingQueueSize")) {
+                object.processingQueueSize = message.processingQueueSize;
+                if (options.oneofs)
+                    object._processingQueueSize = "processingQueueSize";
             }
             return object;
         };
@@ -3491,6 +3643,7 @@ $root.Wa6 = (function() {
                     case 34:
                     case 35:
                     case 36:
+                    case 37:
                         break;
                     }
                 }
@@ -3756,6 +3909,10 @@ $root.Wa6 = (function() {
                 case "BLUE_VR":
                 case 36:
                     message.platform = 36;
+                    break;
+                case "AR_WRIST":
+                case 37:
+                    message.platform = 37;
                     break;
                 }
                 if (object.appVersion != null) {
@@ -4400,6 +4557,7 @@ $root.Wa6 = (function() {
              * @property {number} TEST=34 TEST value
              * @property {number} SMART_GLASSES=35 SMART_GLASSES value
              * @property {number} BLUE_VR=36 BLUE_VR value
+             * @property {number} AR_WRIST=37 AR_WRIST value
              */
             UserAgent.Platform = (function() {
                 var valuesById = {}, values = Object.create(valuesById);
@@ -4440,6 +4598,7 @@ $root.Wa6 = (function() {
                 values[valuesById[34] = "TEST"] = 34;
                 values[valuesById[35] = "SMART_GLASSES"] = 35;
                 values[valuesById[36] = "BLUE_VR"] = 36;
+                values[valuesById[37] = "AR_WRIST"] = 37;
                 return values;
             })();
 
@@ -5799,6 +5958,7 @@ $root.Wa6 = (function() {
              * @interface IClientFinish
              * @property {Uint8Array|null} ["static"] ClientFinish static
              * @property {Uint8Array|null} [payload] ClientFinish payload
+             * @property {Uint8Array|null} [extendedCiphertext] ClientFinish extendedCiphertext
              */
 
             /**
@@ -5832,6 +5992,14 @@ $root.Wa6 = (function() {
              */
             ClientFinish.prototype.payload = null;
 
+            /**
+             * ClientFinish extendedCiphertext.
+             * @member {Uint8Array|null|undefined} extendedCiphertext
+             * @memberof Wa6.HandshakeMessage.ClientFinish
+             * @instance
+             */
+            ClientFinish.prototype.extendedCiphertext = null;
+
             // OneOf field names bound to virtual getters and setters
             var $oneOfFields;
 
@@ -5854,6 +6022,17 @@ $root.Wa6 = (function() {
              */
             Object.defineProperty(ClientFinish.prototype, "_payload", {
                 get: $util.oneOfGetter($oneOfFields = ["payload"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ClientFinish _extendedCiphertext.
+             * @member {"extendedCiphertext"|undefined} _extendedCiphertext
+             * @memberof Wa6.HandshakeMessage.ClientFinish
+             * @instance
+             */
+            Object.defineProperty(ClientFinish.prototype, "_extendedCiphertext", {
+                get: $util.oneOfGetter($oneOfFields = ["extendedCiphertext"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5885,6 +6064,8 @@ $root.Wa6 = (function() {
                     writer.uint32(/* id 1, wireType 2 =*/10).bytes(message["static"]);
                 if (message.payload != null && Object.hasOwnProperty.call(message, "payload"))
                     writer.uint32(/* id 2, wireType 2 =*/18).bytes(message.payload);
+                if (message.extendedCiphertext != null && Object.hasOwnProperty.call(message, "extendedCiphertext"))
+                    writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.extendedCiphertext);
                 return writer;
             };
 
@@ -5927,6 +6108,10 @@ $root.Wa6 = (function() {
                         }
                     case 2: {
                             message.payload = reader.bytes();
+                            break;
+                        }
+                    case 3: {
+                            message.extendedCiphertext = reader.bytes();
                             break;
                         }
                     default:
@@ -5975,6 +6160,11 @@ $root.Wa6 = (function() {
                     if (!(message.payload && typeof message.payload.length === "number" || $util.isString(message.payload)))
                         return "payload: buffer expected";
                 }
+                if (message.extendedCiphertext != null && message.hasOwnProperty("extendedCiphertext")) {
+                    properties._extendedCiphertext = 1;
+                    if (!(message.extendedCiphertext && typeof message.extendedCiphertext.length === "number" || $util.isString(message.extendedCiphertext)))
+                        return "extendedCiphertext: buffer expected";
+                }
                 return null;
             };
 
@@ -6000,6 +6190,11 @@ $root.Wa6 = (function() {
                         $util.base64.decode(object.payload, message.payload = $util.newBuffer($util.base64.length(object.payload)), 0);
                     else if (object.payload.length >= 0)
                         message.payload = object.payload;
+                if (object.extendedCiphertext != null)
+                    if (typeof object.extendedCiphertext === "string")
+                        $util.base64.decode(object.extendedCiphertext, message.extendedCiphertext = $util.newBuffer($util.base64.length(object.extendedCiphertext)), 0);
+                    else if (object.extendedCiphertext.length >= 0)
+                        message.extendedCiphertext = object.extendedCiphertext;
                 return message;
             };
 
@@ -6025,6 +6220,11 @@ $root.Wa6 = (function() {
                     object.payload = options.bytes === String ? $util.base64.encode(message.payload, 0, message.payload.length) : options.bytes === Array ? Array.prototype.slice.call(message.payload) : message.payload;
                     if (options.oneofs)
                         object._payload = "payload";
+                }
+                if (message.extendedCiphertext != null && message.hasOwnProperty("extendedCiphertext")) {
+                    object.extendedCiphertext = options.bytes === String ? $util.base64.encode(message.extendedCiphertext, 0, message.extendedCiphertext.length) : options.bytes === Array ? Array.prototype.slice.call(message.extendedCiphertext) : message.extendedCiphertext;
+                    if (options.oneofs)
+                        object._extendedCiphertext = "extendedCiphertext";
                 }
                 return object;
             };
@@ -6067,6 +6267,8 @@ $root.Wa6 = (function() {
              * @property {Uint8Array|null} [ephemeral] ClientHello ephemeral
              * @property {Uint8Array|null} ["static"] ClientHello static
              * @property {Uint8Array|null} [payload] ClientHello payload
+             * @property {boolean|null} [useExtended] ClientHello useExtended
+             * @property {Uint8Array|null} [extendedCiphertext] ClientHello extendedCiphertext
              */
 
             /**
@@ -6108,6 +6310,22 @@ $root.Wa6 = (function() {
              */
             ClientHello.prototype.payload = null;
 
+            /**
+             * ClientHello useExtended.
+             * @member {boolean|null|undefined} useExtended
+             * @memberof Wa6.HandshakeMessage.ClientHello
+             * @instance
+             */
+            ClientHello.prototype.useExtended = null;
+
+            /**
+             * ClientHello extendedCiphertext.
+             * @member {Uint8Array|null|undefined} extendedCiphertext
+             * @memberof Wa6.HandshakeMessage.ClientHello
+             * @instance
+             */
+            ClientHello.prototype.extendedCiphertext = null;
+
             // OneOf field names bound to virtual getters and setters
             var $oneOfFields;
 
@@ -6145,6 +6363,28 @@ $root.Wa6 = (function() {
             });
 
             /**
+             * ClientHello _useExtended.
+             * @member {"useExtended"|undefined} _useExtended
+             * @memberof Wa6.HandshakeMessage.ClientHello
+             * @instance
+             */
+            Object.defineProperty(ClientHello.prototype, "_useExtended", {
+                get: $util.oneOfGetter($oneOfFields = ["useExtended"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
+             * ClientHello _extendedCiphertext.
+             * @member {"extendedCiphertext"|undefined} _extendedCiphertext
+             * @memberof Wa6.HandshakeMessage.ClientHello
+             * @instance
+             */
+            Object.defineProperty(ClientHello.prototype, "_extendedCiphertext", {
+                get: $util.oneOfGetter($oneOfFields = ["extendedCiphertext"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
              * Creates a new ClientHello instance using the specified properties.
              * @function create
              * @memberof Wa6.HandshakeMessage.ClientHello
@@ -6174,6 +6414,10 @@ $root.Wa6 = (function() {
                     writer.uint32(/* id 2, wireType 2 =*/18).bytes(message["static"]);
                 if (message.payload != null && Object.hasOwnProperty.call(message, "payload"))
                     writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.payload);
+                if (message.useExtended != null && Object.hasOwnProperty.call(message, "useExtended"))
+                    writer.uint32(/* id 4, wireType 0 =*/32).bool(message.useExtended);
+                if (message.extendedCiphertext != null && Object.hasOwnProperty.call(message, "extendedCiphertext"))
+                    writer.uint32(/* id 5, wireType 2 =*/42).bytes(message.extendedCiphertext);
                 return writer;
             };
 
@@ -6220,6 +6464,14 @@ $root.Wa6 = (function() {
                         }
                     case 3: {
                             message.payload = reader.bytes();
+                            break;
+                        }
+                    case 4: {
+                            message.useExtended = reader.bool();
+                            break;
+                        }
+                    case 5: {
+                            message.extendedCiphertext = reader.bytes();
                             break;
                         }
                     default:
@@ -6273,6 +6525,16 @@ $root.Wa6 = (function() {
                     if (!(message.payload && typeof message.payload.length === "number" || $util.isString(message.payload)))
                         return "payload: buffer expected";
                 }
+                if (message.useExtended != null && message.hasOwnProperty("useExtended")) {
+                    properties._useExtended = 1;
+                    if (typeof message.useExtended !== "boolean")
+                        return "useExtended: boolean expected";
+                }
+                if (message.extendedCiphertext != null && message.hasOwnProperty("extendedCiphertext")) {
+                    properties._extendedCiphertext = 1;
+                    if (!(message.extendedCiphertext && typeof message.extendedCiphertext.length === "number" || $util.isString(message.extendedCiphertext)))
+                        return "extendedCiphertext: buffer expected";
+                }
                 return null;
             };
 
@@ -6303,6 +6565,13 @@ $root.Wa6 = (function() {
                         $util.base64.decode(object.payload, message.payload = $util.newBuffer($util.base64.length(object.payload)), 0);
                     else if (object.payload.length >= 0)
                         message.payload = object.payload;
+                if (object.useExtended != null)
+                    message.useExtended = Boolean(object.useExtended);
+                if (object.extendedCiphertext != null)
+                    if (typeof object.extendedCiphertext === "string")
+                        $util.base64.decode(object.extendedCiphertext, message.extendedCiphertext = $util.newBuffer($util.base64.length(object.extendedCiphertext)), 0);
+                    else if (object.extendedCiphertext.length >= 0)
+                        message.extendedCiphertext = object.extendedCiphertext;
                 return message;
             };
 
@@ -6333,6 +6602,16 @@ $root.Wa6 = (function() {
                     object.payload = options.bytes === String ? $util.base64.encode(message.payload, 0, message.payload.length) : options.bytes === Array ? Array.prototype.slice.call(message.payload) : message.payload;
                     if (options.oneofs)
                         object._payload = "payload";
+                }
+                if (message.useExtended != null && message.hasOwnProperty("useExtended")) {
+                    object.useExtended = message.useExtended;
+                    if (options.oneofs)
+                        object._useExtended = "useExtended";
+                }
+                if (message.extendedCiphertext != null && message.hasOwnProperty("extendedCiphertext")) {
+                    object.extendedCiphertext = options.bytes === String ? $util.base64.encode(message.extendedCiphertext, 0, message.extendedCiphertext.length) : options.bytes === Array ? Array.prototype.slice.call(message.extendedCiphertext) : message.extendedCiphertext;
+                    if (options.oneofs)
+                        object._extendedCiphertext = "extendedCiphertext";
                 }
                 return object;
             };
@@ -6375,6 +6654,7 @@ $root.Wa6 = (function() {
              * @property {Uint8Array|null} [ephemeral] ServerHello ephemeral
              * @property {Uint8Array|null} ["static"] ServerHello static
              * @property {Uint8Array|null} [payload] ServerHello payload
+             * @property {Uint8Array|null} [extendedStatic] ServerHello extendedStatic
              */
 
             /**
@@ -6416,6 +6696,14 @@ $root.Wa6 = (function() {
              */
             ServerHello.prototype.payload = null;
 
+            /**
+             * ServerHello extendedStatic.
+             * @member {Uint8Array|null|undefined} extendedStatic
+             * @memberof Wa6.HandshakeMessage.ServerHello
+             * @instance
+             */
+            ServerHello.prototype.extendedStatic = null;
+
             // OneOf field names bound to virtual getters and setters
             var $oneOfFields;
 
@@ -6453,6 +6741,17 @@ $root.Wa6 = (function() {
             });
 
             /**
+             * ServerHello _extendedStatic.
+             * @member {"extendedStatic"|undefined} _extendedStatic
+             * @memberof Wa6.HandshakeMessage.ServerHello
+             * @instance
+             */
+            Object.defineProperty(ServerHello.prototype, "_extendedStatic", {
+                get: $util.oneOfGetter($oneOfFields = ["extendedStatic"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            /**
              * Creates a new ServerHello instance using the specified properties.
              * @function create
              * @memberof Wa6.HandshakeMessage.ServerHello
@@ -6482,6 +6781,8 @@ $root.Wa6 = (function() {
                     writer.uint32(/* id 2, wireType 2 =*/18).bytes(message["static"]);
                 if (message.payload != null && Object.hasOwnProperty.call(message, "payload"))
                     writer.uint32(/* id 3, wireType 2 =*/26).bytes(message.payload);
+                if (message.extendedStatic != null && Object.hasOwnProperty.call(message, "extendedStatic"))
+                    writer.uint32(/* id 4, wireType 2 =*/34).bytes(message.extendedStatic);
                 return writer;
             };
 
@@ -6528,6 +6829,10 @@ $root.Wa6 = (function() {
                         }
                     case 3: {
                             message.payload = reader.bytes();
+                            break;
+                        }
+                    case 4: {
+                            message.extendedStatic = reader.bytes();
                             break;
                         }
                     default:
@@ -6581,6 +6886,11 @@ $root.Wa6 = (function() {
                     if (!(message.payload && typeof message.payload.length === "number" || $util.isString(message.payload)))
                         return "payload: buffer expected";
                 }
+                if (message.extendedStatic != null && message.hasOwnProperty("extendedStatic")) {
+                    properties._extendedStatic = 1;
+                    if (!(message.extendedStatic && typeof message.extendedStatic.length === "number" || $util.isString(message.extendedStatic)))
+                        return "extendedStatic: buffer expected";
+                }
                 return null;
             };
 
@@ -6611,6 +6921,11 @@ $root.Wa6 = (function() {
                         $util.base64.decode(object.payload, message.payload = $util.newBuffer($util.base64.length(object.payload)), 0);
                     else if (object.payload.length >= 0)
                         message.payload = object.payload;
+                if (object.extendedStatic != null)
+                    if (typeof object.extendedStatic === "string")
+                        $util.base64.decode(object.extendedStatic, message.extendedStatic = $util.newBuffer($util.base64.length(object.extendedStatic)), 0);
+                    else if (object.extendedStatic.length >= 0)
+                        message.extendedStatic = object.extendedStatic;
                 return message;
             };
 
@@ -6641,6 +6956,11 @@ $root.Wa6 = (function() {
                     object.payload = options.bytes === String ? $util.base64.encode(message.payload, 0, message.payload.length) : options.bytes === Array ? Array.prototype.slice.call(message.payload) : message.payload;
                     if (options.oneofs)
                         object._payload = "payload";
+                }
+                if (message.extendedStatic != null && message.hasOwnProperty("extendedStatic")) {
+                    object.extendedStatic = options.bytes === String ? $util.base64.encode(message.extendedStatic, 0, message.extendedStatic.length) : options.bytes === Array ? Array.prototype.slice.call(message.extendedStatic) : message.extendedStatic;
+                    if (options.oneofs)
+                        object._extendedStatic = "extendedStatic";
                 }
                 return object;
             };
