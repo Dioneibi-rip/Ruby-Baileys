@@ -89,7 +89,7 @@ message WallpaperSettings {
 }
 
 message GroupParticipant {
-    optional string userJid = 1;
+    required string userJid = 1;
     optional Rank rank = 2;
     optional E2E.MemberLabel memberLabel = 3;
     enum Rank {
@@ -122,7 +122,7 @@ message PhoneNumberToLIDMapping {
 }
 
 message Conversation {
-    optional string id = 1;
+    required string id = 1;
     repeated HistorySyncMsg messages = 2;
     optional string newJid = 3;
     optional string oldJid = 4;
@@ -175,7 +175,6 @@ message Conversation {
     optional int64 limitSharingSettingTimestamp = 51;
     optional Protocol.LimitSharing.TriggerType limitSharingTrigger = 52;
     optional bool limitSharingInitiatedByMe = 53;
-    optional bool maibaAiThreadEnabled = 54;
     enum EndOfHistoryTransferType {
         COMPLETE_BUT_MORE_MESSAGES_REMAIN_ON_PRIMARY = 0;
         COMPLETE_AND_NO_MORE_MESSAGE_REMAIN_ON_PRIMARY = 1;
@@ -184,7 +183,7 @@ message Conversation {
 }
 
 message HistorySync {
-    optional HistorySyncType syncType = 1;
+    required HistorySyncType syncType = 1;
     repeated Conversation conversations = 2;
     repeated Web.WebMessageInfo statusV3Messages = 3;
     optional uint32 chunkOrder = 5;

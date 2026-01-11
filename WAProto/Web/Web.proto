@@ -4,33 +4,11 @@ package Web;
 import "../E2E/E2E.proto";
 import "../Protocol/Protocol.proto";
 
-message QuarantinedMessage {
-    optional bytes originalData = 1;
-    optional string extractedText = 2;
-}
-
-message GroupHistoryBundleInfo {
-    optional E2E.Message.MessageHistoryBundle deprecatedMessageHistoryBundle = 1;
-    optional ProcessState processState = 2;
-    enum ProcessState {
-        NOT_INJECTED = 0;
-        INJECTED = 1;
-        INJECTED_PARTIAL = 2;
-        INJECTION_FAILED = 3;
-        INJECTION_FAILED_NO_RETRY = 4;
-    }
-}
-
-message GroupHistoryIndividualMessageInfo {
-    optional Protocol.MessageKey bundleMessageKey = 1;
-    optional bool editedAfterReceivedAsHistory = 2;
-}
-
 message Citation {
-    optional string title = 1;
-    optional string subtitle = 2;
-    optional string cmsId = 3;
-    optional string imageUrl = 4;
+    required string title = 1;
+    required string subtitle = 2;
+    required string cmsId = 3;
+    required string imageUrl = 4;
 }
 
 message StatusMentionMessage {
@@ -102,10 +80,6 @@ message EventAdditionalMetadata {
     optional bool isStale = 1;
 }
 
-message InteractiveMessageAdditionalMetadata {
-    optional bool isGalaxyFlowCompleted = 1;
-}
-
 message PollAdditionalMetadata {
     optional bool pollInvalidated = 1;
 }
@@ -127,7 +101,7 @@ message Reaction {
 }
 
 message UserReceipt {
-    optional string userJid = 1;
+    required string userJid = 1;
     optional int64 receiptTimestamp = 2;
     optional int64 readTimestamp = 3;
     optional int64 playedTimestamp = 4;
@@ -136,7 +110,7 @@ message UserReceipt {
 }
 
 message StatusPSA {
-    optional uint64 campaignId = 44;
+    required uint64 campaignId = 44;
     optional uint64 campaignExpirationTimestamp = 45;
 }
 
@@ -296,7 +270,7 @@ message CommentMetadata {
 }
 
 message WebMessageInfo {
-    optional Protocol.MessageKey key = 1;
+    required Protocol.MessageKey key = 1;
     optional E2E.Message message = 2;
     optional uint64 messageTimestamp = 3;
     optional Status status = 4;
@@ -358,10 +332,6 @@ message WebMessageInfo {
     repeated string statusMentionSources = 71;
     repeated Citation supportAiCitations = 72;
     optional string botTargetId = 73;
-    optional GroupHistoryIndividualMessageInfo groupHistoryIndividualMessageInfo = 74;
-    optional GroupHistoryBundleInfo groupHistoryBundleInfo = 75;
-    optional InteractiveMessageAdditionalMetadata interactiveMessageAdditionalMetadata = 76;
-    optional QuarantinedMessage quarantinedMessage = 77;
     enum BizPrivacyStatus {
         E2EE = 0;
         FB = 2;
@@ -597,9 +567,5 @@ message WebMessageInfo {
         GROUP_MEMBER_LINK_MODE = 217;
         BIZ_AUTOMATICALLY_LABELED_CHAT_SYSTEM_MESSAGE = 218;
         PHONE_NUMBER_HIDING_CHAT_DEPRECATED_MESSAGE = 219;
-        QUARANTINED_MESSAGE = 220;
-        GROUP_MEMBER_SHARE_GROUP_HISTORY_MODE = 221;
-        GROUP_OPEN_BOT_ADDED = 222;
-        GROUP_TEE_BOT_ADDED = 223;
     }
 }

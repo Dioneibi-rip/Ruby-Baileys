@@ -1,6 +1,5 @@
 const proto = {
   ...require('./Adv/Adv').Adv, 
-  ...require('./AICommon/AICommon').AICommon, 
   ...require('./BotMetadata/BotMetadata').BotMetadata, 
   ...require('./Cert/Cert').Cert, 
   ...require('./ChatLockSettings/ChatLockSettings').ChatLockSettings, 
