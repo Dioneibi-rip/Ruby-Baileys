@@ -1,4 +1,4 @@
-# <div align='center'>Baileys - Baileys modificado para Ruby-Bot</div>
+# <div align='center'>Baileys - modificado para Ruby-Bot</div>
 
 <div align="center">
 
