@@ -7,6 +7,8 @@ import { DownloadableMessage, MediaConnInfo, MediaDecryptionKeyInfo, MediaType, 
 import { BinaryNode } from '../WABinary'
 import { ILogger } from './logger'
 
+export declare const getTmpFilesDirectory: (forceRefresh?: boolean) => string
+
 export declare const hkdfInfoKey: (type: MediaType) => string
 
 export declare const getRawMediaUploadData: (media: WAMediaUpload, mediaType: MediaType, logger?: ILogger) => Promise<{
