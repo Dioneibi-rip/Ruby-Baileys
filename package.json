@@ -1,7 +1,7 @@
 {
-  "name": "@itsukichan/baileys",
+  "name": "@rubychan/baileys",
   "version": "7.3.2",
-  "description": "WhatsApp API Modification By Itsukichann",
+  "description": "WhatsApp API refinement for Ruby Hoshino (Rubychan edition)",
   "keywords": [
     "whatsapp",
     "js-whatsapp",
@@ -12,21 +12,19 @@
     "automation",
     "multi-device"
   ],
-  "homepage": "https://github.com/Itsukichann/Baileys",
+  "homepage": "https://github.com/Rubychan/Baileys",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Itsukichann/Baileys.git"
+    "url": "git+ssh://git@github.com/Rubychan/Baileys.git"
   },
   "license": "MIT",
-  "author": "Itsukichann",
-
+  "author": "Rubychan",
   "main": "lib/index.js",
   "files": [
     "lib/*",
     "WAProto/*",
     "engine-requirements.js"
   ],
-
   "scripts": {
     "changelog:last": "conventional-changelog -p angular -r 2",
     "changelog:preview": "conventional-changelog -p angular -u",
@@ -37,7 +35,6 @@
     "release": "release-it",
     "test": "jest"
   },
-
   "dependencies": {
     "@hapi/boom": "^9.1.3",
     "@adiwajshing/keyed-db": "^0.2.4",
@@ -57,7 +54,6 @@
     "qrcode-terminal": "^0.12.0",
     "ws": "^8.13.0"
   },
-
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^16.0.0",
@@ -77,29 +73,23 @@
     "typedoc-plugin-markdown": "4.4.2",
     "typescript": "^5.8.2"
   },
-
   "peerDependencies": {
-    "jimp": "^0.22.12", 
+    "jimp": "^0.22.12",
     "sharp": "*"
   },
-
   "peerDependenciesMeta": {
     "jimp": {
       "optional": true
     }
   },
-
   "packageManager": "yarn@1.22.19",
-
   "engines": {
     "node": ">=20.0.0"
   },
-
   "directories": {
     "lib": "lib"
   },
-
   "bugs": {
-    "url": "https://github.com/Itsukichann/Baileys/issues"
+    "url": "https://github.com/Rubychan/Baileys/issues"
   }
 }
