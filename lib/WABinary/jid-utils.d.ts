@@ -10,7 +10,7 @@ export declare const STORIES_JID = "status@broadcast"
 
 export declare const META_AI_JID = '13135550002@c.us'
 
-export type JidServer = 'c.us' | 'g.us' | 'broadcast' | 's.whatsapp.net' | 'call' | 'lid' | 'newsletter' | 'bot'
+export type JidServer = 'c.us' | 'g.us' | 'broadcast' | 's.whatsapp.net' | 'call' | 'lid' | 'lid.whatsapp.net' | 'newsletter' | 'bot'
 
 export type JidWithDevice = {
     user: string
