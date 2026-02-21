@@ -1,4 +1,4 @@
-# ✨ Baileys modificado para Ruby-Bot
+# ✨ Ruby-Baileys — Edición Ruby Hoshino (Rubychan)
 
 <div align="center">
   <img src="https://i.pinimg.com/1200x/5f/4f/48/5f4f48a0e224a5830a5ba9e4afc177de.jpg" alt="Ruby-Baileys banner" width="100%"/>
@@ -193,3 +193,15 @@ npm run lint
 - [ ] Helpers de flujo para bots conversacionales.
 - [ ] Mejoras de observabilidad (métricas y tracing).
 - [ ] Documentación avanzada de despliegue.
+
+---
+
+## 🤝 Créditos
+
+Proyecto mantenido y personalizado para la identidad de **Ruby Hoshino / Rubychan**.
+
+---
+
+## 📄 Licencia
+
+MIT
