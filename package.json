@@ -1,95 +1,195 @@
-{
-  "name": "@rubychan/baileys",
-  "version": "7.3.2",
-  "description": "WhatsApp API refinement for Ruby Hoshino (Rubychan edition)",
-  "keywords": [
-    "whatsapp",
-    "js-whatsapp",
-    "whatsapp-api",
-    "whatsapp-web",
-    "whatsapp-chat",
-    "whatsapp-group",
-    "automation",
-    "multi-device"
+# ✨ Baileys modificado para Ruby-Bot
+
+<div align="center">
+  <img src="https://i.pinimg.com/1200x/5f/4f/48/5f4f48a0e224a5830a5ba9e4afc177de.jpg" alt="Ruby-Baileys banner" width="100%"/>
+  <br/>
+  <h3>Una versión moderna, optimizada y lista para producción de Baileys para automatización avanzada de WhatsApp.</h3>
+  <p>
+    <img alt="Node" src="https://img.shields.io/badge/Node-%3E%3D20-339933?logo=node.js&logoColor=white">
+    <img alt="License" src="https://img.shields.io/badge/License-MIT-blue">
+    <img alt="Status" src="https://img.shields.io/badge/Status-Active-success">
+    <img alt="Brand" src="https://img.shields.io/badge/Brand-Rubychan-ff4da6">
+  </p>
+</div>
+
+---
+
+## 🌸 ¿Qué es Ruby-Baileys?
+
+**Ruby-Baileys** es una base robusta para bots y automatizaciones de WhatsApp Multi-Device, refinada para un flujo más limpio, mejor rendimiento y DX (experiencia de desarrollo) más cómoda.
+
+Está pensada para:
+
+- Bots de atención y soporte.
+- Automatización de canales/newsletters.
+- Sistemas de mensajería interactiva.
+- Gestión avanzada de grupos y presencia.
+- Integraciones con servicios externos.
+
+---
+
+## 🚀 Características principales
+
+### 📨 Mensajería moderna
+- Envío de texto, imagen, video, audio, documentos y stickers.
+- Botones e interacciones (`buttons`, `interactive`).
+- Encuestas y respuestas de encuesta.
+- Ubicación, contactos y mensajes contextuales.
+
+### 🖼️ Álbumes multimedia
+- Envío tipo **álbum/carrusel** con múltiples imágenes/videos.
+- Asociación correcta de cada media con el mensaje padre del álbum.
+- Delay configurable para estabilidad en entrega masiva.
+
+### 🧠 Estilo IA para mensajes
+- Modo `aiStyle` para marcar mensajes con estilo IA.
+- Integración con envío de metadatos AI en relay cuando corresponda.
+
+### 📢 Control de canales/newsletters
+- Crear newsletter.
+- Actualizar nombre, descripción y foto.
+- Seguir, dejar de seguir, silenciar/reactivar.
+- Reaccionar mensajes del canal.
+- Obtener metadatos y listados de participación.
+
+### 🔐 Emparejamiento más seguro
+- Sanitización del número telefónico para pairing.
+- Validación de entradas inválidas.
+- Soporte de código de emparejamiento personalizado alfanumérico.
+
+### 🛡️ Fiabilidad de auth-state (Mongo)
+- Reconstrucción correcta de claves de sincronización.
+- Escrituras por lote (`bulkWrite`) para mejor performance.
+- Fallback automático a `updateOne/deleteOne` cuando `bulkWrite` no existe.
+
+---
+
+## 🧩 Alias cómodos (DX mejorada)
+
+Ruby-Baileys acepta alias para facilitar uso en español:
+
+- `album` o `álbum` ➜ flujo de álbum.
+- `encuesta` ➜ `poll`.
+- `ubicacion` ➜ `location`.
+- `aiStyle: true` ➜ marca texto como estilo IA.
+
+---
+
+## 📦 Instalación
+
+```bash
+npm install
+```
+
+> Requiere Node.js **>= 20**.
+
+---
+
+## ⚙️ Uso básico
+
+```js
+const { default: makeWASocket } = require('./lib')
+
+const sock = makeWASocket({
+  // tu config...
+})
+```
+
+---
+
+## 💬 Ejemplos rápidos
+
+### 1) Botones interactivos
+
+```js
+const buttons = [
+  { buttonId: 'btn_1', buttonText: { displayText: 'Haz clic en mí' }, type: 1 },
+  { buttonId: 'btn_2', buttonText: { displayText: 'Visitar sitio' }, type: 1 }
+]
+
+await sock.sendMessage(jid, {
+  text: 'Elige una opción:',
+  footer: 'Con amor, Rubychan 💖',
+  buttons,
+  headerType: 1
+})
+```
+
+### 2) Envío de álbum
+
+```js
+await sock.sendMessage(jid, {
+  album: [
+    { image: { url: 'https://example.com/pic1.jpg' } },
+    { video: { url: 'https://example.com/clip.mp4' } }
   ],
-  "homepage": "https://github.com/Rubychan/Baileys",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/Rubychan/Baileys.git"
-  },
-  "license": "MIT",
-  "author": "Rubychan",
-  "main": "lib/index.js",
-  "files": [
-    "lib/*",
-    "WAProto/*",
-    "engine-requirements.js"
-  ],
-  "scripts": {
-    "changelog:last": "conventional-changelog -p angular -r 2",
-    "changelog:preview": "conventional-changelog -p angular -u",
-    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "lint": "eslint src --ext .js,.ts",
-    "lint:fix": "yarn lint --fix",
-    "preinstall": "node ./engine-requirements.js",
-    "release": "release-it",
-    "test": "jest"
-  },
-  "dependencies": {
-    "@hapi/boom": "^9.1.3",
-    "@adiwajshing/keyed-db": "^0.2.4",
-    "@cacheable/node-cache": "1.5.3",
-    "@itsukichan/libsignal-node": "^1.0.1",
-    "async-mutex": "^0.5.0",
-    "audio-decode": "^2.2.2",
-    "cache-manager": "^5.7.6",
-    "fflate": "^0.8.2",
-    "lodash": "^4.17.21",
-    "unfurl.js": "^6.4.0",
-    "lru-cache": "^11.1.0",
-    "music-metadata": "^7.12.3",
-    "pino": "^9.6",
-    "p-queue": "^9.0.0",
-    "protobufjs": "^7.2.4",
-    "qrcode-terminal": "^0.12.0",
-    "ws": "^8.13.0"
-  },
-  "devDependencies": {
-    "@types/jest": "^29.5.14",
-    "@types/node": "^16.0.0",
-    "@types/ws": "^8.0.0",
-    "@itsukichan/eslint-config": "^1.0.0",
-    "conventional-changelog-cli": "^2.2.2",
-    "eslint": "^8.0.0",
-    "jest": "^30.1.1",
-    "jimp": "^0.22.12",
-    "json": "^11.0.0",
-    "unfurl.js": "^6.4.0",
-    "open": "^8.4.2",
-    "release-it": "^15.10.3",
-    "ts-jest": "^29.4.1",
-    "ts-node": "^10.8.1",
-    "typedoc": "^0.27.9",
-    "typedoc-plugin-markdown": "4.4.2",
-    "typescript": "^5.8.2"
-  },
-  "peerDependencies": {
-    "jimp": "^0.22.12",
-    "sharp": "*"
-  },
-  "peerDependenciesMeta": {
-    "jimp": {
-      "optional": true
-    }
-  },
-  "packageManager": "yarn@1.22.19",
-  "engines": {
-    "node": ">=20.0.0"
-  },
-  "directories": {
-    "lib": "lib"
-  },
-  "bugs": {
-    "url": "https://github.com/Rubychan/Baileys/issues"
+  caption: 'Recuerdos ✨'
+})
+```
+
+### 3) Encuesta (alias en español)
+
+```js
+await sock.sendMessage(jid, {
+  encuesta: {
+    nombre: '¿Color favorito?',
+    valores: ['Rojo', 'Azul', 'Verde'],
+    selectableCount: 1
   }
-}
+})
+```
+
+### 4) Ubicación (alias en español)
+
+```js
+await sock.sendMessage(jid, {
+  ubicacion: {
+    gradosLatitud: 37.422,
+    gradosLongitud: -122.084,
+    nombre: 'Googleplex',
+    direccion: '1600 Amphitheatre Pkwy, Mountain View'
+  }
+})
+```
+
+### 5) Código de emparejamiento personalizado
+
+```js
+const code = await sock.requestPairingCode('628xxxxxxxxx', 'RUBY2026')
+console.log('Pairing code:', code)
+```
+
+### 6) Newsletter / canal
+
+```js
+await sock.newsletterCreate('Ruby Updates', 'Novedades semanales')
+await sock.newsletterUpdateDescription('canal@newsletter', 'Actualizaciones frescas ✨')
+await sock.newsletterReactMessage('canal@newsletter', '175', '🔥')
+```
+
+---
+
+## 🧠 Buenas prácticas
+
+- Usa almacenamiento persistente para `authState` en producción.
+- Activa logs estructurados para auditoría y debugging.
+- Aísla reintentos de red y controla timeouts.
+- Si envías multimedia intensiva, monitorea uso de CPU/RAM.
+
+---
+
+## 🛠️ Scripts útiles
+
+```bash
+npm test
+npm run lint
+```
+
+---
+
+## 🗺️ Roadmap sugerido
+
+- [ ] Más utilidades para plantillas interactivas.
+- [ ] Helpers de flujo para bots conversacionales.
+- [ ] Mejoras de observabilidad (métricas y tracing).
+- [ ] Documentación avanzada de despliegue.
