@@ -1,7 +1,7 @@
 {
-  "name": "@rubychan/baileys",
+  "name": "@ruby/baileys",
   "version": "7.3.2",
-  "description": "WhatsApp API refinement for Ruby Hoshino (Rubychan edition)",
+  "description": "WhatsApp API refinement for Ruby Hoshino",
   "keywords": [
     "whatsapp",
     "js-whatsapp",
@@ -12,10 +12,10 @@
     "automation",
     "multi-device"
   ],
-  "homepage": "https://github.com/Rubychan/Baileys",
+  "homepage": "https://github.com/Ruby/Baileys",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/Rubychan/Baileys.git"
+    "url": "git+ssh://git@github.com/Ruby/Baileys.git"
   },
   "license": "MIT",
   "author": "Rubychan",
