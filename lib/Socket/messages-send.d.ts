@@ -26,6 +26,7 @@ export declare const makeMessagesSocket: (config: SocketConfig) => {
     getEphemeralGroup: (jid: string) => Promise<number>
     updateMediaMessage: (message: proto.IWebMessageInfo) => Promise<proto.IWebMessageInfo>
     sendStatusMentions: (content: import("../Types").WAProto.IMessage, jid: string, Private?: boolean) => Promise<string>
+    sendAlbumMessage: (jid: string, medias: Array<Record<string, unknown>>, options?: MiscMessageGenerationOptions) => Promise<proto.WebMessageInfo | undefined>
     sendMessage: (jid: string, content: AnyMessageContent, options?: MiscMessageGenerationOptions) => Promise<proto.WebMessageInfo | undefined>
     subscribeNewsletterUpdates: (jid: string) => Promise<{
         duration: string
