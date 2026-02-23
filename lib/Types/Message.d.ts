@@ -407,6 +407,21 @@ export type MiscMessageGenerationOptions = MinimalRelayOptions & {
     broadcast?: boolean
     newsletter?: boolean
     additionalNodes?: BinaryNode[]
+    /** optional smart retry strategy for transient send failures */
+    retryConfig?: {
+        /** max send attempts including the initial one */
+        maxAttempts?: number
+        /** initial delay before first retry in milliseconds */
+        delayMs?: number
+        /** exponential multiplier applied to the base retry delay */
+        backoffMultiplier?: number
+        /** random jitter added to each retry delay in milliseconds */
+        jitterMs?: number
+        /** send composing/paused presence around each attempt (default true) */
+        presence?: boolean
+    }
+    /** @internal */
+    __skipSmartRetry?: boolean
 }
 
 export type MessageGenerationOptionsFromContent = MiscMessageGenerationOptions & {
