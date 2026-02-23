@@ -45,6 +45,11 @@ Está pensada para:
 - Modo `aiStyle` para marcar mensajes con estilo IA.
 - Integración con envío de metadatos AI en relay cuando corresponda.
 
+### 🔁 Smart Retry para sub-bots
+- Nuevo `retryConfig` en `sendMessage` para reintentos automáticos ante fallos transitorios.
+- Backoff exponencial + jitter para evitar ráfagas y mejorar entrega.
+- Presencia `composing/paused` opcional durante los intentos para UX más natural.
+
 ### 📢 Control de canales/newsletters
 - Crear newsletter.
 - Actualizar nombre, descripción y foto.
@@ -166,6 +171,24 @@ await sock.newsletterCreate('Ruby Updates', 'Novedades semanales')
 await sock.newsletterUpdateDescription('canal@newsletter', 'Actualizaciones frescas ✨')
 await sock.newsletterReactMessage('canal@newsletter', '175', '🔥')
 ```
+
+
+### 7) Smart retry con backoff (ideal para sub-bots)
+
+```js
+await sock.sendMessage(jid, {
+  text: 'Mensaje importante con tolerancia a fallos'
+}, {
+  retryConfig: {
+    maxAttempts: 4,
+    delayMs: 700,
+    backoffMultiplier: 1.7,
+    jitterMs: 250,
+    presence: true
+  }
+})
+```
+
 
 ---
 
