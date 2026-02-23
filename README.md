@@ -49,6 +49,7 @@ Está pensada para:
 - Nuevo `retryConfig` en `sendMessage` para reintentos automáticos ante fallos transitorios.
 - Backoff exponencial + jitter para evitar ráfagas y mejorar entrega.
 - Presencia `composing/paused` opcional durante los intentos para UX más natural.
+- Cola serial en cifrado de grupos (sender-key) para evitar carreras cuando varios sub-bots envían al mismo grupo al mismo tiempo.
 
 ### 📢 Control de canales/newsletters
 - Crear newsletter.
