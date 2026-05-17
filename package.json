@@ -1,17 +1,17 @@
 {
-  "name": "Carlos",
+  "name": "Baileys-Ruby",
   "version": "25.9.1",
   "description": "baileys whatsapp-api",
   "keywords": [
     "whatsapp",
     "baileys"
   ],
-  "homepage": "https://github.com/Kone457/baileys",
+  "homepage": "https://github.com/Dioneibi-rip/Ruby-baileys",
   "repository": {
-    "url": "https://github.com/Kone457/baileys"
+    "url": "https://github.com/Dioneibi-rip/Ruby-baileys"
   },
   "license": "MIT",
-  "author": "JoseXrl15k",
+  "author": "Dioneibi",
   "main": "lib/index.js",
   "files": [
     "lib/*",
