@@ -9,6 +9,24 @@ import { SignalRepository } from './Signal';
 import { ILogger } from '../Utils/logger';
 export type WAVersion = [number, number, number];
 export type WABrowserDescription = [string, string, string];
+export type MessageSafetyConfig = {
+    /** Enable conservative safeguards for bot-like sending patterns. */
+    enabled?: boolean;
+    /** Minimum global delay inserted before outgoing user messages. */
+    messageSendMinDelayMs?: number;
+    /** Maximum global delay inserted before outgoing user messages; randomized between min and max. */
+    messageSendMaxDelayMs?: number;
+    /** Minimum delay between messages to the same chat/JID. */
+    perJidMinDelayMs?: number;
+    /** Warn or block when a status/broadcast send targets more JIDs than this value. */
+    maxStatusJidList?: number;
+    /** Warn or block when an encrypted fanout reaches more devices than this value. */
+    maxGroupDevices?: number;
+    /** Throw instead of warning when a fanout limit is exceeded. */
+    blockOnFanoutLimit?: boolean;
+    /** Emit logger warnings when safety limits are exceeded. */
+    logWarnings?: boolean;
+};
 export type CacheStore = {
     /** get a cached key and change the stats */
     get<T>(key: string): T | undefined;
@@ -65,6 +83,10 @@ export type SocketConfig = {
     transactionOpts: TransactionCapabilityOptions;
     /** marks the client as online whenever the socket successfully connects */
     markOnlineOnConnect: boolean;
+    /** Conservative bot-safety controls: pacing, fanout warnings/limits, and anti-spam guardrails. */
+    messageSafety: MessageSafetyConfig;
+    /** @deprecated Use messageSafety. Kept as a Spanish-friendly alias for bot anti-ban tuning. */
+    antiBan?: MessageSafetyConfig;
     /** alphanumeric country code (USA -> US) for the number used */
     countryCode: string;
     /** provide a cache to store media, so does not have to be re-uploaded */
