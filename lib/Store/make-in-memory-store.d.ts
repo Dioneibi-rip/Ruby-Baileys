@@ -19,6 +19,10 @@ export type BaileysInMemoryStoreConfig = {
     labelAssociationKey?: Comparable<LabelAssociation, string>;
     logger?: ILogger;
     socket?: WASocket;
+    maxMessagesPerChat?: number;
+    maxChats?: number;
+    maxContacts?: number;
+    maxGroupMetadata?: number;
 };
 declare const _default: (config: BaileysInMemoryStoreConfig) => {
     chats: KeyedDB<Chat, string>;
