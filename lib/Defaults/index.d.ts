@@ -1,5 +1,5 @@
 import { proto } from '../../WAProto';
-import type { MediaType, SocketConfig, WAVersion } from '../Types';
+import type { MediaType, MessageSafetyConfig, SocketConfig, WAVersion } from '../Types';
 
 export declare const UNAUTHORIZED_CODES: number[];
 export declare const DEFAULT_ORIGIN = "https://web.whatsapp.com";
@@ -24,6 +24,7 @@ export declare const WA_CERT_DETAILS: {
     SERIAL: number;
 };
 export declare const PROCESSABLE_HISTORY_TYPES: proto.Message.HistorySyncNotification.HistorySyncType[];
+export declare const DEFAULT_MESSAGE_SAFETY_CONFIG: MessageSafetyConfig;
 export declare const DEFAULT_CONNECTION_CONFIG: SocketConfig;
 export declare const MEDIA_PATH_MAP: {
     [T in MediaType]?: string;
