@@ -46,7 +46,7 @@
 Abre tu terminal y ejecuta los siguientes comandos uno por uno para preparar el entorno:
 
 ```bash
-git clone [https://github.com/Dioneibi-rip/Ruby-Baileys.git](https://github.com/Dioneibi-rip/Ruby-Baileys.git)
+git clone https://github.com/Dioneibi-rip/Ruby-Baileys.git
 
 ```
 ```bash
