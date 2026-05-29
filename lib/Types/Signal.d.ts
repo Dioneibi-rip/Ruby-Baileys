@@ -39,7 +39,17 @@ type E2ESessionOpts = {
     jid: string;
     session: E2ESession;
 };
+export type LIDMappingRepository = {
+    storeLIDPNMappings(mappings: Array<{ lid: string; pn: string }>): Promise<void>;
+    getPNForLID(lid: string): Promise<string | undefined>;
+    getLIDForPN(pn: string): Promise<string | undefined>;
+    getLIDsForPNs(pns: string[]): Promise<Array<{ pn: string; lid: string }>>;
+};
 export type SignalRepository = {
+    lidMapping: LIDMappingRepository;
+    validateSession(jid: string): Promise<{ exists: boolean; reason?: string }>;
+    deleteSession(jids: string[]): Promise<void>;
+    migrateSession(fromJid: string, toJid: string): Promise<{ migrated: number; skipped: number; total: number }>;
     decryptGroupMessage(opts: DecryptGroupSignalOpts): Promise<Uint8Array>;
     processSenderKeyDistributionMessage(opts: ProcessSenderKeyDistributionMessageOpts): Promise<void>;
     decryptMessage(opts: DecryptSignalProtoOpts): Promise<Uint8Array>;
