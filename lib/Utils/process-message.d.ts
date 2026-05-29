@@ -1,11 +1,12 @@
 import { AxiosRequestConfig } from 'axios';
 import { proto } from '../../WAProto';
-import { AuthenticationCreds, BaileysEventEmitter, CacheStore, SignalKeyStoreWithTransaction, SocketConfig } from '../Types';
+import { AuthenticationCreds, BaileysEventEmitter, CacheStore, SignalKeyStoreWithTransaction, SocketConfig, SignalRepository } from '../Types';
 import { ILogger } from './logger';
 type ProcessMessageContext = {
     shouldProcessHistoryMsg: boolean;
     placeholderResendCache?: CacheStore;
     creds: AuthenticationCreds;
+    signalRepository: SignalRepository;
     keyStore: SignalKeyStoreWithTransaction;
     ev: BaileysEventEmitter;
     getMessage: SocketConfig['getMessage'];
@@ -13,7 +14,7 @@ type ProcessMessageContext = {
     options: AxiosRequestConfig<{}>;
 };
 /** Cleans a received message to further processing */
-export declare const cleanMessage: (message: proto.IWebMessageInfo, meId: string) => void;
+export declare const cleanMessage: (message: proto.IWebMessageInfo, meId: string, meLid?: string) => void;
 export declare const isRealMessage: (message: proto.IWebMessageInfo, meId: string) => boolean | undefined;
 export declare const shouldIncrementChatUnread: (message: proto.IWebMessageInfo) => boolean;
 /**
@@ -38,5 +39,5 @@ type PollContext = {
  * @returns list of SHA256 options
  */
 export declare function decryptPollVote({ encPayload, encIv }: proto.Message.IPollEncValue, { pollCreatorJid, pollMsgId, pollEncKey, voterJid, }: PollContext): proto.Message.PollVoteMessage;
-declare const processMessage: (message: proto.IWebMessageInfo, { shouldProcessHistoryMsg, placeholderResendCache, ev, creds, keyStore, logger, options, getMessage }: ProcessMessageContext) => Promise<void>;
+export declare const processMessage: (message: proto.IWebMessageInfo, { shouldProcessHistoryMsg, placeholderResendCache, ev, creds, keyStore, logger, options, getMessage }: ProcessMessageContext) => Promise<void>;
 export default processMessage;

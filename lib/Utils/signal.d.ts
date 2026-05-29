@@ -16,7 +16,7 @@ export declare const generateOrGetPreKeys: (creds: AuthenticationCreds, range: n
 export declare const xmppSignedPreKey: (key: SignedKeyPair) => BinaryNode;
 export declare const xmppPreKey: (pair: KeyPair, id: number) => BinaryNode;
 export declare const parseAndInjectE2ESessions: (node: BinaryNode, repository: SignalRepository) => Promise<void>;
-export declare const extractDeviceJids: (result: USyncQueryResultList[], myJid: string, excludeZeroDevices: boolean) => JidWithDevice[];
+export declare const extractDeviceJids: (result: USyncQueryResultList[], myJid: string, myLidOrExcludeZeroDevices?: string | boolean, excludeZeroDevices?: boolean) => JidWithDevice[];
 /**
  * get the next N keys for upload or processing
  * @param count number of pre-keys to get or generate
