@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://i.pinimg.com/736x/cb/42/c2/cb42c2d460451b8c968511fec658b40d.jpg" alt="Ruby Header" width="100%">
+<img src="https://i.pinimg.com/736x/3a/f1/e0/3af1e0da373b4efe2a5729f8c4a139b9.jpg" alt="Ruby Header" width="100%">
 
 <br><br>
 
