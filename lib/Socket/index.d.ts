@@ -168,5 +168,7 @@ declare const makeWASocket: (config: UserFacingSocketConfig) => {
     requestPairingCode: (phoneNumber: any, pairKey?: string) => Promise<string>;
     waitForConnectionUpdate: (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
     sendWAMBuffer: (wamBuffer: Buffer) => Promise<any>;
+    getReconnectDelay: () => number;
+    resetReconnectDelay: () => void;
 };
 export default makeWASocket;

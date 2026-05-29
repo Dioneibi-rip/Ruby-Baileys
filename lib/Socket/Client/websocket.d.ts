@@ -9,5 +9,7 @@ export declare class WebSocketClient extends AbstractSocketClient {
     connect(): Promise<void>;
     close(): Promise<void>;
     restart(): Promise<void>;
+    ping(): boolean;
+    terminate(): void;
     send(str: string | Uint8Array, cb?: (err?: Error) => void): boolean;
 }

@@ -118,6 +118,20 @@ export type SocketConfig = {
      * Messages from that jid will also not be decrypted
      * */
     shouldIgnoreJid: (jid: string) => boolean | undefined;
+    /** process read/played receipts; disable for lean bots that do not track delivery state */
+    processReadReceipts: boolean;
+    /** process notification nodes */
+    processNotifications: boolean;
+    /** process call nodes */
+    processCalls: boolean;
+    /** emit a non-enumerable lightweight view on incoming messages for lazy serializers */
+    emitMessageLite: boolean;
+    /** exponential reconnection settings for consumers that restart sockets on close */
+    reconnectBackoffMs: { initial: number; max: number; factor: number; jitter: number; };
+    /** max time to wait for a keep-alive response */
+    keepAliveResponseTimeoutMs: number;
+    /** max silent interval before the watchdog closes a stalled socket */
+    keepAliveMaxIdleMs: number;
     /**
      * Optionally patch the message before sending out
      * */
