@@ -130,6 +130,4 @@ connectWithCode()
 
 Copyright © 2026 **Dioneibi-rip**
 
-### ☕ ¡GRACIAS POR UTILIZAR RUBY BAILEYS!
-
 </div>
