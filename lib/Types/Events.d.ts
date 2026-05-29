@@ -10,6 +10,12 @@ import { LabelAssociation } from './LabelAssociation';
 import { MessageUpsertType, MessageUserReceiptUpdate, WAMessage, WAMessageKey, WAMessageUpdate } from './Message';
 import { ConnectionState } from './State';
 import { NewsletterSettingsUpdate, SubscriberAction, NewsletterViewRole } from './Newsletter';
+export type WAMessageLite = {
+    key: WAMessageKey;
+    message?: proto.IMessage | null;
+    pushName?: string | null;
+    sender?: string;
+};
 export type BaileysEventMap = {
     /** connection state has been updated -- WS closed, opened, connecting etc. */
     'connection.update': Partial<ConnectionState>;
@@ -65,7 +71,7 @@ export type BaileysEventMap = {
      * if requestId is provided, then the messages was received from the phone due to it being unavailable
      *  */
     'messages.upsert': {
-        messages: WAMessage[];
+        messages: (WAMessage | WAMessageLite)[];
         type: MessageUpsertType;
         requestId?: string;
     };

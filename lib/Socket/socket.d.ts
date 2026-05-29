@@ -36,6 +36,8 @@ export declare const makeSocket: (config: SocketConfig) => {
     uploadPreKeys: (count?: number) => Promise<void>;
     uploadPreKeysToServerIfRequired: () => Promise<void>;
     requestPairingCode: (phoneNumber: any, pairKey?: string) => Promise<string>;
+    getReconnectDelay: () => number;
+    resetReconnectDelay: () => void;
     /** Waits for the connection to WA to reach a state */
     waitForConnectionUpdate: (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
     sendWAMBuffer: (wamBuffer: Buffer) => Promise<any>;

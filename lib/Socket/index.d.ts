@@ -166,6 +166,8 @@ declare const makeWASocket: (config: UserFacingSocketConfig) => {
     uploadPreKeys: (count?: number) => Promise<void>;
     uploadPreKeysToServerIfRequired: () => Promise<void>;
     requestPairingCode: (phoneNumber: any, pairKey?: string) => Promise<string>;
+    getReconnectDelay: () => number;
+    resetReconnectDelay: () => void;
     waitForConnectionUpdate: (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
     sendWAMBuffer: (wamBuffer: Buffer) => Promise<any>;
 };
