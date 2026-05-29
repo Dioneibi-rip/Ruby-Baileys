@@ -47,8 +47,9 @@ export type LIDMappingRepository = {
 };
 export type SignalRepository = {
     lidMapping: LIDMappingRepository;
-    validateSession(jid: string): Promise<{ exists: boolean; id: string }>;
-    migrateSession(fromJid: string, toJid: string): Promise<void>;
+    validateSession(jid: string): Promise<{ exists: boolean; reason?: string }>;
+    deleteSession(jids: string[]): Promise<void>;
+    migrateSession(fromJid: string, toJid: string): Promise<{ migrated: number; skipped: number; total: number }>;
     decryptGroupMessage(opts: DecryptGroupSignalOpts): Promise<Uint8Array>;
     processSenderKeyDistributionMessage(opts: ProcessSenderKeyDistributionMessageOpts): Promise<void>;
     decryptMessage(opts: DecryptSignalProtoOpts): Promise<Uint8Array>;

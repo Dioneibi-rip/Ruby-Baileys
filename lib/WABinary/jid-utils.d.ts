@@ -4,6 +4,12 @@ export declare const SERVER_JID = "server@c.us";
 export declare const PSA_WID = "0@c.us";
 export declare const STORIES_JID = "status@broadcast";
 export declare const META_AI_JID = "13135550002@c.us";
+export declare const WAJIDDomains: {
+    WHATSAPP: number;
+    LID: number;
+    HOSTED: number;
+    HOSTED_LID: number;
+};
 export type JidServer = 'c.us' | 'g.us' | 'broadcast' | 's.whatsapp.net' | 'call' | 'lid' | 'newsletter' | 'bot' | 'hosted' | 'hosted.lid' | 'hosted.s.whatsapp.net';
 export type JidWithDevice = {
     user: string;
@@ -40,3 +46,4 @@ export declare const jidNormalizedUser: (jid: string | undefined) => string;
 export declare const transferDevice: (fromJid: string | undefined, toJid: string) => string;
 export declare const lidToJid: (jid: string) => string;
 export declare const getBotJid: (jid: string) => string;
+export declare const getServerFromDomainType: (initialServer: JidServer, domainType: number) => JidServer;
