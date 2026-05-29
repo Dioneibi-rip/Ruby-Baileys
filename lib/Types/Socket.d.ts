@@ -73,6 +73,14 @@ export type SocketConfig = {
     retryRequestDelayMs: number;
     /** max retry count */
     maxMsgRetryCount: number;
+    /** emit read/played receipt updates; set false to ack and drop noisy read events */
+    processReadReceipts: boolean;
+    /** emit only key, message, pushName, and sender in messages.upsert to reduce handler memory pressure */
+    emitMessageLite: boolean;
+    /** starting delay returned by getReconnectDelay() */
+    reconnectBaseDelayMs: number;
+    /** maximum delay returned by getReconnectDelay() */
+    reconnectMaxDelayMs: number;
     /** time to wait for the generation of the next QR in ms */
     qrTimeout?: number;
     /** provide an auth state object to maintain the auth state */
