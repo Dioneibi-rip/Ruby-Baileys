@@ -114,14 +114,22 @@ async function connectWithCode() {
 }
 
 connectWithCode()
-
 ```
+
+---
+
 <div align="center">
-### 🌳 Creador
+
+## 🌳 Creador
+
 <a href="https://github.com/Dioneibi-rip">
-<img src="https://github.com/Dioneibi-rip.png" width="130" height="130" alt="Dioneibi-rip" style="border-radius: 50%;"/>
+  <img src="https://github.com/Dioneibi-rip.png" width="130" height="130" alt="Dioneibi-rip">
 </a>
-> Copyright (c) 2026 **Dioneibi-rip**.
-> 
-**¡GRACIAS POR UTILIZAR RUBY BAILEYS! ☕**
+
+<br><br>
+
+Copyright © 2026 **Dioneibi-rip**
+
+### ☕ ¡GRACIAS POR UTILIZAR RUBY BAILEYS!
+
 </div>
