@@ -35,7 +35,12 @@ export type WAMediaPayloadStream = {
 };
 export type WAMediaUpload = Buffer | WAMediaPayloadStream | WAMediaPayloadURL;
 export type WAStickerPackSticker = WAMediaUpload | ({
-    media: WAMediaUpload;
+    /** Media payload for this sticker. */
+    media?: WAMediaUpload;
+    /** Alias used by the working sticker-pack sender implementation. */
+    sticker?: WAMediaUpload;
+    /** Alias used by the working sticker-pack sender implementation. */
+    data?: WAMediaUpload;
     fileName?: string;
     isAnimated?: boolean;
     emojis?: string[];
@@ -44,6 +49,8 @@ export type WAStickerPackSticker = WAMediaUpload | ({
     mimetype?: string;
 } & Partial<proto.Message.StickerPackMessage.ISticker>);
 export type WAStickerPackContent = {
+    /** WhatsApp sticker pack id. `packId` is the canonical field used by the working sender. */
+    packId?: string;
     stickerPackId?: string;
     id?: string;
     name?: string;
@@ -63,6 +70,9 @@ export type WAStickerPackContent = {
     /** max parallel sticker uploads while creating the pack; defaults to 3 to reduce event-loop spikes */
     uploadConcurrency?: number;
 } & Contextable;
+export type WAStickerPackMessageContent = {
+    stickerPack: WAStickerPackContent;
+} & Contextable & Mentionable;
 /** Set of message types that are supported by the library */
 export type MessageType = keyof proto.Message;
 export type DownloadableMessage = {
@@ -184,9 +194,7 @@ export type AnyMediaMessageContent = (({
     mimetype: string;
     fileName?: string;
     caption?: string;
-} & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Cardsable) | {
-    stickerPack: WAStickerPackContent;
-}) & {
+} & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Cardsable) | WAStickerPackMessageContent) & {
     mimetype?: string;
 } & Editable;
 export type ButtonReplyInfo = {
