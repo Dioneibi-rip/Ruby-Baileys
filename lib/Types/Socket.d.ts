@@ -81,6 +81,10 @@ export type SocketConfig = {
     reconnectBaseDelayMs: number;
     /** maximum delay returned by getReconnectDelay() */
     reconnectMaxDelayMs: number;
+    /** Optional policy used by connection.update consumers to decide reconnect behavior. */
+    shouldReconnect: (lastDisconnect: { error?: Error; statusCode: number; reason?: string; }) => boolean;
+    /** Maximum time without a server frame/pong before keep-alive closes the socket. */
+    keepAliveMaxDelayMs?: number;
     /** time to wait for the generation of the next QR in ms */
     qrTimeout?: number;
     /** provide an auth state object to maintain the auth state */
@@ -145,5 +149,9 @@ export type SocketConfig = {
     getMessage: (key: proto.IMessageKey) => Promise<proto.IMessage | undefined>;
     /** cached group metadata, use to prevent redundant requests to WA & speed up msg sending */
     cachedGroupMetadata: (jid: string) => Promise<GroupMetadata | undefined>;
+    /** build a bounded NodeCache-backed group metadata cache when cachedGroupMetadata is not provided */
+    enableGroupMetadataCache?: boolean;
+    /** TTL in seconds for the built-in group metadata cache */
+    groupMetadataCacheTtl?: number;
     makeSignalRepository: (auth: SignalAuthState) => SignalRepository;
 };

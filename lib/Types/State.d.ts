@@ -8,6 +8,10 @@ export type ConnectionState = {
         error: Error | undefined;
         date: Date;
     };
+    /** whether the configured reconnect policy recommends creating a fresh socket */
+    shouldReconnect?: boolean;
+    /** exponential backoff delay suggested before reconnecting */
+    reconnectDelayMs?: number;
     /** is this a new login */
     isNewLogin?: boolean;
     /** the current QR code */
