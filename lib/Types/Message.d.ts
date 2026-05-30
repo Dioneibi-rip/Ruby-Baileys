@@ -24,7 +24,7 @@ export type WAMessageKey = proto.IMessageKey & {
 export type WATextMessage = proto.Message.IExtendedTextMessage;
 export type WAContextInfo = proto.IContextInfo;
 export type WALocationMessage = proto.Message.ILocationMessage;
-export type WAGenericMediaMessage = proto.Message.IVideoMessage | proto.Message.IImageMessage | proto.Message.IAudioMessage | proto.Message.IDocumentMessage | proto.Message.IStickerMessage;
+export type WAGenericMediaMessage = proto.Message.IVideoMessage | proto.Message.IImageMessage | proto.Message.IAudioMessage | proto.Message.IDocumentMessage | proto.Message.IStickerMessage | proto.Message.IStickerPackMessage;
 export declare const WAMessageStubType: typeof proto.WebMessageInfo.StubType;
 export declare const WAMessageStatus: typeof proto.WebMessageInfo.Status;
 export type WAMediaPayloadURL = {
@@ -34,6 +34,35 @@ export type WAMediaPayloadStream = {
     stream: Readable;
 };
 export type WAMediaUpload = Buffer | WAMediaPayloadStream | WAMediaPayloadURL;
+export type WAStickerPackSticker = WAMediaUpload | ({
+    media: WAMediaUpload;
+    fileName?: string;
+    isAnimated?: boolean;
+    emojis?: string[];
+    accessibilityLabel?: string;
+    isLottie?: boolean;
+    mimetype?: string;
+} & Partial<proto.Message.StickerPackMessage.ISticker>);
+export type WAStickerPackContent = {
+    stickerPackId?: string;
+    id?: string;
+    name?: string;
+    publisher?: string;
+    cover: WAMediaUpload;
+    stickers: WAStickerPackSticker[];
+    caption?: string;
+    packDescription?: string;
+    description?: string;
+    trayIconFileName?: string;
+    thumbnailHeight?: number;
+    thumbnailWidth?: number;
+    coverHeight?: number;
+    coverWidth?: number;
+    imageDataHash?: string;
+    stickerPackOrigin?: proto.Message.StickerPackMessage.StickerPackOrigin;
+    /** max parallel sticker uploads while creating the pack; defaults to 3 to reduce event-loop spikes */
+    uploadConcurrency?: number;
+} & Contextable;
 /** Set of message types that are supported by the library */
 export type MessageType = keyof proto.Message;
 export type DownloadableMessage = {
@@ -155,7 +184,9 @@ export type AnyMediaMessageContent = (({
     mimetype: string;
     fileName?: string;
     caption?: string;
-} & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Cardsable)) & {
+} & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Cardsable) | {
+    stickerPack: WAStickerPackContent;
+}) & {
     mimetype?: string;
 } & Editable;
 export type ButtonReplyInfo = {
