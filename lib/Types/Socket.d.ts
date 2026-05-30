@@ -83,8 +83,6 @@ export type SocketConfig = {
     reconnectMaxDelayMs: number;
     /** Optional policy used by connection.update consumers to decide reconnect behavior. */
     shouldReconnect: (lastDisconnect: { error?: Error; statusCode: number; reason?: string; }) => boolean;
-    /** Maximum time without a server frame/pong before keep-alive closes the socket. */
-    keepAliveMaxDelayMs?: number;
     /** time to wait for the generation of the next QR in ms */
     qrTimeout?: number;
     /** provide an auth state object to maintain the auth state */
