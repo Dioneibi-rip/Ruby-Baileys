@@ -22,6 +22,8 @@ export declare const NOISE_WA_HEADER: Buffer;
 export declare const URL_REGEX: RegExp;
 export declare const WA_CERT_DETAILS: {
     SERIAL: number;
+    ISSUER: string;
+    PUBLIC_KEY: Buffer;
 };
 export declare const PROCESSABLE_HISTORY_TYPES: proto.Message.HistorySyncNotification.HistorySyncType[];
 export declare const DEFAULT_MESSAGE_SAFETY_CONFIG: MessageSafetyConfig;
