@@ -116,18 +116,3 @@ async function connectWithCode() {
 connectWithCode()
 ```
 
----
-
-<div align="center">
-
-## 🌳 Creador
-
-<a href="https://github.com/Dioneibi-rip">
-  <img src="https://github.com/Dioneibi-rip.png" width="130" height="130" alt="Dioneibi-rip">
-</a>
-
-<br><br>
-
-Copyright © 2026 **Dioneibi-rip**
-
-</div>
