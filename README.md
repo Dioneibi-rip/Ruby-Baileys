@@ -1,28 +1,25 @@
 <div align="center">
 
-<img src="https://i.pinimg.com/736x/3a/f1/e0/3af1e0da373b4efe2a5729f8c4a139b9.jpg" alt="Ruby Hoshino banner" width="100%" style="border-radius: 12px;"/>
+<img src="https://i.pinimg.com/736x/3a/f1/e0/3af1e0da373b4efe2a5729f8c4a139b9.jpg" alt="Ruby Header" width="100%" style="border-radius: 10px;"/>
 
 <br><br>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&pause=1200&color=2E7D32&center=true&vCenter=true&width=760&lines=Ruby+Baileys+%F0%9F%8C%BF;API+WhatsApp+WebSocket+ligera+y+modular;Optimizaci%C3%B3n+24%2F7+para+bots+persistentes;Sin+Selenium+%E2%80%A2+Sin+Chromium+%E2%80%A2+Multi-Device)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Oswald&weight=600&pause=1000&color=FF7B93&center=true&vCenter=true&width=520&lines=✦+Ruby+Baileys+✦;WhatsApp+WebSocket+API+con+estilo;QR+%26+código+de+8+dígitos;Conexión+persistente+24%2F7+🍒)](https://git.io/typing-svg)
 
 <br>
 
 <p>
-  <a href="https://github.com/Dioneibi-rip/Ruby-Baileys/stargazers"><img src="https://img.shields.io/github/stars/Dioneibi-rip/Ruby-Baileys?style=for-the-badge&logo=github&label=Stars&labelColor=1B5E20&color=4CAF50" alt="GitHub stars"/></a>
-  <a href="https://github.com/Dioneibi-rip/Ruby-Baileys/network/members"><img src="https://img.shields.io/github/forks/Dioneibi-rip/Ruby-Baileys?style=for-the-badge&logo=github&label=Forks&labelColor=1B5E20&color=2E7D32" alt="GitHub forks"/></a>
-  <a href="https://github.com/Dioneibi-rip/Ruby-Baileys"><img src="https://img.shields.io/github/repo-size/Dioneibi-rip/Ruby-Baileys?style=for-the-badge&label=Repo%20Size&labelColor=1B5E20&color=81C784" alt="Repository size"/></a>
-  <img src="https://api.visitorbadge.io/api/visitors?user=Dioneibi-rip&repo=Ruby-Baileys&label=Visitas&countColor=%234CAF50&labelColor=%231B5E20&style=for-the-badge" alt="Repository visits"/>
+  <a href="https://github.com/Dioneibi-rip/Ruby-Baileys"><img src="https://img.shields.io/github/stars/Dioneibi-rip/Ruby-Baileys?style=flat-square&color=ff7b93&logo=github" alt="Stars"/></a>
+  <a href="https://github.com/Dioneibi-rip/Ruby-Baileys"><img src="https://img.shields.io/github/forks/Dioneibi-rip/Ruby-Baileys?style=flat-square&color=ff7b93&logo=github" alt="Forks"/></a>
+  <a href="https://github.com/Dioneibi-rip/Ruby-Baileys"><img src="https://img.shields.io/github/repo-size/Dioneibi-rip/Ruby-Baileys?style=flat-square&color=ff7b93" alt="Size"/></a>
+  <img src="https://api.visitorbadge.io/api/visitors?user=Dioneibi-rip&repo=Ruby-Baileys&label=visitas&countColor=%23ff7b93&style=flat-square" alt="Visitas"/>
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Node.js-%E2%89%A520.0.0-4CAF50?style=for-the-badge&logo=node.js&logoColor=white&labelColor=1B5E20" alt="Node.js >= 20"/>
-  <img src="https://img.shields.io/badge/WhatsApp-Multi--Device-2E7D32?style=for-the-badge&logo=whatsapp&logoColor=white&labelColor=1B5E20" alt="WhatsApp Multi-Device"/>
-  <img src="https://img.shields.io/badge/WebSocket-API%2024%2F7-81C784?style=for-the-badge&logo=socketdotio&logoColor=white&labelColor=1B5E20" alt="WebSocket API 24/7"/>
+  <img src="https://img.shields.io/badge/Node.js-%E2%89%A520-ffb6c9?style=for-the-badge&logo=node.js" alt="Node >=20"/>
+  <img src="https://img.shields.io/badge/WhatsApp-Multi--Device-ff7b93?style=for-the-badge&logo=whatsapp" alt="Multi Device"/>
+  <img src="https://img.shields.io/badge/fork-modificado%20%26%20elegante-f7a8b8?style=for-the-badge" alt="Kawaii"/>
 </p>
-
-<h3>🌿 Ruby Baileys</h3>
-<p><strong>Una base moderna, ligera y extensible para bots de WhatsApp con conexión persistente, store indexado y mensajería avanzada.</strong></p>
 
 </div>
 
