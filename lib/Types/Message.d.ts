@@ -119,9 +119,20 @@ type Templatable = {
     templateButtons?: proto.IHydratedTemplateButton[];
     footer?: string;
 };
+type NativeFlowButton = proto.Message.InteractiveMessage.NativeFlowMessage.INativeFlowButton & {
+    paramsJson?: string;
+};
 type Interactiveable = {
-    /** add buttons to the message  */
-    interactiveButtons?: proto.Message.InteractiveMessage.NativeFlowMessage.NativeFlowButton[];
+    /** add native-flow buttons to the message */
+    interactiveButtons?: NativeFlowButton[];
+    /** alias for interactiveButtons with optional messageParamsJson/messageVersion support */
+    nativeFlow?: NativeFlowButton[];
+    messageParamsJson?: string;
+    messageVersion?: number;
+    bizJid?: string;
+    shopSurface?: proto.Message.InteractiveMessage.ShopMessage.Surface;
+    id?: string;
+    thumbnail?: Buffer;
     title?: string;
     subtitle?: string;
     media?: boolean;
@@ -133,8 +144,18 @@ type Shopable = {
     subtitle?: string;
     media?: boolean;
 };
+type CarouselCard = (AnyMediaMessageContent | ({
+    product: WASendableProduct;
+    businessOwnerJid?: string;
+    body?: string;
+} & WithDimensions)) & Interactiveable & {
+    text?: string;
+    footer?: string;
+    thumbnail?: Buffer;
+};
 type Cardsable = {
-    cards?: string[];
+    /** send a native interactive carousel with image/video/product cards */
+    cards?: CarouselCard[];
     subtitle?: string;
 };
 type Editable = {
@@ -326,7 +347,9 @@ export type AnyRegularMessageContent = (({
     album: AlbumMedia[];
     caption?: string;
 } & Mentionable & Contextable & Editable)) & ViewOnce;
-export type AnyMessageContent = AnyRegularMessageContent | {
+export type AnyMessageContent = AnyRegularMessageContent | ({
+    raw: true;
+} & proto.IMessage) | {
     forward: WAMessage;
     force?: boolean;
 } | {
