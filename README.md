@@ -843,20 +843,55 @@ Perfecto para administrar grupos, moderar chats y añadir diversión con juegos 
 
 ### 📦 Base del Fork
 
-Este fork está basado en [Baileys (GitHub)](https://github.com/ANDERSONTELLO/bails)
+Este fork está basado en [ANDERSONTELLO/bails](https://github.com/ANDERSONTELLO/bails), el cual a su vez se basa en Baileys y sus contribuciones originales.
 
 ### 📣 Créditos
 
-Todo el crédito es atribuido a los mantenedores y colaboradores originales de Baileys:
+<p align="center">
+  <a href="https://github.com/ANDERSONTELLO">
+    <img src="https://github.com/ANDERSONTELLO.png" width="100px" alt="ANDERSONTELLO"/>
+  </a>
+</p>
 
-- [purpshell](https://github.com/purpshell)
-- [jlucaso1](https://github.com/jlucaso1)
-- [adiwajshing](https://github.com/adiwajshing)
+<p align="center">
+  <b>Fork Base Utilizado</b><br>
+  <a href="https://github.com/ANDERSONTELLO">ANDERSONTELLO</a>
+</p>
+
+<br>
+
+<p align="center">
+  <b>Colaboradores y Mantenedores Originales de Baileys</b>
+</p>
+
+<table align="center">
+<tr>
+<td align="center">
+<a href="https://github.com/purpshell">
+<img src="https://github.com/purpshell.png" width="100px;" alt="purpshell"/>
+<br><sub><b>purpshell</b></sub>
+</a>
+</td>
+
+<td align="center">
+<a href="https://github.com/jlucaso1">
+<img src="https://github.com/jlucaso1.png" width="100px;" alt="jlucaso1"/>
+<br><sub><b>jlucaso1</b></sub>
+</a>
+</td>
+
+<td align="center">
+<a href="https://github.com/adiwajshing">
+<img src="https://github.com/adiwajshing.png" width="100px;" alt="adiwajshing"/>
+<br><sub><b>adiwajshing</b></sub>
+</a>
+</td>
+</tr>
+</table>
 
 <!-- Por favor, no reemplaces mi nombre con el tuyo. Es una falta de respeto. -->
 
-Este fork incluye mejoras y modificaciones adicionales realizadas por [Lia Wynn](https://github.com/itsliaaa).
-
+Este fork incluye modificaciones, correcciones y características adicionales implementadas sobre la base utilizada.
 
 > [!CAUTION]
 > ⚠️ **La modificación, eliminación o tergiversación de estos créditos está estrictamente prohibida. Cualquier redistribución o fork debe conservar esta sección en su forma original sin excepciones.**
