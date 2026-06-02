@@ -836,32 +836,27 @@ sock.ev.on('groups.update', updates => {
 sock.ev.on('creds.update', saveCreds)
 ```
 
-## 📦 Base del fork
+### 🚀 Prueba el Bot
 
-Ruby Baileys toma como base el ecosistema open source de Baileys y lo adapta para bots con sesiones persistentes, sub-bots, mensajería moderna, soporte multimedia avanzado y despliegues 24/7 con una identidad visual botánico-tecnológica.
+Un bot de WhatsApp con funciones completas [Ruby-Hoshino-Bot](https://github.com/Dioneibi-rip/Ruby-Hoshino-Bot).
+Perfecto para administrar grupos, moderar chats y añadir diversión con juegos de preguntas y herramientas útiles.
 
-## 🤝 Créditos y licencia
+### 📦 Base del Fork
 
-<div align="center">
+Este fork está basado en [Baileys (GitHub)](https://github.com/ANDERSONTELLO/bails)
 
-<a href="https://github.com/Dioneibi-rip/Ruby-Baileys/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Dioneibi-rip/Ruby-Baileys" alt="Contribuidores de Ruby Baileys"/>
-</a>
+### 📣 Créditos
 
-</div>
+Todo el crédito es atribuido a los mantenedores y colaboradores originales de Baileys:
 
-- 🌿 **Dioneibi-rip / Dioneibi** — creador, adaptación principal y mantenimiento de Ruby Baileys.
-- 🌱 **Mantenedores y comunidad original de Baileys** — base técnica, investigación y trabajo open source que hizo posible este fork.
-- 🍃 **itsliaaa y comunidad de documentación** — inspiración para mantener ejemplos prácticos, navegables y fáciles de copiar.
-- 🎋 **Contribuidores, testers y usuarios** — reportes, mejoras y validación en entornos reales.
+- [purpshell](https://github.com/purpshell)
+- [jlucaso1](https://github.com/jlucaso1)
+- [adiwajshing](https://github.com/adiwajshing)
 
-> [!NOTE]
-> Este proyecto conserva una licencia open source de tipo MIT según el paquete del repositorio. Revisa los archivos de licencia y metadatos del proyecto antes de redistribuir versiones modificadas.
+<!-- Por favor, no reemplaces mi nombre con el tuyo. Es una falta de respeto. -->
 
----
+Este fork incluye mejoras y modificaciones adicionales realizadas por [Lia Wynn](https://github.com/itsliaaa).
 
-<div align="center">
 
-**Ruby Baileys** — tecnología WebSocket, sesiones persistentes y una documentación limpia que crece como un jardín. 🌿🌱🍃
-
-</div>
+> [!CAUTION]
+> ⚠️ **La modificación, eliminación o tergiversación de estos créditos está estrictamente prohibida. Cualquier redistribución o fork debe conservar esta sección en su forma original sin excepciones.**
