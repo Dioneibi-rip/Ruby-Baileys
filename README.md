@@ -61,35 +61,104 @@ yarn install
 npm start
 
 ```
-### ✦ Conexión Rápida
-Aquí tienes la estructura base para conectarte e iniciar tu sesión recibiendo mensajes.
+### ✦ Conexión 24/7 resiliente
+Estructura recomendada para sesiones persistentes, reconexión silenciosa, anti-sleep y memoria acotada.
 ```typescript
-import makeWASocket, { useMultiFileAuthState } from '@whiskeysockets/baileys'
+import makeWASocket, {
+    DisconnectReason,
+    makeInMemoryStore,
+    useMultiFileAuthState
+} from '@whiskeysockets/baileys'
+import { Boom } from '@hapi/boom'
+
+const SESSION_DIR = 'sesion_ruby'
+const STORE_FILE = './ruby-store.json'
+const RECONNECT_REASONS = new Set<number>([
+    DisconnectReason.connectionLost,      // 408
+    DisconnectReason.connectionClosed,    // 428
+    DisconnectReason.restartRequired,     // 515
+    DisconnectReason.connectionReplaced   // 440
+])
+
+let sock: ReturnType<typeof makeWASocket> | undefined
+let reconnectTimer: NodeJS.Timeout | undefined
+
+const store = makeInMemoryStore({
+    maxMessagesPerChat: 50,
+    maxChats: 500,
+    maxContacts: 2000,
+    maxGroupMetadata: 250,
+    flushIntervalMs: 60_000,
+    flushFile: STORE_FILE
+})
+store.readFromFile(STORE_FILE)
 
 async function connectToWhatsApp() {
-    const { state, saveCreds } = await useMultiFileAuthState('sesion_ruby')
-
-    const sock = makeWASocket({
-        auth: state,
-        printQRInTerminal: true
+    const { state, saveCreds } = await useMultiFileAuthState(SESSION_DIR, {
+        atomicWrites: true,
+        backupOnWrite: true,
+        cleanupStaleTempFiles: true
     })
 
-    sock.ev.on('connection.update', (update) => {
-        const { connection } = update
-        if(connection === 'open') {
+
+    const scheduleReconnect = (delayMs = 1_500) => {
+        if (reconnectTimer) return
+        reconnectTimer = setTimeout(() => {
+            reconnectTimer = undefined
+            connectToWhatsApp().catch(err => console.error('reconnect failed', err))
+        }, delayMs)
+        reconnectTimer.unref?.()
+    }
+
+    sock = makeWASocket({
+        auth: state,
+        printQRInTerminal: true,
+        keepAliveIntervalMs: 30_000,
+        retryRequestDelayMs: 250,
+        connectTimeoutMs: 20_000,
+        defaultQueryTimeoutMs: 60_000,
+        markOnlineOnConnect: true,
+        syncFullHistory: false,
+        getMessage: async key => {
+            const cached = await store.loadMessage(key.remoteJid!, key.id!)
+            return cached?.message
+        },
+        shouldReconnect: ({ statusCode }) =>
+            RECONNECT_REASONS.has(statusCode) || statusCode !== DisconnectReason.loggedOut
+    })
+
+    store.bind(sock.ev)
+    sock.ev.on('creds.update', saveCreds)
+
+    sock.ev.on('connection.update', update => {
+        const { connection, lastDisconnect, reconnectDelayMs } = update
+        if (connection === 'open') {
             console.log('Conectado exitosamente')
+            return
+        }
+
+        if (connection === 'close') {
+            const statusCode = (lastDisconnect?.error as Boom | undefined)?.output?.statusCode
+                || (lastDisconnect?.error as any)?.statusCode
+                || DisconnectReason.connectionClosed
+
+            if (statusCode === DisconnectReason.loggedOut) {
+                console.error('Sesión cerrada por WhatsApp; requiere nuevo emparejamiento.')
+                return
+            }
+
+            if (RECONNECT_REASONS.has(statusCode) || update.shouldReconnect !== false) {
+                scheduleReconnect(reconnectDelayMs || 1_500)
+            }
         }
     })
 
-    sock.ev.on('messages.upsert', async (m) => {
-        console.log(JSON.stringify(m, undefined, 2))
+    sock.ev.on('messages.upsert', async ({ messages }) => {
+        console.log(JSON.stringify(messages, undefined, 2))
     })
-
-    sock.ev.on('creds.update', saveCreds)
 }
 
-connectToWhatsApp()
-
+connectToWhatsApp().catch(console.error)
 ```
 ### ➮ Código de Emparejamiento (Sin QR)
 Si prefieres conectar tu dispositivo utilizando un código de 8 dígitos en lugar de escanear la pantalla:

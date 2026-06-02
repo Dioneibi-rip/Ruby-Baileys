@@ -23,6 +23,10 @@ export type BaileysInMemoryStoreConfig = {
     maxChats?: number;
     maxContacts?: number;
     maxGroupMetadata?: number;
+    /** Periodically trim bounded collections and optionally persist the store. Disabled when 0/undefined. */
+    flushIntervalMs?: number;
+    /** Optional file path used by the automatic flush interval. */
+    flushFile?: string;
 };
 declare const _default: (config: BaileysInMemoryStoreConfig) => {
     chats: KeyedDB<Chat, string>;
@@ -102,6 +106,9 @@ declare const _default: (config: BaileysInMemoryStoreConfig) => {
         };
         labels: ObjectRepository<Label>;
         labelAssociations: KeyedDB<LabelAssociation, string>;
+        groupMetadata: {
+            [_: string]: GroupMetadata;
+        };
     };
     fromJSON: (json: {
         chats: Chat[];
@@ -115,7 +122,13 @@ declare const _default: (config: BaileysInMemoryStoreConfig) => {
             [labelId: string]: Label;
         };
         labelAssociations: LabelAssociation[];
+        groupMetadata?: {
+            [id: string]: GroupMetadata;
+        };
     }) => void;
+    sweepMemory: () => void;
+    startAutoFlush: (intervalMs?: number, path?: string) => void;
+    stopAutoFlush: () => void;
     writeToFile: (path: string) => void;
     readFromFile: (path: string) => void;
 };
