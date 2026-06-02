@@ -91,7 +91,7 @@ export type MediaDownloadOptions = {
     endByte?: number;
     options?: AxiosRequestConfig<any>;
 };
-export declare const getUrlFromDirectPath: (directPath: string) => string;
+export declare const getUrlFromDirectPath: (directPath: string, host?: string) => string;
 export declare const downloadContentFromMessage: ({ mediaKey, directPath, url }: DownloadableMessage, type: MediaType, opts?: MediaDownloadOptions) => Promise<Transform>;
 /**
  * Decrypts and downloads an AES256-CBC encrypted file given the keys.
