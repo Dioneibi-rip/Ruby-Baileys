@@ -400,6 +400,8 @@ export type MiscMessageGenerationOptions = MinimalRelayOptions & {
     /** if it is broadcast */
     broadcast?: boolean;
     newsletter?: boolean;
+    messageSafety?: false;
+    simulatePresence?: boolean;
     additionalNodes?: BinaryNode[];
 };
 export type MessageGenerationOptionsFromContent = MiscMessageGenerationOptions & {
