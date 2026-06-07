@@ -18,6 +18,15 @@ export type MessageSafetyConfig = {
     messageSendMaxDelayMs?: number;
     /** Minimum delay between messages to the same chat/JID. */
     perJidMinDelayMs?: number;
+    warmUpMessageCount?: number;
+    warmUpMinDelayMs?: number;
+    warmUpMaxDelayMs?: number;
+    presenceMinDelayMs?: number;
+    presenceMaxDelayMs?: number;
+    presenceMsPerChar?: number;
+    mediaPresenceMaxDelayMs?: number;
+    presencePauseMinDelayMs?: number;
+    presencePauseMaxDelayMs?: number;
     /** Warn or block when a status/broadcast send targets more JIDs than this value. */
     maxStatusJidList?: number;
     /** Warn or block when an encrypted fanout reaches more devices than this value. */
