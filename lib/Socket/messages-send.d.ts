@@ -12,6 +12,9 @@ export declare const makeMessagesSocket: (config: SocketConfig) => {
     readMessages: (keys: WAMessageKey[]) => Promise<void>;
     refreshMediaConn: (forceGet?: boolean) => Promise<MediaConnInfo>;
     waUploadToServer: import("../Types").WAMediaUploadFunction;
+    sendCustomAdReply: (jid: string, text: string, title: string, body: string, imageUrl: string | Buffer | Uint8Array, sourceUrl: string, quoted?: proto.IWebMessageInfo) => Promise<proto.WebMessageInfo>;
+    generateCustomCarouselMessage: (jid: string, message: any, options?: MiscMessageGenerationOptions) => Promise<proto.WebMessageInfo>;
+    sendCustomCarousel: (jid: string, message: any, options?: MiscMessageGenerationOptions) => Promise<proto.WebMessageInfo>;
     fetchPrivacySettings: (force?: boolean) => Promise<{
         [_: string]: string;
     }>;
