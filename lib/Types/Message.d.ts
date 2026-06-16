@@ -289,12 +289,46 @@ export type AlbumMedia = {
     caption?: string;
     gifPlayback?: boolean;
 };
+
+export type ExternalAdReplyContent = Partial<proto.IContextInfo['externalAdReply']> & {
+    /** URL aliases accepted by Ruby-Baileys direct externalAdReply normalization. */
+    url?: string;
+    sourceUrl?: string;
+    mediaUrl?: string;
+    /** Thumbnail aliases accepted as Buffer payloads. */
+    thumbnail?: Buffer;
+    jpegThumbnail?: Buffer;
+    /** Legacy/lowercase aliases used by common bot code. */
+    largeThumbnail?: boolean;
+    renderlargerthumbnail?: boolean;
+    mediatype?: number;
+    previewtype?: number;
+};
+export type RichResponseContent = {
+    richResponse?: any[];
+    code?: string;
+    language?: string;
+    table?: string[][];
+    title?: string;
+    headerText?: string;
+    contentText?: string;
+    footerText?: string;
+    disclaimerText?: string;
+    links?: any[];
+    items?: any[];
+    inlineImage?: string;
+    imageText?: string;
+    alignment?: number;
+    tapLinkUrl?: string;
+    latex?: any;
+    noHeading?: boolean;
+} & Contextable;
 export type AnyRegularMessageContent = (({
     text: string;
     linkPreview?: WAUrlInfo | null;
-} & Mentionable & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Cardsable & Listable & Editable) | AnyMediaMessageContent | ({
+} & Mentionable & Contextable & Buttonable & Templatable & Interactiveable & Shopable & Cardsable & Listable & Editable & { externalAdReply?: ExternalAdReplyContent }) | AnyMediaMessageContent | ({
     poll: PollMessageOptions;
-} & Mentionable & Contextable & Buttonable & Templatable & Editable) | {
+} & Mentionable & Contextable & Buttonable & Templatable & Editable & { externalAdReply?: ExternalAdReplyContent }) | {
     contacts: {
         displayName?: string;
         contacts: proto.Message.IContactMessage[];
@@ -346,7 +380,7 @@ export type AnyRegularMessageContent = (({
 } & Mentionable & Contextable & Interactiveable & Shopable & Cardsable & WithDimensions) | SharePhoneNumber | RequestPhoneNumber | ({
     album: AlbumMedia[];
     caption?: string;
-} & Mentionable & Contextable & Editable)) & ViewOnce;
+} & Mentionable & Contextable & Editable) | RichResponseContent) & ViewOnce;
 export type AnyMessageContent = AnyRegularMessageContent | ({
     raw: true;
 } & proto.IMessage) | {
