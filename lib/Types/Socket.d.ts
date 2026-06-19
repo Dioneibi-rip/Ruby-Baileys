@@ -58,6 +58,8 @@ export type SocketConfig = {
     defaultQueryTimeoutMs: number | undefined;
     /** ping-pong interval for WS connection */
     keepAliveIntervalMs: number;
+    /** Randomized outbound send delay window, in milliseconds, used to smooth burst traffic. */
+    outgoingJitterMs?: number | { min?: number; max?: number; };
     /** should baileys use the mobile api instead of the multi device api
     * @deprecated This feature has been removed
     */
@@ -98,6 +100,8 @@ export type SocketConfig = {
     auth: AuthenticationState;
     /** manage history processing with this control; by default will sync up everything */
     shouldSyncHistoryMessage: (msg: proto.Message.IHistorySyncNotification) => boolean;
+    /** optional delay between album message items */
+    albumMessageItemDelayMs?: number;
     /** transaction capability options for SignalKeyStore */
     transactionOpts: TransactionCapabilityOptions;
     /** marks the client as online whenever the socket successfully connects */
