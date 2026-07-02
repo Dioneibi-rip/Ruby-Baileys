@@ -11,6 +11,7 @@ export * from './history';
 export * from './chat-utils';
 export * from './lt-hash';
 export * from './auth-utils';
+export * from './lru-cache';
 export * from './baileys-event-stream';
 export * from './use-multi-file-auth-state';
 export * from './link-preview';
