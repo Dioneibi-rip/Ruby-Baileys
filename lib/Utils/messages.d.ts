@@ -21,6 +21,7 @@ export declare const generateForwardMessageContent: (message: WAMessage, forceFo
 export declare const generateWAMessageContent: (message: AnyMessageContent, options: MessageContentGenerationOptions) => Promise<proto.Message>;
 export declare const generateWAMessageFromContent: (jid: string, message: WAMessageContent, options: MessageGenerationOptionsFromContent) => proto.WebMessageInfo;
 export declare const generateWAMessage: (jid: string, content: AnyMessageContent, options: MessageGenerationOptions) => Promise<proto.WebMessageInfo>;
+export declare const prepareAlbumMessageContent: (jid: string, albums: Extract<AnyMessageContent, { album: unknown }>['album'], options: MessageGenerationOptions & { sock?: { relayMessage?: Function; waUploadToServer?: Function }; suki?: { relayMessage?: Function; waUploadToServer?: Function }; ai?: boolean; AI?: boolean }) => Promise<proto.WebMessageInfo[]>;
 /** Get the key to access the true type of content */
 export declare const getContentType: (content: WAProto.IMessage | undefined) => keyof proto.IMessage | undefined;
 /**

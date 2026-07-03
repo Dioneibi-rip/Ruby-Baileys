@@ -437,6 +437,8 @@ export type MiscMessageGenerationOptions = MinimalRelayOptions & {
     messageSafety?: false;
     simulatePresence?: boolean;
     additionalNodes?: BinaryNode[];
+    /** Adds the official bot stanza used by WhatsApp clients to render an AI-generated label for eligible 1:1 messages. */
+    ai?: boolean;
 };
 export type MessageGenerationOptionsFromContent = MiscMessageGenerationOptions & {
     userJid: string;
