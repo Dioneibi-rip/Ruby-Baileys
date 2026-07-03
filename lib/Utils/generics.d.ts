@@ -5,6 +5,10 @@ import { BaileysEventEmitter, BaileysEventMap, BrowsersMap, WACallUpdateType, WA
 import { BinaryNode } from '../WABinary';
 export declare const Browsers: BrowsersMap;
 export declare const getPlatformId: (browser: string) => any;
+export declare const CompanionWebClientType: { [key: string]: number };
+export declare const getCompanionWebClientType: (browser: [string, string, string]) => number;
+export declare const getCompanionPlatformId: (browser: [string, string, string]) => string;
+export declare const buildPairingQRData: (ref: string, noiseKeyB64: string, identityKeyB64: string, advB64: string, browser: [string, string, string]) => string;
 export declare const BufferJSON: {
     replacer: (k: any, value: any) => any;
     reviver: (_: any, value: any) => any;
