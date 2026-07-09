@@ -164,5 +164,7 @@ export type SocketConfig = {
     enableGroupMetadataCache?: boolean;
     /** TTL in seconds for the built-in group metadata cache */
     groupMetadataCacheTtl?: number;
+    /** Delay in milliseconds between processing groups returned by groupFetchAllParticipating */
+    groupFetchAllParticipatingThrottleMs?: number;
     makeSignalRepository: (auth: SignalAuthState) => SignalRepository;
 };
