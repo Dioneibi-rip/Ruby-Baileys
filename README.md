@@ -208,17 +208,34 @@ Este ejemplo prioriza estabilidad: guarda credenciales, evita sincronización co
 
 ```js
 const { Boom } = require('@hapi/boom')
+const fs = require('fs')
 const {
   default: makeWASocket,
   DisconnectReason,
+  makeInMemoryStore,
   useMultiFileAuthState
 } = require('baileys-ruby')
 
 const SESSION_DIR = './sessions/ruby-main'
+const store = makeInMemoryStore({
+  logger: undefined,
+  fetchContactProfilePictures: false
+})
 let reconnectTimer
+let reconnectAttempt = 0
+
+const reconnectDelay = () => {
+  const base = 5_000
+  const max = 60_000
+  const exp = Math.min(max, base * (2 ** reconnectAttempt++))
+  const jitter = Math.floor(Math.random() * 3_000)
+  return Math.min(max, exp + jitter)
+}
 
 async function startRuby() {
-  const { state, saveCreds } = await useMultiFileAuthState(SESSION_DIR)
+  const { state, saveCreds, flushCreds } = await useMultiFileAuthState(SESSION_DIR, {
+    saveDebounceMs: 10_000
+  })
 
   const sock = makeWASocket({
     auth: state,
@@ -227,13 +244,19 @@ async function startRuby() {
     connectTimeoutMs: 20_000,
     defaultQueryTimeoutMs: 60_000,
     syncFullHistory: false,
-    markOnlineOnConnect: true
+    markOnlineOnConnect: true,
+    getMessage: async key => {
+      const message = await store.loadMessage(key.remoteJid, key.id)
+      return message?.message || undefined
+    }
   })
 
+  store.bind(sock.ev)
   sock.ev.on('creds.update', saveCreds)
 
-  sock.ev.on('connection.update', ({ connection, lastDisconnect }) => {
+  sock.ev.on('connection.update', async ({ connection, lastDisconnect }) => {
     if (connection === 'open') {
+      reconnectAttempt = 0
       console.log('🌿 Ruby Baileys conectada y lista para operar 24/7')
       return
     }
@@ -242,12 +265,16 @@ async function startRuby() {
       const statusCode = new Boom(lastDisconnect?.error).output.statusCode
 
       if (statusCode === DisconnectReason.loggedOut) {
-        console.log('🔐 Sesión cerrada: elimina la carpeta de sesión y empareja otra vez')
+        clearTimeout(reconnectTimer)
+        await flushCreds().catch(() => {})
+        fs.rmSync(SESSION_DIR, { recursive: true, force: true })
+        console.log('🔐 Sesión inválida destruida: empareja otra vez')
         return
       }
 
       clearTimeout(reconnectTimer)
-      reconnectTimer = setTimeout(startRuby, 1500)
+      reconnectTimer = setTimeout(startRuby, reconnectDelay())
+      reconnectTimer.unref?.()
     }
   })
 
@@ -286,11 +313,18 @@ const {
 } = require('baileys-ruby')
 
 async function connectWithPairingCode() {
-  const { state, saveCreds } = await useMultiFileAuthState('./sessions/ruby-code')
+  const { state, saveCreds } = await useMultiFileAuthState('./sessions/ruby-code', {
+    saveDebounceMs: 10_000
+  })
 
   const sock = makeWASocket({
     auth: state,
-    printQRInTerminal: false
+    printQRInTerminal: false,
+    keepAliveIntervalMs: 30_000,
+    connectTimeoutMs: 20_000,
+    defaultQueryTimeoutMs: 60_000,
+    syncFullHistory: false,
+    getMessage: async () => undefined
   })
 
   if (!sock.authState.creds.registered) {
@@ -318,7 +352,10 @@ const {
 } = require('baileys-ruby')
 
 const logger = Pino({ level: 'silent' })
-const store = makeInMemoryStore({ logger })
+const store = makeInMemoryStore({
+  logger,
+  fetchContactProfilePictures: false
+})
 
 store.readFromFile('./ruby-store.json')
 
@@ -327,10 +364,16 @@ setInterval(() => {
 }, 60_000).unref()
 
 async function startWithStore() {
-  const { state, saveCreds } = await useMultiFileAuthState('./sessions/ruby-store')
+  const { state, saveCreds } = await useMultiFileAuthState('./sessions/ruby-store', {
+    saveDebounceMs: 10_000
+  })
 
   const sock = makeWASocket({
     auth: state,
+    keepAliveIntervalMs: 30_000,
+    connectTimeoutMs: 20_000,
+    defaultQueryTimeoutMs: 60_000,
+    syncFullHistory: false,
     getMessage: async key => {
       const message = await store.loadMessage(key.remoteJid, key.id)
       return message?.message || undefined

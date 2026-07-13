@@ -27,6 +27,8 @@ export type BaileysInMemoryStoreConfig = {
     flushIntervalMs?: number;
     /** Optional file path used by the automatic flush interval. */
     flushFile?: string;
+    /** Fetch contact profile pictures on contacts.update. Disabled by default to avoid reconnect storms. */
+    fetchContactProfilePictures?: boolean;
 };
 declare const _default: (config: BaileysInMemoryStoreConfig) => {
     chats: KeyedDB<Chat, string>;
