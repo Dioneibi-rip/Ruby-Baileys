@@ -6,6 +6,8 @@ export type MultiFileAuthStateOptions = {
     backupOnWrite?: boolean;
     /** Remove stale temporary auth files left by interrupted writes. Defaults to true. */
     cleanupStaleTempFiles?: boolean;
+    /** Debounce creds.json writes triggered by frequent creds.update events. Defaults to 10000ms. Use 0 to disable. */
+    saveDebounceMs?: number;
 };
 /**
  * stores the full authentication state in a single folder.
@@ -17,5 +19,6 @@ export type MultiFileAuthStateOptions = {
 export declare const useMultiFileAuthState: (folder: string, opts?: MultiFileAuthStateOptions) => Promise<{
     state: AuthenticationState;
     saveCreds: () => Promise<void>;
+    flushCreds: () => Promise<void>;
     removeCreds: () => Promise<void>;
 }>;
