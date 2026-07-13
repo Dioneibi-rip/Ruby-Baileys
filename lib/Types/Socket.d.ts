@@ -36,6 +36,12 @@ export type MessageSafetyConfig = {
     /** Emit logger warnings when safety limits are exceeded. */
     logWarnings?: boolean;
 };
+export type MessagePacingConfig = {
+    minDelayMs?: number;
+    maxDelayMs?: number;
+    msPerPayloadChar?: number;
+    composingForText?: boolean;
+};
 export type CacheStore = {
     /** get a cached key and change the stats */
     get<T>(key: string): T | undefined;
@@ -98,6 +104,10 @@ export type SocketConfig = {
     qrTimeout?: number;
     /** provide an auth state object to maintain the auth state */
     auth: AuthenticationState;
+    /** Physical credentials folder used for critical-session quarantine cleanup. */
+    authFolder?: string;
+    /** Optional options passed to fetchLatestWaWebVersion during telemetry-aware bootstrap. */
+    versionFetchOptions?: AxiosRequestConfig<{}>;
     /** manage history processing with this control; by default will sync up everything */
     shouldSyncHistoryMessage: (msg: proto.Message.IHistorySyncNotification) => boolean;
     /** optional delay between album message items */
@@ -108,6 +118,8 @@ export type SocketConfig = {
     markOnlineOnConnect: boolean;
     /** Conservative bot-safety controls: pacing, fanout warnings/limits, and anti-spam guardrails. */
     messageSafety: MessageSafetyConfig;
+    /** Humanized outbound pacing and composing-presence controls. */
+    messagePacing?: MessagePacingConfig;
     /** @deprecated Use messageSafety. Kept as a Spanish-friendly alias for bot anti-ban tuning. */
     antiBan?: MessageSafetyConfig;
     /** alphanumeric country code (USA -> US) for the number used */

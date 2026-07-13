@@ -17,7 +17,7 @@ export type MultiFileAuthStateOptions = {
  * to make auth persistence resilient against process crashes/restarts.
  * */
 export declare const useMultiFileAuthState: (folder: string, opts?: MultiFileAuthStateOptions) => Promise<{
-    state: AuthenticationState;
+    state: AuthenticationState & { folder: string; authFolder: string; };
     saveCreds: () => Promise<void>;
     flushCreds: () => Promise<void>;
     removeCreds: () => Promise<void>;
