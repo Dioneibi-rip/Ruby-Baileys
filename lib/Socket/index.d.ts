@@ -1,4 +1,6 @@
 import { UserFacingSocketConfig } from '../Types';
+export declare const prepareWASocketConfig: (config?: UserFacingSocketConfig) => Promise<UserFacingSocketConfig>;
+export declare const makeWASocketWithTelemetry: (config?: UserFacingSocketConfig) => Promise<ReturnType<typeof makeWASocket>>;
 declare const makeWASocket: (config: UserFacingSocketConfig) => {
     logger: import("../Utils/logger").ILogger;
     getOrderDetails: (orderId: string, tokenBase64: string) => Promise<import("../Types").OrderDetails>;

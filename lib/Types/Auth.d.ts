@@ -99,5 +99,7 @@ export type SignalAuthState = {
 export type AuthenticationState = {
     creds: AuthenticationCreds;
     keys: SignalKeyStore;
+    folder?: string;
+    authFolder?: string;
 };
 export {};
