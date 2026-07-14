@@ -1,5 +1,5 @@
 import { proto } from '../WAProto';
-import makeWASocket from './Socket';
+import makeWASocket, { makeWASocketWithTelemetry, prepareWASocketConfig } from './Socket';
 
 export * from '../WAProto';
 export * from './Utils';
@@ -12,5 +12,5 @@ export * from './WAUSync';
 
 export type WASocket = ReturnType<typeof makeWASocket>;
 
-export { makeWASocket, proto };
+export { makeWASocket, makeWASocketWithTelemetry, prepareWASocketConfig, proto };
 export default makeWASocket;
