@@ -39,8 +39,6 @@ export type MessageSafetyConfig = {
 export type MessagePacingConfig = {
     minDelayMs?: number;
     maxDelayMs?: number;
-    msPerPayloadChar?: number;
-    composingForText?: boolean;
 };
 export type CacheStore = {
     /** get a cached key and change the stats */
