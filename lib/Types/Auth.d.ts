@@ -60,6 +60,11 @@ export type AuthenticationCreds = SignalCreds & {
     lastPropHash: string | undefined;
     routingInfo: Buffer | undefined;
 };
+export type ContactTrustedContactToken = {
+    token: Uint8Array | Buffer | string;
+    timestamp?: number | string;
+    jid?: string;
+};
 export type SignalDataTypeMap = {
     'pre-key': KeyPair;
     'session': Uint8Array;
@@ -69,6 +74,10 @@ export type SignalDataTypeMap = {
     };
     'app-state-sync-key': proto.Message.IAppStateSyncKeyData;
     'app-state-sync-version': LTHashState;
+    'contacts-tc-token': ContactTrustedContactToken;
+    /** @deprecated use 'contacts-tc-token' */
+    tctoken: ContactTrustedContactToken;
+    'lid-mapping': string;
 };
 export type SignalDataSet = {
     [T in keyof SignalDataTypeMap]?: {
