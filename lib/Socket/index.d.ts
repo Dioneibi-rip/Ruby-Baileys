@@ -1,7 +1,6 @@
 import { UserFacingSocketConfig } from '../Types';
 export declare const prepareWASocketConfig: (config?: UserFacingSocketConfig) => Promise<UserFacingSocketConfig>;
-export declare const makeWASocketWithTelemetry: (config?: UserFacingSocketConfig) => Promise<ReturnType<typeof makeWASocket>>;
-declare const makeWASocket: (config: UserFacingSocketConfig) => {
+declare const makeWASocketInternal: (config: UserFacingSocketConfig) => {
     logger: import("../Utils/logger").ILogger;
     getOrderDetails: (orderId: string, tokenBase64: string) => Promise<import("../Types").OrderDetails>;
     getCatalog: ({ jid, limit, cursor }: import("../Types").GetCatalogOptions) => Promise<{
@@ -173,4 +172,7 @@ declare const makeWASocket: (config: UserFacingSocketConfig) => {
     waitForConnectionUpdate: (check: (u: Partial<import("../Types").ConnectionState>) => Promise<boolean | undefined>, timeoutMs?: number) => Promise<void>;
     sendWAMBuffer: (wamBuffer: Buffer) => Promise<any>;
 };
+export declare const makeWASocketWithTelemetry: (config?: UserFacingSocketConfig) => Promise<ReturnType<typeof makeWASocketInternal>>;
+declare const makeWASocket: (config?: UserFacingSocketConfig) => Promise<ReturnType<typeof makeWASocketInternal>>;
+export { makeWASocketInternal };
 export default makeWASocket;
