@@ -10,7 +10,7 @@ export * from './WABinary';
 export * from './WAM';
 export * from './WAUSync';
 
-export type WASocket = ReturnType<typeof makeWASocket>;
+export type WASocket = Awaited<ReturnType<typeof makeWASocket>>;
 
 export { makeWASocket, makeWASocketWithTelemetry, prepareWASocketConfig, proto };
 export default makeWASocket;
