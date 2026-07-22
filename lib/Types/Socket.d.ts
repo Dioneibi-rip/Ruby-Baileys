@@ -1,4 +1,3 @@
-import { AxiosRequestConfig } from 'axios';
 import type { Agent } from 'https';
 import type { URL } from 'url';
 import { proto } from '../../WAProto';
@@ -105,7 +104,7 @@ export type SocketConfig = {
     /** Physical credentials folder used for critical-session quarantine cleanup. */
     authFolder?: string;
     /** Optional options passed to fetchLatestWaWebVersion during telemetry-aware bootstrap. */
-    versionFetchOptions?: AxiosRequestConfig<{}>;
+    versionFetchOptions?: RequestInit;
     /** manage history processing with this control; by default will sync up everything */
     shouldSyncHistoryMessage: (msg: proto.Message.IHistorySyncNotification) => boolean;
     /** optional delay between album message items */
@@ -160,8 +159,8 @@ export type SocketConfig = {
         patch: boolean;
         snapshot: boolean;
     };
-    /** options for axios */
-    options: AxiosRequestConfig<{}>;
+    /** options for fetch */
+    options: RequestInit;
     /**
      * fetch a message from your store
      * implement this so that messages failed to send

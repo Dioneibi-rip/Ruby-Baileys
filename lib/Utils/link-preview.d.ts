@@ -1,4 +1,3 @@
-import { AxiosRequestConfig } from 'axios';
 import { ILogger } from './logger';
 import { WAMediaUploadFunction, WAUrlInfo } from '../Types';
 export type URLGenerationOptions = {
@@ -7,7 +6,7 @@ export type URLGenerationOptions = {
         /** Timeout in ms */
         timeout: number;
         proxyUrl?: string;
-        headers?: AxiosRequestConfig<{}>['headers'];
+        headers?: RequestInit['headers'];
     };
     uploadImage?: WAMediaUploadFunction;
     logger?: ILogger;
