@@ -1,4 +1,3 @@
-import { AxiosRequestConfig } from 'axios';
 import type { Readable } from 'stream';
 import type { URL } from 'url';
 import { proto } from '../../WAProto';
@@ -461,7 +460,7 @@ export type MediaGenerationOptions = {
     /** cache media so it does not have to be uploaded again */
     mediaCache?: CacheStore;
     mediaUploadTimeoutMs?: number;
-    options?: AxiosRequestConfig;
+    options?: RequestInit;
     backgroundColor?: string;
     font?: number;
     /** The message is for newsletter? */

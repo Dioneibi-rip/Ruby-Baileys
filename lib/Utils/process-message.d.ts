@@ -1,4 +1,3 @@
-import { AxiosRequestConfig } from 'axios';
 import { proto } from '../../WAProto';
 import { AuthenticationCreds, BaileysEventEmitter, CacheStore, SignalKeyStoreWithTransaction, SocketConfig, SignalRepository } from '../Types';
 import { ILogger } from './logger';
@@ -11,7 +10,7 @@ type ProcessMessageContext = {
     ev: BaileysEventEmitter;
     getMessage: SocketConfig['getMessage'];
     logger?: ILogger;
-    options: AxiosRequestConfig<{}>;
+    options: RequestInit;
 };
 /** Cleans a received message to further processing */
 export declare const cleanMessage: (message: proto.IWebMessageInfo, meId: string, meLid?: string) => void;
