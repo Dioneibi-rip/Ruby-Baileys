@@ -1,5 +1,4 @@
-import type KeyedDB from '@adiwajshing/keyed-db';
-import type { Comparable } from '@adiwajshing/keyed-db/lib/Types';
+import type DatabaseLib, { Comparable } from '../Utils/DatabaseLib';
 import { proto } from '../../WAProto';
 import type makeMDSocket from '../Socket';
 import type { BaileysEventEmitter, Chat, ConnectionState, Contact, GroupMetadata, PresenceData, WAMessage, WAMessageCursor, WAMessageKey } from '../Types';
@@ -31,7 +30,7 @@ export type BaileysInMemoryStoreConfig = {
     fetchContactProfilePictures?: boolean;
 };
 declare const _default: (config: BaileysInMemoryStoreConfig) => {
-    chats: KeyedDB<Chat, string>;
+    chats: DatabaseLib<Chat, string>;
     contacts: {
         [_: string]: Contact;
     };
@@ -59,7 +58,7 @@ declare const _default: (config: BaileysInMemoryStoreConfig) => {
         };
     };
     labels: ObjectRepository<Label>;
-    labelAssociations: KeyedDB<LabelAssociation, string>;
+    labelAssociations: DatabaseLib<LabelAssociation, string>;
     bind: (ev: BaileysEventEmitter) => void;
     /** loads messages from the store, if not found -- uses the legacy connection */
     loadMessages: (jid: string, count: number, cursor: WAMessageCursor) => Promise<WAMessage[]>;
@@ -88,7 +87,7 @@ declare const _default: (config: BaileysInMemoryStoreConfig) => {
     fetchGroupMetadata: (jid: string, sock: WASocket | undefined) => Promise<GroupMetadata>;
     fetchMessageReceipts: ({ remoteJid, id }: WAMessageKey) => Promise<proto.IUserReceipt[] | null | undefined>;
     toJSON: () => {
-        chats: KeyedDB<Chat, string>;
+        chats: DatabaseLib<Chat, string>;
         contacts: {
             [_: string]: Contact;
         };
@@ -107,7 +106,7 @@ declare const _default: (config: BaileysInMemoryStoreConfig) => {
             };
         };
         labels: ObjectRepository<Label>;
-        labelAssociations: KeyedDB<LabelAssociation, string>;
+        labelAssociations: DatabaseLib<LabelAssociation, string>;
         groupMetadata: {
             [_: string]: GroupMetadata;
         };
