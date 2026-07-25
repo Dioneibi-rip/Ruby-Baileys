@@ -20,7 +20,8 @@
     "engine-requirements.js"
   ],
   "scripts": {
-    "preinstall": "node ./engine-requirements.js"
+    "preinstall": "node ./engine-requirements.js",
+    "audit:upstream-network": "node scripts/audit-upstream-network.js"
   },
   "dependencies": {
     "@hapi/boom": "^10.0.1",
