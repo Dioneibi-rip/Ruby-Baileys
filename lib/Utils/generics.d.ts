@@ -2,6 +2,8 @@ import { ILogger } from './logger';
 import { proto } from '../../WAProto';
 import { BaileysEventEmitter, BaileysEventMap, BrowsersMap, WACallUpdateType, WAVersion } from '../Types';
 import { BinaryNode } from '../WABinary';
+export declare const WA_WEB_USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/150.0.7871.187 Safari/537.36";
+export declare const WA_WEB_ORIGIN = "https://web.whatsapp.com";
 export declare const Browsers: BrowsersMap;
 export declare const getPlatformId: (browser: string) => any;
 export declare const BufferJSON: {
